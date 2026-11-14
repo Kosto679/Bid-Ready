@@ -33,7 +33,7 @@ def _parse_lines(text: str) -> dict[str, Any]:
     low = t.lower()
     name = None
     m = re.match(r"\s*([^\n,.]{2,60}?)\s+(?:is|are|—|-|:)\s", t)
-    if m:
+    if m and m.group(1).strip().lower() not in ("we", "i", "our company", "this", "it", "they", "εμείς", "είμαστε"):
         name = m.group(1).strip()
     size = None
     m = re.search(r"(\d{1,5})\s*[- ]?\s*(?:person|people|employees|staff|άτομα|εργαζόμεν)", low)
