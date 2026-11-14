@@ -76,6 +76,30 @@ def api_pack(body: PackIn) -> dict:
     return agent.handover(body.run_id, body.notice_id)
 
 
+class EvalIn(BaseModel):
+    conditions: list[str] = ["headline", "page"]
+    trials: int = 1
+
+
+@app.get("/api/evals/latest")
+def api_eval_latest() -> dict:
+    from . import evals, gemini
+
+    ok, why = gemini.configured()
+    return {"result": evals.latest(), "configured": ok, "why": why, "model": gemini.MODEL}
+
+
+@app.post("/api/evals/run")
+def api_eval_run(body: EvalIn) -> dict:
+    from . import evals, gemini
+
+    conds = tuple(c for c in body.conditions if c in evals.CONDITIONS) or ("headline", "page")
+    try:
+        return {"result": evals.run_eval(conditions=conds, trials=max(1, min(body.trials, 5)))}
+    except gemini.NotConfigured as e:
+        raise HTTPException(400, f"Gemini is not configured: {e}")
+
+
 @app.get("/api/runs/{run_id}/letter")
 def api_letter(run_id: str) -> FileResponse:
     p = _safe(run_id) / "consortium_letter_el.md"

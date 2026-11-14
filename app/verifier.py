@@ -154,6 +154,115 @@ def check_zip_entries(claim: dict) -> dict:
     return {"method": "reread_pack_file", "source": p.name, "observed": {"entries": names, "non_ascii": non_ascii, "missing": missing, "corrupt": bad}, "mismatch": bool(non_ascii or missing or bad)}
 
 
+# ---- field observers: the answer key, read off the tender pages at check time ----------------
+
+def _budget(nid: str) -> tuple[float, str]:
+    t = T.norm(_open(nid, 17))
+    m = re.search(r"ανέρχεται σε [^()]*\((\d{1,3}(?:\.\d{3})+,\d{2}) €\) πλέον ΦΠΑ", t)
+    if not m:
+        raise SourceUnavailable("initial budget not found on p17")
+    return T.parse_eur(m.group(1)), m.group(0)
+
+
+def _obs_budget(nid: str) -> dict:
+    v, q = _budget(nid)
+    return {"value": v, "pages": [17], "quote": q}
+
+
+def _obs_guarantee(nid: str) -> dict:
+    amounts = T.amounts_after(nid, 27, "2.2.2.1", window=700)
+    if not amounts:
+        raise SourceUnavailable("guarantee not found on p27")
+    return {"value": amounts[0], "pages": [27], "quote": T.find_span(nid, 27, "ποσοστό 2%", after=120)}
+
+
+def _obs_turnover(nid: str) -> dict:
+    t = T.norm(_open(nid, 33))
+    m = re.search(r"\((\d+)%\)\s*του προϋπολογισμού", t)
+    if not m:
+        raise SourceUnavailable("turnover % not found on p33")
+    b, _ = _budget(nid)
+    return {"value": int(m.group(1)) / 100 * b, "pages": [33, 17], "quote": T.find_span(nid, 33, "διακόσια τοις εκατό (200%)", before=120, after=120)}
+
+
+def _obs_perf_guarantee(nid: str) -> dict:
+    t = T.norm(_open(nid, 72))
+    m = re.search(r"ποσοστό (\d+)% επί της εκτιμώμενης αξίας της σύμβασης, μη συμπεριλαμβανομένου ΦΠΑ και χωρίς", t)
+    if not m:
+        raise SourceUnavailable("performance guarantee % not found on p72")
+    b, _ = _budget(nid)
+    return {"value": int(m.group(1)) / 100 * b, "pages": [72, 17], "quote": m.group(0)}
+
+
+def _obs_date(nid: str, label: str) -> dict:
+    t = T.norm(_open(nid, 11))
+    m = re.search(label + r"\s+(\d{2})-(\d{2})-(\d{4}).{0,40}?ώρα\s+(\d{2}:\d{2})", t)
+    if not m:
+        raise SourceUnavailable(f"{label} not found on p11")
+    return {"value": f"{m.group(3)}-{m.group(2)}-{m.group(1)}T{m.group(4)}", "pages": [11], "quote": m.group(0)}
+
+
+def _obs_escrow_count(nid: str) -> dict:
+    t = T.norm(_open(nid, 33))
+    m = re.search(r"I\. Πέντε \((\d+)\) τουλάχ", t) or re.search(r"I\. \w+ \((\d+)\) τουλάχ", t)
+    if not m:
+        raise SourceUnavailable("escrow project count not found on p33")
+    return {"value": int(m.group(1)), "pages": [33], "quote": m.group(0)}
+
+
+def _obs_duration(nid: str) -> dict:
+    t = T.norm(_open(nid, 17))
+    m = re.search(r"διάρκεια της σύμβασης ορίζεται σε \w+ \((\d+)\) μήνες", t)
+    if not m:
+        raise SourceUnavailable("duration not found on p17")
+    return {"value": int(m.group(1)), "pages": [17], "quote": m.group(0)}
+
+
+def _obs_iso_count(nid: str) -> dict:
+    t = T.norm(_open(nid, 36) + " " + _open(nid, 37))
+    i, j = t.find("2.2.7"), t.find("2.2.8")
+    sect = t[i:j if j > i else None]
+    stds = sorted(set(re.findall(r"ISO(?:/IEC)?\s*(\d{4,5})", sect)))
+    if not stds:
+        raise SourceUnavailable("no ISO standards found in §2.2.7")
+    return {"value": len(stds), "pages": [36, 37], "quote": ", ".join("ISO " + s for s in stds)}
+
+
+OBSERVERS: dict[str, Callable[[str], dict]] = {
+    "initial_budget_ex_vat_eur": _obs_budget,
+    "participation_guarantee_eur": _obs_guarantee,
+    "turnover_3y_min_eur": _obs_turnover,
+    "performance_guarantee_eur": _obs_perf_guarantee,
+    "submission_deadline": lambda nid: _obs_date(nid, "ΥΠΟΒΟΛΗΣ"),
+    "technical_opening": lambda nid: _obs_date(nid, "ΑΠΟΣΦΡΑΓΙΣΗΣ ΠΡΟΣΦΟΡΩΝ"),
+    "escrow_projects_required": _obs_escrow_count,
+    "contract_duration_months": _obs_duration,
+    "iso_certificates_required": _obs_iso_count,
+}
+
+
+def same_value(claimed, observed) -> bool:
+    if claimed is None:
+        return False
+    if isinstance(observed, (int, float)):
+        try:
+            return abs(float(claimed) - float(observed)) <= 0.5
+        except (TypeError, ValueError):
+            return False
+    return str(claimed).strip().replace(" ", "T")[:16] == str(observed)[:16]
+
+
+def check_field_value(claim: dict) -> dict:
+    nid, field = claim["notice_id"], claim["check"]["field"]
+    obs = OBSERVERS[field](nid)
+    return {
+        "method": "reread_tender_pdf_page",
+        "source": f"RFP PDF p{'+'.join(map(str, obs['pages']))} via text/pages.json",
+        "observed": {field: obs["value"], "quote": obs["quote"]},
+        "mismatch": not same_value(claim["value"], obs["value"]),
+    }
+
+
 def _open_claim_page(claim: dict) -> tuple[str, int]:
     nid, pg = _page(claim)
     _open(nid, pg)
@@ -172,6 +281,7 @@ CHECKS: dict[str, Check] = {
     "file_readable": check_file_readable,
     "ics_deadline": check_ics_deadline,
     "zip_entries": check_zip_entries,
+    "field_value": check_field_value,
 }
 
 

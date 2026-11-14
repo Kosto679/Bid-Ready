@@ -5,3 +5,6 @@ __pycache__/
 *.db
 out/
 data/tender-demo/**/*.zip
+# never commit cloud credentials
+*-sa.json
+service-account*.json

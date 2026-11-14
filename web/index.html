@@ -74,6 +74,14 @@ pre{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);borde
     <div id="packOut" style="margin-top:12px"></div>
     <p class="m">A human reviews, signs, and submits on ΕΣΗΔΗΣ (promitheus.gov.gr). Bid-Ready stops here.</p>
   </section>
+
+  <section class="card" id="s5">
+    <div class="step">Model check</div>
+    <h2>How often does the model get the tender facts right?</h2>
+    <p class="m">Gemini extracts nine facts from TED 769674-2026; the verifier re-reads the PDF page and grades every answer. "Headline" gives the model only the TED metadata; "Page" gives it the cited page.</p>
+    <div class="row"><button id="go5">Run model check</button><span class="m" id="evalMeta"></span></div>
+    <div id="evalOut" style="margin-top:12px"></div>
+  </section>
 </main>
 <script>
 const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -127,6 +135,20 @@ async function renderReceipts(){const d=await (await fetch(`/api/runs/${runId}/r
 $('#go4').onclick=async()=>{busy($('#go4'),true);try{const r=await post('/api/pack',{run_id:runId,notice_id:noticeId});
   $('#packOut').innerHTML=`<p><span class="pill ${r.ready?'VERIFIED':'FAILED'}">${r.ready?'READY':'NOT READY'}</span> ${esc((r.entries||[]).join(' · '))}</p><p><a href="/api/runs/${runId}/zip">Download ${esc((r.zip_path||'').split(/[\\/]/).pop())}</a></p>`;
   renderReceipts();}catch(e){alert(e)}busy($('#go4'),false)};
+
+const pct=v=>v==null?'—':Math.round(v*100)+'%';
+const OUT={correct:'VERIFIED',wrong:'FAILED',abstained:'RECORDED',error:'UNVERIFIED'};
+function renderEval(d){
+  const r=d.result;
+  $('#evalMeta').textContent=d.configured===false?`Not configured: ${d.why}`:(r?`${r.model} · ${r.ts}`:`Model: ${d.model||''}`);
+  if(!r){$('#evalOut').innerHTML='<p class="m">No eval run yet.</p>';return}
+  const s=Object.entries(r.summary).map(([c,v])=>`<tr><td><b>${esc(c)}</b></td><td>${v.correct}</td><td>${v.wrong}</td><td>${v.abstained}</td><td>${v.errors}</td><td><b>${pct(v.accuracy)}</b></td><td>${pct(v.precision)}</td><td>${pct(v.grounded)}</td></tr>`).join('');
+  const rows=r.rows.map(x=>`<tr><td>${esc(x.condition)}</td><td>${esc(x.field)}</td><td>${x.value==null?'<span class="m">abstained</span>':esc(x.value)}</td><td>${esc(x.observed??'')}</td><td><span class="pill ${OUT[x.outcome]}">${esc(x.outcome)}</span></td></tr>`).join('');
+  $('#evalOut').innerHTML=`<table><tr><th>Condition</th><th>Correct</th><th>Wrong</th><th>Abstained</th><th>Errors</th><th>Accuracy</th><th>Precision</th><th>Grounded</th></tr>${s}</table>
+    <table style="margin-top:14px"><tr><th>Condition</th><th>Field</th><th>Model said</th><th>Page says</th><th>Outcome</th></tr>${rows}</table>`;
+}
+fetch('/api/evals/latest').then(r=>r.json()).then(renderEval).catch(()=>{});
+$('#go5').onclick=async()=>{busy($('#go5'),true);try{const d=await post('/api/evals/run',{conditions:['headline','page'],trials:1});renderEval({...d,configured:true})}catch(e){alert(e)}busy($('#go5'),false)};
 </script>
 </body>
 </html>

@@ -44,6 +44,22 @@ Demo profile: 8-person Athens studio, €350,000 3-year turnover, ISO 9001 only,
 
 **Honest note.** `data/tender-demo/769674-2026/requirements.json` is a human-curated clause index prepared before the hackathon. It tells the agent *what* to check and *where*. The verifier never grades against it; it re-opens the cited page text from the tender PDF. Fixtures and cached documents were prepared before Saturday 13:00; the code was built after (see commit times).
 
+## Model eval (Gemini on the contest's Google Cloud)
+
+How often does a model get the tender facts right? Gemini extracts nine facts from TED 769674-2026 (budget, both guarantees, turnover threshold, deadline, opening, escrow projects, duration, ISO count). The verifier re-reads the PDF page and grades every answer: correct, wrong, abstained, or error. The answer key is never `requirements.json`.
+
+- **headline**: the model sees only TED metadata (the €300,000 headline). Abstaining is the right answer for most fields.
+- **page**: the model sees the cited page text.
+- **full**: the whole RFP text (large; opt-in).
+
+```bash
+gcloud auth application-default login       # once, with the contest account
+# .env: GOOGLE_CLOUD_PROJECT=<contest project id>, GOOGLE_CLOUD_LOCATION=global, GEMINI_MODEL=<model id>
+python -m app.evals --conditions headline,page --trials 3
+```
+
+Results land in `out/evals/` (JSON + Markdown) and in the UI's "Model check" panel. Every graded answer is also a receipt.
+
 ## Out of scope
 
 Submitting on ΕΣΗΔΗΣ, fetching the ESPD `.xml`, parsing the full 137-page διακήρυξη from scratch.
