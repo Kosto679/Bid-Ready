@@ -344,13 +344,35 @@ def _src_name(src: dict) -> str:
 def check_rule_quote(claim: dict) -> dict:
     """Any source: the quote is in the re-opened page/block, and each `must` group has a form present in the quote."""
     c = claim["check"]
-    text = T.norm(_open_src(c.get("source")))
+    src = c.get("source") or {}
+    text = T.norm(_open_src(src))
     q = T.norm(c.get("quote") or "")
     on_page = bool(q) and q in text
+    spans_next = False
+    if q and not on_page and src.get("kind") == "pack":
+        # a quote may run onto the next page; drop page footers ("Σελ. 16", "20 - 103") at the join
+        try:
+            nxt = T.norm(T.pack_page(src["pack"], int(src["page"]) + 1))
+        except (IndexError, FileNotFoundError, ValueError):
+            nxt = ""
+        try:  # a running header repeats at the top of consecutive pages: drop it
+            after = T.norm(T.pack_page(src["pack"], int(src["page"]) + 2))
+            k = 0
+            while k < min(len(nxt), len(after), 400) and nxt[k] == after[k]:
+                k += 1
+            if k >= 20:
+                nxt = nxt[k:].lstrip()
+        except (IndexError, FileNotFoundError, ValueError):
+            pass
+        foot = re.compile(r"\s*(Σελ(?:ίδα)?\.?\s*\d+(?:\s*(?:από|/)\s*\d+)?|\d{1,3}\s*-\s*\d{2,3})\s*$")
+        joined = foot.sub("", text) + " " + nxt
+        if q in joined or q in T.norm(joined):
+            on_page = spans_next = True
+            text = joined
     groups = c.get("must") or []
     found = [any(T.norm(f) in q for f in g) for g in groups]
-    return {"method": "reread_source", "source": _src_name(c["source"]),
-            "observed": {"quote_in_source": on_page, "values_in_quote": found},
+    return {"method": "reread_source", "source": _src_name(c["source"]) + (" (continues on the next page)" if spans_next else ""),
+            "observed": {"quote_in_source": on_page, "values_in_quote": found, "spans_next_page": spans_next},
             "mismatch": not (on_page and all(found))}
 
 

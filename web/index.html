@@ -273,11 +273,14 @@ function renderFoot(){
   back.disabled=pane==='s1';
   go2.classList.toggle('hidden', pane!=='s1'||$('#profileBox').classList.contains('hidden'));
   goE.classList.toggle('hidden', pane!=='sFit');
-  toP.classList.toggle('hidden', pane!=='s3'||!hasPack());
-  hint.textContent=pane==='s2'?'Choose a tender.':pane==='s3'&&!hasPack()?'This is as far as this tender goes.':'';
+  // Always visible on the eligibility step; greyed out with the reason until the pack can be built.
+  const packReason=noticeId!=='769674-2026'?'The letter and pack are ΚτΠ-only for now.':!hasPack()?'Drafting your letter…':'';
+  toP.classList.toggle('hidden', pane!=='s3');
+  toP.disabled=!!packReason;toP.title=packReason;
+  hint.textContent=pane==='s2'?'Choose a tender.':pane==='s3'?packReason:'';
 }
 $('#back').onclick=()=>{if(pane==='s4')showStep('s3');else if(pane==='s3')showStep('sFit');else if(pane==='sFit')showStep('s2');else if(pane==='s2')showStep('s1')};
-$('#toPack').onclick=()=>showStep('s4');
+$('#toPack').onclick=()=>{if(!$('#toPack').disabled)showStep('s4')};
 showStep('s1');
 
 /* ---- glossary ---------------------------------------------------------------------------- */
