@@ -115,7 +115,10 @@ CPV_DIVISIONS = {
 
 
 def division_name(code: str) -> str:
-    return CPV_DIVISIONS.get(_digits(code)[:2], "other")
+    """Short sentence-friendly name; falls back to the CPV list's official division label."""
+    from . import cpv
+
+    return CPV_DIVISIONS.get(_digits(code)[:2]) or cpv.division(code).lower()
 
 
 def explain(notice: dict, profile: dict, cpv: float, matches: int, val: float, place: float, days: int | None) -> dict:

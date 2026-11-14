@@ -10,6 +10,7 @@ import hashlib
 import re
 from typing import Any
 
+from . import cpv
 from .receipts import new_run_id, write_receipt
 
 CITY_NUTS = {
@@ -19,15 +20,6 @@ CITY_NUTS = {
     "heraklion": "EL43", "ηράκλειο": "EL43",
     "ioannina": "EL54", "larissa": "EL61", "volos": "EL61",
 }
-
-CPV_HINTS = [
-    (r"software|app|web|platform|saas|develop|λογισμικ|εφαρμογ", ["72000000", "72200000", "72260000"]),
-    (r"consult|σύμβουλ", ["72220000"]),
-    (r"data|analytics|ai\b|machine learning|δεδομέν", ["72300000", "72316000"]),
-    (r"cloud|hosting|devops|φιλοξεν", ["72400000", "72415000"]),
-    (r"support|maintenance|υποστήριξ|συντήρησ", ["72250000", "72267000"]),
-    (r"security|cyber|ασφάλει", ["72212730"]),
-]
 
 QUESTIONS = {
     "turnover_2023_2025_total_eur": "What was your total turnover for 2023 + 2024 + 2025 combined (EUR)?",
@@ -54,17 +46,12 @@ def _parse_lines(text: str) -> dict[str, Any]:
             break
     if not location and ("greece" in low or "ελλάδα" in low):
         location, nuts = "Greece", "GRC"
-    cpvs: list[str] = []
-    for pat, codes in CPV_HINTS:
-        if re.search(pat, low):
-            cpvs += [c for c in codes if c not in cpvs]
     return {
         "name": name or "Your company",
         "summary": t.replace("\n", " "),
         "size": size,
         "location": location,
         "nuts_or_country": nuts,
-        "cpv_codes": cpvs,
     }
 
 
@@ -114,6 +101,11 @@ def apply_answers(profile: dict, answers: dict | None) -> dict:
         p["public_sector_projects_last_5y"] = None if v in (None, "", "skip") else v
     if "profitable_last_3y" in answers:
         p["profitable_last_3y"] = answers["profitable_last_3y"]
+    if isinstance(answers.get("cpv_codes"), list):
+        # The person removed (or kept) codes on the profile card: only keep valid codes they chose.
+        keep = [cpv.digits(c) for c in answers["cpv_codes"] if cpv.valid(c)]
+        p["cpv_codes"] = keep
+        p["cpv_detail"] = [d for d in p.get("cpv_detail") or [] if d["code"] in keep]
     return p
 
 
@@ -150,6 +142,9 @@ def onboard(lines: str = "", answers: dict | None = None, profile_json: dict | N
         base.update(parsed or _parse_lines(lines))
         if not parsed:
             source = "rules"
+        # CPV codes: Gemini picks from the curated list (app/cpv.py), keyword rules otherwise.
+        g = cpv.guess(lines)
+        base.update(cpv_codes=g["codes"], cpv_detail=g["detail"], cpv_source=g["source"], cpv_note=g["note"])
     profile = apply_answers(base, answers)
     questions = missing_questions(profile)
     receipt = write_receipt({

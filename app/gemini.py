@@ -59,6 +59,61 @@ def client():
     return _client
 
 
+CPV_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "codes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "code": {"type": "string", "description": "An 8-digit code copied exactly from the list."},
+                    "reason": {"type": "string", "description": "Under 12 words, quoting the words from the description that justify it."},
+                },
+                "required": ["code", "reason"],
+            },
+        }
+    },
+    "required": ["codes"],
+}
+
+CPV_SYSTEM = (
+    "You assign EU CPV (Common Procurement Vocabulary) codes to a company so it can find public tenders it could win. "
+    "Choose ONLY codes from the list provided, copied exactly. Pick 2 to 6 codes for what the company actually sells, "
+    "most specific first; include the broad division code only if it adds coverage. Do not pick codes for its clients' "
+    "industries (a software studio serving hotels is not a hotel). Give each a short reason quoting the description."
+)
+
+_cpv_cache: dict[str, list[dict]] = {}
+
+
+def suggest_cpv(description: str, model: str | None = None) -> list[dict]:
+    """Returns [{"code", "reason"}] straight from the model (validate against app.cpv before use). Cached per text."""
+    from google.genai import types
+
+    from . import cpv
+
+    key = description.strip()
+    if key in _cpv_cache:
+        return _cpv_cache[key]
+    resp = client().models.generate_content(
+        model=model or MODEL,
+        contents=f"CPV CODES YOU MAY USE:\n{cpv.prompt_list()}\n\nCOMPANY DESCRIPTION:\n<<<\n{description}\n>>>",
+        config=types.GenerateContentConfig(
+            system_instruction=CPV_SYSTEM,
+            temperature=0,
+            response_mime_type="application/json",
+            response_json_schema=CPV_SCHEMA,
+        ),
+    )
+    try:
+        out = json.loads(resp.text or "{}").get("codes", [])
+    except json.JSONDecodeError:
+        out = []
+    _cpv_cache[key] = out
+    return out
+
+
 def ask(question: str, context: str, model: str | None = None) -> dict[str, Any]:
     """One extraction: returns {"value", "quote", "raw", "model"}. Raises on transport errors."""
     from google.genai import types
