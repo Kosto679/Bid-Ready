@@ -26,6 +26,8 @@ class OnboardIn(BaseModel):
 class MatchesIn(BaseModel):
     profile: dict[str, Any]
     run_id: str | None = None
+    value_min: float | None = None
+    value_max: float | None = None
 
 
 class PrepareIn(BaseModel):
@@ -56,7 +58,7 @@ def api_onboard(body: OnboardIn) -> dict:
 
 @app.post("/api/matches")
 def api_matches(body: MatchesIn) -> dict:
-    return agent.shortlist(body.profile, run_id=body.run_id)
+    return agent.shortlist(body.profile, run_id=body.run_id, value_min=body.value_min, value_max=body.value_max)
 
 
 @app.post("/api/prepare")

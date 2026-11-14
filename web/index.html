@@ -96,6 +96,10 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
 @keyframes enter{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .cor-foot{position:sticky;bottom:0;background:var(--bg);border-top:1px solid var(--line);padding:14px 28px calc(14px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:880px;margin:0 auto;width:100%}
 .cor-foot .right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+/* estimated-value filter */
+.vfilter{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.vfilter label{margin:0;font-weight:600;font-size:13px}.vfilter input{width:130px;padding:7px 9px}
+.linkbtn{background:none;border:0;padding:0;color:var(--accent);font:inherit;font-weight:600;cursor:pointer;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -131,6 +135,12 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
         <p><b>Value vs turnover</b> = your 2023–2025 turnover ÷ (2 × the TED value), capped at 1. TED's value can include options, so this is rough. <b>Place</b> = 1 if the work is in Greece and so are you. <b>Deadline</b> = days left ÷ 45, capped at 1: more time to prepare scores higher.</p>
         <p>Each factor counts 25%, so the score is 25 × the sum of the four, from 0 to 100.</p>
       </details>
+      <div class="vfilter">
+        <label for="vmin">Estimated value (TED) from</label><input id="vmin" inputmode="numeric" placeholder="any">
+        <label for="vmax">to</label><input id="vmax" inputmode="numeric" placeholder="any">
+        <button type="button" id="vApply" class="ghost">Apply</button><button type="button" id="vClear" class="linkbtn">Clear</button>
+      </div>
+      <p class="m" id="vmaxHint" style="margin:4px 0 10px"></p>
       <div id="matches"></div>
     </section>
 
@@ -304,18 +314,34 @@ async function doOnboard(prefill){busy($('#go1'),true);try{
 $('#go2').onclick=async()=>{busy($('#go2'),true);try{
   const a={cpv_codes:profile.cpv_codes||[]};document.querySelectorAll('#questions input').forEach(i=>{a[i.dataset.f]=i.value.trim()===''?null:i.value.trim()});
   const r=await post('/api/onboard',{lines:$('#lines').value,answers:a,run_id:runId});profile=r.profile;
-  const m=await post('/api/matches',{profile,run_id:runId});
+  const t=profile.turnover_2023_2025_total_eur;
+  if(!$('#vmax').dataset.touched){$('#vmax').value=t?Math.round(t/2000)*1000:''}
+  $('#vmaxHint').textContent=t?`Default: half your 3-year turnover (${eur(t/2)}). Tenders usually ask for turnover of about twice their value to bid alone; raise it if you'd bid with a partner.`:'Add your turnover to get a suggested maximum.';
+  await runMatches();
+}catch(e){alert(e)}busy($('#go2'),false)};
+
+const numOrNull=v=>{const x=String(v||'').replace(/[^\d]/g,'');return x?Number(x):null};
+$('#vmin').oninput=$('#vmax').oninput=e=>{e.target.dataset.touched='1'};
+$('#vApply').onclick=async()=>{busy($('#vApply'),true);try{await runMatches()}catch(e){alert(e)}busy($('#vApply'),false)};
+$('#vClear').onclick=async()=>{$('#vmin').value='';$('#vmax').value='';$('#vmax').dataset.touched='1';try{await runMatches()}catch(e){alert(e)}};
+
+async function runMatches(){
+  const m=await post('/api/matches',{profile,run_id:runId,value_min:numOrNull($('#vmin').value),value_max:numOrNull($('#vmax').value)});
   MATCHES=Object.fromEntries(m.matches.map(n=>[n.publication_number,n]));
-  const S=m.searched||{};
+  const S=m.searched||{}, F=S.filter||{};
   const divs=(S.divisions||[]).map(d=>`<b>${esc(d.code)}</b> ${esc(d.label)}`).join(' · ');
+  const range=F.value_min||F.value_max?`${F.value_min?eur(F.value_min):'any'} – ${F.value_max?eur(F.value_max):'any'}`:'';
   $('#matches').innerHTML=`<p class="m">Searched ${m.source==='ted_live'?'the live TED Search API':'the local cache (TED unreachable, live hop UNVERIFIED)'} for open tenders in Greece in your ${termBtn('cpv','CPV')} division${(S.divisions||[]).length>1?'s':''}: ${divs}.
-    ${S.total_on_ted!=null?`TED has <b>${S.total_on_ted}</b>; we scored all <b>${S.scored}</b> and show the best ${Math.min(S.shown,8)}.`:''}</p>`+m.matches.map(n=>`
+    ${S.total_on_ted!=null?`TED has <b>${S.total_on_ted}</b>; we scored all <b>${S.scored}</b>.`:''}
+    ${range?`Estimated value ${esc(range)}: <b>${F.hidden}</b> hidden${F.hidden?` (<button type="button" class="linkbtn" id="vShowAll">show all</button>)`:''}${F.unknown_value?`, ${F.unknown_value} with no value on TED kept`:''}.`:''}
+    Showing the best ${Math.min(S.shown,8)}.</p>`+m.matches.map(n=>`
     <button type="button" class="match" data-n="${esc(n.publication_number)}"><div class="score ${band(n.fit_score)}" title="${band(n.fit_score)} fit">${n.fit_score}<span class="mk">${MARK[band(n.fit_score)]}</span><small>fit</small></div>
-    <div><div class="t">${n.pinned?'<span class="pill RECORDED">Demo tender, not in your top 8</span> ':''}${esc((n.title||'').replace(/^Ελλάδα – /,''))}</div><div class="m">${esc(n.buyer_name)} · TED ${esc(n.publication_number)} · <a href="${esc(n.ted_url)}" target="_blank" rel="noopener">notice</a></div><div class="m">${esc(n.reason)}</div>${factorBars(n.factors)}</div>
+    <div><div class="t">${n.pinned?`<span class="pill RECORDED">Demo tender, ${esc(n.pinned_reason||'not in your top 8')}</span> `:''}${n.value_unknown?'<span class="pill RECORDED">no value on TED</span> ':''}${esc((n.title||'').replace(/^Ελλάδα – /,''))}</div><div class="m">${esc(n.buyer_name)} · TED ${esc(n.publication_number)} · <a href="${esc(n.ted_url)}" target="_blank" rel="noopener">notice</a></div><div class="m">${esc(n.reason)}</div>${factorBars(n.factors)}</div>
     <span class="pill ${n.publication_number==='769674-2026'?'VERIFIED':'RECORDED'}">${n.publication_number==='769674-2026'?'PDF on file':'TED only'}</span></button>`).join('');
   document.querySelectorAll('#matches .match').forEach(b=>b.onclick=e=>{if(e.target.closest('a'))return;prepare(b.dataset.n)});
+  const all=$('#vShowAll');if(all)all.onclick=()=>$('#vClear').click();
   showStep('s2');
-}catch(e){alert(e)}busy($('#go2'),false)};
+}
 
 function renderProfile(){
   const det=profile.cpv_detail||[];

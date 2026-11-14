@@ -10,17 +10,38 @@ DEMO_NOTICE = "769674-2026"
 FETCH = 100  # notices pulled from TED per search; all are scored before the top N are shown
 
 
-def shortlist(profile: dict, run_id: str | None = None, limit: int = 8) -> dict:
-    """Search TED in the profile's CPV divisions, score every result, return the best `limit` (+ the demo tender)."""
+def default_value_max(profile: dict) -> float | None:
+    """Half the 3-year turnover: tenders typically ask for turnover of ~200% of the value to qualify alone."""
+    t = profile.get("turnover_2023_2025_total_eur")
+    return round(t / 2, -3) if t else None
+
+
+def in_value_range(notice: dict, vmin: float | None, vmax: float | None) -> bool | None:
+    """True/False, or None when TED has no estimated value (kept, but flagged)."""
+    v = notice.get("estimated_value")
+    if v is None:
+        return None
+    return (vmin is None or v >= vmin) and (vmax is None or v <= vmax)
+
+
+def shortlist(profile: dict, run_id: str | None = None, limit: int = 8,
+              value_min: float | None = None, value_max: float | None = None) -> dict:
+    """Search TED in the profile's CPV divisions, score every result, keep those inside the estimated-value
+    range (unknown values are kept and flagged), return the best `limit` (+ the demo tender)."""
     run_id = run_id or new_run_id()
     divisions = sorted({cpv.digits(c)[:2] for c in profile.get("cpv_codes") or [] if len(cpv.digits(c)) >= 2}) or ["72"]
     found = ted.find_tenders(limit=FETCH, run_id=run_id, include=[DEMO_NOTICE], cpv_divisions=divisions)
     scored = scoring.score_tenders(found["notices"], profile, run_id=run_id)["scored"]
-    top = scored[:limit]
+    kept, hidden = [], []
+    for s in scored:
+        ok = in_value_range(s, value_min, value_max)
+        (hidden if ok is False else kept).append({**s, "value_unknown": ok is None})
+    top = kept[:limit]
     demo = next((s for s in scored if s["publication_number"] == DEMO_NOTICE), None)
-    if demo and demo not in top:
-        demo = {**demo, "pinned": True}  # shown for the demo even though it didn't make the top N
-        top.append(demo)
+    if demo and not any(t["publication_number"] == DEMO_NOTICE for t in top):
+        outside = in_value_range(demo, value_min, value_max) is False
+        # shown for the demo even though it didn't make the list
+        top.append({**demo, "pinned": True, "pinned_reason": "outside your value range" if outside else "not in your top 8"})
     return {
         "run_id": run_id,
         "source": found["source"],
@@ -31,6 +52,9 @@ def shortlist(profile: dict, run_id: str | None = None, limit: int = 8) -> dict:
             "total_on_ted": found["total"],
             "scored": len(scored),
             "shown": len(top),
+            "filter": {"value_min": value_min, "value_max": value_max, "hidden": len(hidden),
+                       "unknown_value": sum(k["value_unknown"] for k in kept),
+                       "default_max": default_value_max(profile)},
         },
         "receipts": [found["receipt"]],
     }
