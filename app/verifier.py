@@ -371,6 +371,10 @@ def check_rule_quote(claim: dict) -> dict:
             text = joined
     groups = c.get("must") or []
     found = [any(T.norm(f) in q for f in g) for g in groups]
+    if found and not found[0] and c.get("amount"):
+        # same figure written with cents or rounded by the reader: within €1 counts
+        nums = [T.parse_eur(m) for m in re.findall(r"\d{1,3}(?:\.\d{3})+,\d{2}|\d{1,3}(?:\.\d{3})+|\d+,\d{2}", q)]
+        found[0] = any(abs(x - float(c["amount"])) <= 1 for x in nums)
     return {"method": "reread_source", "source": _src_name(c["source"]) + (" (continues on the next page)" if spans_next else ""),
             "observed": {"quote_in_source": on_page, "values_in_quote": found, "spans_next_page": spans_next},
             "mismatch": not (on_page and all(found))}

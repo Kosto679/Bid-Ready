@@ -51,6 +51,18 @@ def test_wrong_amount_fails_quote_and_arithmetic():
     assert rec["rule:guarantee"] == "FAILED" and rec["rule:guarantee:arith"] == "FAILED"
 
 
+def test_turnover_amount_computed_when_reader_leaves_it_empty():
+    def no_amount(ctx):
+        d = ktp_reader(ctx)
+        d["turnover"] = {**d["turnover"], "min_eur": None}     # rule found, amount not computed
+        return d
+    r = RL.read(KTP, reader=no_amount)
+    t = r["rules"]["turnover"]
+    assert t["min_eur"] == 400000 and t["computed"] is True    # 200% x the €200,000 budget it read
+    rec = {x["intent"]["claim_id"]: x["status"] for x in verifier.verify("rules_t3", r["claims"])}
+    assert rec["rule:turnover:arith"] == "VERIFIED"           # and the 200% is really on the page
+
+
 def test_compare_with_profile(studio_profile):
     rows = {r["id"]: r for r in RL.compare(ktp_reader(""), studio_profile)}
     assert rows["turnover"]["status"] == "missing"          # 350k < 400k total

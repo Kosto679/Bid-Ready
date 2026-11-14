@@ -16,33 +16,39 @@ Source: https://www.powergame.gr/start-ups-digital/1039587/i-athanati-grafeiokra
 
 Open with the statistic above. Then one line: "That paperwork is the job. We finish a checked pack, and we do not mark it ready on the agent's word."
 
-### 0:10–0:25 — Onboard
+*(Rewritten Sat 14 Nov evening: the demo now has a "no" and a "yes". Demo studio: 8 people, Athens, €400,000 turnover over 2023–25, ISO 9001, two small municipal websites.)*
 
-Paste two lines (or a website) about an 8-person Athens studio. Show the profile appear, and the agent asking for turnover, certificates, and public-sector projects in the last 5 years. Answer that last question (e.g. "none" or "two small sites, not escrow") so experience can be missing rather than unclear.
+### 0:10–0:20 — Onboard
 
-### 0:25–0:55 — Ranked matches, then a deliberate choice
+"Use demo studio": the profile appears with CPV codes and a reason for each. The three answers (turnover, certificates, public projects) are prefilled.
 
-Show two or three tenders already scored and sorted, each with a one-line reason from the TED formula (CPV, value vs turnover, place, days to deadline). The app searches TED in the profile's CPV divisions and scores every open notice (49 for IT on Sat 14 Nov), then shows the best 8. ΚτΠ scores **77 and ranks about 4th** for the demo studio on the rule of thumb (it rises to 85 once "Prepare bid" has read its real turnover rule; delete `out/rule_cache.json` before recording to start from 77): one clean CPV match, Greece, 23 days to prepare. Point at it on the list and click "Prepare bid" to open the fit report. Say: "A strong fit on paper: right CPV, right place, three weeks to prepare. But a fit score isn't eligibility. Let's check." Open the real TED URL if the network is up: https://ted.europa.eu/en/notice/-/detail/769674-2026
+### 0:20–0:40 — Ranked matches
 
-*(Updated Sat 14 Nov: the ranking moves as tenders open and close. Re-check it on the morning of the demo. If ΚτΠ drops out of the top 8 it still appears, marked "Demo tender, not in your top 8".)*
+The app searches TED in the studio's CPV divisions, scores every open notice (49 for IT) and shows the best 8. ΚτΠ is near the top. Say: "A strong fit on paper. But a fit score isn't eligibility." Click it: the fit report, then "Continue".
 
-### 0:55–1:35 — Prepare bid
+### 0:40–1:10 — ΚτΠ: you can't bid alone
 
-Eligibility comes back as not eligible, with citations: missing escrow-payment projects (§2.2.6.1), missing ISOs (§2.2.7), turnover if the demo profile is under €400,000 total. One sentence on what a partnership would need. Open the Greek letter as outreach to a possible consortium partner. The judge should see a document, not only a chat bubble.
+Verdict: "You can't bid on this alone. You could join as a subcontractor." Turnover ✓ (€400,000 meets the €400,000 total), but ✗ five escrow-payment projects (§2.2.6.1, p33) and ✗ six ISOs (§2.2.7, p36). Each row links to its PDF page. Scroll to the Greek letter to a consortium partner: concrete proposal, dates, next steps.
 
-### 1:35–2:05 — The receipt
+### 1:10–1:30 — The catch
 
-The participation guarantee was computed as €6,000 because a naive extractor trusted TED's €300,000 headline; the cited PDF page says €4,000 (2% of €200,000). The receipt is FAILED. Say: "This is the exact mistake that headline invites. We do not mark this ready. That is the product."
+"How we checked our own reading": 15 checks, 1 corrected. "Our first reading put the guarantee at €6,000, 2% of TED's €300,000 headline. The tender says €4,000 on page 27. We use €4,000." Say: "That's the mistake that headline invites. The pack stays 'needs review' until a person sees it."
 
-### 2:05–2:30 — Handover
+### 1:30–2:00 — But here's one you can win (774438-2026)
 
-Unzip the pack live (ASCII names): consortium letter, checklist, receipts, `.ics` with the 7 Dec 14:00 Athens deadline. "A human signs and submits on ΕΣΗΔΗΣ. We stop here."
+Back to the list, open 774438-2026 (Asterousia biosphere digital repository, €125k). Point at the note: "Found in ΚΗΜΔΗΣ, read from its tender document": a tender nobody annotated. Turnover ✓ (≈ €133k a year vs €125,101 needed, p16), ISO 9001 ✓ (p17), team ?. Click "Answer" on the team: tick project manager, archaeologist and photographer (contracted). The verdict turns to "You can bid on this one", with the €2,502 guarantee and the 14 Dec deadline under "what you'd have to provide".
 
-### 2:30–2:50 — Agents can call it (~15 seconds)
+### 2:00–2:15 — Handover (ΚτΠ)
+
+Show the pack: letter, checklist, receipts, deadline file. "A human signs and submits on ΕΣΗΔΗΣ. We stop here."
+
+*(Before recording: re-check that 774438 still reads turnover, ISO and team. Gemini's reading varies run to run; the cached read in `out/rules_read/` is a verified one. Delete `out/rule_cache.json` only if you want ΚτΠ's score to start from the rule of thumb.)*
+
+### 2:15–2:40 — Agents can call it (~15 seconds)
 
 In Cursor, with the MCP server attached, one prompt: check eligibility on this tender. Show the tool result including the FAILED guarantee receipt. "People get a pack. Other agents get a receipt, not a vibe." If MCP is flaky, show the same call in a terminal. Do not skip this beat.
 
-### 2:50–3:00 — Close, then optional wow
+### 2:40–3:00 — Close, then optional wow
 
 Stop and offer questions. If an extra is working, use this last slice: the receipt wall, Firecrawl onboarding, or "you're missing tax clearance — here is the official MITOS procedure."
 

@@ -180,6 +180,23 @@ def _read(notice_id: str, reader: Callable[[str], dict] | None = None) -> dict:
             return {"notice_id": notice_id, "source": {**g, "note": f"Gemini not configured ({why}); rules not read."}, "rules": {}, "claims": []}
         reader = gemini_reader
     raw = reader(context(g["units"])) or {}
+    # Arithmetic is the code's job, not the model's: the reader reliably finds "turnover >= N% of the value"
+    # but sometimes leaves the amount empty. Fill it from the stated % and the budget it read; the
+    # rule_arith check then confirms the % is on the cited page.
+    t, b = raw.get("turnover") or {}, (raw.get("budget") or {}).get("amount_eur")
+    base_src = "the budget read from the tender"
+    if not b and g.get("adam"):
+        try:  # the register's cost excl. VAT (for ΚτΠ it equals the initial budget without options)
+            from . import khmdhs
+
+            b = (khmdhs.record(g["adam"]) or {}).get("cost_ex_vat")
+            base_src = f"the ΚΗΜΔΗΣ register's cost excl. VAT for ΑΔΑΜ {g['adam']}"
+        except Exception:
+            b = None
+    if isinstance(t, dict) and not t.get("min_eur") and t.get("percent_of_budget") and b:
+        raw["turnover"] = {**t, "min_eur": round(float(t["percent_of_budget"]) / 100 * float(b), 2), "computed": True,
+                           "computed_from": f"{t['percent_of_budget']:g}% of €{float(b):,.2f} ({base_src})"}
+        raw["_base"] = float(b)
     by_ref = {ref: (label, src) for ref, label, _, src in g["units"]}
     rules: dict[str, dict] = {}
     claims: list[dict] = []
@@ -226,12 +243,15 @@ def _read(notice_id: str, reader: Callable[[str], dict] | None = None) -> dict:
             "claim_id": f"rule:{key}", "notice_id": notice_id, "kind": "rule_quote", "origin": "check_eligibility", "actor": "gemini",
             "statement": f"{key}: {json.dumps({k: v for k, v in item.items() if k not in ('quote', 'ref', 'label')}, ensure_ascii=False)}",
             "citation": _citation(notice_id, hit[1], hit[0], item["quote"]),
-            "check": {"source": hit[1], "quote": item["quote"], "must": must},
+            "check": {"source": hit[1], "quote": item["quote"], "must": must,
+                      # an amount the model may have rounded (125,100.81 -> 125,101): accept within €1
+                      "amount": (item.get("amount_eur") if key in ("budget", "guarantee")
+                                 else item.get("min_eur") if key == "turnover" and not item.get("percent_of_budget") else None)},
             "value": item.get("amount_eur") or item.get("min_eur") or item.get("min_projects") or item.get("standards"),
             "required": True,
         })
     # arithmetic: % of budget must give the stated amount
-    b = (rules.get("budget") or {}).get("amount_eur")
+    b = (rules.get("budget") or {}).get("amount_eur") or raw.get("_base")
     for key, pct_field, amt_field in (("guarantee", "percent", "amount_eur"), ("turnover", "percent_of_budget", "min_eur")):
         r = rules.get(key) or {}
         if b and r.get(pct_field) and r.get(amt_field):
@@ -309,7 +329,8 @@ def verdict(rows: list[dict]) -> str:
     core = [r for r in rows if r["id"] in ("turnover", "experience", "iso")]
     if any(r["status"] == "missing" for r in core) or any(r["id"] == "team" and r["status"] == "missing" for r in rows):
         return "not_eligible"
-    if core and all(r["status"] == "meets" for r in core):
+    team_open = any(r["id"] == "team" and r["status"] == "unclear" for r in rows)  # on pain of exclusion: must be answered
+    if core and all(r["status"] == "meets" for r in core) and not team_open:
         return "eligible"
     return "unclear"
 

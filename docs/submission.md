@@ -24,10 +24,16 @@ Greek SMEs mostly stay out of public procurement. A 2024 Powergame report found 
 
 The same six tools are exposed over MCP, so other agents get a receipt, not a vibe.
 
-## Demo: TED 769674-2026 (Κοινωνία της Πληροφορίας, escrow-payments platform)
+## Demo: one tender you can't win alone, one you can
 
-- An 8-person Athens software studio is honestly **not eligible**: it lacks five public escrow-payment projects (§2.2.6.1) and six ISO certificates (§2.2.7), and its turnover is under the €400,000 three-year total (§2.2.5). The letter becomes outreach to a consortium partner.
-- TED's headline value is €300,000 (it includes a €100,000 option). A naive extractor computes a 2% participation guarantee of €6,000. The verifier re-reads §2.2.2.1 on PDF page 27 and finds €4,000. **FAILED**, so the pack is handed over as NOT READY.
+Demo company: an 8-person Athens software studio, €400,000 turnover over 2023–25, ISO 9001, two small municipal websites.
+
+**TED 769674-2026 (Κοινωνία της Πληροφορίας, escrow-payments platform): not alone.**
+- The studio meets the turnover rule (€400,000 total, §2.2.5), but lacks five public escrow-payment projects (§2.2.6.1) and six ISO certificates (§2.2.7). The verdict says so, and that it could join as a subcontractor (§2.2.9.2 B.10). The Greek letter becomes outreach to a consortium partner.
+- TED's headline value is €300,000 (it includes a €100,000 option). A naive extractor computes a 2% participation guarantee of €6,000. The verifier re-reads §2.2.2.1 on PDF page 27, finds €4,000 and corrects it; the pack stays "needs review" until a person sees it.
+
+**TED 774438-2026 (Asterousia biosphere digital repository, €125k): yes.**
+- Nobody annotated this tender. Bid-Ready found its document in ΚΗΜΔΗΣ, read it, and verified each rule against the PDF: average yearly turnover ≥ €125,101 (the studio has ≈ €133,000), ISO 9001 (held), and a named team of a project manager, an archaeologist and a photographer. The studio declares the team (contracted specialists), and the verdict becomes "You can bid on this one", with the €2,502 guarantee and the 14 Dec deadline listed.
 
 ## Model eval on the contest's Google Cloud
 

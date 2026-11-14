@@ -191,7 +191,7 @@ DEMO_LINES = (
 )
 
 DEMO_ANSWERS = {
-    "turnover_2023_2025_total_eur": 350000,
+    "turnover_2023_2025_total_eur": 400000,
     "certificates": "ISO 9001",
     "public_sector_projects_last_5y": "Two small municipal websites (2023, 2025); no escrow-payment systems.",
     "profitable_last_3y": True,

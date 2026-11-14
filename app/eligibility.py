@@ -346,6 +346,9 @@ def present(report: dict, profile: dict, receipts: list[dict], deadline: str | N
         r["kind"] = "provide" if r["id"] in PROVIDE_IDS else "rule"
         if not r.get("declared"):
             r["you"] = _you(r["id"], profile)
+            t = profile.get("turnover_2023_2025_total_eur")
+            if r["id"] == "turnover" and t is not None and "average" in r.get("title", "").lower():
+                r["you"] = f"≈ €{t / 3:,.0f} a year (€{t:,.0f} over 2023–25)"
     rules = [r for r in rows if r["kind"] == "rule"]
     missing = [r for r in rules if r["status"] == "missing"]
     verdict = report.get("verdict")
@@ -356,12 +359,19 @@ def present(report: dict, profile: dict, receipts: list[dict], deadline: str | N
         sub = (f"{len(missing)} of {len(rules)} rules missing. A partner would need to bring "
                + (", ".join(gaps[:-1]) + " and " + gaps[-1] if len(gaps) > 1 else gaps[0]) + ".")
     elif verdict == "eligible":
-        headline, sub = "You meet the rules we could check.", "Review the ones marked “we didn't ask” before you commit."
+        declared = [r for r in rules if r.get("declared")]
+        headline = "You can bid on this one."
+        sub = (f"You meet all {len(rules)} rules we found"
+               + (f", {len(declared)} of them self-declared: the buyer will ask for evidence." if declared else ".")
+               + " Arrange the guarantee and documents below.")
     elif not rules:
         headline, sub = "We couldn't read this tender's rules.", (report.get("source") or {}).get("note") or ""
     else:
+        open_ = [r for r in rules if r["status"] == "unclear"]
         headline = "We can't tell yet."
-        sub = f"{sum(r['status'] == 'unclear' for r in rules)} rule(s) depend on answers we don't have."
+        sub = (f"{len(open_)} rule{'s' if len(open_) != 1 else ''} need{'' if len(open_) != 1 else 's'} your answer: "
+               + ", ".join(SHORT.get(r["id"], r["title"]).replace("the ", "", 1) if r["id"] in SHORT else r["title"] for r in open_)
+               + ". Use “Answer” on those rows.")
     report["summary"] = {"headline": headline, "sub": sub, "missing": len(missing), "rules": len(rules),
                          "subcontract": subcontract and verdict == "not_eligible"}
 
