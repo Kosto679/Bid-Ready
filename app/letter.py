@@ -227,7 +227,7 @@ def _polish(draft: str, profile: dict) -> tuple[str | None, str]:
             model=gemini.MODEL,
             contents=POLISH_PROMPT + "ΠΡΟΦΙΛ:\n" + json.dumps({k: profile.get(k) for k in ("name", "summary", "public_sector_projects_last_5y")}, ensure_ascii=False)
                      + "\n\nΕΠΙΣΤΟΛΗ:\n" + draft,
-            config=types.GenerateContentConfig(temperature=0.3),
+            config=types.GenerateContentConfig(temperature=0.3, thinking_config=gemini.fast_thinking()),
         )
         text = (resp.text or "").strip()
         text = re.sub(r"^```(?:markdown)?\s*|\s*```$", "", text)

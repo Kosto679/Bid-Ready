@@ -34,6 +34,18 @@ pre{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);borde
 .factor em{grid-column:1/-1;font-style:normal;font-variant-numeric:tabular-nums}
 details.m{margin:-4px 0 12px}details.m summary{cursor:pointer;color:var(--accent);font-weight:600}details.m p{margin:8px 0}
 tr.changed td{background:var(--ambbg)}
+/* receipt wall */
+.wallh{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin:16px 0 8px}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.tile{border:1px solid var(--line);border-left-width:4px;border-radius:10px;padding:10px 12px;background:var(--card);display:flex;flex-direction:column;gap:4px;min-width:0;animation:tileIn .35s ease both}
+.tile .th{display:flex;gap:8px;align-items:baseline}.tile .sh{font-size:12px}
+.tile.VERIFIED{border-left-color:var(--ok)}.tile.VERIFIED .sh{color:var(--ok)}
+.tile.FAILED{border-color:var(--bad);border-left-width:4px;background:var(--badbg)}.tile.FAILED .sh{color:var(--bad)}
+.tile.UNVERIFIED,.tile.RECORDED{border-left-color:var(--amb)}.tile.UNVERIFIED .sh{color:var(--amb)}
+.tile .diff{font-size:14px}.tile a{text-decoration:none}.tile a:hover{text-decoration:underline}
+.VERIFIED-t{color:var(--ok)}.FAILED-t{color:var(--bad)}.UNVERIFIED-t{color:var(--amb)}
+@keyframes tileIn{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.tile{animation:none}}
 /* CPV chips on the profile card */
 .cpvbox{margin-top:10px;display:flex;flex-direction:column;gap:8px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
@@ -275,10 +287,29 @@ async function showEligibility(){const btn=$('#goElig');$('#s3').classList.remov
       :`<span class="pill RECORDED">Template</span> Built from the tender facts and your profile${fc.skipped?` (Gemini not used: ${esc(fc.skipped)})`:''}.`;
   }catch(e){alert(e)}}
 
+const SHAPE={VERIFIED:'●',FAILED:'▲',UNVERIFIED:'■',RECORDED:'■'};
+const GROUPS=[['fig','Figures re-read from the PDF'],['cite','Clauses found on their cited pages'],['pack','Handover files read back'],['letter','Letter fact check']];
+function groupOf(id){return id.startsWith('cite:')?'cite':id.startsWith('pack:')?'pack':id==='letter_facts'?'letter':'fig'}
+function tileLabel(r){const c=r.intent.claim||'',id=r.intent.claim_id||'';
+  const q=c.match(/Rule '([^']+)'/);if(q)return q[1];
+  return {participation_guarantee:'Participation guarantee',turnover_threshold:'Turnover threshold',deadline:'Submission deadline',
+    'pack:letter':'Consortium letter','pack:ics':'Deadline calendar file','pack:zip':'ZIP contents and names','letter_facts':'Gemini rewrite adds no facts'}[id]||c.replace(/\s*\(§.*$/,'').slice(0,80)}
+function pageLink(r){const cit=r.intent.citation||{};if(!cit.pdf_page)return'';
+  return `<a href="/api/tenders/769674-2026/rfp#page=${cit.pdf_page}" target="_blank" rel="noopener">§${esc(cit.section)} · PDF p${cit.pdf_page}${cit.printed_page?` / printed ${cit.printed_page}`:''} ↗</a>`}
+function tile(r,i){const ic=r.independent_check||{},o=ic.observed||{};
+  const claimed=r.tool_response&&r.tool_response.value!=null&&typeof r.tool_response.value!=='string'?r.tool_response.value:null;
+  const field=Object.keys(o).find(k=>typeof o[k]==='number'||/deadline/.test(k));
+  const detail=r.status==='FAILED'?`<div class="diff">Claimed <b>${esc(claimed??'?')}</b> · page says <b>${esc(field?o[field]:JSON.stringify(o))}</b></div><div class="m">${esc(r.reason||'')}</div>`
+    :r.status==='UNVERIFIED'?`<div class="m">${esc(r.reason||'Source could not be re-opened.')}</div>`
+    :(field&&o[field]!=null?`<div class="m">Page says ${esc(o[field])}</div>`:'');
+  return `<div class="tile ${r.status}" style="animation-delay:${i*40}ms"><div class="th"><span class="sh">${SHAPE[r.status]||'■'}</span><b>${esc(tileLabel(r))}</b></div>${detail}<div class="m">${pageLink(r)||esc(ic.source||'')}</div></div>`}
 async function renderReceipts(){const d=await (await fetch(`/api/runs/${runId}/receipts`)).json();const st=d.state;
   const checked=d.receipts.filter(r=>r.independent_check);
-  $('#receipts').innerHTML=checked.map(r=>`<div class="receipt ${r.status}"><span class="pill ${r.status}">${r.status}</span> ${esc(r.intent.claim)}
-    ${r.status!=='VERIFIED'?`<div class="m" style="margin-top:6px">Observed on the page: <b>${esc(JSON.stringify(r.independent_check.observed))}</b><br>Source: ${esc(r.independent_check.source)}<br>${esc(r.reason||'')}</div>`:`<div class="m">${esc(r.independent_check.source)}</div>`}</div>`).join('');
+  const count=s=>checked.filter(r=>r.status===s).length;
+  let i=0;
+  $('#receipts').innerHTML=`<p class="m"><span class="VERIFIED-t">● ${count('VERIFIED')} verified</span> · <span class="FAILED-t">▲ ${count('FAILED')} failed</span> · <span class="UNVERIFIED-t">■ ${count('UNVERIFIED')} unverified</span>. Every tile is one check the verifier made by re-reading the tender or a pack file. Click a page reference to open the PDF there.</p>`
+    +GROUPS.map(([g,title])=>{const rs=checked.filter(r=>groupOf(r.intent.claim_id||'')===g).sort((a,b)=>(a.status==='VERIFIED')-(b.status==='VERIFIED'));
+      return rs.length?`<h3 class="wallh">${title}</h3><div class="wall">${rs.map(r=>tile(r,i++)).join('')}</div>`:''}).join('');
   const s=$('#status');
   if(st.state==='ready'){s.className='banner yes';s.textContent='All checks verified against the tender. Ready for a human to sign.'}
   else if(st.state==='not_checked'){s.className='banner wait';s.textContent='Checks have not finished. Not ready.'}

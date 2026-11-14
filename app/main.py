@@ -102,6 +102,19 @@ def api_eval_run(body: EvalIn) -> dict:
         raise HTTPException(400, f"Gemini is not configured: {e}")
 
 
+@app.get("/api/tenders/{notice_id}/rfp")
+def api_rfp(notice_id: str) -> FileResponse:
+    """The tender's RFP PDF, inline, so links like .../rfp#page=27 open at the cited page."""
+    from . import tender_source as T
+
+    if notice_id != "769674-2026":
+        raise HTTPException(404)
+    p = T.notice_dir(notice_id) / T.rfp_file_rel()
+    if not p.exists():
+        raise HTTPException(404)
+    return FileResponse(p, media_type="application/pdf", filename=f"RFP_{notice_id}.pdf", content_disposition_type="inline")
+
+
 @app.get("/api/runs/{run_id}/letter")
 def api_letter(run_id: str) -> FileResponse:
     p = _safe(run_id) / "consortium_letter_el.md"

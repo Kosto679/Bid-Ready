@@ -7,6 +7,7 @@ eligibility marks experience UNCLEAR (not missing).
 from __future__ import annotations
 
 import hashlib
+from concurrent.futures import ThreadPoolExecutor
 import re
 from typing import Any
 
@@ -160,13 +161,15 @@ def onboard(lines: str = "", answers: dict | None = None, profile_json: dict | N
         rules = _parse_lines(lines)
         base.update(rules)
         source = "rules"
-        g_prof = _gemini_profile(lines)
+        # Profile fields and CPV codes are two independent Gemini calls: run them in parallel.
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            f_prof = pool.submit(_gemini_profile, lines)
+            f_cpv = pool.submit(cpv.guess, lines)  # Gemini picks from the curated list, keyword rules otherwise
+            g_prof, g = f_prof.result(), f_cpv.result()
         if g_prof:
             # Gemini fills only what it found; rules keep anything it left empty. The summary stays your own words.
             base.update({k: v for k, v in g_prof.items() if v not in (None, "")})
             source = "gemini"
-        # CPV codes: Gemini picks from the curated list (app/cpv.py), keyword rules otherwise.
-        g = cpv.guess(lines)
         base.update(cpv_codes=g["codes"], cpv_detail=g["detail"], cpv_source=g["source"], cpv_note=g["note"])
     profile = apply_answers(base, answers)
     questions = missing_questions(profile)
