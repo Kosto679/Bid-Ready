@@ -40,13 +40,9 @@ We asked Gemini (gemini-3.8-flash on Vertex AI) for nine facts from this tender 
 
 Every wrong answer was the same trap: given the headline, Gemini reported €300,000 as the initial budget (the page says €200,000). The verifier caught all three.
 
-## On a tender nobody prepared
-
-On the ΟΛΠΑ (Patras Port) notice, which has no clause index, Gemini finds the relevant pages and extracts the budget (€280,000), participation guarantee (€5,600), deadline (1 Dec 2026, 11:00) and the four required ISOs. The verifier checks each without an answer key: the quote must be on the cited page and contain the value, and the guarantee must equal the percentage its clause states (2%) times the extracted budget. All four, and the cross-check, came back VERIFIED.
-
 ## How it's built
 
-Python 3.11+ · FastAPI · MCP Python SDK (FastMCP, stdio) · SQLite receipts · TED Search API v3 · Gemini on Vertex AI (Google Cloud) for the eval harness · python-docx. 39 offline tests, including a golden end-to-end test on TED 769674-2026.
+Python 3.11+ · FastAPI · MCP Python SDK (FastMCP, stdio) · SQLite receipts · TED Search API v3 · Gemini on Vertex AI (Google Cloud) for profile reading, CPV codes, the letter rewrite and the eval harness · python-docx. 39 offline tests, including a golden end-to-end test on TED 769674-2026.
 
 ## Honest notes
 
@@ -56,7 +52,7 @@ Python 3.11+ · FastAPI · MCP Python SDK (FastMCP, stdio) · SQLite receipts ·
 
 ## What's next
 
-Automatic clause indexing for tenders we haven't annotated (starting with the ΟΛΠΑ backup), pre-filling the ΕΕΕΣ/ESPD, and a "what you're missing" path linked to the official gov.gr procedures.
+MCP tools that scan tenders with filters across TED and the Greek ΚΗΜΔΗΣ register, then index and check any of them automatically (starting with the ΟΛΠΑ backup), pre-filling the ΕΕΕΣ/ESPD, and a "what you're missing" path linked to the official gov.gr procedures.
 
 ## Links
 

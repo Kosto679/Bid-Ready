@@ -148,7 +148,9 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
     <p class="m">A human reviews, signs, and submits on <span data-term="esidis">ΕΣΗΔΗΣ</span> (promitheus.gov.gr). Bid-Ready stops here.</p>
   </section>
 
-  <section class="card" id="s6">
+  <!-- Parked: live extraction on an unannotated tender (ΟΛΠΑ). Remove "hidden" to bring it back,
+       e.g. once the MCP tools can scan tenders with filters. Backend: app/live_extract.py, POST /api/live/{id}. -->
+  <section class="card hidden" id="s6">
     <div class="step">Unannotated tender</div>
     <h2>Does it work on a tender nobody prepared?</h2>
     <p>A tender we never prepared: Patras Port's new app platform (ΟΛΠΑ, 98 pages). Gemini reads it live, and we prove every answer against the PDF.</p>
