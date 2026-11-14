@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bid-Ready</title>
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1d1d1b;--mute:#6b6a65;--line:#e4e2db;--accent:#1f4fd1;--ok:#137a3a;--okbg:#e5f4ea;--bad:#b42318;--badbg:#fdeceb;--amb:#9a6200;--ambbg:#fdf3dc}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--card:#1e1e1c;--ink:#ecebe6;--mute:#a09e97;--line:#33322f;--accent:#7aa2ff;--ok:#5fd08a;--okbg:#14301f;--bad:#ff8a80;--badbg:#3a1714;--amb:#f2c063;--ambbg:#34280f}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:980px;margin:0 auto;padding:24px 16px 80px}
+h1{font-size:26px;margin:0}h2{font-size:18px;margin:0 0 12px}.sub{color:var(--mute);margin:4px 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0}
+.step{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+textarea,input{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px}
+label{display:block;font-weight:600;margin:10px 0 4px}
+button{font:inherit;font-weight:600;border:0;border-radius:8px;padding:9px 16px;background:var(--accent);color:#fff;cursor:pointer}
+button.ghost{background:transparent;color:var(--accent);border:1px solid var(--line)}button:disabled{opacity:.5;cursor:wait}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.match{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:start;padding:12px 0;border-top:1px solid var(--line)}
+.score{font-size:22px;font-weight:700;text-align:center}.score small{display:block;font-size:11px;color:var(--mute);font-weight:400}
+.t{font-weight:600}.m{color:var(--mute);font-size:13px}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:99px}
+.meets,.VERIFIED{background:var(--okbg);color:var(--ok)}.missing,.FAILED{background:var(--badbg);color:var(--bad)}.unclear,.UNVERIFIED,.RECORDED{background:var(--ambbg);color:var(--amb)}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:8px 6px;border-top:1px solid var(--line);vertical-align:top}th{color:var(--mute);font-weight:600}
+.banner{border-radius:10px;padding:14px 16px;font-weight:600;margin:10px 0}
+.banner.wait{background:var(--ambbg);color:var(--amb)}.banner.no{background:var(--badbg);color:var(--bad)}.banner.yes{background:var(--okbg);color:var(--ok)}
+.receipt{border:1px solid var(--line);border-radius:10px;padding:12px;margin:8px 0}.receipt.FAILED{border-color:var(--bad);border-width:2px}
+pre{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;font:13px/1.55 ui-monospace,Consolas,monospace;max-height:420px;overflow:auto}
+.hidden{display:none}.q{margin:6px 0}a{color:var(--accent)}
+@media (max-width:600px){.match{grid-template-columns:44px 1fr}.match button{grid-column:2}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Bid-Ready</h1>
+  <p class="sub">From two lines about your company to a checked bid pack. Nothing is marked ready until an independent verifier re-reads the tender itself.</p>
+
+  <section class="card" id="s1">
+    <div class="step">1 · Onboard</div>
+    <h2>Tell us who you are</h2>
+    <textarea id="lines" rows="3" placeholder="e.g. We are an 8-person software studio in Athens building web apps…"></textarea>
+    <div class="row" style="margin-top:10px"><button id="go1">Build profile</button><button class="ghost" id="demo">Use demo studio</button></div>
+    <div id="profileBox" class="hidden" style="margin-top:14px">
+      <div id="profileSummary" class="m"></div>
+      <div id="questions"></div>
+      <div class="row" style="margin-top:10px"><button id="go2">Find matching tenders</button></div>
+    </div>
+  </section>
+
+  <section class="card hidden" id="s2">
+    <div class="step">2 · Ranked matches</div>
+    <h2>Open Greek IT tenders, scored on TED data</h2>
+    <p class="m">Fit = 25% CPV overlap + 25% TED value vs your 3-year turnover + 25% place + 25% days to deadline (capped at 45). This is a shortlist score, not eligibility.</p>
+    <div id="matches"></div>
+  </section>
+
+  <section class="card hidden" id="s3">
+    <div class="step">3 · Prepare bid</div>
+    <h2 id="s3title">Eligibility</h2>
+    <div id="status" class="banner wait">Checking against the tender pages… not ready.</div>
+    <div id="verdict"></div>
+    <table id="rules"></table>
+    <h2 style="margin-top:22px">Receipts</h2>
+    <div id="receipts"></div>
+    <h2 style="margin-top:22px">Consortium letter (Greek)</h2>
+    <pre id="letter"></pre>
+  </section>
+
+  <section class="card hidden" id="s4">
+    <div class="step">4 · Handover</div>
+    <h2>Download the pack</h2>
+    <div class="row"><button id="go4">Build handover ZIP</button></div>
+    <div id="packOut" style="margin-top:12px"></div>
+    <p class="m">A human reviews, signs, and submits on ΕΣΗΔΗΣ (promitheus.gov.gr). Bid-Ready stops here.</p>
+  </section>
+</main>
+<script>
+const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let runId=null,profile=null,answers={},noticeId=null;
+async function post(u,b){const r=await fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)});if(!r.ok)throw new Error(await r.text());return r.json()}
+function busy(btn,on){btn.disabled=on;if(on){btn.dataset.t=btn.textContent;btn.textContent='Working…'}else if(btn.dataset.t)btn.textContent=btn.dataset.t}
+const eur=v=>v==null?'—':'€'+Math.round(v).toLocaleString('en');
+
+$('#demo').onclick=async()=>{const d=await (await fetch('/api/demo')).json();$('#lines').value=d.lines;answers={};await doOnboard(d.answers)};
+$('#go1').onclick=()=>doOnboard(null);
+async function doOnboard(prefill){busy($('#go1'),true);try{
+  const r=await post('/api/onboard',{lines:$('#lines').value,answers:null,run_id:runId});runId=r.run_id;profile=r.profile;
+  $('#profileSummary').innerHTML=`<b>${esc(profile.name)}</b> · ${esc(profile.size??'?')} people · ${esc(profile.location??'location?')} · likely CPV ${esc((profile.cpv_codes||[]).join(', ')||'—')}`;
+  $('#questions').innerHTML='<p class="m" style="margin-top:10px">We could not work these out from your text:</p>'+r.questions.map(q=>`<div class="q"><label for="q_${q.field}">${esc(q.question)}</label><input id="q_${q.field}" data-f="${q.field}" value="${esc(prefill?.[q.field]??'')}"></div>`).join('');
+  $('#profileBox').classList.remove('hidden');
+}catch(e){alert(e)}busy($('#go1'),false)}
+
+$('#go2').onclick=async()=>{busy($('#go2'),true);try{
+  const a={};document.querySelectorAll('#questions input').forEach(i=>{a[i.dataset.f]=i.value.trim()===''?null:i.value.trim()});
+  const r=await post('/api/onboard',{lines:$('#lines').value,answers:a,run_id:runId});profile=r.profile;
+  const m=await post('/api/matches',{profile,run_id:runId});
+  $('#matches').innerHTML=`<p class="m">Source: ${m.source==='ted_live'?'live TED Search API':'local cache (TED unreachable, live hop UNVERIFIED)'}</p>`+m.matches.map(n=>`
+    <div class="match"><div class="score">${n.fit_score}<small>fit</small></div>
+    <div><div class="t">${esc((n.title||'').replace(/^Ελλάδα – /,''))}</div><div class="m">${esc(n.buyer_name)} · TED ${esc(n.publication_number)} · <a href="${esc(n.ted_url)}" target="_blank" rel="noopener">notice</a></div><div class="m">${esc(n.reason)}</div></div>
+    <button class="ghost" data-n="${esc(n.publication_number)}">Prepare bid</button></div>`).join('');
+  document.querySelectorAll('#matches button').forEach(b=>b.onclick=()=>prepare(b.dataset.n,b));
+  $('#s2').classList.remove('hidden');$('#s2').scrollIntoView({behavior:'smooth'});
+}catch(e){alert(e)}busy($('#go2'),false)};
+
+async function prepare(nid,btn){noticeId=nid;busy(btn,true);$('#s3').classList.remove('hidden');$('#status').className='banner wait';$('#status').textContent='Checking against the tender pages… not ready.';$('#rules').innerHTML='';$('#receipts').innerHTML='';$('#letter').textContent='';$('#verdict').innerHTML='';
+  $('#s3').scrollIntoView({behavior:'smooth'});
+  try{const r=await post('/api/prepare',{notice_id:nid,profile,run_id:runId});const e=r.eligibility;
+    $('#s3title').textContent='Eligibility · TED '+nid;
+    const V={not_eligible:'Not eligible on your own',eligible:'Eligible',unclear:'Unclear'}[e.verdict];
+    $('#verdict').innerHTML=`<p><span class="pill ${e.verdict==='not_eligible'?'missing':e.verdict==='eligible'?'meets':'unclear'}">${V}</span></p>${e.partnership_note?`<p>${esc(e.partnership_note)}</p>`:''}`;
+    $('#rules').innerHTML='<tr><th>Rule</th><th>Status</th><th>Clause</th><th>Notes</th></tr>'+(e.rules||[]).map(x=>`<tr><td>${esc(x.title)}</td><td><span class="pill ${x.status}">${x.status}</span></td><td>§${esc(x.citation.section)}<br><span class="m">PDF p${x.citation.pdf_page} / printed ${x.citation.printed_page}</span></td><td class="m">${esc(x.notes)}</td></tr>`).join('');
+    renderReceipts(r.state);
+    $('#letter').textContent=r.letter.markdown;$('#s4').classList.remove('hidden');
+  }catch(e){alert(e)}busy(btn,false)}
+
+async function renderReceipts(){const d=await (await fetch(`/api/runs/${runId}/receipts`)).json();const st=d.state;
+  const checked=d.receipts.filter(r=>r.independent_check);
+  $('#receipts').innerHTML=checked.map(r=>`<div class="receipt ${r.status}"><span class="pill ${r.status}">${r.status}</span> ${esc(r.intent.claim)}
+    ${r.status!=='VERIFIED'?`<div class="m" style="margin-top:6px">Observed on the page: <b>${esc(JSON.stringify(r.independent_check.observed))}</b><br>Source: ${esc(r.independent_check.source)}<br>${esc(r.reason||'')}</div>`:`<div class="m">${esc(r.independent_check.source)}</div>`}</div>`).join('');
+  const s=$('#status');
+  if(st.state==='ready'){s.className='banner yes';s.textContent='All checks verified against the tender. Ready for a human to sign.'}
+  else if(st.state==='not_checked'){s.className='banner wait';s.textContent='Checks have not finished. Not ready.'}
+  else{s.className='banner no';s.textContent=`NOT READY — ${st.failed.length} failed, ${st.unverified.length} unverified check(s). See the red receipt below.`}
+}
+
+$('#go4').onclick=async()=>{busy($('#go4'),true);try{const r=await post('/api/pack',{run_id:runId,notice_id:noticeId});
+  $('#packOut').innerHTML=`<p><span class="pill ${r.ready?'VERIFIED':'FAILED'}">${r.ready?'READY':'NOT READY'}</span> ${esc((r.entries||[]).join(' · '))}</p><p><a href="/api/runs/${runId}/zip">Download ${esc((r.zip_path||'').split(/[\\/]/).pop())}</a></p>`;
+  renderReceipts();}catch(e){alert(e)}busy($('#go4'),false)};
+</script>
+</body>
+</html>
