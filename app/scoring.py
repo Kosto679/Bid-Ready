@@ -27,11 +27,20 @@ def cpv_factor(notice_cpvs: list[str], profile_cpvs: list[str]) -> tuple[float, 
     return matches / max(len(codes), 1), matches
 
 
-def value_factor(ted_value: float | None, turnover: float | None) -> float:
-    if turnover is None or not ted_value:
+def value_factor(ted_value: float | None, turnover: float | None, rule: dict | None = None) -> float:
+    """turnover vs what the tender needs.
+
+    rule (from rule_cache): the tender's own verified turnover rule {"min_eur", "basis": "total"|"average"}.
+    Without it, a rule of thumb: a 3-year turnover of about 2x TED's estimated value (which may include options).
+    """
+    if turnover is None:
         return 0.0
-    need = 2.0 * ted_value  # rough 200% heuristic on the TED value (may include options)
-    return min(1.0, turnover / need)
+    if rule and rule.get("min_eur"):
+        have = turnover / 3 if rule.get("basis") == "average" else turnover  # profile holds a 3-year total
+        return min(1.0, have / float(rule["min_eur"]))
+    if not ted_value:
+        return 0.0
+    return min(1.0, turnover / (2.0 * ted_value))
 
 
 def _is_greece(profile: dict) -> bool:
@@ -69,10 +78,10 @@ def _eur(v: float | None) -> str:
     return "unknown" if v is None else f"€{v:,.0f}"
 
 
-def score_one(notice: dict, profile: dict, today: date) -> dict:
+def score_one(notice: dict, profile: dict, today: date, rule: dict | None = None) -> dict:
     cpv, matches = cpv_factor(notice.get("classification_cpv") or [], profile.get("cpv_codes") or [])
     turnover = profile.get("turnover_2023_2025_total_eur")
-    val = value_factor(notice.get("estimated_value"), turnover)
+    val = value_factor(notice.get("estimated_value"), turnover, rule)
     place = place_factor(notice.get("place_of_performance") or [], profile)
     days = days_to(notice.get("deadline_date"), today)
     dl = deadline_factor(days)
@@ -83,17 +92,24 @@ def score_one(notice: dict, profile: dict, today: date) -> dict:
         cpv_txt = f"partly matches ({matches} of {len(set(_digits(c) for c in notice.get('classification_cpv') or []))} codes)"
     place_txt = "Greece, like you" if place else ("unknown" if not notice.get("place_of_performance") else "outside your area")
     days_txt = "no deadline" if days is None else (f"{days} days" + (", capped at 45 for scoring" if days > DEADLINE_CAP_DAYS else ""))
+    if rule and rule.get("min_eur"):
+        value_txt = (f"the tender asks for {_eur(rule['min_eur'])} turnover "
+                     f"({'yearly average' if rule.get('basis') == 'average' else '3-year total'}) versus your "
+                     f"{_eur(turnover) if turnover is not None else 'unknown'} 3-year turnover")
+    else:
+        value_txt = (f"the estimated value is {_eur(notice.get('estimated_value'))} versus your "
+                     f"{_eur(turnover) if turnover is not None else 'unknown'} 3-year turnover")
     reason = (
-        f"CPV {cpv_txt} your profile; the TED value is {_eur(notice.get('estimated_value'))} versus your "
-        f"{_eur(turnover) if turnover is not None else 'unknown'} 3-year turnover; place is {place_txt}; "
+        f"CPV {cpv_txt} your profile; {value_txt}; place is {place_txt}; "
         f"the deadline is {notice.get('deadline_date') or 'unknown'} ({days_txt})."
     )
     return {
         **notice,
         "fit_score": fit,
         "band": band(fit),
-        "factors": {"cpv": round(cpv, 3), "value_fit": round(val, 3), "place": place, "deadline": round(dl, 3), "days_to_deadline": days},
-        "explain": explain(notice, profile, cpv, matches, val, place, days),
+        "factors": {"cpv": round(cpv, 3), "value_fit": round(val, 3), "place": place, "deadline": round(dl, 3), "days_to_deadline": days,
+                    "value_source": "tender_rule" if rule and rule.get("min_eur") else "rule_of_thumb"},
+        "explain": explain(notice, profile, cpv, matches, val, place, days, rule),
         "reason": reason,
     }
 
@@ -121,7 +137,7 @@ def division_name(code: str) -> str:
     return CPV_DIVISIONS.get(_digits(code)[:2]) or cpv.division(code).lower()
 
 
-def explain(notice: dict, profile: dict, cpv: float, matches: int, val: float, place: float, days: int | None) -> dict:
+def explain(notice: dict, profile: dict, cpv: float, matches: int, val: float, place: float, days: int | None, rule: dict | None = None) -> dict:
     codes = list(dict.fromkeys(_digits(c) for c in notice.get("classification_cpv") or [] if _digits(c)))
     mine = sorted({_digits(c)[:2] for c in profile.get("cpv_codes") or [] if len(_digits(c)) >= 2})
     divs = sorted({c[:2] for c in codes})
@@ -138,11 +154,20 @@ def explain(notice: dict, profile: dict, cpv: float, matches: int, val: float, p
     v, t = notice.get("estimated_value"), profile.get("turnover_2023_2025_total_eur")
     if t is None:
         val_why = "You didn't give your turnover, so this counts as 0."
+    elif rule and rule.get("min_eur"):
+        need = float(rule["min_eur"])
+        if rule.get("basis") == "average":
+            val_why = (f"The tender's own rule, read from the tender and verified: an average yearly turnover of at least {_eur(need)}. "
+                       f"Your 3-year total of {_eur(t)} is about {_eur(t / 3)} a year, {val:.0%} of what it asks.")
+        else:
+            val_why = (f"The tender's own rule, read from the tender and verified: a 3-year total turnover of at least {_eur(need)}. "
+                       f"You have {_eur(t)}, {val:.0%} of it.")
     elif not v:
-        val_why = "TED shows no value for this tender, so this counts as 0."
+        val_why = "TED shows no estimated value for this tender, so this counts as 0."
     else:
-        val_why = (f"TED value {_eur(v)}. A rough rule of thumb is a 3-year turnover of twice the value ({_eur(2 * v)}). "
-                   f"You have {_eur(t)}, {val:.0%} of that." + (" TED's value may include options, so the real bar can be lower." if val < 1 else ""))
+        val_why = (f"Estimated value {_eur(v)} (TED's figure; it can include options). We haven't read this tender's own turnover rule yet, "
+                   f"so we use a rule of thumb: a 3-year turnover of about twice the value ({_eur(2 * v)}). You have {_eur(t)}, {val:.0%} of that. "
+                   "Prepare bid reads the real rule.")
     places = ", ".join((notice.get("place_of_performance") or [])[:3]) or "not given"
     place_why = (f"The work is in Greece ({places}) and so are you." if place else
                  f"The work is in {places}, outside your area." if notice.get("place_of_performance") else "TED gives no place of performance.")
@@ -159,7 +184,10 @@ def explain(notice: dict, profile: dict, cpv: float, matches: int, val: float, p
 def score_tenders(notices: list[dict], profile: dict, run_id: str | None = None) -> dict[str, Any]:
     run_id = run_id or new_run_id()
     today = config.now_athens().date()
-    scored = [score_one(n, profile, today) for n in notices]
+    from . import rule_cache
+
+    rules = rule_cache.load_all()  # verified turnover rules for tenders whose rules have been read
+    scored = [score_one(n, profile, today, rules.get(n.get("publication_number") or "")) for n in notices]
     scored.sort(key=lambda s: (-s["fit_score"], s.get("deadline_date") or "9999", s.get("publication_number") or ""))
     receipt = write_receipt({
         "run_id": run_id,

@@ -5,19 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bid-Ready</title>
 <style>
-:root{--bg:#f7f6f2;--card:#fff;--ink:#1d1d1b;--mute:#6b6a65;--line:#e4e2db;--accent:#1f4fd1;--ok:#137a3a;--okbg:#e5f4ea;--bad:#b42318;--badbg:#fdeceb;--amb:#9a6200;--ambbg:#fdf3dc}
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1d1d1b;--mute:#6b6a65;--line:#e4e2db;--accent:#1f4fd1;--ok:#137a3a;--okbg:#e5f4ea;--bad:#b42318;--badbg:#fdeceb;--amb:#9a6200;--ambbg:#fdf3dc;--ease-out:cubic-bezier(0.23, 1, 0.32, 1)}
 @media (prefers-color-scheme:dark){:root{--bg:#141413;--card:#1e1e1c;--ink:#ecebe6;--mute:#a09e97;--line:#33322f;--accent:#7aa2ff;--ok:#5fd08a;--okbg:#14301f;--bad:#ff8a80;--badbg:#3a1714;--amb:#f2c063;--ambbg:#34280f}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
-main{max-width:980px;margin:0 auto;padding:24px 16px 80px}
-h1{font-size:26px;margin:0}h2{font-size:18px;margin:0 0 12px}.sub{color:var(--mute);margin:4px 0 20px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0}
-.step{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
-textarea,input{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2{letter-spacing:-.02em}h2{font-size:28px;margin:0 0 8px}h3{font-size:15px;margin:0}
+.sub{color:var(--mute);margin:0 0 18px}
+textarea,input{width:100%;font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px}
 label{display:block;font-weight:600;margin:10px 0 4px}
-button{font:inherit;font-weight:600;border:0;border-radius:8px;padding:9px 16px;background:var(--accent);color:#fff;cursor:pointer}
-button.ghost{background:transparent;color:var(--accent);border:1px solid var(--line)}button:disabled{opacity:.5;cursor:wait}
+button{font:inherit;font-weight:600;border:0;border-radius:8px;padding:9px 16px;background:var(--accent);color:#fff;cursor:pointer;transition:transform 140ms var(--ease-out),opacity 150ms ease}
+button:active{transform:scale(0.97)}
+button.ghost{background:transparent;color:var(--accent);border:1px solid var(--line)}
+button:disabled{opacity:.45;cursor:not-allowed;transform:none}
+button.busy{cursor:wait}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.match{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:start;padding:12px 0;border-top:1px solid var(--line)}
+.match{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:start;padding:14px 0;border-top:1px solid var(--line);cursor:pointer;background:transparent;width:100%;text-align:left;color:inherit;font-weight:400;border-radius:0}
+.match:hover .t{color:var(--accent)}
 .score{font-size:22px;font-weight:700;text-align:center}.score small{display:block;font-size:11px;color:var(--mute);font-weight:400}
 .t{font-weight:600}.m{color:var(--mute);font-size:13px}
 .pill{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:99px}
@@ -25,22 +27,19 @@ button.ghost{background:transparent;color:var(--accent);border:1px solid var(--l
 table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:8px 6px;border-top:1px solid var(--line);vertical-align:top}th{color:var(--mute);font-weight:600}
 .banner{border-radius:10px;padding:14px 16px;font-weight:600;margin:10px 0}
 .banner.wait{background:var(--ambbg);color:var(--amb)}.banner.no{background:var(--badbg);color:var(--bad)}.banner.yes{background:var(--okbg);color:var(--ok)}
-.receipt{border:1px solid var(--line);border-radius:10px;padding:12px;margin:8px 0}.receipt.FAILED{border-color:var(--bad);border-width:2px}
-pre{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;font:13px/1.55 ui-monospace,Consolas,monospace;max-height:420px;overflow:auto}
+pre{white-space:pre-wrap;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px;font:13px/1.55 ui-monospace,Consolas,monospace;max-height:420px;overflow:auto}
 .hidden{display:none}.q{margin:6px 0}a{color:var(--accent)}
 .factors{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px 14px;margin-top:8px}
 .factor{display:grid;grid-template-columns:auto 1fr;gap:2px 8px;align-items:center;font-size:12px;color:var(--mute)}
 .factor i{display:block;height:6px;border-radius:99px;background:var(--line);overflow:hidden}.factor i b{display:block;height:100%;background:var(--accent)}
 .factor em{grid-column:1/-1;font-style:normal;font-variant-numeric:tabular-nums}
-details.m{margin:-4px 0 12px}details.m summary{cursor:pointer;color:var(--accent);font-weight:600}details.m p{margin:8px 0}
+details.m{margin:0 0 16px}details.m summary{cursor:pointer;color:var(--accent);font-weight:600}details.m p{margin:8px 0}
 tr.changed td{background:var(--ambbg)}
-/* live extraction quotes */
 td.quote{font-size:13px;color:var(--mute);line-height:1.5;min-width:220px}
 td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-radius:3px;padding:0 2px}
-/* receipt wall */
 .wallh{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin:16px 0 8px}
 .wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
-.tile{border:1px solid var(--line);border-left-width:4px;border-radius:10px;padding:10px 12px;background:var(--card);display:flex;flex-direction:column;gap:4px;min-width:0;animation:tileIn .35s ease both}
+.tile{border:1px solid var(--line);border-left-width:4px;border-radius:10px;padding:10px 12px;background:var(--card);display:flex;flex-direction:column;gap:4px;min-width:0;animation:tileIn .35s var(--ease-out) both}
 .tile .th{display:flex;gap:8px;align-items:baseline}.tile .sh{font-size:12px}
 .tile.VERIFIED{border-left-color:var(--ok)}.tile.VERIFIED .sh{color:var(--ok)}
 .tile.FAILED{border-color:var(--bad);border-left-width:4px;background:var(--badbg)}.tile.FAILED .sh{color:var(--bad)}
@@ -48,136 +47,203 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
 .tile .diff{font-size:14px}.tile a{text-decoration:none}.tile a:hover{text-decoration:underline}
 .VERIFIED-t{color:var(--ok)}.FAILED-t{color:var(--bad)}.UNVERIFIED-t{color:var(--amb)}
 @keyframes tileIn{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.tile{animation:none}}
-/* CPV chips on the profile card */
 .cpvbox{margin-top:10px;display:flex;flex-direction:column;gap:8px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{display:inline-grid;grid-template-columns:minmax(0,1fr) auto;gap:0 8px;align-items:start;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:7px 8px 7px 10px;font-size:13px;color:var(--ink);max-width:100%}
+.chip{display:inline-grid;grid-template-columns:minmax(0,1fr) auto;gap:0 8px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 8px 7px 10px;font-size:13px;color:var(--ink);max-width:100%}
 .chip b{font-variant-numeric:tabular-nums}.chip em{grid-column:1;font-style:normal;color:var(--mute);font-size:12px}
 .chip .x{grid-row:1/3;grid-column:2;background:none;color:var(--mute);border:0;padding:0 2px;font-size:13px;cursor:pointer}.chip .x:hover{color:var(--bad)}
-/* glossary */
 .term{background:none;border:0;border-radius:0;padding:0;color:inherit;font:inherit;font-weight:inherit;border-bottom:1px dotted var(--accent);cursor:help}
 .term:hover,.term:focus-visible{color:var(--accent);outline:none}
 #pop{position:fixed;z-index:20;max-width:360px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18);font-size:13.5px;line-height:1.5}
 #pop b{display:block;margin-bottom:4px;font-size:14px}#pop .why{margin-top:6px;color:var(--mute)}
 .gloss dt{font-weight:700;margin-top:10px}.gloss dd{margin:2px 0 0;color:var(--mute)}
-/* colour bands: good >=70, fair 40-69, weak <40 (shape + colour) */
 .good{color:var(--ok)}.fair{color:var(--amb)}.weak{color:var(--bad)}
 .score.good,.score.fair,.score.weak{font-variant-numeric:tabular-nums}
 .score .mk{font-size:11px;display:block}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--mute);margin:-4px 0 10px}
 .legend span b{font-weight:700}
-/* fit report (lighthouse-style) */
 .report{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center}
 @media (max-width:600px){.report{grid-template-columns:1fr;justify-items:center;text-align:center}}
-.ring{display:block}.ring .track{stroke:var(--line)}.ring .val{transition:stroke-dashoffset 1.1s cubic-bezier(.2,.8,.2,1)}
+.ring{display:block}.ring .track{stroke:var(--line)}.ring .val{transition:stroke-dashoffset 1.1s var(--ease-out)}
 .ring text{fill:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
 .ring.good .val{stroke:var(--ok)}.ring.fair .val{stroke:var(--amb)}.ring.weak .val{stroke:var(--bad)}
 .ring.good .bg{fill:var(--okbg)}.ring.fair .bg{fill:var(--ambbg)}.ring.weak .bg{fill:var(--badbg)}
 .verdict-line{font-size:18px;font-weight:700;margin:0 0 6px}
 .frows{margin-top:18px}
 .frow{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
-.frow h3{font-size:15px;margin:0}.frow p{margin:2px 0 0;font-size:13.5px;color:var(--mute)}
+.frow p{margin:2px 0 0;font-size:13.5px;color:var(--mute)}
 .pts{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
-.notelig{background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:12px 14px;margin-top:16px;font-size:13.5px}
-@media (prefers-reduced-motion:reduce){.ring .val{transition:none}}
-@media (max-width:600px){.match{grid-template-columns:44px 1fr}.match button{grid-column:2}}
+.notelig{background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:12px 14px;margin-top:16px;font-size:13.5px}
+@media (prefers-reduced-motion:reduce){.ring .val{transition:none}.tile{animation:none}.cor-enter{animation:none}button{transition:none}}
+@media (max-width:600px){.match{grid-template-columns:44px 1fr auto}}
+
+.cor{min-height:100vh;display:flex;flex-direction:column}
+.cor-top{padding:20px 28px 0;max-width:880px;margin:0 auto;width:100%}
+.cor-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:0 0 16px}
+.cor-brand{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0}
+#openLab{padding:4px 10px;font-size:12px;font-weight:600}
+.cor-rail{display:flex;align-items:center;flex-wrap:wrap;margin:0 0 18px}
+.cor-rail .st{display:flex;align-items:center;gap:8px;color:var(--mute);font-size:13px;font-weight:600}
+.cor-rail .st[data-now]{color:var(--ink)}
+.cor-rail .st[data-done]{color:var(--ok)}
+.cor-rail .dot{width:8px;height:8px;border-radius:50%;background:var(--line);flex:none}
+.cor-rail .st[data-now] .dot{background:var(--accent)}
+.cor-rail .st[data-done] .dot{background:var(--ok)}
+.cor-rail .bar{width:28px;height:1px;background:var(--line);margin:0 8px}
+.you{font-size:13px;color:var(--mute);margin:0 0 8px}
+.cor-main{flex:1;max-width:880px;width:100%;margin:0 auto;padding:0 28px 96px}
+.cor-enter{animation:enter 220ms var(--ease-out) both}
+@keyframes enter{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.cor-foot{position:sticky;bottom:0;background:var(--bg);border-top:1px solid var(--line);padding:14px 28px calc(14px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:880px;margin:0 auto;width:100%}
+.cor-foot .right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
 </style>
 </head>
 <body>
-<main>
-  <h1>Bid-Ready</h1>
-  <p class="sub">From two lines about your company to a checked bid pack. Nothing is marked ready until an independent verifier re-reads the tender itself.</p>
-  <details class="m card" style="padding:12px 18px"><summary>New to public tenders? Key terms explained</summary><dl class="gloss" id="glossList"></dl></details>
-
-  <section class="card" id="s1">
-    <div class="step">1 · Onboard</div>
-    <h2>Tell us who you are</h2>
-    <textarea id="lines" rows="3" placeholder="e.g. We are an 8-person software studio in Athens building web apps…"></textarea>
-    <div class="row" style="margin-top:10px"><button id="go1">Build profile</button><button class="ghost" id="demo">Use demo studio</button></div>
-    <div id="profileBox" class="hidden" style="margin-top:14px">
-      <div id="profileSummary" class="m"></div>
-      <div id="questions"></div>
-      <div class="row" style="margin-top:10px"><button id="go2">Find matching tenders</button></div>
+<div class="cor">
+  <header class="cor-top">
+    <div class="cor-head">
+      <p class="cor-brand">Bid-Ready</p>
+      <button type="button" class="ghost" id="openLab">Lab</button>
     </div>
-  </section>
+    <nav class="cor-rail" id="rail" aria-label="Progress"></nav>
+    <p class="you" id="youLine" hidden></p>
+  </header>
 
-  <section class="card hidden" id="s2">
-    <div class="step">2 · Ranked matches</div>
-    <h2>Open Greek IT tenders, scored on <span data-term="ted">TED</span> data</h2>
-    <p class="m">Fit = 25% <span data-term="cpv">CPV</span> overlap + 25% TED value vs your 3-year <span data-term="turnover">turnover</span> + 25% place + 25% days to deadline (capped at 45). This is a shortlist score, not eligibility.</p>
-    <div class="legend"><span class="good"><b>●</b> 70–100 strong fit</span><span class="fair"><b>■</b> 40–69 partial fit</span><span class="weak"><b>▲</b> 0–39 weak fit</span></div>
-    <details class="m"><summary>How is this scored?</summary>
-      <p><b>CPV</b> is the EU's Common Procurement Vocabulary: an 8-digit code for what a tender buys (72000000 = IT services: consulting, software development, Internet and support). We match on the first two digits, the division, against the codes guessed from your description. Score = share of the tender's codes in your divisions.</p>
-      <p><b>Value vs turnover</b> = your 2023–2025 turnover ÷ (2 × the TED value), capped at 1. TED's value can include options, so this is rough. <b>Place</b> = 1 if the work is in Greece and so are you. <b>Deadline</b> = days left ÷ 45, capped at 1: more time to prepare scores higher.</p>
-      <p>Each factor counts 25%, so the score is 25 × the sum of the four, from 0 to 100.</p>
-    </details>
-    <div id="matches"></div>
-  </section>
+  <div class="cor-main" id="panes">
+    <section id="s1">
+      <h2>Tell us who you are</h2>
+      <p class="sub">Two lines about the company. Nothing is marked ready until an independent verifier re-reads the tender itself.</p>
+      <details class="m"><summary>New to public tenders? Key terms explained</summary><dl class="gloss" id="glossList"></dl></details>
+      <textarea id="lines" rows="3" placeholder="e.g. We are an 8-person software studio in Athens building web apps…"></textarea>
+      <div class="row" style="margin-top:10px"><button id="go1">Build profile</button><button class="ghost" id="demo">Use demo studio</button></div>
+      <div id="profileBox" class="hidden" style="margin-top:14px">
+        <div id="profileSummary" class="m"></div>
+        <div id="questions"></div>
+      </div>
+    </section>
 
-  <section class="card hidden" id="sFit">
-    <div class="step">3 · Fit report</div>
-    <h2 id="fitTitle">How this tender scored for you</h2>
-    <div class="report">
-      <div id="fitRing"></div>
-      <div><p class="verdict-line" id="fitVerdict"></p><p class="m" id="fitSub"></p></div>
+    <section class="hidden" id="s2">
+      <h2>Open Greek IT tenders</h2>
+      <p class="sub">Scored on <span data-term="ted">TED</span> data only. Pick one to read its rules. Fit = 25% <span data-term="cpv">CPV</span> + 25% TED value vs your 3-year <span data-term="turnover">turnover</span> + 25% place + 25% days to deadline (capped at 45).</p>
+      <div class="legend"><span class="good"><b>●</b> 70–100 strong fit</span><span class="fair"><b>■</b> 40–69 partial fit</span><span class="weak"><b>▲</b> 0–39 weak fit</span></div>
+      <details class="m"><summary>How is this scored?</summary>
+        <p><b>CPV</b> is the EU's Common Procurement Vocabulary: an 8-digit code for what a tender buys (72000000 = IT services: consulting, software development, Internet and support). We match on the first two digits, the division, against the codes guessed from your description. Score = share of the tender's codes in your divisions.</p>
+        <p><b>Value vs turnover</b> = your 2023–2025 turnover ÷ (2 × the TED value), capped at 1. TED's value can include options, so this is rough. <b>Place</b> = 1 if the work is in Greece and so are you. <b>Deadline</b> = days left ÷ 45, capped at 1: more time to prepare scores higher.</p>
+        <p>Each factor counts 25%, so the score is 25 × the sum of the four, from 0 to 100.</p>
+      </details>
+      <div id="matches"></div>
+    </section>
+
+    <section class="hidden" id="sFit">
+      <h2 id="fitTitle">How this tender scored for you</h2>
+      <div class="report">
+        <div id="fitRing"></div>
+        <div><p class="verdict-line" id="fitVerdict"></p><p class="m" id="fitSub"></p></div>
+      </div>
+      <div class="frows" id="fitRows"></div>
+      <div class="notelig"><b>A fit score is not eligibility.</b> It only uses the four facts TED publishes. Whether you can actually bid depends on the tender's own rules (turnover, past projects, certificates), which the next step checks clause by clause against the tender PDF.</div>
+    </section>
+
+    <section class="hidden" id="s3">
+      <h2 id="s3title">Can you bid?</h2>
+      <div id="status" class="banner wait">Checking against the tender pages… not ready.</div>
+      <div id="verdict"></div>
+      <table id="rules"></table>
+      <h2 style="margin-top:22px;font-size:18px"><span data-term="receipt">Receipts</span></h2>
+      <div id="receipts"></div>
+      <h2 style="margin-top:22px;font-size:18px" id="letterHead">Consortium letter (Greek)</h2>
+      <p class="m" id="letterSrc"></p>
+      <pre id="letter"></pre>
+    </section>
+
+    <section class="hidden" id="s4">
+      <h2>Handover</h2>
+      <p class="sub">A human reviews, signs, and submits on <span data-term="esidis">ΕΣΗΔΗΣ</span> (promitheus.gov.gr). Bid-Ready stops here.</p>
+      <div class="row"><button id="go4">Build handover ZIP</button></div>
+      <div id="packOut" style="margin-top:12px"></div>
+    </section>
+
+    <!-- Parked: live extraction on an unannotated tender (ΟΛΠΑ). Remove "hidden" to bring it back. -->
+    <section class="hidden" id="s6">
+      <h2>Does it work on a tender nobody prepared?</h2>
+      <p>A tender we never prepared: Patras Port's new app platform (ΟΛΠΑ, 98 pages). Gemini reads it live, and we prove every answer against the PDF.</p>
+      <p class="m">Proved means: the quoted sentence is really on that page and contains the answer (highlighted), and the guarantee matches the budget at the percentage the tender states.</p>
+      <div class="row"><button id="go6">Read it live</button><span class="m" id="liveMeta"></span></div>
+      <div id="liveOut" style="margin-top:12px"></div>
+    </section>
+
+    <section class="hidden" id="s5">
+      <h2>Lab</h2>
+      <p class="sub">Not part of preparing a bid. Measures whether Gemini reads this tender’s facts, and whether the generic rule reader matches the hand-made ΚτΠ index.</p>
+      <h2 style="font-size:18px;margin-top:8px">How often does the model get the tender facts right?</h2>
+      <p class="m">Gemini extracts nine facts from TED 769674-2026; the verifier re-reads the PDF page and grades every answer. "Headline" gives the model only the TED metadata; "Page" gives it the cited page.</p>
+      <div class="row"><button id="go5">Run model check</button><span class="m" id="evalMeta"></span></div>
+      <div id="evalOut" style="margin-top:12px"></div>
+      <h2 style="font-size:18px;margin-top:24px">Does the generic rule reader match our hand-made index?</h2>
+      <p class="m">For any tender without a hand-made index, Gemini reads the eligibility rules live. Here it reads ΚτΠ's PDF from scratch, and we compare its answers with the index we built by hand.</p>
+      <div class="row"><button id="go7" class="ghost">Compare on ΚτΠ</button><span class="m" id="agreeMeta"></span></div>
+      <div id="agreeOut" style="margin-top:12px"></div>
+    </section>
+  </div>
+
+  <footer class="cor-foot">
+    <button type="button" class="ghost" id="back" disabled>Back</button>
+    <div class="right">
+      <span class="m" id="footHint"></span>
+      <span class="m" id="eligWait"></span>
+      <button type="button" id="go2" class="hidden">Find matching tenders</button>
+      <button type="button" id="goElig" class="hidden" disabled>Check eligibility →</button>
+      <button type="button" id="toPack" class="hidden">Build the pack →</button>
     </div>
-    <div class="frows" id="fitRows"></div>
-    <div class="notelig"><b>A fit score is not eligibility.</b> It only uses the four facts TED publishes. Whether you can actually bid depends on the tender's own rules (turnover, past projects, certificates), which the next step checks clause by clause against the tender PDF.</div>
-    <div class="row" style="margin-top:16px"><button id="goElig">Continue to the eligibility check →</button><span class="m" id="eligWait"></span></div>
-  </section>
-
-  <section class="card hidden" id="s3">
-    <div class="step">4 · Eligibility check</div>
-    <h2 id="s3title">Eligibility</h2>
-    <div id="status" class="banner wait">Checking against the tender pages… not ready.</div>
-    <div id="verdict"></div>
-    <table id="rules"></table>
-    <h2 style="margin-top:22px"><span data-term="receipt">Receipts</span></h2>
-    <div id="receipts"></div>
-    <h2 style="margin-top:22px" id="letterHead">Consortium letter (Greek)</h2>
-    <p class="m" id="letterSrc"></p>
-    <pre id="letter"></pre>
-  </section>
-
-  <section class="card hidden" id="s4">
-    <div class="step">5 · Handover</div>
-    <h2>Download the pack</h2>
-    <div class="row"><button id="go4">Build handover ZIP</button></div>
-    <div id="packOut" style="margin-top:12px"></div>
-    <p class="m">A human reviews, signs, and submits on <span data-term="esidis">ΕΣΗΔΗΣ</span> (promitheus.gov.gr). Bid-Ready stops here.</p>
-  </section>
-
-  <!-- Parked: live extraction on an unannotated tender (ΟΛΠΑ). Remove "hidden" to bring it back,
-       e.g. once the MCP tools can scan tenders with filters. Backend: app/live_extract.py, POST /api/live/{id}. -->
-  <section class="card hidden" id="s6">
-    <div class="step">Unannotated tender</div>
-    <h2>Does it work on a tender nobody prepared?</h2>
-    <p>A tender we never prepared: Patras Port's new app platform (ΟΛΠΑ, 98 pages). Gemini reads it live, and we prove every answer against the PDF.</p>
-    <p class="m">Proved means: the quoted sentence is really on that page and contains the answer (highlighted), and the guarantee matches the budget at the percentage the tender states.</p>
-    <div class="row"><button id="go6">Read it live</button><span class="m" id="liveMeta"></span></div>
-    <div id="liveOut" style="margin-top:12px"></div>
-  </section>
-
-  <section class="card" id="s5">
-    <div class="step">Model check</div>
-    <h2>How often does the model get the tender facts right?</h2>
-    <p class="m">Gemini extracts nine facts from TED 769674-2026; the verifier re-reads the PDF page and grades every answer. "Headline" gives the model only the TED metadata; "Page" gives it the cited page.</p>
-    <div class="row"><button id="go5">Run model check</button><span class="m" id="evalMeta"></span></div>
-    <div id="evalOut" style="margin-top:12px"></div>
-    <h2 style="margin-top:24px">Does the generic rule reader match our hand-made index?</h2>
-    <p class="m">For any tender without a hand-made index, Gemini reads the eligibility rules live. Here it reads ΚτΠ's PDF from scratch, and we compare its answers with the index we built by hand.</p>
-    <div class="row"><button id="go7" class="ghost">Compare on ΚτΠ</button><span class="m" id="agreeMeta"></span></div>
-    <div id="agreeOut" style="margin-top:12px"></div>
-  </section>
-</main>
+  </footer>
+</div>
 <div id="pop" role="dialog" hidden></div>
 <script>
 const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let runId=null,profile=null,answers={},noticeId=null;
 async function post(u,b){const r=await fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)});if(!r.ok)throw new Error(await r.text());return r.json()}
-function busy(btn,on){btn.disabled=on;if(on){btn.dataset.t=btn.textContent;btn.textContent='Working…'}else if(btn.dataset.t)btn.textContent=btn.dataset.t}
+function busy(btn,on){btn.disabled=on;btn.classList.toggle('busy',on);if(on){btn.dataset.t=btn.textContent;btn.textContent='Working…'}else if(btn.dataset.t)btn.textContent=btn.dataset.t}
 const eur=v=>v==null?'—':'€'+Math.round(v).toLocaleString('en');
+
+const PANES=['s1','s2','sFit','s3','s4','s5'];
+let pane='s1', prevPane='s1';
+function hasPack(){return !!window.__canPack}
+function showStep(id){
+  pane=id;
+  PANES.forEach(s=>$(`#${s}`).classList.toggle('hidden', s!==id));
+  const shown=$(`#${id}`);
+  shown.classList.remove('cor-enter');void shown.offsetWidth;shown.classList.add('cor-enter');
+  renderRail();renderYou();renderFoot();
+  window.scrollTo(0,0);
+}
+function renderRail(){
+  const order=[{id:'s1',label:'You'},{id:'s2',label:'Matches'},{id:'sFit',label:'This tender'},{id:'s3',label:'Rules'}];
+  if(hasPack()||pane==='s4') order.push({id:'s4',label:'Pack'});
+  const idx=order.findIndex(s=>s.id===pane);
+  $('#rail').innerHTML=order.map((s,i)=>{
+    const now=pane!=='s5'&&s.id===pane, done=pane!=='s5'&&idx>i;
+    return `${i?'<span class="bar" aria-hidden="true"></span>':''}<span class="st"${now?' data-now':done?' data-done':''}><i class="dot"></i>${s.label}</span>`;
+  }).join('');
+}
+function renderYou(){
+  const el=$('#youLine');
+  if(!profile||pane==='s1'){el.hidden=true;return}
+  el.hidden=false;
+  const iso=(profile.certificates||[]).join(', ')||'no ISO given';
+  el.textContent=`${profile.name||'Your company'} · ${profile.size??'?'} people · ${profile.location||''} · ${eur(profile.turnover_2023_2025_total_eur)} over 3 years · ${iso}`;
+}
+function renderFoot(){
+  const back=$('#back'), hint=$('#footHint'), goE=$('#goElig'), toP=$('#toPack'), go2=$('#go2');
+  back.disabled=pane==='s1';
+  go2.classList.toggle('hidden', pane!=='s1'||$('#profileBox').classList.contains('hidden'));
+  goE.classList.toggle('hidden', pane!=='sFit');
+  toP.classList.toggle('hidden', pane!=='s3'||!hasPack());
+  hint.textContent=pane==='s2'?'Choose a tender.':pane==='s3'&&!hasPack()?'This is as far as this tender goes.':pane==='s5'?'Lab is off the bid path.':'';
+}
+$('#back').onclick=()=>{if(pane==='s5')showStep(prevPane);else if(pane==='s4')showStep('s3');else if(pane==='s3')showStep('sFit');else if(pane==='sFit')showStep('s2');else if(pane==='s2')showStep('s1')};
+$('#openLab').onclick=()=>{if(pane==='s5')showStep(prevPane);else{prevPane=pane;showStep('s5')}};
+$('#toPack').onclick=()=>showStep('s4');
+showStep('s1');
 
 /* ---- glossary ---------------------------------------------------------------------------- */
 const GLOSS={
@@ -230,9 +296,9 @@ $('#demo').onclick=async()=>{const d=await (await fetch('/api/demo')).json();$('
 $('#go1').onclick=()=>doOnboard(null);
 async function doOnboard(prefill){busy($('#go1'),true);try{
   const r=await post('/api/onboard',{lines:$('#lines').value,answers:null,run_id:runId});runId=r.run_id;profile=r.profile;
-  renderProfile();
+  renderProfile();renderYou();
   $('#questions').innerHTML='<p class="m" style="margin-top:10px">We could not work these out from your text:</p>'+r.questions.map(q=>`<div class="q"><label for="q_${q.field}">${esc(q.question)}</label><input id="q_${q.field}" data-f="${q.field}" value="${esc(prefill?.[q.field]??'')}"></div>`).join('');
-  $('#profileBox').classList.remove('hidden');
+  $('#profileBox').classList.remove('hidden');renderFoot();
 }catch(e){alert(e)}busy($('#go1'),false)}
 
 $('#go2').onclick=async()=>{busy($('#go2'),true);try{
@@ -244,11 +310,11 @@ $('#go2').onclick=async()=>{busy($('#go2'),true);try{
   const divs=(S.divisions||[]).map(d=>`<b>${esc(d.code)}</b> ${esc(d.label)}`).join(' · ');
   $('#matches').innerHTML=`<p class="m">Searched ${m.source==='ted_live'?'the live TED Search API':'the local cache (TED unreachable, live hop UNVERIFIED)'} for open tenders in Greece in your ${termBtn('cpv','CPV')} division${(S.divisions||[]).length>1?'s':''}: ${divs}.
     ${S.total_on_ted!=null?`TED has <b>${S.total_on_ted}</b>; we scored all <b>${S.scored}</b> and show the best ${Math.min(S.shown,8)}.`:''}</p>`+m.matches.map(n=>`
-    <div class="match"><div class="score ${band(n.fit_score)}" title="${band(n.fit_score)} fit">${n.fit_score}<span class="mk">${MARK[band(n.fit_score)]}</span><small>fit</small></div>
+    <button type="button" class="match" data-n="${esc(n.publication_number)}"><div class="score ${band(n.fit_score)}" title="${band(n.fit_score)} fit">${n.fit_score}<span class="mk">${MARK[band(n.fit_score)]}</span><small>fit</small></div>
     <div><div class="t">${n.pinned?'<span class="pill RECORDED">Demo tender, not in your top 8</span> ':''}${esc((n.title||'').replace(/^Ελλάδα – /,''))}</div><div class="m">${esc(n.buyer_name)} · TED ${esc(n.publication_number)} · <a href="${esc(n.ted_url)}" target="_blank" rel="noopener">notice</a></div><div class="m">${esc(n.reason)}</div>${factorBars(n.factors)}</div>
-    <button class="ghost" data-n="${esc(n.publication_number)}">Prepare bid</button></div>`).join('');
-  document.querySelectorAll('#matches button').forEach(b=>b.onclick=()=>prepare(b.dataset.n,b));
-  $('#s2').classList.remove('hidden');$('#s2').scrollIntoView({behavior:'smooth'});
+    <span class="pill ${n.publication_number==='769674-2026'?'VERIFIED':'RECORDED'}">${n.publication_number==='769674-2026'?'PDF on file':'TED only'}</span></button>`).join('');
+  document.querySelectorAll('#matches .match').forEach(b=>b.onclick=e=>{if(e.target.closest('a'))return;prepare(b.dataset.n)});
+  showStep('s2');
 }catch(e){alert(e)}busy($('#go2'),false)};
 
 function renderProfile(){
@@ -264,7 +330,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-rm]');if(!
   profile.cpv_codes=(profile.cpv_codes||[]).filter(c=>c!==b.dataset.rm);profile.cpv_detail=(profile.cpv_detail||[]).filter(d=>d.code!==b.dataset.rm);renderProfile()});
 
 function factorBars(f){if(!f)return'';
-  const items=[['CPV',f.cpv],['Value vs turnover',f.value_fit],['Place',f.place],['Deadline',f.deadline]];
+  const items=[['CPV',f.cpv],[f.value_source==='tender_rule'?'Turnover vs tender rule ✓':'Turnover vs value (rough)',f.value_fit],['Place',f.place],['Deadline',f.deadline]];
   return `<div class="factors">${items.map(([l,v])=>`<div class="factor"><span>${l}</span><i><b style="width:${Math.round((v||0)*100)}%"></b></i><em>${(v||0).toFixed(2)} × 25 = ${(25*(v||0)).toFixed(1)} pts</em></div>`).join('')}</div>`}
 
 const FACTORS=[['cpv','CPV match','cpv'],['value_fit','Value vs your turnover','turnover'],['place','Place of work',null],['deadline','Time to prepare',null]];
@@ -276,26 +342,28 @@ function showReport(n){
   $('#fitVerdict').innerHTML=`<span class="${b}">${MARK[b]} ${VERDICT[b]}: ${n.fit_score} / 100</span>`;
   $('#fitSub').innerHTML=`${esc(n.buyer_name)} · TED ${esc(n.publication_number)} · deadline ${esc(n.deadline_date||'?')} ${esc(n.deadline_time||'')}. Each of the four factors below is worth up to 25 points.`;
   $('#fitRows').innerHTML=FACTORS.map(([k,label,term])=>{const v=(n.factors||{})[k]||0;
-    return `<div class="frow">${ring(v*100,56,label)}<div><h3>${term?termBtn(term,label):esc(label)}</h3><p>${esc((n.explain||{})[k]||'')}</p></div><div class="pts ${band(v*100)}">${(25*v).toFixed(1)} / 25</div></div>`}).join('');
-  const s=$('#sFit');s.classList.remove('hidden');$('#s3').classList.add('hidden');$('#s4').classList.add('hidden');
-  s.scrollIntoView({behavior:'smooth'});animateRings(s);
+    const tag=k==='value_fit'?((n.factors||{}).value_source==='tender_rule'?' <span class="pill VERIFIED">tender\'s own rule</span>':' <span class="pill RECORDED">rule of thumb</span>'):'';
+    return `<div class="frow">${ring(v*100,56,label)}<div><h3>${term?termBtn(term,label):esc(label)}${tag}</h3><p>${esc((n.explain||{})[k]||'')}</p></div><div class="pts ${band(v*100)}">${(25*v).toFixed(1)} / 25</div></div>`}).join('');
+  window.__canPack=false;showStep('sFit');animateRings($('#sFit'));
 }
 
-async function prepare(nid,btn){
+async function prepare(nid){
   noticeId=nid;const n=MATCHES[nid];if(n)showReport(n);
-  $('#goElig').disabled=true;$('#eligWait').textContent='Checking the tender pages and drafting the letter…';
+  $('#goElig').disabled=true;$('#eligWait').textContent='Checking the tender pages…';
   $('#status').className='banner wait';$('#status').textContent='Checking against the tender pages… not ready.';$('#rules').innerHTML='';$('#receipts').innerHTML='';$('#letter').textContent='';$('#verdict').innerHTML='';$('#letterSrc').innerHTML='';
   prepPromise=post('/api/prepare',{notice_id:nid,profile,run_id:runId});
-  prepPromise.then(()=>{if(noticeId===nid){$('#goElig').disabled=false;$('#eligWait').textContent='Ready.'}}).catch(e=>{$('#eligWait').textContent='The check failed: '+e.message});
+  prepPromise.then(()=>{if(noticeId===nid){$('#goElig').disabled=false;$('#eligWait').textContent=''}}).catch(e=>{$('#eligWait').textContent='The check failed: '+e.message});
   if(!n)showEligibility();
 }
 $('#goElig').onclick=()=>showEligibility();
 
-async function showEligibility(){const btn=$('#goElig');$('#s3').classList.remove('hidden');$('#s3').scrollIntoView({behavior:'smooth'});
+async function showEligibility(){$('#s3title').textContent='Can you bid?';
+  showStep('s3');
   try{const r=await prepPromise;const e=r.eligibility;const nid=noticeId;
-    $('#s3title').textContent='Eligibility · TED '+nid;
+    $('#s3title').textContent='Can you bid? · TED '+nid;
     const V={not_eligible:'Not eligible on your own',eligible:'Eligible',unclear:'Unclear'}[e.verdict];
-    const srcNote=e.generic?`<p class="m"><span class="pill RECORDED">Read live</span> ${esc(e.source?.note||'')} Gemini read the rules; the verifier re-checked every quote and figure below.</p>`:'';
+    const noRules=e.source?.kind==='none';
+    const srcNote=e.generic?`<p class="m">${noRules?'':`<span class="pill RECORDED">Read live</span> `}${esc(e.source?.note||'')}${noRules?'':' Gemini read the rules; the verifier re-checked every quote and figure below.'}</p>`:'';
     $('#verdict').innerHTML=`<p><span class="pill ${e.verdict==='not_eligible'?'missing':e.verdict==='eligible'?'meets':'unclear'}">${V}</span></p>${srcNote}${e.partnership_note?`<p>${esc(e.partnership_note)}</p>`:''}`;
     const clause=c=>{if(!c)return'';const where=c.pdf_page?`PDF p${c.pdf_page}${c.printed_page&&c.printed_page!==c.pdf_page?` / printed ${c.printed_page}`:''}`:'';
       if(c.url)return `<a href="${esc(c.url)}" target="_blank" rel="noopener">${c.pdf_page?esc(where):esc(c.section||'TED notice')} ↗</a>`;
@@ -306,9 +374,11 @@ async function showEligibility(){const btn=$('#goElig');$('#s3').classList.remov
     renderReceipts(r.state);
     const L=r.letter, fc=L.fact_check||{};
     const hasLetter=!!L.markdown;
-    $('#letter').textContent=L.markdown||'';$('#letter').classList.toggle('hidden',!hasLetter);$('#letterHead').classList.toggle('hidden',!hasLetter&&!L.note);
-    $('#s4').classList.toggle('hidden',!hasLetter);
-    if(!hasLetter){$('#letterSrc').textContent=L.note||'';return}
+    window.__canPack=hasLetter;
+    $('#letter').textContent=L.markdown||'';$('#letter').classList.toggle('hidden',!hasLetter);$('#letterHead').classList.toggle('hidden',!hasLetter);
+    $('#letterSrc').textContent='';
+    renderFoot();renderRail();
+    if(!hasLetter)return;
     $('#letterSrc').innerHTML=L.source==='gemini_polished'?`<span class="pill VERIFIED">Fact-checked</span> Rewritten by Gemini; no numbers or English beyond the checked draft.`
       :(fc.new_numbers||fc.unexpected_latin_words)?`<span class="pill FAILED">Rewrite rejected</span> Gemini's version added ${esc([...(fc.new_numbers||[]),...(fc.unexpected_latin_words||[])].join(', '))}; showing the checked draft.`
       :`<span class="pill RECORDED">Template</span> Built from the tender facts and your profile${fc.skipped?` (Gemini not used: ${esc(fc.skipped)})`:''}.`;
@@ -329,7 +399,6 @@ function pageLink(r){const cit=r.intent.citation||{};
   return `<a href="${esc(href)}" target="_blank" rel="noopener">${/^\d/.test(cit.section||'')?'§':''}${esc(cit.section)} · PDF p${cit.pdf_page}${cit.printed_page&&cit.printed_page!==cit.pdf_page?` / printed ${cit.printed_page}`:''} ↗</a>`}
 
 const LIVE_LABEL={initial_value_ex_vat_eur:'Budget excl. VAT and options',participation_guarantee_eur:'Participation guarantee',submission_deadline:'Submission deadline',iso_standards:'ISO certificates required'};
-/* Escape the quote, then highlight where the extracted value appears in it. */
 function liveForms(v){
   if(v==null)return[];
   if(Array.isArray(v))return v.map(String);

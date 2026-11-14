@@ -28,7 +28,7 @@ Bid-Ready is a guided path from a short company profile to a checked bid pack fo
 6. Use ASCII file names inside the handover ZIP (no Greek characters in entry names).
 7. Write the deadline `.ics` with `TZID=Europe/Athens`, or as `12:00Z` for 14:00 Athens. Never use a floating local time.
 8. For the ΚτΠ RFP PDF, printed page = PDF page minus 7. Store both `pdf_page` and `printed_page` on every citation.
-9. `score_tenders` uses TED metadata only (see `docs/04-scoring.md`). Do not score against `requirements.json`.
+9. `score_tenders` uses TED metadata plus the profile (see `docs/04-scoring.md`). The one exception: once a tender's turnover rule has been read from its own text and VERIFIED, the value factor uses that rule (`app/rule_cache.py`). Never score against `requirements.json` directly.
 10. Do not start extras until the core loop in `docs/01-scope.md` works end to end.
 11. Do not submit a bid on ΕΣΗΔΗΣ. Stop at the handover ZIP. A human signs.
 

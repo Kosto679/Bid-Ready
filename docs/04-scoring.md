@@ -1,6 +1,8 @@
 # Scoring
 
-`score_tenders` must use a simple, visible formula on **TED metadata plus the company profile only**. Do not read `requirements.json` here. Only the ΚτΠ tender has that file, and the other 2–3 shortlist notices would have nothing to score against.
+`score_tenders` must use a simple, visible formula on **TED metadata plus the company profile**. Do not read `requirements.json` here. Only the ΚτΠ tender has that file, and the other shortlist notices would have nothing to score against.
+
+**Exception (added Sat 14 Nov):** when a tender's own turnover rule has been read from its text and the verifier marked it VERIFIED (via Prepare bid), the value factor uses that rule instead of the rule of thumb below: `have / need`, where `have` is the 3-year total for a "total" rule or the total ÷ 3 for a "yearly average" rule. The UI labels which one was used. Rules are stored in `app/rule_cache.py`, never taken from `requirements.json` directly.
 
 ## Inputs
 

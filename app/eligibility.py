@@ -12,7 +12,7 @@ from typing import Any
 
 from . import config, ted
 from . import tender_source as T
-from . import verifier
+from . import rule_cache, verifier
 from .receipts import new_run_id, save_claims, write_receipt
 
 KTP = "769674-2026"
@@ -219,6 +219,7 @@ def check_eligibility(notice_id: str, profile: dict, run_id: str | None = None, 
     out = {**report, "claims": claims, "receipt": receipt}
     if run_verify:
         out["receipts"] = verifier.verify(run_id)
+        rule_cache.save_from_receipts(notice_id, out["receipts"])
     out["state"] = verifier.run_state(run_id)
     return out
 
@@ -310,6 +311,7 @@ def check_eligibility_generic(notice_id: str, profile: dict, run_id: str, run_ve
     out = {**report, "claims": read["claims"], "receipt": receipt}
     if run_verify and read["claims"]:
         out["receipts"] = verifier.verify(run_id)
+        rule_cache.save_from_receipts(notice_id, out["receipts"], read["rules"])
     else:
         out["receipts"] = [receipt]
     out["state"] = verifier.run_state(run_id)
