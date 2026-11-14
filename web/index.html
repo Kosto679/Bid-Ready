@@ -34,6 +34,9 @@ pre{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);borde
 .factor em{grid-column:1/-1;font-style:normal;font-variant-numeric:tabular-nums}
 details.m{margin:-4px 0 12px}details.m summary{cursor:pointer;color:var(--accent);font-weight:600}details.m p{margin:8px 0}
 tr.changed td{background:var(--ambbg)}
+/* live extraction quotes */
+td.quote{font-size:13px;color:var(--mute);line-height:1.5;min-width:220px}
+td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-radius:3px;padding:0 2px}
 /* receipt wall */
 .wallh{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin:16px 0 8px}
 .wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
@@ -148,7 +151,8 @@ tr.changed td{background:var(--ambbg)}
   <section class="card" id="s6">
     <div class="step">Unannotated tender</div>
     <h2>Does it work on a tender nobody prepared?</h2>
-    <p class="m">ΟΛΠΑ Α.Ε. (Patras Port), ΑΔΑΜ 26PROC020181047: a 98-page notice with no clause index. Gemini finds and reads the relevant pages live; the verifier then checks what it can without an answer key: the quote really is on the cited page and contains the value, and the guarantee equals the percentage its clause states times the extracted budget.</p>
+    <p>A tender we never prepared: Patras Port's new app platform (ΟΛΠΑ, 98 pages). Gemini reads it live, and we prove every answer against the PDF.</p>
+    <p class="m">Proved means: the quoted sentence is really on that page and contains the answer (highlighted), and the guarantee matches the budget at the percentage the tender states.</p>
     <div class="row"><button id="go6">Read it live</button><span class="m" id="liveMeta"></span></div>
     <div id="liveOut" style="margin-top:12px"></div>
   </section>
@@ -307,10 +311,25 @@ function pageLink(r){const cit=r.intent.citation||{};if(!cit.pdf_page)return'';
   return `<a href="${esc(href)}" target="_blank" rel="noopener">${/^\d/.test(cit.section||'')?'§':''}${esc(cit.section)} · PDF p${cit.pdf_page}${cit.printed_page&&cit.printed_page!==cit.pdf_page?` / printed ${cit.printed_page}`:''} ↗</a>`}
 
 const LIVE_LABEL={initial_value_ex_vat_eur:'Budget excl. VAT and options',participation_guarantee_eur:'Participation guarantee',submission_deadline:'Submission deadline',iso_standards:'ISO certificates required'};
+/* Escape the quote, then highlight where the extracted value appears in it. */
+function liveForms(v){
+  if(v==null)return[];
+  if(Array.isArray(v))return v.map(String);
+  if(typeof v==='number'){const w=Math.round(v),g=w.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');return[g+',00',g,w.toLocaleString('en'),String(w)]}
+  const m=String(v).match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}:\d{2})/);
+  if(m){const[,y,mo,d,hm]=m;return[`${d}/${mo}/${y}`,`${d}-${mo}-${y}`,`${d}.${mo}.${y}`,hm]}
+  return[String(v)];
+}
+function hl(quote,v){
+  let s=esc((quote||'').replace(/\s+/g,' ').trim());
+  const forms=[...new Set(liveForms(v))].sort((a,b)=>b.length-a.length).map(f=>esc(f).replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+  if(!forms.length)return s;
+  return s.replace(new RegExp(`(${forms.join('|')})(?![\\d])`,'g'),'<mark>$1</mark>');
+}
 function fmtLive(v){if(v==null)return'<span class="m">not found</span>';if(Array.isArray(v))return esc(v.map(x=>'ISO '+x).join(', '));if(typeof v==='number')return esc(eur(v));return esc(String(v).replace('T',' '))}
 $('#go6').onclick=async()=>{const b=$('#go6');busy(b,true);$('#liveMeta').textContent='Gemini is reading the notice, about 15 seconds…';
   try{const r=await post('/api/live/26PROC020181047',{});
-    const rows=Object.entries(r.fields).map(([k,f])=>`<tr><td>${esc(LIVE_LABEL[k]||k)}</td><td><b>${fmtLive(f.value)}</b></td><td>${f.pdf_page?`<a href="${esc(r.pdf_url)}#page=${f.pdf_page}" target="_blank" rel="noopener">PDF p${f.pdf_page} ↗</a>`:'—'}<div class="m">searched p${esc(f.searched_pages.join(', p'))}</div></td><td><span class="pill ${f.status||'UNVERIFIED'}">${esc(f.status||'—')}</span>${f.reason?`<div class="m">${esc(f.reason)}</div>`:''}</td><td class="m">${esc((f.quote||'').slice(0,160))}</td></tr>`).join('');
+    const rows=Object.entries(r.fields).map(([k,f])=>`<tr><td>${esc(LIVE_LABEL[k]||k)}</td><td><b>${fmtLive(f.value)}</b></td><td>${f.pdf_page?`<a href="${esc(r.pdf_url)}#page=${f.pdf_page}" target="_blank" rel="noopener">PDF p${f.pdf_page} ↗</a>`:'—'}<div class="m">searched p${esc(f.searched_pages.join(', p'))}</div></td><td><span class="pill ${f.status||'UNVERIFIED'}">${esc(f.status||'—')}</span>${f.reason?`<div class="m">${esc(f.reason)}</div>`:''}</td><td class="quote">${f.quote?hl(f.quote,f.value):'<span class="m">no quote</span>'}</td></tr>`).join('');
     const a=r.arithmetic;
     $('#liveOut').innerHTML=`<table><tr><th>Fact</th><th>Gemini read</th><th>Page</th><th>Verifier</th><th>Quote</th></tr>${rows}</table>
       ${a?`<div class="tile ${a.status}" style="margin-top:12px"><div class="th"><span class="sh">${SHAPE[a.status]}</span><b>Cross-check: guarantee = ${esc(a.observed?.percentage_on_page??'?')}% × budget ${esc(eur(a.observed?.base))} = ${esc(eur(a.observed?.expected))}</b></div><div class="m">${a.status==='VERIFIED'?'Matches the guarantee Gemini read. Two independent figures agree.':esc(a.reason||'')}</div></div>`:''}`;
