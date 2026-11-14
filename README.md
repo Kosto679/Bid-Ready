@@ -18,11 +18,12 @@ python -m app.mcp_server          # MCP (stdio): six tools
 
 Set `BIDREADY_OFFLINE=1` to skip live TED and use `data/tender-demo/ted-cache/`.
 
-Cursor / Claude Code MCP config:
+MCP clients (both configs ship in the repo; create the `.venv` first):
 
-```json
-{ "mcpServers": { "bid-ready": { "command": ".venv/Scripts/python", "args": ["-m", "app.mcp_server"] } } }
-```
+- **Claude Code**: `.mcp.json` at the project root. Open the project in Claude Code and approve the `bid-ready` server when asked.
+- **Cursor**: `.cursor/mcp.json`. Enable `bid-ready` under Settings → MCP.
+
+Then ask: *"Check eligibility on TED 769674-2026."* The result includes the FAILED guarantee receipt. TED calls time out after 8 s and fall back to the local cache, so the call works offline.
 
 ## What it does
 

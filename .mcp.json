@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "bid-ready": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": ["/c", ".venv\\Scripts\\python.exe", "-m", "app.mcp_server"],
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "BIDREADY_TED_TIMEOUT": "8"
+      }
+    }
+  }
+}

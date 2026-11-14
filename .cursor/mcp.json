@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "bid-ready": {
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "args": ["-m", "app.mcp_server"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "BIDREADY_TED_TIMEOUT": "8"
+      }
+    }
+  }
+}

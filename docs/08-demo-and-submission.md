@@ -22,7 +22,9 @@ Paste two lines (or a website) about an 8-person Athens studio. Show the profile
 
 ### 0:25–0:55 — Ranked matches, then a deliberate choice
 
-Show two or three tenders already scored and sorted, each with a one-line reason from the TED formula (CPV, value vs turnover, place, days to deadline). The ΚτΠ tender is probably low. Do **not** click it as if it were the best fit. Say: "It is the biggest, and the deadline is soonest — Monday 7 December 2026, 14:00 Athens — so why is it scored low? Let's check." Open the real TED URL if the network is up: https://ted.europa.eu/en/notice/-/detail/769674-2026
+Show two or three tenders already scored and sorted, each with a one-line reason from the TED formula (CPV, value vs turnover, place, days to deadline). With the formula as specified, the ΚτΠ tender ranks **first** (about 77) for the demo studio: one clean CPV match, Greece, and 23 days to prepare, while the others close in 2–4 days and list many unrelated CPV codes. Say: "On paper this is our best match: right CPV, right place, three weeks to prepare. But a fit score isn't eligibility. Let's check." Open the real TED URL if the network is up: https://ted.europa.eu/en/notice/-/detail/769674-2026
+
+*(Updated Sat 14 Nov after the live run: the original line "why is it scored low?" no longer matches what the screen shows. Re-check the ranking on the morning of the demo; it moves as other tenders close.)*
 
 ### 0:55–1:35 — Prepare bid
 
@@ -43,6 +45,8 @@ In Cursor, with the MCP server attached, one prompt: check eligibility on this t
 ### 2:50–3:00 — Close, then optional wow
 
 Stop and offer questions. If an extra is working, use this last slice: the receipt wall, Firecrawl onboarding, or "you're missing tax clearance — here is the official MITOS procedure."
+
+Ready now: the **Model check** panel. "We ran Gemini on the contest's Google Cloud over nine facts from this tender. Given the PDF page, it got 27 of 27 right. Given only the TED headline, it called €300,000 the budget every time, the same trap, and the verifier failed it."
 
 ## Video plan
 
@@ -76,7 +80,7 @@ Do not leave this until 17:30. Include:
 
 **Why a cover letter? ΕΣΗΔΗΣ doesn't ask for one.** Agreed: the documents that usually go on ΕΣΗΔΗΣ are the ΕΕΕΣ and the offers. Given the "not eligible alone" verdict, the Greek letter is the next useful step — a draft to a possible partner. Filling the ΕΕΕΣ is an extra if time allows.
 
-**Did you plant the guarantee error?** It is a known trap, and we used it on purpose. TED really shows €300,000. A naive extractor that trusts that headline computes 2% as €6,000. The notice sets the guarantee on €200,000, so €4,000. We did not hide a random switch; we used the exact mistake that figure invites, and the verifier catches it against the PDF page.
+**Did you plant the guarantee error?** It is a known trap, and we used it on purpose. TED really shows €300,000. A naive extractor that trusts that headline computes 2% as €6,000. The notice sets the guarantee on €200,000, so €4,000. We did not hide a random switch; we used the exact mistake that figure invites, and the verifier catches it against the PDF page. It isn't hypothetical: in our eval, Gemini given only the TED metadata reported €300,000 as the initial budget in 3 of 3 trials.
 
 **Isn't the verifier just observability?** It blocks "ready". Logs would still let the agent claim success. We refuse to mark the pack ready without independent checks on the tender pages, read writes back, and use idempotency keys so a retry cannot double-write.
 
