@@ -263,6 +263,71 @@ def check_field_value(claim: dict) -> dict:
     }
 
 
+# ---- checks without an answer key (tenders nobody annotated) ---------------------------------
+
+def _value_forms(v: Any, kind: str) -> list[str]:
+    """Ways a value can be written in Greek tender text."""
+    if kind in ("num", "int"):
+        n = float(v)
+        whole = f"{n:,.0f}"
+        return [whole.replace(",", "."), whole.replace(",", "") , whole, f"{n:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")]
+    if kind == "datetime":
+        y, mo, d, hm = v[0:4], v[5:7], v[8:10], v[11:16]
+        return [f"{d}-{mo}-{y}", f"{d}/{mo}/{y}", f"{d}.{mo}.{y}", f"{int(d)}/{int(mo)}/{y}", hm]
+    return [str(x) for x in v] if isinstance(v, list) else [str(v)]
+
+
+def check_quote_supports_value(claim: dict) -> dict:
+    c = claim["check"]
+    pg, quote, kind = c.get("pdf_page"), c.get("quote") or "", c.get("type", "num")
+    if claim.get("value") is None:
+        raise SourceUnavailable("the model gave no value")
+    if not isinstance(pg, int):
+        raise SourceUnavailable("the model gave no page")
+    try:
+        page = T.pack_page(c["pack"], pg)
+    except (FileNotFoundError, IndexError) as e:
+        raise SourceUnavailable(str(e)) from e
+    on_page = bool(quote) and T.norm(quote) in T.norm(page)
+    forms = _value_forms(claim["value"], kind)
+    q = T.norm(quote)
+    if kind == "datetime":
+        supported = any(f in q for f in forms[:4]) and forms[4] in q
+    elif kind == "list":
+        supported = all(f in q for f in forms)
+    else:
+        supported = any(f in q for f in forms)
+    return {
+        "method": "reread_tender_pdf_page", "source": f"{c['pack']} PDF p{pg} via page text",
+        "observed": {"quote_on_page": on_page, "value_in_quote": supported, "looked_for": forms[:3]},
+        "mismatch": not (on_page and supported),
+    }
+
+
+def check_arithmetic_pct(claim: dict) -> dict:
+    """value == (percentage written in the cited clause) x base. Re-reads the clause to get the %."""
+    c = claim["check"]
+    try:
+        page = T.norm(T.pack_page(c["pack"], int(c["pdf_page"])))
+    except (FileNotFoundError, IndexError, TypeError, ValueError) as e:
+        raise SourceUnavailable(str(e)) from e
+    quote = T.norm(c.get("quote") or "")
+    if not quote or quote not in page:
+        raise SourceUnavailable("the clause quote is not on the cited page")
+    i = page.find(quote)
+    window = page[max(0, i - 300): i + len(quote) + 300]
+    m = re.search(r"(\d+(?:,\d+)?)\s*%", quote) or re.search(r"(\d+(?:,\d+)?)\s*%", window)
+    if not m:
+        raise SourceUnavailable("no percentage stated near the clause")
+    pct = float(m.group(1).replace(",", "."))
+    expected = pct / 100 * float(c["base"])
+    return {
+        "method": "reread_tender_pdf_page", "source": f"{c['pack']} PDF p{c['pdf_page']} via page text",
+        "observed": {"percentage_on_page": pct, "base": c["base"], "expected": round(expected, 2)},
+        "mismatch": abs(expected - float(claim["value"])) > 0.5,
+    }
+
+
 def _open_claim_page(claim: dict) -> tuple[str, int]:
     nid, pg = _page(claim)
     _open(nid, pg)
@@ -282,6 +347,8 @@ CHECKS: dict[str, Check] = {
     "ics_deadline": check_ics_deadline,
     "zip_entries": check_zip_entries,
     "field_value": check_field_value,
+    "quote_supports_value": check_quote_supports_value,
+    "arithmetic_pct": check_arithmetic_pct,
 }
 
 

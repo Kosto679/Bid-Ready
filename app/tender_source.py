@@ -82,6 +82,27 @@ def amounts_after(notice_id: str, pdf_page: int, anchor: str, window: int = 600)
     return [parse_eur(m.group(1) + "," + m.group(2)) for m in EUR_RE.finditer(chunk)]
 
 
+@lru_cache(maxsize=8)
+def pack_pages(pack: str) -> tuple[str, ...]:
+    """Per-page text for any tender pack folder under data/tender-demo/: text/pages.json, or a
+    pdftotext dump in text/*.txt with form feeds between pages. Index i holds PDF page i+1."""
+    d = config.DATA_DIR / pack / "text"
+    if (d / "pages.json").exists():
+        return tuple(json.loads((d / "pages.json").read_text(encoding="utf-8")))
+    for f in sorted(d.glob("*.txt")):
+        txt = f.read_text(encoding="utf-8")
+        if "\f" in txt:
+            return tuple(txt.split("\f"))
+    raise FileNotFoundError(f"no per-page text in {d}")
+
+
+def pack_page(pack: str, pdf_page: int) -> str:
+    pages = pack_pages(pack)
+    if pdf_page < 1 or pdf_page > len(pages) or not pages[pdf_page - 1].strip():
+        raise IndexError(f"PDF page {pdf_page} not available in {pack}")
+    return pages[pdf_page - 1]
+
+
 def requirements(notice_id: str) -> dict:
     """Human-curated clause INDEX (what to check, where). Never the sole source of truth."""
     return json.loads((notice_dir(notice_id) / "requirements.json").read_text(encoding="utf-8"))

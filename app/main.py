@@ -102,14 +102,31 @@ def api_eval_run(body: EvalIn) -> dict:
         raise HTTPException(400, f"Gemini is not configured: {e}")
 
 
+@app.post("/api/live/{notice_id}")
+def api_live(notice_id: str) -> dict:
+    from . import gemini
+    from . import live_extract as LX
+
+    if notice_id not in LX.PACKS:
+        raise HTTPException(404)
+    try:
+        return LX.run(notice_id)
+    except gemini.NotConfigured as e:
+        raise HTTPException(400, f"Gemini is not configured: {e}")
+
+
 @app.get("/api/tenders/{notice_id}/rfp")
 def api_rfp(notice_id: str) -> FileResponse:
     """The tender's RFP PDF, inline, so links like .../rfp#page=27 open at the cited page."""
+    from . import live_extract as LX
     from . import tender_source as T
 
-    if notice_id != "769674-2026":
+    if notice_id == "769674-2026":
+        p = T.notice_dir(notice_id) / T.rfp_file_rel()
+    elif notice_id in LX.PACKS:
+        p = config.DATA_DIR / LX.PACKS[notice_id]["pack"] / LX.PACKS[notice_id]["pdf"]
+    else:
         raise HTTPException(404)
-    p = T.notice_dir(notice_id) / T.rfp_file_rel()
     if not p.exists():
         raise HTTPException(404)
     return FileResponse(p, media_type="application/pdf", filename=f"RFP_{notice_id}.pdf", content_disposition_type="inline")

@@ -145,6 +145,14 @@ tr.changed td{background:var(--ambbg)}
     <p class="m">A human reviews, signs, and submits on <span data-term="esidis">ΕΣΗΔΗΣ</span> (promitheus.gov.gr). Bid-Ready stops here.</p>
   </section>
 
+  <section class="card" id="s6">
+    <div class="step">Unannotated tender</div>
+    <h2>Does it work on a tender nobody prepared?</h2>
+    <p class="m">ΟΛΠΑ Α.Ε. (Patras Port), ΑΔΑΜ 26PROC020181047: a 98-page notice with no clause index. Gemini finds and reads the relevant pages live; the verifier then checks what it can without an answer key: the quote really is on the cited page and contains the value, and the guarantee equals the percentage its clause states times the extracted budget.</p>
+    <div class="row"><button id="go6">Read it live</button><span class="m" id="liveMeta"></span></div>
+    <div id="liveOut" style="margin-top:12px"></div>
+  </section>
+
   <section class="card" id="s5">
     <div class="step">Model check</div>
     <h2>How often does the model get the tender facts right?</h2>
@@ -295,7 +303,19 @@ function tileLabel(r){const c=r.intent.claim||'',id=r.intent.claim_id||'';
   return {participation_guarantee:'Participation guarantee',turnover_threshold:'Turnover threshold',deadline:'Submission deadline',
     'pack:letter':'Consortium letter','pack:ics':'Deadline calendar file','pack:zip':'ZIP contents and names','letter_facts':'Gemini rewrite adds no facts'}[id]||c.replace(/\s*\(§.*$/,'').slice(0,80)}
 function pageLink(r){const cit=r.intent.citation||{};if(!cit.pdf_page)return'';
-  return `<a href="/api/tenders/769674-2026/rfp#page=${cit.pdf_page}" target="_blank" rel="noopener">§${esc(cit.section)} · PDF p${cit.pdf_page}${cit.printed_page?` / printed ${cit.printed_page}`:''} ↗</a>`}
+  const href=cit.url||`/api/tenders/769674-2026/rfp#page=${cit.pdf_page}`;
+  return `<a href="${esc(href)}" target="_blank" rel="noopener">${/^\d/.test(cit.section||'')?'§':''}${esc(cit.section)} · PDF p${cit.pdf_page}${cit.printed_page&&cit.printed_page!==cit.pdf_page?` / printed ${cit.printed_page}`:''} ↗</a>`}
+
+const LIVE_LABEL={initial_value_ex_vat_eur:'Budget excl. VAT and options',participation_guarantee_eur:'Participation guarantee',submission_deadline:'Submission deadline',iso_standards:'ISO certificates required'};
+function fmtLive(v){if(v==null)return'<span class="m">not found</span>';if(Array.isArray(v))return esc(v.map(x=>'ISO '+x).join(', '));if(typeof v==='number')return esc(eur(v));return esc(String(v).replace('T',' '))}
+$('#go6').onclick=async()=>{const b=$('#go6');busy(b,true);$('#liveMeta').textContent='Gemini is reading the notice, about 15 seconds…';
+  try{const r=await post('/api/live/26PROC020181047',{});
+    const rows=Object.entries(r.fields).map(([k,f])=>`<tr><td>${esc(LIVE_LABEL[k]||k)}</td><td><b>${fmtLive(f.value)}</b></td><td>${f.pdf_page?`<a href="${esc(r.pdf_url)}#page=${f.pdf_page}" target="_blank" rel="noopener">PDF p${f.pdf_page} ↗</a>`:'—'}<div class="m">searched p${esc(f.searched_pages.join(', p'))}</div></td><td><span class="pill ${f.status||'UNVERIFIED'}">${esc(f.status||'—')}</span>${f.reason?`<div class="m">${esc(f.reason)}</div>`:''}</td><td class="m">${esc((f.quote||'').slice(0,160))}</td></tr>`).join('');
+    const a=r.arithmetic;
+    $('#liveOut').innerHTML=`<table><tr><th>Fact</th><th>Gemini read</th><th>Page</th><th>Verifier</th><th>Quote</th></tr>${rows}</table>
+      ${a?`<div class="tile ${a.status}" style="margin-top:12px"><div class="th"><span class="sh">${SHAPE[a.status]}</span><b>Cross-check: guarantee = ${esc(a.observed?.percentage_on_page??'?')}% × budget ${esc(eur(a.observed?.base))} = ${esc(eur(a.observed?.expected))}</b></div><div class="m">${a.status==='VERIFIED'?'Matches the guarantee Gemini read. Two independent figures agree.':esc(a.reason||'')}</div></div>`:''}`;
+    $('#liveMeta').textContent=`Run ${r.run_id}`;
+  }catch(e){$('#liveMeta').textContent='';alert(e)}busy(b,false)};
 function tile(r,i){const ic=r.independent_check||{},o=ic.observed||{};
   const claimed=r.tool_response&&r.tool_response.value!=null&&typeof r.tool_response.value!=='string'?r.tool_response.value:null;
   const field=Object.keys(o).find(k=>typeof o[k]==='number'||/deadline/.test(k));
