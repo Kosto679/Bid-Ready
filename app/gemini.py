@@ -59,6 +59,50 @@ def client():
     return _client
 
 
+PROFILE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "name": {"type": ["string", "null"], "description": "Company name exactly as written, or null."},
+        "size": {"type": ["integer", "null"], "description": "Number of people, only if stated."},
+        "city": {"type": ["string", "null"], "description": "City in English (e.g. Athens), only if stated."},
+        "nuts_or_country": {"type": ["string", "null"], "description": "Greek NUTS-2 code (EL30 Attica, EL52 Central Macedonia, EL63 Western Greece, EL43 Crete, ...) if the city is in Greece, else ISO3 country code, else null."},
+    },
+    "required": ["name", "size", "city", "nuts_or_country"],
+}
+
+PROFILE_SYSTEM = (
+    "You read a short company description for a public-tender tool. Extract only what is stated. "
+    "Use null for anything not stated; never guess a size or a name."
+)
+
+_profile_cache: dict[str, dict] = {}
+
+
+def extract_profile(description: str, model: str | None = None) -> dict:
+    """{"name", "size", "city", "nuts_or_country"} from the description (validate before use). Cached per text."""
+    from google.genai import types
+
+    key = description.strip()
+    if key in _profile_cache:
+        return _profile_cache[key]
+    resp = client().models.generate_content(
+        model=model or MODEL,
+        contents=f"COMPANY DESCRIPTION:\n<<<\n{description}\n>>>",
+        config=types.GenerateContentConfig(
+            system_instruction=PROFILE_SYSTEM,
+            temperature=0,
+            response_mime_type="application/json",
+            response_json_schema=PROFILE_SCHEMA,
+        ),
+    )
+    try:
+        out = json.loads(resp.text or "{}")
+    except json.JSONDecodeError:
+        out = {}
+    _profile_cache[key] = out
+    return out
+
+
 CPV_SCHEMA = {
     "type": "object",
     "properties": {

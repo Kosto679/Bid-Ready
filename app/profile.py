@@ -120,6 +120,32 @@ def missing_questions(profile: dict) -> list[dict]:
     return qs
 
 
+def _gemini_profile(lines: str) -> dict | None:
+    """Name, size and location via Gemini, validated. None if Gemini is off or fails."""
+    from . import gemini
+
+    if not lines.strip() or not gemini.configured()[0]:
+        return None
+    try:
+        raw = gemini.extract_profile(lines)
+    except Exception:
+        return None
+    out: dict[str, Any] = {}
+    name = (raw.get("name") or "").strip()
+    if name and name.lower() in lines.lower():  # must appear in the text
+        out["name"] = name
+    size = raw.get("size")
+    if isinstance(size, int) and 0 < size < 1_000_000:
+        out["size"] = size
+    nuts = (raw.get("nuts_or_country") or "").upper()
+    if re.fullmatch(r"EL\d{2}|[A-Z]{3}", nuts):
+        out["nuts_or_country"] = nuts
+    city = (raw.get("city") or "").strip()
+    if city:
+        out["location"] = f"{city}, Greece" if nuts.startswith("EL") or nuts == "GRC" else city
+    return out or None
+
+
 def onboard(lines: str = "", answers: dict | None = None, profile_json: dict | None = None, run_id: str | None = None) -> dict:
     run_id = run_id or new_run_id()
     base: dict[str, Any] = {
@@ -131,17 +157,14 @@ def onboard(lines: str = "", answers: dict | None = None, profile_json: dict | N
     if profile_json:
         base.update(profile_json)
     else:
-        parsed = None
-        try:
-            from . import llm
-
-            parsed = llm.extract_profile(lines)
-            source = "llm" if parsed else "rules"
-        except Exception:
-            parsed = None
-        base.update(parsed or _parse_lines(lines))
-        if not parsed:
-            source = "rules"
+        rules = _parse_lines(lines)
+        base.update(rules)
+        source = "rules"
+        g_prof = _gemini_profile(lines)
+        if g_prof:
+            # Gemini fills only what it found; rules keep anything it left empty. The summary stays your own words.
+            base.update({k: v for k, v in g_prof.items() if v not in (None, "")})
+            source = "gemini"
         # CPV codes: Gemini picks from the curated list (app/cpv.py), keyword rules otherwise.
         g = cpv.guess(lines)
         base.update(cpv_codes=g["codes"], cpv_detail=g["detail"], cpv_source=g["source"], cpv_note=g["note"])

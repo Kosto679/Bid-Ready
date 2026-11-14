@@ -10,7 +10,7 @@ A guided path from a two-line company profile to a checked bid pack for Greek/EU
 python -m venv .venv
 .venv\Scripts\activate            # Windows (source .venv/bin/activate elsewhere)
 pip install -r requirements.txt
-copy .env.example .env            # optional: ANTHROPIC_API_KEY for LLM onboarding
+copy .env.example .env            # Google Cloud project for Gemini (optional; rules work offline)
 pytest -q                         # golden KtP test runs fully offline
 uvicorn app.main:app --port 8000  # UI at http://localhost:8000
 python -m app.mcp_server          # MCP (stdio): six tools

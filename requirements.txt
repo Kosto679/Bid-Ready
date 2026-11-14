@@ -5,7 +5,6 @@ pydantic>=2.8
 python-dotenv>=1.0
 mcp>=1.2,<2
 python-docx>=1.1
-anthropic>=0.40
 pytest>=8.0
 tzdata>=2024.1
 google-genai>=1.0

@@ -12,7 +12,7 @@ def isolated(tmp_path, monkeypatch):
     monkeypatch.setenv("BIDREADY_OFFLINE", "1")
     monkeypatch.setenv("BIDREADY_DB", str(tmp_path / "receipts.db"))
     monkeypatch.setenv("BIDREADY_TODAY", "2026-11-15")
-    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("GOOGLE_CLOUD_PROJECT", raising=False)
     from app import config
 
     monkeypatch.setattr(config, "OUT_DIR", tmp_path / "out")
