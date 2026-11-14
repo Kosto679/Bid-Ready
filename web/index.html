@@ -79,9 +79,7 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
 
 .cor{min-height:100vh;display:flex;flex-direction:column}
 .cor-top{padding:20px 28px 0;max-width:880px;margin:0 auto;width:100%}
-.cor-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:0 0 16px}
-.cor-brand{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0}
-#openLab{padding:4px 10px;font-size:12px;font-weight:600}
+.cor-brand{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0 0 16px}
 .cor-rail{display:flex;align-items:center;flex-wrap:wrap;margin:0 0 18px}
 .cor-rail .st{display:flex;align-items:center;gap:8px;color:var(--mute);font-size:13px;font-weight:600}
 .cor-rail .st[data-now]{color:var(--ink)}
@@ -96,6 +94,20 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
 @keyframes enter{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .cor-foot{position:sticky;bottom:0;background:var(--bg);border-top:1px solid var(--line);padding:14px 28px calc(14px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:880px;margin:0 auto;width:100%}
 .cor-foot .right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+/* eligibility screen: verdict, your rules, what to provide, our checks */
+.ecard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0}
+.ecard p{margin:0}.eh{font-size:13px;color:var(--mute);margin:0 0 8px!important}
+.vh{font-size:19px;font-weight:700;line-height:1.35}.vh.weak{color:var(--bad)}.vh.good{color:var(--ok)}.vh.fair{color:var(--amb)}
+.erules{display:flex;flex-direction:column}
+.erow{display:grid;grid-template-columns:22px minmax(0,1.3fr) minmax(0,1fr);gap:10px;align-items:baseline;padding:8px 0;border-top:1px solid var(--line)}
+.erow:first-child{border-top:0}
+.emark{font-weight:700;text-align:center}.emark.good{color:var(--ok)}.emark.weak{color:var(--bad)}.emark.fair{color:var(--amb)}
+.eyou{color:var(--mute);font-size:13.5px}
+.erow2{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;padding:6px 0;font-size:14.5px}
+.erow2 .emark{color:var(--mute)}
+.echeck .good{color:var(--ok)}.echeck .fair{color:var(--amb)}
+.efix{margin-top:10px;background:var(--ambbg);color:var(--amb);border:1px solid var(--amb);border-radius:8px;padding:10px 12px;font-size:14px}
+@media (max-width:640px){.erow{grid-template-columns:22px minmax(0,1fr)}.erow .eyou{grid-column:2}}
 /* estimated-value filter */
 .vfilter{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .vfilter label{margin:0;font-weight:600;font-size:13px}.vfilter input{width:130px;padding:7px 9px}
@@ -105,10 +117,7 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
 <body>
 <div class="cor">
   <header class="cor-top">
-    <div class="cor-head">
-      <p class="cor-brand">Bid-Ready</p>
-      <button type="button" class="ghost" id="openLab">Lab</button>
-    </div>
+    <p class="cor-brand">Bid-Ready</p>
     <nav class="cor-rail" id="rail" aria-label="Progress"></nav>
     <p class="you" id="youLine" hidden></p>
   </header>
@@ -124,6 +133,15 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
         <div id="profileSummary" class="m"></div>
         <div id="questions"></div>
       </div>
+      <details class="m" style="margin-top:28px">
+        <summary>How we check the model on this tender</summary>
+        <p class="m">Not part of preparing a bid. Gemini extracts nine facts from TED 769674-2026; the verifier re-reads the PDF page and grades every answer. "Headline" gives the model only the TED metadata; "Page" gives it the cited page.</p>
+        <div class="row"><button id="go5">Run model check</button><span class="m" id="evalMeta"></span></div>
+        <div id="evalOut" style="margin-top:12px"></div>
+        <p class="m" style="margin-top:18px">For any tender without a hand-made index, Gemini reads the eligibility rules live. Here it reads ΚτΠ's PDF from scratch, and we compare its answers with the index we built by hand.</p>
+        <div class="row"><button id="go7" class="ghost">Compare on ΚτΠ</button><span class="m" id="agreeMeta"></span></div>
+        <div id="agreeOut" style="margin-top:12px"></div>
+      </details>
     </section>
 
     <section class="hidden" id="s2">
@@ -156,11 +174,20 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
 
     <section class="hidden" id="s3">
       <h2 id="s3title">Can you bid?</h2>
-      <div id="status" class="banner wait">Checking against the tender pages… not ready.</div>
-      <div id="verdict"></div>
-      <table id="rules"></table>
-      <h2 style="margin-top:22px;font-size:18px"><span data-term="receipt">Receipts</span></h2>
-      <div id="receipts"></div>
+      <div class="ecard" id="verdict"><p class="m">Checking the tender's rules…</p></div>
+      <div class="ecard">
+        <p class="eh">What the tender asks of your company</p>
+        <div id="rules" class="erules"></div>
+      </div>
+      <div class="ecard" id="provideCard">
+        <p class="eh">If you bid: what you'd have to provide</p>
+        <div id="provide" class="eprov"></div>
+      </div>
+      <div class="ecard">
+        <p class="eh">How we checked our own reading</p>
+        <div id="status" class="echeck">Checking against the tender pages…</div>
+        <details class="m" style="margin-top:10px"><summary>Show every check (<span data-term="receipt">receipts</span>)</summary><div id="receipts" style="margin-top:8px"></div></details>
+      </div>
       <h2 style="margin-top:22px;font-size:18px" id="letterHead">Consortium letter (Greek)</h2>
       <p class="m" id="letterSrc"></p>
       <pre id="letter"></pre>
@@ -182,18 +209,6 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
       <div id="liveOut" style="margin-top:12px"></div>
     </section>
 
-    <section class="hidden" id="s5">
-      <h2>Lab</h2>
-      <p class="sub">Not part of preparing a bid. Measures whether Gemini reads this tender’s facts, and whether the generic rule reader matches the hand-made ΚτΠ index.</p>
-      <h2 style="font-size:18px;margin-top:8px">How often does the model get the tender facts right?</h2>
-      <p class="m">Gemini extracts nine facts from TED 769674-2026; the verifier re-reads the PDF page and grades every answer. "Headline" gives the model only the TED metadata; "Page" gives it the cited page.</p>
-      <div class="row"><button id="go5">Run model check</button><span class="m" id="evalMeta"></span></div>
-      <div id="evalOut" style="margin-top:12px"></div>
-      <h2 style="font-size:18px;margin-top:24px">Does the generic rule reader match our hand-made index?</h2>
-      <p class="m">For any tender without a hand-made index, Gemini reads the eligibility rules live. Here it reads ΚτΠ's PDF from scratch, and we compare its answers with the index we built by hand.</p>
-      <div class="row"><button id="go7" class="ghost">Compare on ΚτΠ</button><span class="m" id="agreeMeta"></span></div>
-      <div id="agreeOut" style="margin-top:12px"></div>
-    </section>
   </div>
 
   <footer class="cor-foot">
@@ -215,8 +230,8 @@ async function post(u,b){const r=await fetch(u,{method:'POST',headers:{'Content-
 function busy(btn,on){btn.disabled=on;btn.classList.toggle('busy',on);if(on){btn.dataset.t=btn.textContent;btn.textContent='Working…'}else if(btn.dataset.t)btn.textContent=btn.dataset.t}
 const eur=v=>v==null?'—':'€'+Math.round(v).toLocaleString('en');
 
-const PANES=['s1','s2','sFit','s3','s4','s5'];
-let pane='s1', prevPane='s1';
+const PANES=['s1','s2','sFit','s3','s4'];
+let pane='s1';
 function hasPack(){return !!window.__canPack}
 function showStep(id){
   pane=id;
@@ -231,7 +246,7 @@ function renderRail(){
   if(hasPack()||pane==='s4') order.push({id:'s4',label:'Pack'});
   const idx=order.findIndex(s=>s.id===pane);
   $('#rail').innerHTML=order.map((s,i)=>{
-    const now=pane!=='s5'&&s.id===pane, done=pane!=='s5'&&idx>i;
+    const now=s.id===pane, done=idx>i;
     return `${i?'<span class="bar" aria-hidden="true"></span>':''}<span class="st"${now?' data-now':done?' data-done':''}><i class="dot"></i>${s.label}</span>`;
   }).join('');
 }
@@ -248,10 +263,9 @@ function renderFoot(){
   go2.classList.toggle('hidden', pane!=='s1'||$('#profileBox').classList.contains('hidden'));
   goE.classList.toggle('hidden', pane!=='sFit');
   toP.classList.toggle('hidden', pane!=='s3'||!hasPack());
-  hint.textContent=pane==='s2'?'Choose a tender.':pane==='s3'&&!hasPack()?'This is as far as this tender goes.':pane==='s5'?'Lab is off the bid path.':'';
+  hint.textContent=pane==='s2'?'Choose a tender.':pane==='s3'&&!hasPack()?'This is as far as this tender goes.':'';
 }
-$('#back').onclick=()=>{if(pane==='s5')showStep(prevPane);else if(pane==='s4')showStep('s3');else if(pane==='s3')showStep('sFit');else if(pane==='sFit')showStep('s2');else if(pane==='s2')showStep('s1')};
-$('#openLab').onclick=()=>{if(pane==='s5')showStep(prevPane);else{prevPane=pane;showStep('s5')}};
+$('#back').onclick=()=>{if(pane==='s4')showStep('s3');else if(pane==='s3')showStep('sFit');else if(pane==='sFit')showStep('s2');else if(pane==='s2')showStep('s1')};
 $('#toPack').onclick=()=>showStep('s4');
 showStep('s1');
 
@@ -300,7 +314,7 @@ function ring(score,size,label){const r=size*0.42,c=2*Math.PI*r,b=band(score),sw
       stroke-dasharray="${c}" stroke-dashoffset="${c}" data-off="${c*(1-score/100)}" transform="rotate(-90 ${size/2} ${size/2})"/>
     <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-size="${size*0.3}">${Math.round(score)}</text></svg>`}
 function animateRings(root){requestAnimationFrame(()=>requestAnimationFrame(()=>root.querySelectorAll('.ring .val').forEach(c=>c.style.strokeDashoffset=c.dataset.off)))}
-let MATCHES={}, prepPromise=null;
+let MATCHES={}, prepPromise=null, letterPromise=null;
 
 $('#demo').onclick=async()=>{const d=await (await fetch('/api/demo')).json();$('#lines').value=d.lines;answers={};await doOnboard(d.answers)};
 $('#go1').onclick=()=>doOnboard(null);
@@ -375,7 +389,10 @@ async function prepare(nid){
   noticeId=nid;const n=MATCHES[nid];if(n)showReport(n);
   $('#goElig').disabled=true;$('#eligWait').textContent='Checking the tender pages…';
   $('#status').className='banner wait';$('#status').textContent='Checking against the tender pages… not ready.';$('#rules').innerHTML='';$('#receipts').innerHTML='';$('#letter').textContent='';$('#verdict').innerHTML='';$('#letterSrc').innerHTML='';
-  prepPromise=post('/api/prepare',{notice_id:nid,profile,run_id:runId});
+  prepPromise=post('/api/prepare',{notice_id:nid,profile,run_id:runId,with_letter:false});
+  // The letter's Gemini rewrite is slow (~15 s); start it as soon as eligibility is saved, show it when it lands.
+  letterPromise=prepPromise.then(r=>post('/api/letter',{run_id:r.run_id,notice_id:nid,profile}));
+  letterPromise.catch(()=>{});
   prepPromise.then(()=>{if(noticeId===nid){$('#goElig').disabled=false;$('#eligWait').textContent=''}}).catch(e=>{$('#eligWait').textContent='The check failed: '+e.message});
   if(!n)showEligibility();
 }
@@ -385,18 +402,32 @@ async function showEligibility(){$('#s3title').textContent='Can you bid?';
   showStep('s3');
   try{const r=await prepPromise;const e=r.eligibility;const nid=noticeId;
     $('#s3title').textContent='Can you bid? · TED '+nid;
-    const V={not_eligible:'Not eligible on your own',eligible:'Eligible',unclear:'Unclear'}[e.verdict];
+    const S=e.summary||{};
     const noRules=e.source?.kind==='none';
-    const srcNote=e.generic?`<p class="m">${noRules?'':`<span class="pill RECORDED">Read live</span> `}${esc(e.source?.note||'')}${noRules?'':' Gemini read the rules; the verifier re-checked every quote and figure below.'}</p>`:'';
-    $('#verdict').innerHTML=`<p><span class="pill ${e.verdict==='not_eligible'?'missing':e.verdict==='eligible'?'meets':'unclear'}">${V}</span></p>${srcNote}${e.partnership_note?`<p>${esc(e.partnership_note)}</p>`:''}`;
-    const clause=c=>{if(!c)return'';const where=c.pdf_page?`PDF p${c.pdf_page}${c.printed_page&&c.printed_page!==c.pdf_page?` / printed ${c.printed_page}`:''}`:'';
-      if(c.url)return `<a href="${esc(c.url)}" target="_blank" rel="noopener">${c.pdf_page?esc(where):esc(c.section||'TED notice')} ↗</a>`;
-      return `§${esc(c.section)}<br><span class="m">${esc(where)}</span>`};
-    $('#rules').innerHTML='<tr><th>Rule</th><th>Status</th><th>Clause</th><th>Notes</th></tr>'+(e.rules||[]).map(x=>`<tr><td>${esc(x.title)}${RULE_TERM[x.id]?` <span class="m">(${termBtn(RULE_TERM[x.id],'what is this?')})</span>`:''}</td><td><span class="pill ${x.status}">${x.status}</span></td><td>${clause(x.citation)}</td><td class="m">${esc(x.notes)}</td></tr>`).join('')
-      +(!(e.rules||[]).length?`<tr><td colspan="4" class="m">${esc(e.source?.note||'No rules could be read.')} <a href="${esc(e.ted_url)}" target="_blank" rel="noopener">Open the notice on TED ↗</a></td></tr>`:'');
+    const srcNote=e.generic?`<p class="m" style="margin-top:8px">${noRules?'':'<span class="pill RECORDED">Read live</span> '}${esc(e.source?.note||'')}</p>`:'';
+    const tone={not_eligible:'weak',eligible:'good'}[e.verdict]||'fair';
+    $('#verdict').innerHTML=`<p class="eh">Verdict</p><p class="vh ${tone}">${esc(S.headline||'')}</p><p class="m" style="margin:4px 0 0">${esc(S.sub||'')}</p>${srcNote}`;
+    const pageRef=c=>{if(!c)return'';const pg=c.pdf_page;const href=c.url||(pg?`/api/tenders/${nid}/rfp#page=${pg}`:null);
+      if(!href)return'';return `<a href="${esc(href)}" target="_blank" rel="noopener">${pg?`p${pg}`:'TED notice'} ↗</a>`};
+    const MARKS={meets:['✓','good','you meet it'],missing:['✗','weak',"you don't meet it"],unclear:['?','fair','we can\'t tell']};
+    const ruleRows=(e.rules||[]).filter(x=>x.kind!=='provide');
+    $('#rules').innerHTML=ruleRows.map(x=>{const[m,cls,aria]=MARKS[x.status]||MARKS.unclear;
+      return `<div class="erow" title="${esc(x.notes||'')}"><span class="emark ${cls}" aria-label="${aria}">${m}</span>
+        <span class="etitle">${esc(x.title)}${RULE_TERM[x.id]?` ${termBtn(RULE_TERM[x.id],'?')}`:''}</span>
+        <span class="eyou">You: ${esc(x.you||'—')}${pageRef(x.citation)?` · ${pageRef(x.citation)}`:''}</span></div>`}).join('')
+      ||`<p class="m">${esc(e.source?.note||'No rules could be read.')} <a href="${esc(e.ted_url)}" target="_blank" rel="noopener">Open the notice on TED ↗</a></p>`;
+    const PICON={bank:'€',file:'▤',calendar:'◷'};
+    $('#provide').innerHTML=(e.provide||[]).map(p=>`<div class="erow2"><span class="emark">${PICON[p.icon]||'•'}</span><span>${esc(p.text)}${p.citation?` · ${pageRef(p.citation)}`:''}</span></div>`).join('');
+    $('#provideCard').classList.toggle('hidden',!(e.provide||[]).length);
     window.__generic=!!e.generic;
     renderReceipts(r.state);
-    const L=r.letter, fc=L.fact_check||{};
+    window.__canPack=false;renderFoot();renderRail();
+    const isDemo=nid==='769674-2026';
+    $('#letterHead').classList.toggle('hidden',!isDemo);$('#letter').classList.add('hidden');
+    $('#letterSrc').innerHTML=isDemo?'<span class="m">Drafting the Greek letter from the checked facts…</span>':'';
+    const lr=await letterPromise;if(noticeId!==nid)return;
+    renderReceipts(lr.state);
+    const L=lr.letter, fc=L.fact_check||{};
     const hasLetter=!!L.markdown;
     window.__canPack=hasLetter;
     $('#letter').textContent=L.markdown||'';$('#letter').classList.toggle('hidden',!hasLetter);$('#letterHead').classList.toggle('hidden',!hasLetter);
@@ -461,14 +492,33 @@ async function renderReceipts(){const d=await (await fetch(`/api/runs/${runId}/r
     +GROUPS.map(([g,title])=>{const rs=checked.filter(r=>groupOf(r.intent.claim_id||'')===g).sort((a,b)=>(a.status==='VERIFIED')-(b.status==='VERIFIED'));
       return rs.length?`<h3 class="wallh">${title}</h3><div class="wall">${rs.map(r=>tile(r,i++)).join('')}</div>`:''}).join('');
   const s=$('#status');
-  if(window.__generic){s.className='banner wait';s.textContent=`${count('VERIFIED')} fact(s) re-checked against the source. Not a bid pack: for this tender we can show the rules, not prepare the documents.`}
-  else if(st.state==='ready'){s.className='banner yes';s.textContent='All checks verified against the tender. Ready for a human to sign.'}
-  else if(st.state==='not_checked'){s.className='banner wait';s.textContent='Checks have not finished. Not ready.'}
-  else{s.className='banner no';s.textContent=`NOT READY — ${st.failed.length} failed, ${st.unverified.length} unverified check(s). See the red receipt below.`}
+  const ok=count('VERIFIED'), fixed=count('FAILED'), open=count('UNVERIFIED');
+  const total=ok+fixed+open;
+  const corrections=checked.filter(r=>r.status==='FAILED').map(r=>{const claimed=(r.tool_response||{}).value, obs=(r.independent_check||{}).observed||{};
+    const seen=Object.values(obs).find(v=>typeof v==='number'), cit=r.intent.citation||{};
+    const what=tileLabel(r).toLowerCase();
+    const pg=cit.pdf_page?` (p${cit.pdf_page})`:'';
+    if(typeof claimed==='number'&&seen!=null)
+      return `<div class="efix">Caught a wrong figure: our first reading put the ${esc(what)} at ${esc(eur(claimed))}. The tender says ${esc(eur(seen))}${esc(pg)}. We use ${esc(eur(seen))}.</div>`;
+    return `<div class="efix">Caught a mismatch: ${esc(tileLabel(r))}. ${esc(r.reason||'')}</div>`}).join('');
+  const line=total?`${total} figure${total===1?'':'s'} and quote${total===1?'':'s'} re-read from the tender. <span class="good">${ok} confirmed</span>${fixed?`, <span class="fair">${fixed} corrected</span>`:''}${open?`, <span class="fair">${open} couldn't be re-checked</span>`:''}.`:'Checking against the tender pages…';
+  const pack=window.__generic?'<p class="m" style="margin:8px 0 0">For this tender we show the rules; the letter and handover pack are ΚτΠ-only for now.</p>'
+    :st.state==='ready'?'<p class="m" style="margin:8px 0 0">Every check confirmed. The pack is ready for a person to review and sign.</p>'
+    :fixed||open?'<p class="m" style="margin:8px 0 0">The pack is marked “needs review” until someone looks at the correction.</p>':'';
+  s.className='echeck';s.innerHTML=`<p style="margin:0">${line}</p>${corrections}${pack}`;
 }
 
 $('#go4').onclick=async()=>{busy($('#go4'),true);try{const r=await post('/api/pack',{run_id:runId,notice_id:noticeId});
-  $('#packOut').innerHTML=`<p><span class="pill ${r.ready?'VERIFIED':'FAILED'}">${r.ready?'READY':'NOT READY'}</span> ${esc((r.entries||[]).join(' · '))}</p><p><a href="/api/runs/${runId}/zip">Download ${esc((r.zip_path||'').split(/[\\/]/).pop())}</a></p>`;
+  const WHAT={'consortium_letter_el.docx':'Greek letter to a possible consortium partner (Word)','consortium_letter_el.md':'Same letter, plain text',
+    'eligibility_checklist.md':'Every rule with its clause and PDF page','receipts.json':'Every check the verifier made, with the page it re-read',
+    'deadline.ics':'Calendar entry: Mon 7 Dec 2026, 14:00 Athens time','README.txt':'What a human does next'};
+  const FAILED_LABEL={participation_guarantee:'the participation guarantee figure'};
+  const failed=(r.state?.failed||[]).map(id=>FAILED_LABEL[id]||id);
+  const why=r.ready?'Every check verified. Ready for a human to review and sign.'
+    :`Not marked ready: the verifier failed ${failed.length?esc(failed.join(', ')):'a check'}. A human fixes it before anyone signs.`;
+  $('#packOut').innerHTML=`<p><span class="pill ${r.ready?'VERIFIED':'FAILED'}">${r.ready?'READY':'NOT READY'}</span> ${why}</p>
+    <table>${[...(r.entries||[])].sort((a,b)=>{const o=Object.keys(WHAT),i=f=>o.includes(f)?o.indexOf(f):99;return i(a)-i(b)}).map(f=>`<tr><td><code>${esc(f)}</code></td><td class="m">${esc(WHAT[f]||'')}</td></tr>`).join('')}</table>
+    <p style="margin-top:10px"><a href="/api/runs/${runId}/zip">Download ${esc((r.zip_path||'').split(/[\\/]/).pop())}</a></p>`;
   renderReceipts();}catch(e){alert(e)}busy($('#go4'),false)};
 
 const pct=v=>v==null?'—':Math.round(v*100)+'%';

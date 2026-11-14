@@ -34,6 +34,7 @@ ANCHORS = {
     "experience_sla": ("experience_sla", 34, "Service Level Agreement"),
     "experience_transformation": ("experience_transformation", 34, "ψηφιακό μετασχηματισμό"),
     "iso": ("iso", 36, "ISO 9001:2015"),
+    "team": ("team", 34, "2.2.6.2"),
     "participation_guarantee": ("participation_guarantee", 27, "2.2.2.1"),
 }
 
@@ -161,6 +162,15 @@ def check_eligibility(notice_id: str, profile: dict, run_id: str | None = None, 
                  "Source flag: the notice cites editions '27001:2019' and '27701:2019', which do not exist — not silently corrected.",
     })
 
+    rules.append({
+        "id": "team",
+        "title": "Named project team of 7 (PM, 4 developers, security officer, DPO)",
+        "status": "unclear",
+        "citation": _citation(notice_id, req, "team"),
+        "notes": "Minimum CVs, on pain of exclusion: a project manager with 12 years, an information-security officer with 20, "
+                 "and a DPO with a law degree, among others. We didn't ask about your team.",
+    })
+
     # Participation guarantee: the naive path trusts TED's procedure-level value.
     notice_res = ted.get_notice(notice_id, run_id=run_id)
     notice = notice_res["notice"] or {"estimated_value": value["total_with_option_ex_vat"], "publication_number": notice_id}
@@ -220,8 +230,109 @@ def check_eligibility(notice_id: str, profile: dict, run_id: str | None = None, 
     if run_verify:
         out["receipts"] = verifier.verify(run_id)
         rule_cache.save_from_receipts(notice_id, out["receipts"])
+        _apply_guarantee_check(rules, out["receipts"])
+    present(report, profile, out.get("receipts") or [], deadline="Monday 7 Dec 2026, 14:00 (Athens)")
+    _save_report(run_id, report)  # the pack checklist reads this file
+    out.update({k: report[k] for k in ("summary", "provide", "rules")})
     out["state"] = verifier.run_state(run_id)
     return out
+
+
+# ---- presentation: one shape for every tender ---------------------------------------------------
+
+SHORT = {
+    "turnover": "enough turnover", "profitability": "profit in each year",
+    "experience_escrow": "5 public escrow-payment projects", "experience_sla": "an SLA support project ≥ €200,000",
+    "experience_transformation": "a digital-transformation project", "experience": "the required past projects",
+    "iso": "the ISO certificates", "team": "the named team",
+}
+PROVIDE_IDS = {"participation_guarantee", "guarantee"}
+
+
+def _you(rule_id: str, profile: dict) -> str:
+    t = profile.get("turnover_2023_2025_total_eur")
+    projects = profile.get("public_sector_projects_last_5y")
+    if rule_id == "turnover":
+        return f"€{t:,.0f} over 2023–25" if t is not None else "not given"
+    if rule_id == "profitability":
+        p = profile.get("profitable_last_3y")
+        return "not given" if p is None else ("yes" if p else "no")
+    if rule_id.startswith("experience"):
+        if projects is None:
+            return "not given"
+        s = str(projects).strip()
+        if re.fullmatch(r"(none|no|κανένα|-)\.?", s, re.I):
+            return "none"
+        if rule_id in ("experience_escrow", "experience_sla") and _count_escrow_projects(projects) == 0:
+            return "no escrow-payment projects"
+        return s if len(s) <= 60 else s[:57] + "…"
+    if rule_id == "iso":
+        certs = profile.get("certificates") or []
+        return ", ".join(certs) if certs else "none"
+    if rule_id == "team":
+        return "we didn't ask"
+    return ""
+
+
+def present(report: dict, profile: dict, receipts: list[dict], deadline: str | None = None) -> None:
+    """Adds rule["you"] and rule["kind"], report["summary"] (built only from the rule rows) and report["provide"]."""
+    rows = report.get("rules") or []
+    for r in rows:
+        r["kind"] = "provide" if r["id"] in PROVIDE_IDS else "rule"
+        r["you"] = _you(r["id"], profile)
+    rules = [r for r in rows if r["kind"] == "rule"]
+    missing = [r for r in rules if r["status"] == "missing"]
+    verdict = report.get("verdict")
+    subcontract = any(c.get("intent", {}).get("claim_id") == "cite:partnership:subcontractor_b10" and c.get("status") == "VERIFIED" for c in receipts)
+    if verdict == "not_eligible":
+        headline = "You can't bid on this alone." + (" You could join as a subcontractor." if subcontract else "")
+        gaps = [SHORT.get(r["id"], r["title"]) for r in missing]
+        sub = (f"{len(missing)} of {len(rules)} rules missing. A partner would need to bring "
+               + (", ".join(gaps[:-1]) + " and " + gaps[-1] if len(gaps) > 1 else gaps[0]) + ".")
+    elif verdict == "eligible":
+        headline, sub = "You meet the rules we could check.", "Review the ones marked “we didn't ask” before you commit."
+    elif not rules:
+        headline, sub = "We couldn't read this tender's rules.", (report.get("source") or {}).get("note") or ""
+    else:
+        headline = "We can't tell yet."
+        sub = f"{sum(r['status'] == 'unclear' for r in rules)} rule(s) depend on answers we don't have."
+    report["summary"] = {"headline": headline, "sub": sub, "missing": len(missing), "rules": len(rules),
+                         "subcontract": subcontract and verdict == "not_eligible"}
+
+    provide = []
+    g = next((r for r in rows if r["id"] in PROVIDE_IDS), None)
+    if g:
+        amount = None
+        rec = next((x for x in receipts if x.get("intent", {}).get("claim_id") in ("participation_guarantee", "rule:guarantee")), None)
+        if rec and rec.get("status") == "FAILED":
+            amount = ((rec.get("independent_check") or {}).get("observed") or {}).get("participation_guarantee_eur")
+        if amount is None:
+            m = re.search(r"€([\d,]+)", g.get("notes") or "")
+            amount = float(m.group(1).replace(",", "")) if m else None
+        extra = ", paper original to ΚτΠ before the bids are opened on 11 Dec (unless issued electronically)" if report.get("notice_id") == KTP else ""
+        provide.append({"icon": "bank", "text": f"Bank or insurer guarantee letter{f' of €{amount:,.0f}' if amount else ''}{extra}",
+                        "citation": g.get("citation")})
+    provide.append({"icon": "file", "text": "ΕΕΕΣ (ESPD), technical offer and financial offer, digitally signed"})
+    if deadline:
+        provide.append({"icon": "calendar", "text": f"Submit on ΕΣΗΔΗΣ by {deadline}"})
+    report["provide"] = provide
+
+
+def _apply_guarantee_check(rules: list[dict], receipts: list[dict]) -> bool:
+    """Carry the verifier's verdict on the guarantee back onto its row, so the table never shows the naive figure as pending."""
+    rec = next((r for r in receipts if (r.get("intent") or {}).get("claim_id") == "participation_guarantee"), None)
+    row = next((r for r in rules if r["id"] == "participation_guarantee"), None)
+    if not rec or not row:
+        return False
+    claimed = (rec.get("tool_response") or {}).get("value")
+    seen = ((rec.get("independent_check") or {}).get("observed") or {}).get("participation_guarantee_eur")
+    row["check"] = rec["status"]
+    if rec["status"] == "FAILED" and seen is not None:
+        row["notes"] = (f"Verifier FAILED the extractor's €{claimed:,.0f}: §2.2.2.1 on PDF p27 says €{seen:,.0f} "
+                        f"(2% of the budget excl. VAT and option). Use €{seen:,.0f}.")
+    elif rec["status"] == "VERIFIED":
+        row["notes"] = f"€{claimed:,.0f}, confirmed on the cited page."
+    return True
 
 
 def _build_claims(run_id: str, notice_id: str, rules: list[dict], naive: dict, initial: float, req: dict) -> list[dict]:
@@ -314,8 +425,23 @@ def check_eligibility_generic(notice_id: str, profile: dict, run_id: str, run_ve
         rule_cache.save_from_receipts(notice_id, out["receipts"], read["rules"])
     else:
         out["receipts"] = [receipt]
+    present(report, profile, out["receipts"], deadline=_deadline_text(notice_id))
+    _save_report(run_id, report)
+    out.update({k: report[k] for k in ("summary", "provide", "rules")})
     out["state"] = verifier.run_state(run_id)
     return out
+
+
+def _deadline_text(notice_id: str) -> str | None:
+    try:
+        n = (ted.get_notice(notice_id, run_id="deadline").get("notice") or {})
+        if n.get("deadline_date"):
+            from datetime import date as _d
+            d = _d.fromisoformat(n["deadline_date"])
+            return f"{d.strftime('%a %d %b %Y').replace(' 0', ' ')}{', ' + n['deadline_time'] if n.get('deadline_time') else ''} (Athens)"
+    except Exception:
+        return None
+    return None
 
 
 PARTNERSHIP_CITES = [

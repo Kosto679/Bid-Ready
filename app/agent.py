@@ -60,16 +60,26 @@ def shortlist(profile: dict, run_id: str | None = None, limit: int = 8,
     }
 
 
-def prepare_bid(notice_id: str, profile: dict, run_id: str | None = None) -> dict:
+def prepare_bid(notice_id: str, profile: dict, run_id: str | None = None, with_letter: bool = True) -> dict:
+    """Eligibility + verify (about 1 s). The letter's Gemini rewrite takes ~15 s, so the UI asks for it separately."""
     run_id = run_id or new_run_id()
     elig = eligibility.check_eligibility(notice_id, profile, run_id=run_id)  # includes verify()
-    if notice_id == DEMO_NOTICE:
-        let = letter.draft_cover_letter(notice_id, profile, elig, run_id=run_id)
-    else:
+    out = {"run_id": run_id, "eligibility": elig}
+    if with_letter:
+        out["letter"] = draft_letter(run_id, notice_id, profile, elig)
+    out["state"] = verifier.run_state(run_id)
+    return out
+
+
+def draft_letter(run_id: str, notice_id: str, profile: dict, elig: dict | None = None) -> dict:
+    if notice_id != DEMO_NOTICE:
         # The consortium letter needs the tender's scope and figures, which we only have checked for ΚτΠ.
-        let = {"markdown": None, "source": "unavailable",
-               "note": "The consortium letter and handover pack need a full document pack; for now that's ΚτΠ only."}
-    return {"run_id": run_id, "eligibility": elig, "letter": let, "state": verifier.run_state(run_id)}
+        return {"markdown": None, "source": "unavailable",
+                "note": "The consortium letter and handover pack need a full document pack; for now that's ΚτΠ only."}
+    elig = elig or eligibility.load_report(run_id)
+    if not elig:
+        raise ValueError(f"no eligibility report for {run_id}; run prepare first")
+    return letter.draft_cover_letter(notice_id, profile, elig, run_id=run_id)
 
 
 def handover(run_id: str, notice_id: str) -> dict:
