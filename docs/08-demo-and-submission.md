@@ -22,9 +22,9 @@ Paste two lines (or a website) about an 8-person Athens studio. Show the profile
 
 ### 0:25–0:55 — Ranked matches, then a deliberate choice
 
-Show two or three tenders already scored and sorted, each with a one-line reason from the TED formula (CPV, value vs turnover, place, days to deadline). With the formula as specified, the ΚτΠ tender ranks **first** (about 77) for the demo studio: one clean CPV match, Greece, and 23 days to prepare, while the others close in 2–4 days and list many unrelated CPV codes. Say: "On paper this is our best match: right CPV, right place, three weeks to prepare. But a fit score isn't eligibility. Let's check." Open the real TED URL if the network is up: https://ted.europa.eu/en/notice/-/detail/769674-2026
+Show two or three tenders already scored and sorted, each with a one-line reason from the TED formula (CPV, value vs turnover, place, days to deadline). The app searches TED in the profile's CPV divisions and scores every open notice (49 for IT on Sat 14 Nov), then shows the best 8. ΚτΠ scores **77 and ranks about 4th** for the demo studio: one clean CPV match, Greece, 23 days to prepare. Point at it on the list and click "Prepare bid" to open the fit report. Say: "A strong fit on paper: right CPV, right place, three weeks to prepare. But a fit score isn't eligibility. Let's check." Open the real TED URL if the network is up: https://ted.europa.eu/en/notice/-/detail/769674-2026
 
-*(Updated Sat 14 Nov after the live run: the original line "why is it scored low?" no longer matches what the screen shows. Re-check the ranking on the morning of the demo; it moves as other tenders close.)*
+*(Updated Sat 14 Nov: the ranking moves as tenders open and close. Re-check it on the morning of the demo. If ΚτΠ drops out of the top 8 it still appears, marked "Demo tender, not in your top 8".)*
 
 ### 0:55–1:35 — Prepare bid
 

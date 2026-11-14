@@ -30,9 +30,18 @@ FIELDS = [
 SEARCH_CACHE = "search_el_72_full.json"
 
 
-def default_query(place: str = "EL*", cpv: str = "72*", deadline_from: str = "20261116") -> str:
+def cpv_clause(cpv: str | list[str]) -> str:
+    """'72*' -> 'classification-cpv = 72*'; ['72','48'] -> '(classification-cpv = 72* OR classification-cpv = 48*)'."""
+    items = [cpv] if isinstance(cpv, str) else list(cpv)
+    items = [c if c.endswith("*") else f"{c}*" for c in items if c]
+    if len(items) == 1:
+        return f"classification-cpv = {items[0]}"
+    return "(" + " OR ".join(f"classification-cpv = {c}" for c in items) + ")"
+
+
+def default_query(place: str = "EL*", cpv: str | list[str] = "72*", deadline_from: str = "20261116") -> str:
     return (
-        f"place-of-performance = {place} AND classification-cpv = {cpv} "
+        f"place-of-performance = {place} AND {cpv_clause(cpv)} "
         f"AND form-type = competition AND deadline-receipt-tender-date-lot >= {deadline_from}"
     )
 
@@ -115,20 +124,20 @@ def _read_cache(name: str) -> dict | None:
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
 
 
-def _search(query: str, limit: int, cache_name: str) -> tuple[list[dict], str, str | None]:
-    """Returns (raw notices, source, error). source is 'ted_live' or 'local_cache'."""
+def _search(query: str, limit: int, cache_name: str) -> tuple[list[dict], str, str | None, int | None]:
+    """Returns (raw notices, source, error, total count). source is 'ted_live' or 'local_cache'."""
     err = None
     if not config.offline():
         try:
             data = _post(query, limit)
             _write_cache(cache_name, data)
-            return data.get("notices", []), "ted_live", None
+            return data.get("notices", []), "ted_live", None, data.get("totalNoticeCount")
         except Exception as e:  # timeout, DNS, 5xx
             err = f"{type(e).__name__}: {e}"
     else:
         err = "offline mode (BIDREADY_OFFLINE=1)"
-    cached = _read_cache(cache_name)
-    return (cached or {}).get("notices", []), "local_cache", err
+    cached = _read_cache(cache_name) or {}
+    return cached.get("notices", []), "local_cache", err, cached.get("totalNoticeCount")
 
 
 def find_tenders(
@@ -139,11 +148,20 @@ def find_tenders(
     limit: int = 10,
     run_id: str | None = None,
     include: list[str] | None = None,
+    cpv_divisions: list[str] | None = None,
 ) -> dict[str, Any]:
-    """Search TED. `include` forces specific publication numbers into the result (e.g. the demo tender)."""
+    """Search TED. `cpv_divisions` (e.g. ['72', '48']) replaces `cpv` with an OR across divisions.
+    `include` forces specific publication numbers into the result (e.g. the demo tender)."""
     run_id = run_id or new_run_id()
-    q = query or default_query(place, cpv, deadline_from)
-    raw, source, err = _search(q, max(limit, 50), SEARCH_CACHE if query is None else _hash_name(q))
+    divs = sorted({d[:2] for d in cpv_divisions or [] if len(d) >= 2})
+    q = query or default_query(place, divs or cpv, deadline_from)
+    if query:
+        cache_name = _hash_name(q)
+    elif divs and divs != ["72"]:
+        cache_name = f"search_el_{'_'.join(divs)}.json"
+    else:
+        cache_name = SEARCH_CACHE
+    raw, source, err, total = _search(q, max(limit, 50), cache_name)
     notices = [normalize(n) for n in raw]
     have = {n["publication_number"] for n in notices}
     for pub in include or []:
@@ -165,13 +183,14 @@ def find_tenders(
         "status": status,
         "reason": None if source == "ted_live" else f"TED unavailable ({err}); served from local cache. Live hop UNVERIFIED.",
     })
-    return {"run_id": run_id, "source": source, "notices": notices, "receipt": receipt}
+    return {"run_id": run_id, "source": source, "notices": notices, "receipt": receipt,
+            "query": q, "divisions": divs or [cpv.rstrip("*")], "total": total, "fetched": len(raw)}
 
 
 def get_notice(publication_number: str, run_id: str | None = None) -> dict[str, Any]:
     run_id = run_id or new_run_id()
     q = f"publication-number = {publication_number}"
-    raw, source, err = _search(q, 5, f"{publication_number}.json")
+    raw, source, err, _ = _search(q, 5, f"{publication_number}.json")
     notice = normalize(raw[0]) if raw else None
     status = "RECORDED" if source == "ted_live" and notice else "UNVERIFIED"
     receipt = write_receipt({

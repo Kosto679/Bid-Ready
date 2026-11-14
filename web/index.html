@@ -210,9 +210,12 @@ $('#go2').onclick=async()=>{busy($('#go2'),true);try{
   const r=await post('/api/onboard',{lines:$('#lines').value,answers:a,run_id:runId});profile=r.profile;
   const m=await post('/api/matches',{profile,run_id:runId});
   MATCHES=Object.fromEntries(m.matches.map(n=>[n.publication_number,n]));
-  $('#matches').innerHTML=`<p class="m">Source: ${m.source==='ted_live'?'live TED Search API':'local cache (TED unreachable, live hop UNVERIFIED)'}</p>`+m.matches.map(n=>`
+  const S=m.searched||{};
+  const divs=(S.divisions||[]).map(d=>`<b>${esc(d.code)}</b> ${esc(d.label)}`).join(' · ');
+  $('#matches').innerHTML=`<p class="m">Searched ${m.source==='ted_live'?'the live TED Search API':'the local cache (TED unreachable, live hop UNVERIFIED)'} for open tenders in Greece in your ${termBtn('cpv','CPV')} division${(S.divisions||[]).length>1?'s':''}: ${divs}.
+    ${S.total_on_ted!=null?`TED has <b>${S.total_on_ted}</b>; we scored all <b>${S.scored}</b> and show the best ${Math.min(S.shown,8)}.`:''}</p>`+m.matches.map(n=>`
     <div class="match"><div class="score ${band(n.fit_score)}" title="${band(n.fit_score)} fit">${n.fit_score}<span class="mk">${MARK[band(n.fit_score)]}</span><small>fit</small></div>
-    <div><div class="t">${esc((n.title||'').replace(/^Ελλάδα – /,''))}</div><div class="m">${esc(n.buyer_name)} · TED ${esc(n.publication_number)} · <a href="${esc(n.ted_url)}" target="_blank" rel="noopener">notice</a></div><div class="m">${esc(n.reason)}</div>${factorBars(n.factors)}</div>
+    <div><div class="t">${n.pinned?'<span class="pill RECORDED">Demo tender, not in your top 8</span> ':''}${esc((n.title||'').replace(/^Ελλάδα – /,''))}</div><div class="m">${esc(n.buyer_name)} · TED ${esc(n.publication_number)} · <a href="${esc(n.ted_url)}" target="_blank" rel="noopener">notice</a></div><div class="m">${esc(n.reason)}</div>${factorBars(n.factors)}</div>
     <button class="ghost" data-n="${esc(n.publication_number)}">Prepare bid</button></div>`).join('');
   document.querySelectorAll('#matches button').forEach(b=>b.onclick=()=>prepare(b.dataset.n,b));
   $('#s2').classList.remove('hidden');$('#s2').scrollIntoView({behavior:'smooth'});
