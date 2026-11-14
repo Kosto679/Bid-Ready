@@ -135,7 +135,7 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
     <table id="rules"></table>
     <h2 style="margin-top:22px"><span data-term="receipt">Receipts</span></h2>
     <div id="receipts"></div>
-    <h2 style="margin-top:22px">Consortium letter (Greek)</h2>
+    <h2 style="margin-top:22px" id="letterHead">Consortium letter (Greek)</h2>
     <p class="m" id="letterSrc"></p>
     <pre id="letter"></pre>
   </section>
@@ -165,6 +165,10 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
     <p class="m">Gemini extracts nine facts from TED 769674-2026; the verifier re-reads the PDF page and grades every answer. "Headline" gives the model only the TED metadata; "Page" gives it the cited page.</p>
     <div class="row"><button id="go5">Run model check</button><span class="m" id="evalMeta"></span></div>
     <div id="evalOut" style="margin-top:12px"></div>
+    <h2 style="margin-top:24px">Does the generic rule reader match our hand-made index?</h2>
+    <p class="m">For any tender without a hand-made index, Gemini reads the eligibility rules live. Here it reads ΚτΠ's PDF from scratch, and we compare its answers with the index we built by hand.</p>
+    <div class="row"><button id="go7" class="ghost">Compare on ΚτΠ</button><span class="m" id="agreeMeta"></span></div>
+    <div id="agreeOut" style="margin-top:12px"></div>
   </section>
 </main>
 <div id="pop" role="dialog" hidden></div>
@@ -291,24 +295,36 @@ async function showEligibility(){const btn=$('#goElig');$('#s3').classList.remov
   try{const r=await prepPromise;const e=r.eligibility;const nid=noticeId;
     $('#s3title').textContent='Eligibility · TED '+nid;
     const V={not_eligible:'Not eligible on your own',eligible:'Eligible',unclear:'Unclear'}[e.verdict];
-    $('#verdict').innerHTML=`<p><span class="pill ${e.verdict==='not_eligible'?'missing':e.verdict==='eligible'?'meets':'unclear'}">${V}</span></p>${e.partnership_note?`<p>${esc(e.partnership_note)}</p>`:''}`;
-    $('#rules').innerHTML='<tr><th>Rule</th><th>Status</th><th>Clause</th><th>Notes</th></tr>'+(e.rules||[]).map(x=>`<tr><td>${esc(x.title)}${RULE_TERM[x.id]?` <span class="m">(${termBtn(RULE_TERM[x.id],'what is this?')})</span>`:''}</td><td><span class="pill ${x.status}">${x.status}</span></td><td>§${esc(x.citation.section)}<br><span class="m">PDF p${x.citation.pdf_page} / printed ${x.citation.printed_page}</span></td><td class="m">${esc(x.notes)}</td></tr>`).join('');
+    const srcNote=e.generic?`<p class="m"><span class="pill RECORDED">Read live</span> ${esc(e.source?.note||'')} Gemini read the rules; the verifier re-checked every quote and figure below.</p>`:'';
+    $('#verdict').innerHTML=`<p><span class="pill ${e.verdict==='not_eligible'?'missing':e.verdict==='eligible'?'meets':'unclear'}">${V}</span></p>${srcNote}${e.partnership_note?`<p>${esc(e.partnership_note)}</p>`:''}`;
+    const clause=c=>{if(!c)return'';const where=c.pdf_page?`PDF p${c.pdf_page}${c.printed_page&&c.printed_page!==c.pdf_page?` / printed ${c.printed_page}`:''}`:'';
+      if(c.url)return `<a href="${esc(c.url)}" target="_blank" rel="noopener">${c.pdf_page?esc(where):esc(c.section||'TED notice')} ↗</a>`;
+      return `§${esc(c.section)}<br><span class="m">${esc(where)}</span>`};
+    $('#rules').innerHTML='<tr><th>Rule</th><th>Status</th><th>Clause</th><th>Notes</th></tr>'+(e.rules||[]).map(x=>`<tr><td>${esc(x.title)}${RULE_TERM[x.id]?` <span class="m">(${termBtn(RULE_TERM[x.id],'what is this?')})</span>`:''}</td><td><span class="pill ${x.status}">${x.status}</span></td><td>${clause(x.citation)}</td><td class="m">${esc(x.notes)}</td></tr>`).join('')
+      +(!(e.rules||[]).length?`<tr><td colspan="4" class="m">${esc(e.source?.note||'No rules could be read.')} <a href="${esc(e.ted_url)}" target="_blank" rel="noopener">Open the notice on TED ↗</a></td></tr>`:'');
+    window.__generic=!!e.generic;
     renderReceipts(r.state);
-    $('#letter').textContent=r.letter.markdown;$('#s4').classList.remove('hidden');
     const L=r.letter, fc=L.fact_check||{};
+    const hasLetter=!!L.markdown;
+    $('#letter').textContent=L.markdown||'';$('#letter').classList.toggle('hidden',!hasLetter);$('#letterHead').classList.toggle('hidden',!hasLetter&&!L.note);
+    $('#s4').classList.toggle('hidden',!hasLetter);
+    if(!hasLetter){$('#letterSrc').textContent=L.note||'';return}
     $('#letterSrc').innerHTML=L.source==='gemini_polished'?`<span class="pill VERIFIED">Fact-checked</span> Rewritten by Gemini; no numbers or English beyond the checked draft.`
       :(fc.new_numbers||fc.unexpected_latin_words)?`<span class="pill FAILED">Rewrite rejected</span> Gemini's version added ${esc([...(fc.new_numbers||[]),...(fc.unexpected_latin_words||[])].join(', '))}; showing the checked draft.`
       :`<span class="pill RECORDED">Template</span> Built from the tender facts and your profile${fc.skipped?` (Gemini not used: ${esc(fc.skipped)})`:''}.`;
   }catch(e){alert(e)}}
 
 const SHAPE={VERIFIED:'●',FAILED:'▲',UNVERIFIED:'■',RECORDED:'■'};
-const GROUPS=[['fig','Figures re-read from the PDF'],['cite','Clauses found on their cited pages'],['pack','Handover files read back'],['letter','Letter fact check']];
-function groupOf(id){return id.startsWith('cite:')?'cite':id.startsWith('pack:')?'pack':id==='letter_facts'?'letter':'fig'}
+const GROUPS=[['rules','Rules read live, re-checked against the source'],['fig','Figures re-read from the PDF'],['cite','Clauses found on their cited pages'],['pack','Handover files read back'],['letter','Letter fact check']];
+function groupOf(id){return id.startsWith('rule:')?'rules':id.startsWith('cite:')?'cite':id.startsWith('pack:')?'pack':id==='letter_facts'?'letter':'fig'}
+const RULE_LABEL={budget:'Budget excl. VAT and options',turnover:'Turnover rule',experience:'Similar projects rule',iso:'ISO certificates rule',team:'Team rule',guarantee:'Participation guarantee'};
 function tileLabel(r){const c=r.intent.claim||'',id=r.intent.claim_id||'';
   const q=c.match(/Rule '([^']+)'/);if(q)return q[1];
+  const rm=id.match(/^rule:([a-z]+)(:arith)?$/);if(rm)return rm[2]?`${RULE_LABEL[rm[1]]||rm[1]}: % × budget adds up`:(RULE_LABEL[rm[1]]||rm[1]);
   return {participation_guarantee:'Participation guarantee',turnover_threshold:'Turnover threshold',deadline:'Submission deadline',
     'pack:letter':'Consortium letter','pack:ics':'Deadline calendar file','pack:zip':'ZIP contents and names','letter_facts':'Gemini rewrite adds no facts'}[id]||c.replace(/\s*\(§.*$/,'').slice(0,80)}
-function pageLink(r){const cit=r.intent.citation||{};if(!cit.pdf_page)return'';
+function pageLink(r){const cit=r.intent.citation||{};
+  if(!cit.pdf_page)return cit.url?`<a href="${esc(cit.url)}" target="_blank" rel="noopener">${esc(cit.section||'Source')} ↗</a>`:'';
   const href=cit.url||`/api/tenders/769674-2026/rfp#page=${cit.pdf_page}`;
   return `<a href="${esc(href)}" target="_blank" rel="noopener">${/^\d/.test(cit.section||'')?'§':''}${esc(cit.section)} · PDF p${cit.pdf_page}${cit.printed_page&&cit.printed_page!==cit.pdf_page?` / printed ${cit.printed_page}`:''} ↗</a>`}
 
@@ -352,7 +368,8 @@ async function renderReceipts(){const d=await (await fetch(`/api/runs/${runId}/r
     +GROUPS.map(([g,title])=>{const rs=checked.filter(r=>groupOf(r.intent.claim_id||'')===g).sort((a,b)=>(a.status==='VERIFIED')-(b.status==='VERIFIED'));
       return rs.length?`<h3 class="wallh">${title}</h3><div class="wall">${rs.map(r=>tile(r,i++)).join('')}</div>`:''}).join('');
   const s=$('#status');
-  if(st.state==='ready'){s.className='banner yes';s.textContent='All checks verified against the tender. Ready for a human to sign.'}
+  if(window.__generic){s.className='banner wait';s.textContent=`${count('VERIFIED')} fact(s) re-checked against the source. Not a bid pack: for this tender we can show the rules, not prepare the documents.`}
+  else if(st.state==='ready'){s.className='banner yes';s.textContent='All checks verified against the tender. Ready for a human to sign.'}
   else if(st.state==='not_checked'){s.className='banner wait';s.textContent='Checks have not finished. Not ready.'}
   else{s.className='banner no';s.textContent=`NOT READY — ${st.failed.length} failed, ${st.unverified.length} unverified check(s). See the red receipt below.`}
 }
@@ -379,6 +396,11 @@ function renderEval(d){
     <table style="margin-top:14px"><tr><th>Condition</th><th>Field</th><th>Model said</th><th>Page says</th><th>Outcome</th></tr>${rows}</table>`;
 }
 fetch('/api/evals/latest').then(r=>r.json()).then(renderEval).catch(()=>{});
+$('#go7').onclick=async()=>{const b=$('#go7');busy(b,true);$('#agreeMeta').textContent='Reading the tender PDF, about 15 seconds…';
+  try{const d=await post('/api/rules/agreement',{});const a=d.agreement;
+    $('#agreeMeta').innerHTML=`<b class="${a.agree===a.total?'good':'fair'}">Agrees on ${a.agree} of ${a.total} rules</b> · verifier: ${d.verified} of ${d.checks} checks passed`;
+    $('#agreeOut').innerHTML=`<table><tr><th>Rule</th><th>Generic reader</th><th>Hand-made index</th><th></th></tr>${a.rows.map(x=>`<tr><td>${esc(x.rule)}</td><td>${esc(Array.isArray(x.generic)?x.generic.join(', '):x.generic??'—')}</td><td>${esc(Array.isArray(x.hand_index)?x.hand_index.join(', '):x.hand_index)}</td><td><span class="pill ${x.agree?'VERIFIED':'FAILED'}">${x.agree?'agrees':'differs'}</span></td></tr>`).join('')}</table>`;
+  }catch(e){$('#agreeMeta').textContent='';alert(e)}busy(b,false)};
 $('#go5').onclick=async()=>{busy($('#go5'),true);$('#evalMeta').textContent='Running 18 Gemini calls, about 1–2 minutes…';
   try{const d=await post('/api/evals/run',{conditions:['headline','page'],trials:1});renderEval({...d,configured:true})}catch(e){alert(e);$('#evalMeta').textContent=''}busy($('#go5'),false)};
 </script>

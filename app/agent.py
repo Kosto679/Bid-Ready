@@ -39,7 +39,12 @@ def shortlist(profile: dict, run_id: str | None = None, limit: int = 8) -> dict:
 def prepare_bid(notice_id: str, profile: dict, run_id: str | None = None) -> dict:
     run_id = run_id or new_run_id()
     elig = eligibility.check_eligibility(notice_id, profile, run_id=run_id)  # includes verify()
-    let = letter.draft_cover_letter(notice_id, profile, elig, run_id=run_id)
+    if notice_id == DEMO_NOTICE:
+        let = letter.draft_cover_letter(notice_id, profile, elig, run_id=run_id)
+    else:
+        # The consortium letter needs the tender's scope and figures, which we only have checked for ΚτΠ.
+        let = {"markdown": None, "source": "unavailable",
+               "note": "The consortium letter and handover pack need a full document pack; for now that's ΚτΠ only."}
     return {"run_id": run_id, "eligibility": elig, "letter": let, "state": verifier.run_state(run_id)}
 
 

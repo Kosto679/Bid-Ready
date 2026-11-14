@@ -102,6 +102,24 @@ def api_eval_run(body: EvalIn) -> dict:
         raise HTTPException(400, f"Gemini is not configured: {e}")
 
 
+@app.post("/api/rules/agreement")
+def api_rules_agreement() -> dict:
+    """Run the generic rule reader on ΚτΠ, verify it, and score it against the hand-made index."""
+    from datetime import datetime
+
+    from . import gemini
+    from . import rules as RL
+
+    ok, why = gemini.configured()
+    if not ok:
+        raise HTTPException(400, f"Gemini is not configured: {why}")
+    r = RL.read("769674-2026")
+    run_id = "agree_" + datetime.now(config.ATHENS).strftime("%Y%m%d_%H%M%S")
+    receipts = verifier.verify(run_id, r["claims"]) if r["claims"] else []
+    return {"agreement": RL.agreement_with_index(r["rules"]), "source": r["source"]["note"],
+            "verified": sum(x["status"] == "VERIFIED" for x in receipts), "checks": len(receipts)}
+
+
 @app.post("/api/live/{notice_id}")
 def api_live(notice_id: str) -> dict:
     from . import gemini

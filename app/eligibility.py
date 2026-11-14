@@ -95,14 +95,7 @@ def naive_guarantee_from_ted(notice: dict) -> dict:
 def check_eligibility(notice_id: str, profile: dict, run_id: str | None = None, run_verify: bool = True) -> dict:
     run_id = run_id or new_run_id()
     if notice_id != KTP or not T.has_local_pack(notice_id):
-        receipt = write_receipt({
-            "run_id": run_id, "idempotency_key": f"check_eligibility:{run_id}:{notice_id}",
-            "action": "check_eligibility", "intent": {"notice_id": notice_id},
-            "tool_call": {"name": "check_eligibility", "arguments": {"notice_id": notice_id}},
-            "tool_response": {"verdict": "unclear"}, "status": "UNVERIFIED",
-            "reason": "No local tender pack / clause index for this notice yet; cannot cite clauses.",
-        })
-        return {"run_id": run_id, "notice_id": notice_id, "verdict": "unclear", "rules": [], "claims": [], "receipts": [receipt], "state": verifier.run_state(run_id)}
+        return check_eligibility_generic(notice_id, profile, run_id, run_verify)
 
     req = T.requirements(notice_id)
     value = req["notice"]["value"]
@@ -283,6 +276,44 @@ def _build_claims(run_id: str, notice_id: str, rules: list[dict], naive: dict, i
         "required": True,
     })
     return claims
+
+
+def check_eligibility_generic(notice_id: str, profile: dict, run_id: str, run_verify: bool = True, reader=None) -> dict:
+    """Any tender without a hand-made index: rules read live (rules.py), verified, compared with the profile."""
+    from . import rules as RL
+
+    read = RL.read(notice_id, reader=reader)
+    rows = RL.compare(read["rules"], profile) if read["rules"] else []
+    claim_cit = {c["claim_id"]: c["citation"] for c in read["claims"] if c.get("citation")}
+    for r in rows:
+        r["citation"] = claim_cit.get(f"rule:{r['id']}") or r["citation"]
+    verdict = RL.verdict(rows) if rows else "unclear"
+    gaps = [r["title"] for r in rows if r["status"] == "missing"]
+    report = {
+        "run_id": run_id, "notice_id": notice_id, "ted_url": ted.ted_url(notice_id), "verdict": verdict,
+        "generic": True, "source": {"kind": read["source"]["kind"], "note": read["source"]["note"]},
+        "partnership_note": ("Alone you are not eligible. A partner would need to cover: " + "; ".join(gaps) +
+                             ". Check the tender's rules on joint bids and subcontracting before you approach one.") if verdict == "not_eligible" else None,
+        "rules": rows, "source_flags": [],
+    }
+    save_claims(run_id, read["claims"])
+    _save_report(run_id, report)
+    status = "RECORDED" if read["claims"] else "UNVERIFIED"
+    receipt = write_receipt({
+        "run_id": run_id, "idempotency_key": f"check_eligibility:{run_id}:{notice_id}",
+        "action": "check_eligibility", "intent": {"notice_id": notice_id, "profile": profile.get("name"), "mode": "generic"},
+        "tool_call": {"name": "check_eligibility", "arguments": {"notice_id": notice_id}},
+        "tool_response": {"verdict": verdict, "rules": {r["id"]: r["status"] for r in rows}, "source": read["source"]["kind"]},
+        "status": status,
+        "reason": read["source"]["note"] if status == "UNVERIFIED" else "Rules read live; claims handed to the verifier.",
+    })
+    out = {**report, "claims": read["claims"], "receipt": receipt}
+    if run_verify and read["claims"]:
+        out["receipts"] = verifier.verify(run_id)
+    else:
+        out["receipts"] = [receipt]
+    out["state"] = verifier.run_state(run_id)
+    return out
 
 
 PARTNERSHIP_CITES = [

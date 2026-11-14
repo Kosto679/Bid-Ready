@@ -103,6 +103,82 @@ def pack_page(pack: str, pdf_page: int) -> str:
     return pages[pdf_page - 1]
 
 
+# ---- TED notice text as citable "blocks" ------------------------------------------------------
+
+SELECTION_TYPES = {
+    "slc-suit-reg-prof": "Professional registration", "slc-suit-reg-trade": "Trade registration",
+    "slc-stand-turnover": "Turnover", "slc-stand-spec-turnover": "Specific turnover", "slc-stand-ratio": "Financial ratio",
+    "slc-stand-insurance": "Insurance", "slc-abil-references-services": "Similar services (references)",
+    "slc-abil-references-works": "Similar works (references)", "slc-abil-staff-qualif": "Staff qualifications",
+    "slc-abil-qual-control": "Quality assurance (ISO)", "slc-abil-envir-mgmt": "Environmental management",
+    "slc-sche-ec-fin": "Economic and financial standing", "slc-sche-tp-ability": "Technical and professional ability",
+    # codes seen on live Greek notices
+    "slc-stand-other": "Economic standing (other)", "slc-stand-to-avg": "Average turnover",
+    "slc-stand-to-spec-avg": "Average specific turnover", "slc-abil-ref-work": "Similar projects (references)",
+    "slc-abil-staff-qual": "Team qualifications", "slc-abil-staff-yrly-no-mgmt": "Average staff numbers",
+    "slc-sche-qu-cert-indep": "Quality certificates (ISO)", "slc-abil-qual-inst": "Quality assurance (ISO)",
+    "slc-abil-subc": "Subcontracting",
+}
+
+
+def ted_blocks_from_xml(xml: str) -> dict[str, dict]:
+    """{"C1": {"label", "text"}, ..., "G1": guarantee, "V1": values} from an eForms notice."""
+    import xml.etree.ElementTree as ET
+
+    root = ET.fromstring(xml)
+    local = lambda el: el.tag.rsplit("}", 1)[-1]
+    out: dict[str, dict] = {}
+    n = 0
+    for el in root.iter():
+        if local(el) == "SelectionCriteria":
+            code = next((c.text for c in el.iter() if local(c) == "TendererRequirementTypeCode"), "") or ""
+            desc = " ".join((c.text or "").strip() for c in el.iter() if local(c) == "Description" and (c.text or "").strip())
+            if desc:
+                n += 1
+                out[f"C{n}"] = {"label": f"TED selection criterion {n}: {SELECTION_TYPES.get(code.strip(), code.strip() or 'criterion')}", "text": desc}
+        elif local(el) == "RequiredFinancialGuarantee":
+            desc = " ".join((c.text or "").strip() for c in el.iter() if local(c) == "Description" and (c.text or "").strip())
+            if desc and "G1" not in out:
+                out["G1"] = {"label": "TED guarantee requirement", "text": desc}
+    proc, lots = None, []
+    for el in root.iter():
+        if local(el) in ("ProcurementProject",):
+            amt = next((c for c in el if local(c) == "RequestedTenderTotal"), None)
+            if amt is not None:
+                val = next((c.text for c in amt if local(c) == "EstimatedOverallContractAmount"), None)
+                if val:
+                    # ProcurementProject directly under the root is the procedure; inside a lot it's the lot
+                    lots.append(val)
+    if lots:
+        proc, lot_vals = lots[0], lots[1:]
+        text = f"Procedure estimated value (may include options): {proc} EUR."
+        if lot_vals:
+            text += " Lot estimated value: " + ", ".join(f"{v} EUR" for v in lot_vals) + "."
+        out["V1"] = {"label": "TED estimated values", "text": text}
+    return out
+
+
+def ted_blocks(publication_number: str) -> dict[str, dict]:
+    """Re-read the cached notice XML from disk (what the verifier re-opens)."""
+    for p in (config.TED_CACHE_DIR / "xml" / f"{publication_number}.xml",
+              config.DATA_DIR / publication_number / f"ted-notice-{publication_number}.xml"):
+        if p.exists():
+            return ted_blocks_from_xml(p.read_text(encoding="utf-8"))
+    raise FileNotFoundError(f"no cached TED XML for {publication_number}")
+
+
+def open_ref(src: dict) -> str:
+    """Re-open one citable unit: {"kind": "pack", "pack", "page"} or {"kind": "ted", "pub", "block"}."""
+    if src.get("kind") == "pack":
+        return pack_page(src["pack"], int(src["page"]))
+    if src.get("kind") == "ted":
+        b = ted_blocks(src["pub"]).get(src["block"])
+        if not b:
+            raise IndexError(f"block {src['block']} not in TED notice {src['pub']}")
+        return b["text"]
+    raise ValueError(f"unknown source kind {src.get('kind')}")
+
+
 def requirements(notice_id: str) -> dict:
     """Human-curated clause INDEX (what to check, where). Never the sole source of truth."""
     return json.loads((notice_dir(notice_id) / "requirements.json").read_text(encoding="utf-8"))

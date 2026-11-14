@@ -187,6 +187,27 @@ def find_tenders(
             "query": q, "divisions": divs or [cpv.rstrip("*")], "total": total, "fetched": len(raw)}
 
 
+def notice_xml(publication_number: str) -> tuple[str | None, str]:
+    """The notice's eForms XML (contains selection criteria text when the buyer filled it in).
+    Cached under ted-cache/xml/. Returns (xml or None, source)."""
+    path = config.TED_CACHE_DIR / "xml" / f"{publication_number}.xml"
+    local = config.DATA_DIR / publication_number / f"ted-notice-{publication_number}.xml"
+    if not config.offline():
+        try:
+            with httpx.Client(timeout=min(config.TED_TIMEOUT_S, 30), follow_redirects=True) as c:
+                r = c.get(f"https://ted.europa.eu/en/notice/{publication_number}/xml")
+                r.raise_for_status()
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(r.text, encoding="utf-8")
+            return r.text, "ted_live"
+        except Exception:
+            pass
+    for p in (path, local):
+        if p.exists():
+            return p.read_text(encoding="utf-8"), "local_cache"
+    return None, "unavailable"
+
+
 def get_notice(publication_number: str, run_id: str | None = None) -> dict[str, Any]:
     run_id = run_id or new_run_id()
     q = f"publication-number = {publication_number}"

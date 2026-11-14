@@ -328,6 +328,45 @@ def check_arithmetic_pct(claim: dict) -> dict:
     }
 
 
+def _open_src(src: dict | None) -> str:
+    if not src:
+        raise SourceUnavailable("no source page/block")
+    try:
+        return T.open_ref(src)
+    except (FileNotFoundError, IndexError, ValueError, KeyError) as e:
+        raise SourceUnavailable(str(e)) from e
+
+
+def _src_name(src: dict) -> str:
+    return f"{src['pack']} PDF p{src['page']}" if src.get("kind") == "pack" else f"TED notice {src.get('pub')} block {src.get('block')}"
+
+
+def check_rule_quote(claim: dict) -> dict:
+    """Any source: the quote is in the re-opened page/block, and each `must` group has a form present in the quote."""
+    c = claim["check"]
+    text = T.norm(_open_src(c.get("source")))
+    q = T.norm(c.get("quote") or "")
+    on_page = bool(q) and q in text
+    groups = c.get("must") or []
+    found = [any(T.norm(f) in q for f in g) for g in groups]
+    return {"method": "reread_source", "source": _src_name(c["source"]),
+            "observed": {"quote_in_source": on_page, "values_in_quote": found},
+            "mismatch": not (on_page and all(found))}
+
+
+def check_rule_arith(claim: dict) -> dict:
+    """amount == pct% x base, and the pct really appears in the cited clause."""
+    c = claim["check"]
+    pct_ok = None
+    if c.get("pct_source"):
+        text = T.norm(_open_src(c["pct_source"]))
+        pct_ok = bool(re.search(rf"(?<![\d,]){re.escape(f'{c['pct']:g}'.replace('.', ','))}\s*%", text))
+    expected = float(c["pct"]) / 100 * float(c["base"])
+    return {"method": "recompute", "source": _src_name(c["pct_source"]) if c.get("pct_source") else "extracted figures",
+            "observed": {"expected": round(expected, 2), "pct_on_page": pct_ok},
+            "mismatch": abs(expected - float(claim["value"])) > 0.5 or pct_ok is False}
+
+
 def _open_claim_page(claim: dict) -> tuple[str, int]:
     nid, pg = _page(claim)
     _open(nid, pg)
@@ -349,6 +388,8 @@ CHECKS: dict[str, Check] = {
     "field_value": check_field_value,
     "quote_supports_value": check_quote_supports_value,
     "arithmetic_pct": check_arithmetic_pct,
+    "rule_quote": check_rule_quote,
+    "rule_arith": check_rule_arith,
 }
 
 
