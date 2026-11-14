@@ -66,3 +66,16 @@ def test_notice_without_published_criteria_says_so(studio_profile, monkeypatch):
     monkeypatch.setattr(ted, "notice_xml", lambda pub: (xml, "ted_live"))
     out = eligibility.check_eligibility("999999-2026", studio_profile)
     assert out["verdict"] == "unclear" and out["rules"] == [] and "only in the tender documents" in out["source"]["note"]
+
+
+def test_notice_that_only_points_at_the_tender_document(studio_profile, monkeypatch):
+    from pathlib import Path
+
+    from app import ted
+
+    xml = (Path("data/tender-demo/ted-cache/xml/758524-2026.xml")).read_text(encoding="utf-8")
+    monkeypatch.setattr(ted, "notice_xml", lambda pub: (xml, "local_cache"))
+    g = RL.gather("758524-2026")
+    assert g["kind"] == "none" and "as stated in the tender document" in g["note"]
+    out = eligibility.check_eligibility("758524-2026", studio_profile, run_verify=False)
+    assert out["verdict"] == "unclear" and out["rules"] == []

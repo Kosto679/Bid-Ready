@@ -315,15 +315,13 @@ $('#go2').onclick=async()=>{busy($('#go2'),true);try{
   const a={cpv_codes:profile.cpv_codes||[]};document.querySelectorAll('#questions input').forEach(i=>{a[i.dataset.f]=i.value.trim()===''?null:i.value.trim()});
   const r=await post('/api/onboard',{lines:$('#lines').value,answers:a,run_id:runId});profile=r.profile;
   const t=profile.turnover_2023_2025_total_eur;
-  if(!$('#vmax').dataset.touched){$('#vmax').value=t?Math.round(t/2000)*1000:''}
-  $('#vmaxHint').textContent=t?`Default: half your 3-year turnover (${eur(t/2)}). Tenders usually ask for turnover of about twice their value to bid alone; raise it if you'd bid with a partner.`:'Add your turnover to get a suggested maximum.';
+  $('#vmaxHint').textContent=t?`Optional. Tenders usually ask for turnover of about twice their value to bid alone, so up to about ${eur(t/2)} for you; higher if you'd bid with a partner.`:'Optional. Add your turnover to get a suggested maximum.';
   await runMatches();
 }catch(e){alert(e)}busy($('#go2'),false)};
 
 const numOrNull=v=>{const x=String(v||'').replace(/[^\d]/g,'');return x?Number(x):null};
-$('#vmin').oninput=$('#vmax').oninput=e=>{e.target.dataset.touched='1'};
 $('#vApply').onclick=async()=>{busy($('#vApply'),true);try{await runMatches()}catch(e){alert(e)}busy($('#vApply'),false)};
-$('#vClear').onclick=async()=>{$('#vmin').value='';$('#vmax').value='';$('#vmax').dataset.touched='1';try{await runMatches()}catch(e){alert(e)}};
+$('#vClear').onclick=async()=>{$('#vmin').value='';$('#vmax').value='';try{await runMatches()}catch(e){alert(e)}};
 
 async function runMatches(){
   const m=await post('/api/matches',{profile,run_id:runId,value_min:numOrNull($('#vmin').value),value_max:numOrNull($('#vmax').value)});
