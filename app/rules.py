@@ -67,18 +67,44 @@ SYSTEM = (
 
 # ---- sources -----------------------------------------------------------------------------------
 
+def _pack_units(pack: str) -> list:
+    """The pages of a tender PDF most likely to hold each rule (keyword retrieval)."""
+    pages = T.pack_pages(pack)
+    pick: list[int] = []
+    for pat in PAGE_HINTS:
+        scored = sorted(((len(re.findall(pat, T.norm(p), re.I)), i + 1) for i, p in enumerate(pages)), key=lambda x: (-x[0], x[1]))
+        pick += [pg for n, pg in scored[:2] if n]
+    pick = sorted(set(pick))[:12]
+    return [(f"p{pg}", f"Tender document, PDF p{pg}", T.pack_page(pack, pg), {"kind": "pack", "pack": pack, "page": pg}) for pg in pick]
+
+
 def gather(notice_id: str) -> dict:
     """Returns {"kind": "pack"|"ted"|"none", "units": [(ref, label, text, src)], "note"}."""
     if notice_id in LOCAL_PACKS:
-        pack = LOCAL_PACKS[notice_id]
-        pages = T.pack_pages(pack)
-        pick: list[int] = []
-        for pat in PAGE_HINTS:
-            scored = sorted(((len(re.findall(pat, T.norm(p), re.I)), i + 1) for i, p in enumerate(pages)), key=lambda x: (-x[0], x[1]))
-            pick += [pg for n, pg in scored[:2] if n]
-        pick = sorted(set(pick))[:12]
-        units = [(f"p{pg}", f"Tender document, PDF p{pg}", T.pack_page(pack, pg), {"kind": "pack", "pack": pack, "page": pg}) for pg in pick]
+        units = _pack_units(LOCAL_PACKS[notice_id])
         return {"kind": "pack", "units": units, "note": f"Read from the tender document ({len(units)} relevant pages)."}
+
+    # Stage 2: the tender document from ΚΗΜΔΗΣ (by ΑΔΑΜ, or matched from the TED notice).
+    from . import khmdhs
+
+    if not config.offline():
+        adam, how = (notice_id, "ΑΔΑΜ") if khmdhs.is_adam(notice_id) else (None, None)
+        if adam is None:
+            try:
+                m = khmdhs.match_ted(notice_id)
+            except Exception:
+                m = None
+            if m:
+                adam, how = m["adam"], m["how"]
+        if adam:
+            try:
+                pages = khmdhs.pages(adam)
+            except Exception:
+                pages = []
+            if sum(len(p.strip()) for p in pages) > 2000:  # a text layer, not a scan
+                units = _pack_units(khmdhs.pack_name(adam))
+                return {"kind": "pack", "units": units, "adam": adam,
+                        "note": f"Found in ΚΗΜΔΗΣ (ΑΔΑΜ {adam}, matched by {how}); read from its tender document ({len(units)} relevant pages)."}
     from . import ted
 
     xml, src = ted.notice_xml(notice_id)

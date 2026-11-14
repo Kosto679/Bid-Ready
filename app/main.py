@@ -34,6 +34,13 @@ class PrepareIn(BaseModel):
     notice_id: str
     profile: dict[str, Any]
     run_id: str | None = None
+    with_letter: bool = True
+
+
+class LetterIn(BaseModel):
+    run_id: str
+    notice_id: str
+    profile: dict[str, Any]
 
 
 class PackIn(BaseModel):
@@ -63,9 +70,16 @@ def api_matches(body: MatchesIn) -> dict:
 
 @app.post("/api/prepare")
 def api_prepare(body: PrepareIn) -> dict:
-    res = agent.prepare_bid(body.notice_id, body.profile, run_id=body.run_id)
+    res = agent.prepare_bid(body.notice_id, body.profile, run_id=body.run_id, with_letter=body.with_letter)
     res["eligibility"].pop("claims", None)
     return res
+
+
+@app.post("/api/letter")
+def api_letter_draft(body: LetterIn) -> dict:
+    """The slow part of Prepare bid (Gemini rewrite), fetched after the eligibility table is on screen."""
+    let = agent.draft_letter(body.run_id, body.notice_id, body.profile)
+    return {"letter": let, "state": verifier.run_state(body.run_id)}
 
 
 @app.get("/api/runs/{run_id}/receipts")
@@ -138,6 +152,9 @@ def api_live(notice_id: str) -> dict:
 @app.get("/api/tenders/{notice_id}/rfp")
 def api_rfp(notice_id: str) -> FileResponse:
     """The tender's RFP PDF, inline, so links like .../rfp#page=27 open at the cited page."""
+    import json as _json
+
+    from . import khmdhs
     from . import live_extract as LX
     from . import tender_source as T
 
@@ -146,7 +163,14 @@ def api_rfp(notice_id: str) -> FileResponse:
     elif notice_id in LX.PACKS:
         p = config.DATA_DIR / LX.PACKS[notice_id]["pack"] / LX.PACKS[notice_id]["pdf"]
     else:
-        raise HTTPException(404)
+        adam = notice_id if khmdhs.is_adam(notice_id) else None
+        if adam is None:  # a TED notice matched to ΚΗΜΔΗΣ earlier
+            mf = config.DATA_DIR / khmdhs.CACHE / "ted-matches.json"
+            m = (_json.loads(mf.read_text(encoding="utf-8")) if mf.exists() else {}).get(notice_id)
+            adam = m and m.get("adam")
+        if not adam:
+            raise HTTPException(404)
+        p = config.DATA_DIR / khmdhs.CACHE / adam / "document.pdf"
     if not p.exists():
         raise HTTPException(404)
     return FileResponse(p, media_type="application/pdf", filename=f"RFP_{notice_id}.pdf", content_disposition_type="inline")
