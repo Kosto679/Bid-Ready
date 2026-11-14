@@ -86,7 +86,8 @@ def api_eval_latest() -> dict:
     from . import evals, gemini
 
     ok, why = gemini.configured()
-    return {"result": evals.latest(), "configured": ok, "why": why, "model": gemini.MODEL}
+    h = evals.history(2)
+    return {"result": h[0] if h else None, "previous": h[1] if len(h) > 1 else None, "configured": ok, "why": why, "model": gemini.MODEL}
 
 
 @app.post("/api/evals/run")
@@ -95,7 +96,8 @@ def api_eval_run(body: EvalIn) -> dict:
 
     conds = tuple(c for c in body.conditions if c in evals.CONDITIONS) or ("headline", "page")
     try:
-        return {"result": evals.run_eval(conditions=conds, trials=max(1, min(body.trials, 5)))}
+        prev = evals.latest()
+        return {"result": evals.run_eval(conditions=conds, trials=max(1, min(body.trials, 5))), "previous": prev}
     except gemini.NotConfigured as e:
         raise HTTPException(400, f"Gemini is not configured: {e}")
 

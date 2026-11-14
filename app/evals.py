@@ -206,10 +206,16 @@ def _save(result: dict) -> None:
     (d / f"{result['run_id']}.md").write_text(to_markdown(result), encoding="utf-8")
 
 
-def latest() -> dict | None:
+def history(n: int = 2) -> list[dict]:
+    """The n most recent eval results, newest first."""
     d = config.OUT_DIR / "evals"
     files = sorted(d.glob("eval_*.json")) if d.exists() else []
-    return json.loads(files[-1].read_text(encoding="utf-8")) if files else None
+    return [json.loads(f.read_text(encoding="utf-8")) for f in reversed(files[-n:])]
+
+
+def latest() -> dict | None:
+    h = history(1)
+    return h[0] if h else None
 
 
 def to_markdown(result: dict) -> str:

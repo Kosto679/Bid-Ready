@@ -28,6 +28,12 @@ table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;p
 .receipt{border:1px solid var(--line);border-radius:10px;padding:12px;margin:8px 0}.receipt.FAILED{border-color:var(--bad);border-width:2px}
 pre{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;font:13px/1.55 ui-monospace,Consolas,monospace;max-height:420px;overflow:auto}
 .hidden{display:none}.q{margin:6px 0}a{color:var(--accent)}
+.factors{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px 14px;margin-top:8px}
+.factor{display:grid;grid-template-columns:auto 1fr;gap:2px 8px;align-items:center;font-size:12px;color:var(--mute)}
+.factor i{display:block;height:6px;border-radius:99px;background:var(--line);overflow:hidden}.factor i b{display:block;height:100%;background:var(--accent)}
+.factor em{grid-column:1/-1;font-style:normal;font-variant-numeric:tabular-nums}
+details.m{margin:-4px 0 12px}details.m summary{cursor:pointer;color:var(--accent);font-weight:600}details.m p{margin:8px 0}
+tr.changed td{background:var(--ambbg)}
 @media (max-width:600px){.match{grid-template-columns:44px 1fr}.match button{grid-column:2}}
 </style>
 </head>
@@ -52,6 +58,11 @@ pre{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);borde
     <div class="step">2 · Ranked matches</div>
     <h2>Open Greek IT tenders, scored on TED data</h2>
     <p class="m">Fit = 25% CPV overlap + 25% TED value vs your 3-year turnover + 25% place + 25% days to deadline (capped at 45). This is a shortlist score, not eligibility.</p>
+    <details class="m"><summary>How is this scored?</summary>
+      <p><b>CPV</b> is the EU's Common Procurement Vocabulary: an 8-digit code for what a tender buys (72000000 = IT services: consulting, software development, Internet and support). We match on the first two digits, the division, against the codes guessed from your description. Score = share of the tender's codes in your divisions.</p>
+      <p><b>Value vs turnover</b> = your 2023–2025 turnover ÷ (2 × the TED value), capped at 1. TED's value can include options, so this is rough. <b>Place</b> = 1 if the work is in Greece and so are you. <b>Deadline</b> = days left ÷ 45, capped at 1: more time to prepare scores higher.</p>
+      <p>Each factor counts 25%, so the score is 25 × the sum of the four, from 0 to 100.</p>
+    </details>
     <div id="matches"></div>
   </section>
 
@@ -64,6 +75,7 @@ pre{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);borde
     <h2 style="margin-top:22px">Receipts</h2>
     <div id="receipts"></div>
     <h2 style="margin-top:22px">Consortium letter (Greek)</h2>
+    <p class="m" id="letterSrc"></p>
     <pre id="letter"></pre>
   </section>
 
@@ -105,11 +117,15 @@ $('#go2').onclick=async()=>{busy($('#go2'),true);try{
   const m=await post('/api/matches',{profile,run_id:runId});
   $('#matches').innerHTML=`<p class="m">Source: ${m.source==='ted_live'?'live TED Search API':'local cache (TED unreachable, live hop UNVERIFIED)'}</p>`+m.matches.map(n=>`
     <div class="match"><div class="score">${n.fit_score}<small>fit</small></div>
-    <div><div class="t">${esc((n.title||'').replace(/^Ελλάδα – /,''))}</div><div class="m">${esc(n.buyer_name)} · TED ${esc(n.publication_number)} · <a href="${esc(n.ted_url)}" target="_blank" rel="noopener">notice</a></div><div class="m">${esc(n.reason)}</div></div>
+    <div><div class="t">${esc((n.title||'').replace(/^Ελλάδα – /,''))}</div><div class="m">${esc(n.buyer_name)} · TED ${esc(n.publication_number)} · <a href="${esc(n.ted_url)}" target="_blank" rel="noopener">notice</a></div><div class="m">${esc(n.reason)}</div>${factorBars(n.factors)}</div>
     <button class="ghost" data-n="${esc(n.publication_number)}">Prepare bid</button></div>`).join('');
   document.querySelectorAll('#matches button').forEach(b=>b.onclick=()=>prepare(b.dataset.n,b));
   $('#s2').classList.remove('hidden');$('#s2').scrollIntoView({behavior:'smooth'});
 }catch(e){alert(e)}busy($('#go2'),false)};
+
+function factorBars(f){if(!f)return'';
+  const items=[['CPV',f.cpv],['Value vs turnover',f.value_fit],['Place',f.place],['Deadline',f.deadline]];
+  return `<div class="factors">${items.map(([l,v])=>`<div class="factor"><span>${l}</span><i><b style="width:${Math.round((v||0)*100)}%"></b></i><em>${(v||0).toFixed(2)} × 25 = ${(25*(v||0)).toFixed(1)} pts</em></div>`).join('')}</div>`}
 
 async function prepare(nid,btn){noticeId=nid;busy(btn,true);$('#s3').classList.remove('hidden');$('#status').className='banner wait';$('#status').textContent='Checking against the tender pages… not ready.';$('#rules').innerHTML='';$('#receipts').innerHTML='';$('#letter').textContent='';$('#verdict').innerHTML='';
   $('#s3').scrollIntoView({behavior:'smooth'});
@@ -120,6 +136,10 @@ async function prepare(nid,btn){noticeId=nid;busy(btn,true);$('#s3').classList.r
     $('#rules').innerHTML='<tr><th>Rule</th><th>Status</th><th>Clause</th><th>Notes</th></tr>'+(e.rules||[]).map(x=>`<tr><td>${esc(x.title)}</td><td><span class="pill ${x.status}">${x.status}</span></td><td>§${esc(x.citation.section)}<br><span class="m">PDF p${x.citation.pdf_page} / printed ${x.citation.printed_page}</span></td><td class="m">${esc(x.notes)}</td></tr>`).join('');
     renderReceipts(r.state);
     $('#letter').textContent=r.letter.markdown;$('#s4').classList.remove('hidden');
+    const L=r.letter, fc=L.fact_check||{};
+    $('#letterSrc').innerHTML=L.source==='gemini_polished'?`<span class="pill VERIFIED">Fact-checked</span> Rewritten by Gemini; no numbers or English beyond the checked draft.`
+      :(fc.new_numbers||fc.unexpected_latin_words)?`<span class="pill FAILED">Rewrite rejected</span> Gemini's version added ${esc([...(fc.new_numbers||[]),...(fc.unexpected_latin_words||[])].join(', '))}; showing the checked draft.`
+      :`<span class="pill RECORDED">Template</span> Built from the tender facts and your profile${fc.skipped?` (Gemini not used: ${esc(fc.skipped)})`:''}.`;
   }catch(e){alert(e)}busy(btn,false)}
 
 async function renderReceipts(){const d=await (await fetch(`/api/runs/${runId}/receipts`)).json();const st=d.state;
@@ -138,17 +158,24 @@ $('#go4').onclick=async()=>{busy($('#go4'),true);try{const r=await post('/api/pa
 
 const pct=v=>v==null?'—':Math.round(v*100)+'%';
 const OUT={correct:'VERIFIED',wrong:'FAILED',abstained:'RECORDED',error:'UNVERIFIED'};
+const hhmm=ts=>(ts||'').slice(11,16);
 function renderEval(d){
-  const r=d.result;
-  $('#evalMeta').textContent=d.configured===false?`Not configured: ${d.why}`:(r?`${r.model} · ${r.ts}`:`Model: ${d.model||''}`);
+  const r=d.result, prev=d.previous;
+  if(d.configured===false){$('#evalMeta').textContent=`Not configured: ${d.why}`}
   if(!r){$('#evalOut').innerHTML='<p class="m">No eval run yet.</p>';return}
+  const key=x=>`${x.condition}|${x.field}|${x.trial}`;
+  const before=new Map((prev?.rows||[]).map(x=>[key(x),x]));
+  const changed=new Set(r.rows.filter(x=>before.has(key(x))&&(before.get(key(x)).outcome!==x.outcome||String(before.get(key(x)).value)!==String(x.value))).map(key));
+  const cmp=!prev?'first run':changed.size?`<b>${changed.size} answer(s) changed</b> since the run at ${hhmm(prev.ts)} (highlighted)`:`same answers as the run at ${hhmm(prev.ts)}: temperature 0, so repeats usually match`;
+  if(d.configured!==false)$('#evalMeta').innerHTML=`${esc(r.model)} · run at <b>${hhmm(r.ts)}</b> · ${r.rows.length} calls · ${cmp}`;
   const s=Object.entries(r.summary).map(([c,v])=>`<tr><td><b>${esc(c)}</b></td><td>${v.correct}</td><td>${v.wrong}</td><td>${v.abstained}</td><td>${v.errors}</td><td><b>${pct(v.accuracy)}</b></td><td>${pct(v.precision)}</td><td>${pct(v.grounded)}</td></tr>`).join('');
-  const rows=r.rows.map(x=>`<tr><td>${esc(x.condition)}</td><td>${esc(x.field)}</td><td>${x.value==null?'<span class="m">abstained</span>':esc(x.value)}</td><td>${esc(x.observed??'')}</td><td><span class="pill ${OUT[x.outcome]}">${esc(x.outcome)}</span></td></tr>`).join('');
+  const rows=r.rows.map(x=>`<tr class="${changed.has(key(x))?'changed':''}"><td>${esc(x.condition)}</td><td>${esc(x.field)}</td><td>${x.value==null?'<span class="m">abstained</span>':esc(x.value)}</td><td>${esc(x.observed??'')}</td><td><span class="pill ${OUT[x.outcome]}">${esc(x.outcome)}</span></td></tr>`).join('');
   $('#evalOut').innerHTML=`<table><tr><th>Condition</th><th>Correct</th><th>Wrong</th><th>Abstained</th><th>Errors</th><th>Accuracy</th><th>Precision</th><th>Grounded</th></tr>${s}</table>
     <table style="margin-top:14px"><tr><th>Condition</th><th>Field</th><th>Model said</th><th>Page says</th><th>Outcome</th></tr>${rows}</table>`;
 }
 fetch('/api/evals/latest').then(r=>r.json()).then(renderEval).catch(()=>{});
-$('#go5').onclick=async()=>{busy($('#go5'),true);try{const d=await post('/api/evals/run',{conditions:['headline','page'],trials:1});renderEval({...d,configured:true})}catch(e){alert(e)}busy($('#go5'),false)};
+$('#go5').onclick=async()=>{busy($('#go5'),true);$('#evalMeta').textContent='Running 18 Gemini calls, about 1–2 minutes…';
+  try{const d=await post('/api/evals/run',{conditions:['headline','page'],trials:1});renderEval({...d,configured:true})}catch(e){alert(e);$('#evalMeta').textContent=''}busy($('#go5'),false)};
 </script>
 </body>
 </html>

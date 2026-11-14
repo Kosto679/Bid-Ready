@@ -52,7 +52,7 @@ def test_golden_ktp(studio_profile):
     # 7. Greek letter on disk
     let = letter.draft_cover_letter(KTP, studio_profile, elig, run_id=run_id)
     text = Path(let["path"]).read_text(encoding="utf-8")
-    assert re.search(r"[α-ωΑ-Ω]{20,}", text.replace(" ", "")) and "ΕΣΗΔΗΣ" in text
+    assert len(re.findall(r"[Ͱ-Ͽἀ-῿]", text)) > 500 and "ΕΣΗΔΗΣ" in text
     assert "4.000 €" in text and "6.000" not in text  # letter uses the verified figure
 
     # 8. ZIP: ASCII names, required entries

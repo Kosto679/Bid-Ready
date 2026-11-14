@@ -191,13 +191,16 @@ def check_eligibility(notice_id: str, profile: dict, run_id: str | None = None, 
         verdict = "eligible"
 
     partnership_note = (
-        "Alone you are not eligible. A consortium would need a partner with ≥5 public escrow-payment projects (one SLA ≥ €200,000) "
-        "and a digital-transformation project; turnover is pooled, but every member must hold all six ISOs, so a subcontracting role "
-        "(no ISO duty, ≤30% share) is the realistic way in."
+        "Alone you are not eligible. A joint venture would need a partner with ≥5 public escrow-payment projects (one with SLA support ≥ €200,000) "
+        "and a digital-transformation project. In a joint venture turnover and profitability are covered jointly (§2.2.5), but the ISO "
+        "conditions are covered by each member (§2.2.7). As a subcontractor whose capacity the bidder does not rely on, you would only need "
+        "a declaration accepting the work (§2.2.9.2 B.10, PDF p48 / printed 41)."
         if verdict == "not_eligible" else None
     )
 
     claims = _build_claims(run_id, notice_id, rules, naive, initial, req)
+    if partnership_note:
+        claims += _partnership_claims(notice_id)
     report = {
         "run_id": run_id,
         "notice_id": notice_id,
@@ -280,6 +283,33 @@ def _build_claims(run_id: str, notice_id: str, rules: list[dict], naive: dict, i
         "required": True,
     })
     return claims
+
+
+PARTNERSHIP_CITES = [
+    ("pooled", "2.2.5", 33, "οι παραπάνω απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης",
+     "In a joint venture, turnover and profitability are covered jointly by the members (§2.2.5)."),
+    ("iso_per_member", "2.2.7", 36,"μπορεί να καλύπτονται από κάθε μέλος της ένωσης / κοινοπραξίας χωριστά",
+     "In a joint venture, the §2.2.7 conditions are covered by each member separately."),
+    ("subcontractor_b10", "2.2.9.2 B.10", 48, "χρήση υπεργολάβων, στις ικανότητες των οποίων δεν στηρίζεται",
+     "A subcontractor whose capacity the bidder does not rely on needs a declaration accepting the work (B.10)."),
+]
+
+
+def _partnership_claims(notice_id: str) -> list[dict]:
+    out = []
+    for cid, section, pg, anchor, statement in PARTNERSHIP_CITES:
+        out.append({
+            "claim_id": f"cite:partnership:{cid}",
+            "notice_id": notice_id,
+            "kind": "quote_on_page",
+            "origin": "check_eligibility",
+            "statement": statement,
+            "citation": {"section": section, "pdf_page": pg, "printed_page": T.printed_page(pg),
+                         "quoted_span": T.find_span(notice_id, pg, anchor, before=40, after=120), "file": T.rfp_file_rel()},
+            "value": anchor,
+            "required": True,
+        })
+    return out
 
 
 def _save_report(run_id: str, report: dict) -> None:
