@@ -34,7 +34,7 @@ ANCHORS = {
     "experience_sla": ("experience_sla", 34, "Service Level Agreement"),
     "experience_transformation": ("experience_transformation", 34, "ψηφιακό μετασχηματισμό"),
     "iso": ("iso", 36, "ISO 9001:2015"),
-    "team": ("team", 34, "2.2.6.2"),
+    "team": ("team", 35, "Έμπειρου Προγραμματιστή Εφαρμογών (Senior Developer)"),  # the roles are listed on p35
     "participation_guarantee": ("participation_guarantee", 27, "2.2.2.1"),
 }
 
@@ -185,8 +185,10 @@ def check_eligibility(notice_id: str, profile: dict, run_id: str | None = None, 
         "extracted": naive,
     })
 
+    apply_declarations(rules, profile)
     core = [r for r in rules if r["id"] in ("turnover", "experience_escrow", "experience_sla", "experience_transformation", "iso")]
-    if any(r["status"] == "missing" for r in core):
+    exclusion = [r for r in rules if r["id"] in ("profitability", "team") and r["status"] == "missing"]  # also on pain of exclusion
+    if any(r["status"] == "missing" for r in core) or exclusion:
         verdict = "not_eligible"
     elif any(r["status"] == "unclear" for r in core):
         verdict = "unclear"
@@ -270,8 +272,71 @@ def _you(rule_id: str, profile: dict) -> str:
         certs = profile.get("certificates") or []
         return ", ".join(certs) if certs else "none"
     if rule_id == "team":
-        return "we didn't ask"
+        size = profile.get("size")
+        return f"{size} people, roles not given" if size else "team not given"
     return ""
+
+
+# ---- self-declarations: rules only the company can answer (as it would in the ΕΕΕΣ) --------------
+
+KTP_ROLES = [
+    {"key": "pm", "label": "Project manager: 12+ years in public ICT, master's, led a Greek public payment system"},
+    {"key": "senior_dev", "label": "2 senior developers: IT degree, 5+ years"},
+    {"key": "dev", "label": "2 developers: 3+ years"},
+    {"key": "infosec", "label": "Information-security officer: ISO 27001 auditor, 20+ years (10 in security), master's"},
+    {"key": "dpo", "label": "Data-protection officer: law degree, master's, 10+ years (5 on GDPR)"},
+]
+
+
+def ask_for(rule: dict, generic: bool) -> dict | None:
+    """The question a company can answer itself for this rule, or None."""
+    rid = rule["id"]
+    if rid == "profitability":
+        return {"type": "yesno", "question": "Did you make a profit in each of 2023, 2024 and 2025?"}
+    if rid == "experience_escrow":
+        return {"type": "number", "question": "How many public-sector escrow-payment projects did you complete in 2021–2026?"}
+    if rid == "experience_sla":
+        return {"type": "yesno", "question": "Was one of them production support under an SLA worth €200,000 or more?"}
+    if rid == "experience_transformation":
+        return {"type": "yesno", "question": "Have you delivered a public digital-transformation consulting project that included maintenance?"}
+    if rid == "experience" and generic:
+        return {"type": "yesno", "question": f"Do you meet this? {rule.get('notes', '').replace('Required: ', '')}"}
+    if rid == "team":
+        roles = KTP_ROLES if not generic else [{"key": f"r{i}", "label": r} for i, r in enumerate(rule.get("roles") or [])]
+        if roles:
+            return {"type": "roles", "question": "Which of these people could you name in the bid (staff or contracted)?", "options": roles}
+    return None
+
+
+def apply_declarations(rules: list[dict], profile: dict, generic: bool = False) -> None:
+    """Attach each rule's question, and let the company's own answers set its status (marked self-declared)."""
+    decl = profile.get("declarations") or {}
+    for r in rules:
+        q = ask_for(r, generic)
+        if not q:
+            continue
+        r["ask"] = {**q, "value": decl.get(r["id"])}
+        if r["id"] not in decl:
+            continue
+        v = decl[r["id"]]
+        if q["type"] == "yesno":
+            ok = v in (True, "yes", "Yes", "true")
+        elif q["type"] == "number":
+            try:
+                ok = int(v) >= 5
+            except (TypeError, ValueError):
+                continue
+        else:  # roles
+            have = set(v or [])
+            missing = [o["label"].split(":")[0] for o in q["options"] if o["key"] not in have]
+            ok = not missing
+            if missing:
+                r["notes"] = "You'd still need: " + "; ".join(missing) + "."
+        r["status"] = "meets" if ok else "missing"
+        r["declared"] = True
+        r["you"] = ("you declared: " + (("yes" if ok else "no") if q["type"] == "yesno" else
+                    f"{v} project{'s' if str(v) != '1' else ''}" if q["type"] == "number" else
+                    f"{len(set(v or []))} of {len(q['options'])} roles"))
 
 
 def present(report: dict, profile: dict, receipts: list[dict], deadline: str | None = None) -> None:
@@ -279,7 +344,8 @@ def present(report: dict, profile: dict, receipts: list[dict], deadline: str | N
     rows = report.get("rules") or []
     for r in rows:
         r["kind"] = "provide" if r["id"] in PROVIDE_IDS else "rule"
-        r["you"] = _you(r["id"], profile)
+        if not r.get("declared"):
+            r["you"] = _you(r["id"], profile)
     rules = [r for r in rows if r["kind"] == "rule"]
     missing = [r for r in rules if r["status"] == "missing"]
     verdict = report.get("verdict")
@@ -399,6 +465,7 @@ def check_eligibility_generic(notice_id: str, profile: dict, run_id: str, run_ve
     claim_cit = {c["claim_id"]: c["citation"] for c in read["claims"] if c.get("citation")}
     for r in rows:
         r["citation"] = claim_cit.get(f"rule:{r['id']}") or r["citation"]
+    apply_declarations(rows, profile, generic=True)
     verdict = RL.verdict(rows) if rows else "unclear"
     gaps = [r["title"] for r in rows if r["status"] == "missing"]
     report = {

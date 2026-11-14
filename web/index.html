@@ -108,6 +108,17 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
 .echeck .good{color:var(--ok)}.echeck .fair{color:var(--amb)}
 .efix{margin-top:10px;background:var(--ambbg);color:var(--amb);border:1px solid var(--amb);border-radius:8px;padding:10px 12px;font-size:14px}
 @media (max-width:640px){.erow{grid-template-columns:22px minmax(0,1fr)}.erow .eyou{grid-column:2}}
+/* the letter as a document */
+.letterdoc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px;max-width:72ch;line-height:1.6;font-size:15px}
+.letterdoc h3{font-size:18px;margin:0 0 12px}.letterdoc h4{font-size:15px;margin:18px 0 6px}
+.letterdoc p{margin:0 0 10px}.letterdoc ul,.letterdoc ol{margin:0 0 10px;padding-left:22px}.letterdoc hr{border:0;border-top:1px solid var(--line);margin:14px 0}
+.letterdoc em{color:var(--mute)}
+.erow .enote{grid-column:2 / -1;color:var(--bad);font-size:13.5px;margin-top:-2px}
+/* self-declaration form */
+.erow .askform{grid-column:2 / -1;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;margin-top:6px}
+.askform p{margin:0 0 8px}.askfield{display:flex;flex-wrap:wrap;gap:8px 16px;margin-bottom:8px}
+.askfield label{display:flex;gap:6px;align-items:center;margin:0;font-weight:400}.askopt{flex-basis:100%}
+.askfield input[type=radio],.askfield input[type=checkbox]{width:auto}
 /* estimated-value filter */
 .vfilter{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .vfilter label{margin:0;font-weight:600;font-size:13px}.vfilter input{width:130px;padding:7px 9px}
@@ -190,7 +201,7 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
       </div>
       <h2 style="margin-top:22px;font-size:18px" id="letterHead">Consortium letter (Greek)</h2>
       <p class="m" id="letterSrc"></p>
-      <pre id="letter"></pre>
+      <div id="letter" class="letterdoc" lang="el"></div>
     </section>
 
     <section class="hidden" id="s4">
@@ -400,7 +411,13 @@ $('#goElig').onclick=()=>showEligibility();
 
 async function showEligibility(){$('#s3title').textContent='Can you bid?';
   showStep('s3');
-  try{const r=await prepPromise;const e=r.eligibility;const nid=noticeId;
+  try{const r=await prepPromise;const nid=noticeId;
+    renderElig(r.eligibility,nid);
+    renderReceipts(r.state);
+    await renderLetter(nid);
+  }catch(e){alert(e)}}
+
+function renderElig(e,nid){
     $('#s3title').textContent='Can you bid? · TED '+nid;
     const S=e.summary||{};
     const noRules=e.source?.kind==='none';
@@ -412,15 +429,65 @@ async function showEligibility(){$('#s3title').textContent='Can you bid?';
     const MARKS={meets:['✓','good','you meet it'],missing:['✗','weak',"you don't meet it"],unclear:['?','fair','we can\'t tell']};
     const ruleRows=(e.rules||[]).filter(x=>x.kind!=='provide');
     $('#rules').innerHTML=ruleRows.map(x=>{const[m,cls,aria]=MARKS[x.status]||MARKS.unclear;
+      const canAnswer=!!x.ask;
       return `<div class="erow" title="${esc(x.notes||'')}"><span class="emark ${cls}" aria-label="${aria}">${m}</span>
-        <span class="etitle">${esc(x.title)}${RULE_TERM[x.id]?` ${termBtn(RULE_TERM[x.id],'?')}`:''}</span>
-        <span class="eyou">You: ${esc(x.you||'—')}${pageRef(x.citation)?` · ${pageRef(x.citation)}`:''}</span></div>`}).join('')
+        <span class="etitle">${esc(x.title)}${RULE_TERM[x.id]?` ${termBtn(RULE_TERM[x.id],'?')}`:''}${x.declared?' <span class="pill RECORDED">self-declared</span>':''}</span>
+        <span class="eyou">You: ${esc(x.you||'—')}${pageRef(x.citation)?` · ${pageRef(x.citation)}`:''}
+          ${canAnswer?` · <button type="button" class="linkbtn" data-ask="${esc(x.id)}">${x.declared?'Change':'Answer'}</button>`:''}</span>
+        ${x.declared&&x.status==='missing'&&x.notes?`<span class="enote">${esc(x.notes)}</span>`:''}
+        ${canAnswer?askForm(x):''}</div>`}).join('')
       ||`<p class="m">${esc(e.source?.note||'No rules could be read.')} <a href="${esc(e.ted_url)}" target="_blank" rel="noopener">Open the notice on TED ↗</a></p>`;
     const PICON={bank:'€',file:'▤',calendar:'◷'};
     $('#provide').innerHTML=(e.provide||[]).map(p=>`<div class="erow2"><span class="emark">${PICON[p.icon]||'•'}</span><span>${esc(p.text)}${p.citation?` · ${pageRef(p.citation)}`:''}</span></div>`).join('');
     $('#provideCard').classList.toggle('hidden',!(e.provide||[]).length);
     window.__generic=!!e.generic;
-    renderReceipts(r.state);
+}
+
+/* Self-declarations: rules only the company can answer, as it would in the ΕΕΕΣ. */
+function askForm(x){const a=x.ask, v=a.value, id=`ask_${x.id}`;
+  let field='';
+  if(a.type==='yesno')field=`<label><input type="radio" name="${id}" value="yes" ${v==='yes'||v===true?'checked':''}> Yes</label> <label><input type="radio" name="${id}" value="no" ${v==='no'||v===false?'checked':''}> No</label>`;
+  else if(a.type==='number')field=`<input type="number" min="0" step="1" id="${id}" value="${esc(v??'')}" style="width:90px">`;
+  else field=a.options.map(o=>`<label class="askopt"><input type="checkbox" name="${id}" value="${esc(o.key)}" ${(v||[]).includes(o.key)?'checked':''}> ${esc(o.label)}</label>`).join('');
+  return `<form class="askform hidden" data-form="${esc(x.id)}" data-type="${a.type}"><p>${esc(a.question)}</p><div class="askfield">${field}</div>
+    <p class="m">Your answer is a self-declaration, like the ΕΕΕΣ. The buyer checks the evidence later.</p>
+    <div class="row"><button type="submit">Save and re-check</button><button type="button" class="linkbtn" data-cancel>Cancel</button><span class="m askerr" role="alert"></span></div></form>`}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-ask]');if(b){const f=document.querySelector(`form[data-form="${b.dataset.ask}"]`);if(f)f.classList.toggle('hidden');return}
+  const c=e.target.closest('[data-cancel]');if(c){c.closest('form').classList.add('hidden')}});
+document.addEventListener('submit',async e=>{const f=e.target.closest('form.askform');if(!f)return;e.preventDefault();
+  const rid=f.dataset.form, t=f.dataset.type, name=`ask_${rid}`, err=f.querySelector('.askerr');err.textContent='';
+  let val;
+  if(t==='yesno'){val=(f.querySelector(`input[name="${name}"]:checked`)||{}).value;if(!val){err.textContent='Choose yes or no.';return}}
+  else if(t==='number'){const raw=f.querySelector(`#${name}`).value.trim();if(raw===''||!/^\d+$/.test(raw)){err.textContent='Enter a whole number.';return}val=Number(raw)}
+  else val=[...f.querySelectorAll(`input[name="${name}"]:checked`)].map(i=>i.value);
+  profile.declarations={...(profile.declarations||{}),[rid]:val};
+  const btn=f.querySelector('button[type=submit]');busy(btn,true);
+  try{const nid=noticeId;
+    const r=await post('/api/prepare',{notice_id:nid,profile,run_id:runId,with_letter:false});
+    prepPromise=Promise.resolve(r);
+    renderElig(r.eligibility,nid);renderReceipts(r.state);
+    letterPromise=post('/api/letter',{run_id:r.run_id,notice_id:nid,profile});letterPromise.catch(()=>{});
+    renderLetter(nid);
+  }catch(x){err.textContent='That didn\'t save. Try again.'}
+  busy(btn,false)});
+
+/* Tiny Markdown renderer for the letter: headings, bold/italic, bullet and numbered lists, rules, paragraphs. */
+function mdToHtml(md){
+  const inline=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*(.+?)\*/g,'<em>$1</em>');
+  const out=[];let list=null,para=[];
+  const flushP=()=>{if(para.length){out.push(`<p>${para.map(inline).join('<br>')}</p>`);para=[]}};
+  const flushL=()=>{if(list){out.push(`<${list.t}>${list.items.map(i=>`<li>${inline(i)}</li>`).join('')}</${list.t}>`);list=null}};
+  for(const raw of md.split('\n')){const l=raw.trimEnd();let m;
+    if(!l.trim()){flushP();flushL();continue}
+    if((m=l.match(/^(#{1,3})\s+(.*)/))){flushP();flushL();out.push(`<h${m[1].length+2}>${inline(m[2])}</h${m[1].length+2}>`);continue}
+    if(/^---+$/.test(l.trim())){flushP();flushL();out.push('<hr>');continue}
+    if((m=l.match(/^\s*[-*]\s+(.*)/))){flushP();if(!list||list.t!=='ul'){flushL();list={t:'ul',items:[]}}list.items.push(m[1]);continue}
+    if((m=l.match(/^\s*\d+\.\s+(.*)/))){flushP();if(!list||list.t!=='ol'){flushL();list={t:'ol',items:[]}}list.items.push(m[1]);continue}
+    flushL();para.push(l.trim())}
+  flushP();flushL();return out.join('')}
+
+async function renderLetter(nid){
     window.__canPack=false;renderFoot();renderRail();
     const isDemo=nid==='769674-2026';
     $('#letterHead').classList.toggle('hidden',!isDemo);$('#letter').classList.add('hidden');
@@ -430,14 +497,14 @@ async function showEligibility(){$('#s3title').textContent='Can you bid?';
     const L=lr.letter, fc=L.fact_check||{};
     const hasLetter=!!L.markdown;
     window.__canPack=hasLetter;
-    $('#letter').textContent=L.markdown||'';$('#letter').classList.toggle('hidden',!hasLetter);$('#letterHead').classList.toggle('hidden',!hasLetter);
+    $('#letter').innerHTML=mdToHtml(L.markdown||'');$('#letter').classList.toggle('hidden',!hasLetter);$('#letterHead').classList.toggle('hidden',!hasLetter);
     $('#letterSrc').textContent='';
     renderFoot();renderRail();
     if(!hasLetter)return;
     $('#letterSrc').innerHTML=L.source==='gemini_polished'?`<span class="pill VERIFIED">Fact-checked</span> Rewritten by Gemini; no numbers or English beyond the checked draft.`
       :(fc.new_numbers||fc.unexpected_latin_words)?`<span class="pill FAILED">Rewrite rejected</span> Gemini's version added ${esc([...(fc.new_numbers||[]),...(fc.unexpected_latin_words||[])].join(', '))}; showing the checked draft.`
       :`<span class="pill RECORDED">Template</span> Built from the tender facts and your profile${fc.skipped?` (Gemini not used: ${esc(fc.skipped)})`:''}.`;
-  }catch(e){alert(e)}}
+}
 
 const SHAPE={VERIFIED:'●',FAILED:'▲',UNVERIFIED:'■',RECORDED:'■'};
 const GROUPS=[['rules','Rules read live, re-checked against the source'],['fig','Figures re-read from the PDF'],['cite','Clauses found on their cited pages'],['pack','Handover files read back'],['letter','Letter fact check']];

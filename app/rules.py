@@ -146,7 +146,28 @@ def _gr(n: float) -> list[str]:
     return [w.replace(",", "."), w.replace(",", ""), w]
 
 
+def _read_cache_path(notice_id: str):
+    return config.OUT_DIR / "rules_read" / f"{notice_id}.json"
+
+
 def read(notice_id: str, reader: Callable[[str], dict] | None = None) -> dict:
+    """Cached per tender (re-checking after a self-declaration shouldn't call Gemini again).
+    A custom reader (tests) bypasses the cache."""
+    p = _read_cache_path(notice_id)
+    if reader is None and p.exists():
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            pass
+    out = _read(notice_id, reader)
+    if reader is None and out["rules"]:
+        p.parent.mkdir(parents=True, exist_ok=True)
+        slim = {**out, "source": {k: v for k, v in out["source"].items() if k != "units"}}
+        p.write_text(json.dumps(slim, ensure_ascii=False, default=str), encoding="utf-8")
+    return out
+
+
+def _read(notice_id: str, reader: Callable[[str], dict] | None = None) -> dict:
     """Extract rules + the claims the verifier will grade. Does not touch the profile."""
     g = gather(notice_id)
     if g["kind"] == "none":
@@ -275,6 +296,7 @@ def compare(rules: dict, profile: dict) -> list[dict]:
     tm = rules.get("team") or {}
     if tm.get("roles"):
         add("team", "Minimum project team", "unclear", "Named team required: " + "; ".join(tm["roles"]), tm)
+        out[-1]["roles"] = list(tm["roles"])
 
     g = rules.get("guarantee") or {}
     if g.get("amount_eur") or g.get("percent"):
@@ -285,7 +307,7 @@ def compare(rules: dict, profile: dict) -> list[dict]:
 
 def verdict(rows: list[dict]) -> str:
     core = [r for r in rows if r["id"] in ("turnover", "experience", "iso")]
-    if any(r["status"] == "missing" for r in core):
+    if any(r["status"] == "missing" for r in core) or any(r["id"] == "team" and r["status"] == "missing" for r in rows):
         return "not_eligible"
     if core and all(r["status"] == "meets" for r in core):
         return "eligible"
