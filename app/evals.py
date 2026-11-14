@@ -35,8 +35,8 @@ INT = "Answer with an integer only."
 FIELDS: list[dict[str, Any]] = [
     {"id": "initial_budget_ex_vat_eur", "q": f"What is the contract's initial estimated value excluding VAT and excluding any option? {NUM}", "pages": [17], "type": "num"},
     {"id": "participation_guarantee_eur", "q": f"What amount must the participation guarantee (εγγύηση συμμετοχής) be? {NUM}", "pages": [27], "type": "num"},
-    {"id": "turnover_3y_min_eur", "q": f"What is the minimum TOTAL turnover required across the last three financial years combined? {NUM}", "pages": [33, 17], "type": "num"},
-    {"id": "performance_guarantee_eur", "q": f"What amount must the performance guarantee (εγγύηση καλής εκτέλεσης) be? {NUM}", "pages": [72, 17], "type": "num"},
+    {"id": "turnover_3y_min_eur", "q": f"What is the minimum TOTAL turnover required across the last three financial years combined? If the text states it as a percentage of the contract budget, calculate the amount using the budget base that the text specifies. {NUM}", "pages": [33, 17], "type": "num"},
+    {"id": "performance_guarantee_eur", "q": f"What amount must the performance guarantee (εγγύηση καλής εκτέλεσης) be? If the text states it as a percentage of the contract value, calculate the amount using the value base that the text specifies. {NUM}", "pages": [72, 17], "type": "num"},
     {"id": "submission_deadline", "q": f"When is the deadline for submitting offers? {DT}", "pages": [11], "type": "datetime"},
     {"id": "technical_opening", "q": f"When are the offers opened (αποσφράγιση)? {DT}", "pages": [11], "type": "datetime"},
     {"id": "escrow_projects_required", "q": f"How many completed public-sector escrow-account payment system projects must a bidder have? {INT}", "pages": [33], "type": "int"},
