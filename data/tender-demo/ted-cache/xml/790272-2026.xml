@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:Changes>
+                  <efbc:ChangedNoticeIdentifier>716001-2026</efbc:ChangedNoticeIdentifier>
+                  <efac:Change>
+                     <efac:ChangedSection>
+                        <efbc:ChangedSectionIdentifier>LOT-0001</efbc:ChangedSectionIdentifier>
+                     </efac:ChangedSection>
+                     <efac:ChangedSection>
+                        <efbc:ChangedSectionIdentifier>LOT-0002</efbc:ChangedSectionIdentifier>
+                     </efac:ChangedSection>
+                  </efac:Change>
+                  <efac:ChangeReason>
+                     <cbc:ReasonCode listName="change-corrig-justification">update-add</cbc:ReasonCode>
+                     <efbc:ReasonDescription languageID="ELL">Παράταση της καταληκτικής ημερομηνίας ηλεκτρονικής υποβολής των προσφορών στο διεθνή ηλεκτρονικό ανοικτό διαγωνισμό με αριθμό διακήρυξης: 1300/16.10.2026 (ΑΔΑΜ: 26PROC020007041, ΑΔΑ: ΨΧ8846ΜΨΠΚ-ΥΘΚ, αριθμός Προκήρυξης στην ΕΕ 2026/S 201-716001) και τίτλο: “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432, έως και την Τρίτη 08/12/2026 και ώρα 17:00 καθώς και τη μετάθεση της ημερομηνίας ηλεκτρονικής αποσφράγισης των προσφορών στον εν λόγω διαγωνισμό για την Πέμπτη 10/12/2026 και ώρα 12:00, και για τα δύο τμήματα, ήτοι Τμήμα Α (Α/Α ΕΣΗΔΗΣ 502056) και Τμήμα Β (Α/Α ΕΣΗΔΗΣ 553083), με βάση την υπ'αριθμ. 213/12.11.2026 απόφαση Δ.Σ. </efbc:ReasonDescription>
+                  </efac:ChangeReason>
+               </efac:Changes>
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://ketekny.gr/</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">Κέντρο Τεκμηρίωσης και Κοστολόγησης Νοσοκομειακών Υπηρεσιών Ανώνυμη Εταιρεία (ΚΕ.ΤΕ.Κ.Ν.Υ. Α.Ε.)</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Βερανζέρου 13 </cbc:StreetName>
+                           <cbc:CityName>Αθήνα</cbc:CityName>
+                           <cbc:PostalZone>10677 </cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>1015.E00969.0001</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Name>Ιάκωβος Καράκιζας</cbc:Name>
+                           <cbc:Telephone>+30 2103648337</cbc:Telephone>
+                           <cbc:ElectronicMail>i.karakizas@ketekny.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://www.aepp-procurement.gr/</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">Ενιαία Αρχή Δημοσίων Συμβάσεων (ΕΑΔΗΣΥ)</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName> ΔΩΡΟΥ 7-9</cbc:StreetName>
+                           <cbc:CityName>ΑΘΗΝΑ</cbc:CityName>
+                           <cbc:PostalZone>10432</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>1000.E00961.0001</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+302132141227</cbc:Telephone>
+                           <cbc:Telefax>+302132141227</cbc:Telefax>
+                           <cbc:ElectronicMail>grafeioproedrou@aepp-procurement.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://op.europa.eu</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">Publications Office of the European Union</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <cbc:PostalZone>2417</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>PUBL</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+352 29291</cbc:Telephone>
+                           <cbc:ElectronicMail>ted@publications.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+            <efac:Publication><efbc:NoticePublicationID schemeName="ojs-notice-id">00790272-2026</efbc:NoticePublicationID><efbc:GazetteID schemeName="ojs-id">221/2026</efbc:GazetteID><efbc:PublicationDate>2026-11-13+01:00</efbc:PublicationDate></efac:Publication></efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-1.14</cbc:CustomizationID>
+   <cbc:ID schemeName="notice-id">dfdbbe4f-9137-46d3-ace8-aac7c484c8f6</cbc:ID>
+   <cbc:ContractFolderID>77f2373c-fc52-46fc-913d-30466e089e47</cbc:ContractFolderID>
+   <cbc:IssueDate>2026-11-12Z</cbc:IssueDate>
+   <cbc:IssueTime>10:17:39Z</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode listName="language">ELL</cbc:NoticeLanguageCode>
+   <cac:ContractingParty>
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">pub-undert-cga</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">health</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:ServiceProviderParty>
+            <cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:Party>
+         </cac:ServiceProviderParty>
+         <cac:ServiceProviderParty>
+            <cbc:ServiceTypeCode listName="organisation-role">serv-prov</cbc:ServiceTypeCode>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:Party>
+         </cac:ServiceProviderParty>
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:TenderingTerms>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-grounds-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:LotDistribution>
+         <cbc:MaximumLotsSubmittedNumeric>2</cbc:MaximumLotsSubmittedNumeric>
+      </cac:LotDistribution>
+   </cac:TenderingTerms>
+   <cac:TenderingProcess>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <cac:ProcessJustification>
+         <cbc:ProcessReasonCode listName="accelerated-procedure">false</cbc:ProcessReasonCode>
+      </cac:ProcessJustification>
+   </cac:TenderingProcess>
+   <cac:ProcurementProject>
+      <cbc:Name languageID="ELL">“Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432</cbc:Name>
+      <cbc:Description languageID="ELL">Η σύμβαση περιλαμβάνει τα Υποέργα 2 και 3 της πράξης «’Ολοκληρωμένη παρέμβαση αποτίμησης και κοστολόγησης υπηρεσιών Ψυχικής Υγείας και Ιατρικής Αποκατάστασης (ΨΥ &amp; ΙΑ), για την λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας» τα οποία αφορούν στη δημιουργία συστήματος αποτίμησης, κοστολόγησης και αποζημίωσης υπηρεσιών υγείας στους τομείς της Ψυχικής Υγείας  και της Ανακουφιστικής Φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), τομείς που δεν συμπεριλαμβάνονται στο υφιστάμενο ελληνικό σύστημα DRG που εφαρμόζεται ήδη.
+</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <cac:RequestedTenderTotal>
+         <cbc:EstimatedOverallContractAmount currencyID="EUR">2602938.39</cbc:EstimatedOverallContractAmount>
+      </cac:RequestedTenderTotal>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">72221000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">72316000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">85312320</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">72200000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:CityName>ΑΘΗΝΑ</cbc:CityName>
+            <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+            <cac:Country>
+               <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:Address>
+      </cac:RealizedLocation>
+   </cac:ProcurementProject>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:Funding>
+                        <cbc:FundingProgramCode listName="eu-programme">ESF_PLUS</cbc:FundingProgramCode>
+                        <cbc:Description languageID="ELL">Φορέας χρηματοδότησης της παρούσας σύμβασης είναι το Υπουργείο Υγείας Κωδ. ΣΑ Ε6917. Η παρούσα σύμβαση χρηματοδοτείται από Πιστώσεις του Προγράμματος Δημοσίων Επενδύσεων (αριθ. ενάριθ. έργου 2025ΣΕ69170005). 
+Η σύμβαση αντιστοιχεί στο Υποέργο 2: «Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας  (ΨΥ), για την λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας» της Πράξης «Ολοκληρωμένη παρέμβαση αποτίμησης και κοστολόγησης υπηρεσιών Ψυχικής Υγείας και Ιατρικής Αποκατάστασης (ΨΥ &amp; ΙΑ), για την λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας» με Κωδικό ΟΠΣ 6019432 η οποία έχει ενταχθεί στο Πρόγραμμα «Ανθρώπινο Δυναμικό και Κοινωνική Συνοχή 2021-2027» με βάση την Απόφαση Ένταξης με Αρ. πρωτ. : 200164/19.11.2025 (ΑΔΑ 9ΣΑΝΗ-56Ω) της ΕΥΔ «ΑΝΘΡΩΠΙΝΟ ΔΥΝΑΜΙΚΟ &amp; ΚΟΙΝΩΝΙΚΗ ΣΥΝΟΧΗ», όπως ισχύει. 
+</cbc:Description>
+                     </efac:Funding>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-stand-to-avg</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά στην οικονομική και χρηματοοικονομική επάρκεια για την παρούσα διαδικασία σύναψης σύμβασης, οι υποψήφιοι οικονομικοί φορείς θα πρέπει, επί ποινή αποκλεισμού να έχουν μέσο γενικό ετήσιο κύκλο εργασιών κατά τις τρεις (3) τελευταίες διαχειριστικές χρήσεις μεγαλύτερο ή ίσο του 150% του προϋπολογισμού της υπό ανάθεσης σύμβασης, εξαιρουμένου του ΦΠΑ.
+Σε περίπτωση που ο υποψήφιος δραστηριοποιείται για χρονικό διάστημα μικρότερο των τριών διαχειριστικών χρήσεων, τότε ο μέσος όρος του κύκλου εργασιών για όσες διαχειριστικές χρήσεις δραστηριοποιείται, θα πρέπει να είναι ίσος ή μεγαλύτερος του 150% του προϋπολογισμού της υπό ανάθεσης σύμβασης για κάθε επιμέρους τμήμα, εξαιρουμένου του ΦΠΑ. 
+Σε περίπτωση ένωσης /κοινοπραξίας η παραπάνω προϋπόθεση μπορεί να καλύπτεται αθροιστικά από όλα τα μέλη της ένωσης / κοινοπραξίας. Η ζητούμενη ικανότητα δεν επηρεάζεται από το ποσοστό συμμετοχής του κάθε φορέα στην ένωση / κοινοπραξία. 
+Ο υποψήφιος Ανάδοχος, σύμφωνα με την περί εταιρειών νομοθεσία της χώρας όπου είναι εγκατεστημένος, υποβάλλει Ισολογισμούς διαχειριστικών χρήσεων, σε περίπτωση που υποχρεούται στην έκδοση Ισολογισμών ή Δήλωση του συνολικού ύψους του ετήσιου κύκλου εργασιών, σε περίπτωση που δεν υποχρεούται στην έκδοση Ισολογισμών.
+Επί ποινή αποκλεισμού δεν μπορεί ο υποψήφιος οικονομικός φορέας να εμφανίζει στις δημοσιευμένες οικονομικές καταστάσεις είτε α) ζημιογόνα αποτελέσματα μετά φόρων σε κάθε μία χωριστά κατά τις τρεις τελευταίες χρήσεις είτε β) αρνητικά ίδια κεφάλαια σε κάθε μία χωριστά κατά τις τρεις τελευταίες χρήσεις. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-ref-services</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι υποψήφιοι οικονομικοί φορείς για την παραδεκτή συμμετοχή τους πρέπει, επί ποινή αποκλεισμού να πληρούν τα παρακάτω κριτήρια τεχνικής και επαγγελματικής ικανότητας ως ακολούθως:
+1. Κατά τη διάρκεια των τριών (3) τελευταίων ημερολογιακών ετών, πριν το έτος διενέργειας του διαγωνισμού, ο υποψήφιος θα πρέπει κατ' ελάχιστον να έχει προβεί σε εμπρόθεσμη και προσήκουσα ολοκλήρωση σχετικών έργων, ως εξής.
+Ένα (1) ή περισσότερα έργα συμβουλευτικών υπηρεσιών στον τομέα της υγείας, τα οποία να περιλαμβάνουν αθροιστικά: 
+•	ανάλυση δεδομένων σχετικά με οικονομικά της υγείας
+•	συμβουλευτικές υπηρεσίες σχετικά με σύστημα κοστολόγησης και αποζημίωσης υπηρεσιών υγείας κατά DRG’s 
+•	υπηρεσίες υποστήριξης φορέων για την εφαρμογή συστημάτων κωδικοποίησης κατά DRG 
+•	υπηρεσίες ποιοτικού ελέγχου εφαρμογής ιατρικών κωδικοποιήσεων κατά DRG
+•	υλοποίηση κεντρικής κωδικοποίησης στον τομέα της υγείας 
+•	εκπαίδευση σε φορείς υγείας για την εφαρμογή κεντρικής κωδικοποίησης 
+•	υπηρεσίες για την αποτύπωση διαδικασιών διαχείρισης δεδομένων υγείας, με σκοπό την εφαρμογή τους σε εθνική κλίμακα.
+Ένα (1) ή περισσότερα ψηφιακά έργα στην Υγεία, τα οποία να περιλαμβάνουν αθροιστικά:
+•	την υλοποίηση κεντρικής εφαρμογής ή/και κεντρικού πληροφοριακού συστήματος σχετικά με την κωδικοποίηση κατά DRG 
+•	υλοποίηση διαλειτουργικότητας για τη συλλογή οικονομικών δεδομένων από μονάδες υγείας με σκοπό την κωδικοποίηση κατά DRGs. 
+•	υλοποίηση συστήματος συλλογής και ανάλυσης δεδομένων υγείας σχετικά με την κωδικοποίηση ή/και κοστολόγηση κατά DRG 
+Σημειώνεται ότι αντικείμενο των ανωτέρω συμβάσεων δύναται να προκύπτει σωρευτικά, ήτοι μία (1) σύμβαση μπορεί να καλύπτει ταυτόχρονα περισσότερα του ενός εκ των ανωτέρω αντικειμένων.
+Επιτρέπεται η τεκμηρίωση εμπειρίας πέραν της τελευταίας τριετίας αλλά όχι πριν την τελευταία πενταετία για λόγους ανάπτυξης του ανταγωνισμού. Η τελευταία πενταετία αντιστοιχεί στο χρονικό διάστημα από 01.01.2021 έως και την καταληκτική ημερομηνία υποβολής προσφορών.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις δύναται να καλύπτονται αθροιστικά από όλα τα μέλη της ένωσης.
+Στην περίπτωση στήριξης στις ικανότητες άλλων φορέων (ενότητα 2.2.8), οι τελευταίοι θα πρέπει να αποδεικνύουν ότι θα εκτελέσουν τις εργασίες ή τις υπηρεσίες για τις οποίες απαιτούνται οι συγκεκριμένες ικανότητες.
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-staff-qual</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">2.	Ο υποψήφιος Ανάδοχος ή, σε περίπτωση Ένωσης/ Κοινοπραξίας, τα μέλη αυτής, θα πρέπει να διαθέτουν Ομάδα Έργου με κατάλληλο ανθρώπινο δυναμικό, ώστε να ανταποκρίνεται επιτυχώς στις απαιτήσεις του έργου. Κατ’ ελάχιστον, η Ομάδα Έργου θα πρέπει να περιλαμβάνει τους εξής βασικούς ρόλους (key experts):
+•	Έναν (1) Υπεύθυνο Έργου (ΥΕ), ο οποίος θα έχει τη συνολική ευθύνη των εργασιών του Αναδόχου, με τα παρακάτω προσόντα:	
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Θετικών Επιστημών ή Ανθρωπιστικών Επιστημών ή Επιστημών Υγείας
+o	Επαγγελματική εμπειρία τουλάχιστον δεκαπέντε (15) ετών, εκ των οποίων τουλάχιστον δεκαετή (10) εργασιακή εμπειρία σε έργα του τομέα υγείας, με τον ρόλο εμπειρογνώμονα ή/και μέλους της Ομάδας Διοίκησης Έργου.
+o	Συμμετοχή σε τουλάχιστον  δύο (2) έργα συμβουλευτικών υπηρεσιών στον τομέα υγείας, εθνικής εμβέλειας, καθώς και σε τουλάχιστον ένα (1) έργο που να περιλαμβάνει παροχή υπηρεσιών σε φορέα ψυχικής υγείας.
+o	Εμπειρία σε έργα που περιλαμβάνουν τουλάχιστον δύο (2) από τα εξής αντικείμενα: ανάλυση δεδομένων σχετικά με οικονομικά της υγείας, συμβουλευτικές υπηρεσίες σχετικά με σύστημα κοστολόγησης και αποζημίωσης υπηρεσιών υγείας κατά DRG’s, υπηρεσίες ποιοτικού ελέγχου κωδικοποίησης κατά DRGs, υλοποίηση κωδικοποίησης για αγαθά ή/και υπηρεσίες υγείας και εκπαίδευσης σε φορείς υγείας για την εφαρμογή της, αποτύπωση διαδικασιών διαχείρισης δεδομένων υγείας, με σκοπό την εφαρμογή τους σε εθνική κλίμακα
+•	Έναν (1) Αναπληρωτή Υπεύθυνο έργου με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Θετικών Επιστημών ή Ανθρωπιστικών Επιστημών ή Επιστημών Υγείας
+o	Επαγγελματική εμπειρία τουλάχιστον δέκα (10) ετών, εκ των οποίων τουλάχιστον πέντε (5) έτη στην υλοποίηση / διαχείριση έργων στον τομέα Υγείας.
+o	Συμμετοχή σε τουλάχιστον δύο (2) έργα συμβουλευτικών υπηρεσιών για ιατρική κωδικοποίηση κατά DRG’s 
+•	Έναν (1) Εμπειρογνώμονα σε θέματα κοστολόγησης και αποζημίωσης σε υπηρεσίες Υγείας με τα παρακάτω προσόντα: 
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Θετικών Επιστημών ή Ανθρωπιστικών Επιστημών ή Επιστημών Υγείας
+o	Μεταπτυχιακό τίτλο σπουδών με αντικείμενο συναφές με την κοστολόγηση και αποζημίωση υπηρεσιών Υγείας.
+o	Συμμετοχή σε τουλάχιστον δύο (2) έργα συμβουλευτικών υπηρεσιών για ιατρική κωδικοποίηση κατά DRG’s 
+•	Έναν (1) Εμπειρογνώμονα (Expert)  Μελετητή Πολιτικών Υγείας / Οικονομολόγο Υγείας με τα παρακάτω προσόντα: 
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Θετικών ή Ανθρωπιστικών Επιστημών
+o	Μεταπτυχιακό τίτλο σπουδών σε αντικείμενο συναφές με τα Οικονομικά της Υγείας, τις πολιτικές υγείας ή τη Διοίκηση της Υγείας
+o	Επαγγελματική εμπειρία τουλάχιστον δέκα (10) ετών στον τομέα της Υγείας, εκ των οποίων τουλάχιστον πέντε (5) έτη σε αντικείμενα συναφή με θέματα Πολιτικών Υγείας ή Οικονομικών της Υγείας.
+•	Ένα (1) στέλεχος Μελετητή Πολιτικών Υγείας / Οικονομολόγο Υγείας μεσαίου επιπέδου με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Θετικών ή Ανθρωπιστικών Επιστημών
+o	Επαγγελματική εμπειρία τουλάχιστον πέντε (5) ετών στη διαχείριση έργων συναφών με τον τομέα της Υγείας.
+o	Συμμετοχή σε τουλάχιστον ένα (1) έργο στον τομέα της Υγείας
+•	Έναν (1) Εμπειρογνώμονα (Expert) Στατιστικολόγο / Αναλυτή Δεδομένων Υγείας με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Θετικών Επιστημών ή Οικονομικών Επιστημών
+o	Μεταπτυχιακό τίτλο σπουδών στον τομέα των Θετικών ή Οικονομικών Επιστημών
+o	Επαγγελματική εμπειρία τουλάχιστον δέκα (10) ετών στον τομέα των Data Analytics, εκ των οποίων τουλάχιστον πέντε (5) έτη ως Υπεύθυνος Έργου / Διευθυντής Έργου / Αναπληρωτής Υπεύθυνος Έργου / Υπεύθυνος Ομάδας Data &amp; Analytics. 
+•	Δύο (2) στελέχη Στατιστικολόγους / Αναλυτές Δεδομένων Υγείας μεσαίου επιπέδου με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Θετικών Επιστημών ή Οικονομικών Επιστημών ή Πολυτεχνικών Σχολών
+o	Επαγγελματική εμπειρία τουλάχιστον τριών (3) ετών στον τομέα των Data Analytics
+•	Έναν (1) Εμπειρογνώμονα (Expert) Επιχειρησιακής Ανάπτυξης Υγείας με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, σε αντικείμενο συναφές με την υγεία
+o	Μεταπτυχιακό τίτλο σπουδών στα Οικονομικά της Υγείας, ή τη Διοίκηση της Υγείας ή την Πληροφορική της Υγείας
+o	Επαγγελματική εμπειρία τουλάχιστον δέκα (10) ετών, συμπεριλαμβανομένων θέσεων ανώτατης διοίκησης σε εταιρείες / φορείς του τομέα υγείας. 
+•	Δύο (2) επαγγελματίες οργάνωσης και διοίκησης μονάδων ψυχικής υγείας με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  σε αντικείμενο συναφές με την υγεία ή τις Οικονομικές Επιστήμες ή τη Διοίκηση Επιχειρήσεων
+o	Επαγγελματική εμπειρία τουλάχιστον πέντε  (5) στην οργάνωση και διοίκηση μονάδων ψυχικής υγείας.  
+•	Ένα (1) στέλεχος κοστολόγησης και αποζημίωσης σε υπηρεσίες υγείας μεσαίου επιπέδου με τα παρακάτω προσόντα: 
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών ή Ανθρωπιστικών Επιστημών, 
+o	Επαγγελματική εμπειρία τουλάχιστον πέντε (5) ετών στον τομέα της Υγείας.
+•	Έναν (1) Εμπειρογνώμονα (Expert) Διοίκησης Υπηρεσιών Υγείας με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών ή Ανθρωπιστικών Επιστημών, 
+o	Μεταπτυχιακό τίτλο σπουδών στον τομέα των Θετικών Επιστημών ή των Οικονομικών ή της Διοίκησης Επιχειρήσεων,
+o	Επαγγελματική εμπειρία τουλάχιστον πέντε (5) ετών σε αντικείμενα συναφή με την καταγραφή και ανάλυση επιχειρησιακών διαδικασιών, εκ των οποίων τουλάχιστον δύο (2) έτη στον τομέα της Υγείας,
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-staff-qual</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">•	Ένα (1) στέλεχος Διοίκησης Υπηρεσιών Υγείας μεσαίου επιπέδου με τα παρακάτω προσόντα: 
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο 
+o	Επαγγελματική εμπειρία τουλάχιστον πέντε (5) ετών στον τομέα Υγείας, σε αντικείμενο συναφές με το έργο.
+•	Ένα (1) στέλεχος Διοίκησης Υπηρεσιών Υγείας junior επιπέδου με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών ή Ανθρωπιστικών Επιστημών,
+o	Επαγγελματική εμπειρία τουλάχιστον δύο (2) ετών στον τομέα Υγείας, σε αντικείμενο συναφές με το έργο.
+•	Τέσσερις (4) Ιατρούς ειδικούς στον ποιοτικό έλεγχο ιατρικής κωδικοποίησης με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  στην Ιατρική
+o	Επαγγελματική εμπειρία τουλάχιστον δύο (2) ετών στον κλινικό έλεγχο και στην ιατρική κωδικοποίηση νοσηλειών (ΚΕΝ, DRG ή συναφές σύστημα ταξινόμησης και αποζημίωσης νοσηλειών).
+•	Έναν (1) Νομικό Σύμβουλο (Expert) με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Νομικής
+o	Επαγγελματική εμπειρία τουλάχιστον πέντε (5) έτη στον τομέα της Υγείας
+•	Ένα (1) στέλεχος σε ρόλο Εμπειρογνώμονα (Expert) Ψηφιακού Μετασχηματισμού στην Υγεία με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών ή Τεχνολογικών Επιστημών ή Πληροφορικής
+o	Μεταπτυχιακό τίτλο σπουδών στον τομέα της Πληροφορικής Υγείας
+o	Επαγγελματική εμπειρία τουλάχιστον δέκα (10) ετών σε έργα ψηφιακής Υγείας
+•	Ένα (1) στέλεχος σε ρόλο Υπεύθυνου Υλοποίησης Πληροφοριακών Συστημάτων με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών ή Τεχνολογικών Επιστημών ή Πληροφορικής
+o	Επαγγελματική εμπειρία τουλάχιστον οχτώ (8) ετών σε έργα ψηφιακής Υγείας
+o	Συμμετοχή σε τουλάχιστον δύο (2) έργα ψηφιακής υγείας εθνικής εμβέλειας, μεταξύ των οποίων ένα (1) έργο που να περιλαμβάνει υλοποίηση κεντρικού εθνικού συστήματος σχετικά με κοστολόγηση ιατρικών πράξεων κατά DRG ή συστήματος DRGs σε μονάδες υγείας για διασύνδεση με σύστημα DRG-Grouper.
+•	Ένα (1) στέλεχος σε ρόλο  Μελετητή στην Πληροφορική Υγείας με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών Επιστημών ή Πληροφορικής
+o	Επαγγελματική εμπειρία τουλάχιστον δύο (2) ετών σε έργα ψηφιακής Υγείας
+o	Εμπειρία σε έργα που να περιλαμβάνουν την υλοποίηση κεντρικού εθνικού συστήματος σχετικά με κοστολόγηση ιατρικών πράξεων κατά DRG.
+•	Τρία (3) στελέχη σε ρόλο Προγραμματιστή στην Πληροφορική Υγείας μεσαίου επιπέδου με τα παρακάτω προσόντα:
+o	Πτυχίο τριτοβάθμιας εκπαίδευσης της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών Επιστημών ή Πληροφορικής
+o	Επαγγελματική εμπειρία τουλάχιστον δύο (2) ετών σε έργα ψηφιακής Υγείας.
+o	Εμπειρία σε έργα που να περιλαμβάνουν την υλοποίηση κεντρικού εθνικού συστήματος σχετικά με κοστολόγηση ιατρικών πράξεων κατά DRG.
+•	Ένα (1) στέλεχος Ασφάλειας Πληροφοριών, προστασίας δεδομένων και υπηρεσιών πληροφορικής μεσαίου επιπέδου, ο οποίος να διαθέτει τουλάχιστον  τα ακόλουθα προσόντα:
+o	Πανεπιστημιακό τίτλο σπουδών της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο Θετικών Επιστημών ή Πληροφορικής
+o	Συμμετοχή σε δύο (2) έργα συμβουλευτικών υπηρεσιών για λογαριασμό φορέα με εθνικό ρόλο στο σύστημα υγείας που να περιλαμβάνουν αθροιστικά συμβουλευτικές υπηρεσίες στην ασφάλεια δεδομένων και προστασία προσωπικών δεδομένων.
+o	Πιστοποιήσεις στα εξής αντικείμενα:
+	Certified Information Privacy Professional /Europe (CIPP/E)
+	Certified Information Security Manager (CISM) 
+	ISO 27001 Lead Auditor
+	ISO 20000-1:2018 Lead Auditor
+•	Έναν (1) στέλεχος διαχείρισης εκπαιδευτικών προγραμμάτων, το οποίο θα πρέπει να διαθέτει τουλάχιστον  τα ακόλουθα προσόντα:
+o	Πανεπιστημιακό τίτλο σπουδών της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο 
+o	Επαγγελματική εμπειρία τουλάχιστον δύο (2) ετών στην εκπαίδευση.
+Διευκρινίζεται ότι σε περίπτωση που ο ίδιος οικονομικός φορέας συμμετέχει σε περισσότερα από ένα (1) Τμήματα της παρούσας σύμβασης, δύναται να προτείνει τα ίδια στελέχη για περισσότερα Τμήματα, εφόσον αυτά πληρούν τα ελάχιστα απαιτούμενα προσόντα του κάθε Τμήματος.
+Tα φυσικά πρόσωπα που δηλώνονται από τον προσφέροντα στην Ομάδα Έργου δύνανται να απασχολούνται με εξαρτημένη σχέση εργασίας ή σύμβαση ανεξαρτήτων υπηρεσιών, η οποία είναι σε ισχύ ήδη κατά τον χρόνο υποβολής της προσφοράς. Στην τελευταία αυτή περίπτωση θεωρούνται ίδιοι πόροι του οικονομικού φορέα και όχι τρίτοι δανείζοντες και δεν απαιτείται εκ μέρους τους η υποβολή ΕΕΕΣ και των σχετικών αποδεικτικών μέσων.
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-reg-trade</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">
+Οι οικονομικοί φορείς που συμμετέχουν στη διαδικασία σύναψης της παρούσας σύμβασης απαιτείται να ασκούν δραστηριότητα συναφή με το αντικείμενο της σύμβασης. 
+Οι οικονομικοί φορείς που είναι εγκατεστημένοι σε κράτος μέλος της Ευρωπαϊκής Ένωσης απαιτείται να είναι εγγεγραμμένοι σε ένα από τα επαγγελματικά μητρώα ή εμπορικά μητρώα  που τηρούνται στο κράτος εγκατάστασής τους ή να ικανοποιούν οποιαδήποτε άλλη απαίτηση ορίζεται στο Παράρτημα XI του Προσαρτήματος Α΄ του ν. 4412/2016. Εφόσον οι οικονομικοί φορείς απαιτείται να διαθέτουν ειδική έγκριση ή να είναι μέλη συγκεκριμένου οργανισμού για να μπορούν να παράσχουν τη σχετική υπηρεσία στη χώρα καταγωγής τους, η αναθέτουσα αρχή μπορεί να τους ζητεί να αποδείξουν ότι διαθέτουν την έγκριση αυτή ή ότι είναι μέλη του εν λόγω οργανισμού ή να τους καλέσει να προβούν σε ένορκη δήλωση ενώπιον συμβολαιογράφου σχετικά με την άσκηση του συγκεκριμένου επαγγέλματος.  
+Στην περίπτωση οικονομικών φορέων εγκατεστημένων σε κράτος μέλους του Ευρωπαϊκού Οικονομικού Χώρου (Ε.Ο.Χ) ή σε τρίτες χώρες που έχουν προσχωρήσει στη ΣΔΣ, ή σε τρίτες χώρες που δεν εμπίπτουν στην προηγούμενη περίπτωση και έχουν συνάψει διμερείς ή πολυμερείς συμφωνίες με την Ένωση σε θέματα διαδικασιών ανάθεσης δημοσίων συμβάσεων, απαιτείται να είναι εγγεγραμμένοι σε αντίστοιχα επαγγελματικά μητρώα. 
+Οι εγκατεστημένοι στην Ελλάδα οικονομικοί φορείς θα πρέπει να είναι εγγεγραμμένοι στο οικείο επαγγελματικό μητρώο, εφόσον, κατά την κείμενη νομοθεσία, απαιτείται η εγγραφή τους για την υπό ανάθεση υπηρεσία. 
+Σε περίπτωση Ένωσης φορέων/κοινοπραξίας, κάθε μέλος απαιτείται να είναι εγγεγραμμένο σε ένα από τα επαγγελματικά μητρώα ή εμπορικά μητρώα που τηρούνται στο κράτος της εγκατάστασής του. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-reg-prof</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">
+Οι οικονομικοί φορείς που συμμετέχουν στη διαδικασία σύναψης της παρούσας σύμβασης απαιτείται να ασκούν δραστηριότητα συναφή με το αντικείμενο της σύμβασης. 
+Οι οικονομικοί φορείς που είναι εγκατεστημένοι σε κράτος μέλος της Ευρωπαϊκής Ένωσης απαιτείται να είναι εγγεγραμμένοι σε ένα από τα επαγγελματικά μητρώα ή εμπορικά μητρώα  που τηρούνται στο κράτος εγκατάστασής τους ή να ικανοποιούν οποιαδήποτε άλλη απαίτηση ορίζεται στο Παράρτημα XI του Προσαρτήματος Α΄ του ν. 4412/2016. Εφόσον οι οικονομικοί φορείς απαιτείται να διαθέτουν ειδική έγκριση ή να είναι μέλη συγκεκριμένου οργανισμού για να μπορούν να παράσχουν τη σχετική υπηρεσία στη χώρα καταγωγής τους, η αναθέτουσα αρχή μπορεί να τους ζητεί να αποδείξουν ότι διαθέτουν την έγκριση αυτή ή ότι είναι μέλη του εν λόγω οργανισμού ή να τους καλέσει να προβούν σε ένορκη δήλωση ενώπιον συμβολαιογράφου σχετικά με την άσκηση του συγκεκριμένου επαγγέλματος.  
+Στην περίπτωση οικονομικών φορέων εγκατεστημένων σε κράτος μέλους του Ευρωπαϊκού Οικονομικού Χώρου (Ε.Ο.Χ) ή σε τρίτες χώρες που έχουν προσχωρήσει στη ΣΔΣ, ή σε τρίτες χώρες που δεν εμπίπτουν στην προηγούμενη περίπτωση και έχουν συνάψει διμερείς ή πολυμερείς συμφωνίες με την Ένωση σε θέματα διαδικασιών ανάθεσης δημοσίων συμβάσεων, απαιτείται να είναι εγγεγραμμένοι σε αντίστοιχα επαγγελματικά μητρώα. 
+Οι εγκατεστημένοι στην Ελλάδα οικονομικοί φορείς θα πρέπει να είναι εγγεγραμμένοι στο οικείο επαγγελματικό μητρώο, εφόσον, κατά την κείμενη νομοθεσία, απαιτείται η εγγραφή τους για την υπό ανάθεση υπηρεσία. 
+Σε περίπτωση Ένωσης φορέων/κοινοπραξίας, κάθε μέλος απαιτείται να είναι εγγεγραμμένο σε ένα από τα επαγγελματικά μητρώα ή εμπορικά μητρώα που τηρούνται στο κράτος της εγκατάστασής του. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-sche-qu-cert-indep</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς να διαθέτουν σε ισχύ τα ακόλουθα πιστοποιητικά:
+•	ISO 9001:2015 ή νεότερο για τη Διαχείριση της Ποιότητας ή ισοδύναμο, εν ισχύ, από διαπιστευμένο οργανισμό. 
+•	ISO 27001:2022 ή νεότερο για την Ασφάλεια των Πληροφοριών ή ισοδύναμο, εν ισχύ, από διαπιστευμένο οργανισμό. 
+•	ISO 20000:2018 ή νεότερο για την παροχή υπηρεσιών πληροφορικής ή ισοδύναμο, εν ισχύ, από διαπιστευμένο οργανισμό.
+•	ISO 27701:2019 ή νεότερο για τη Διαχείριση Προσωπικών Δεδομένων ή ισοδύναμο, εν ισχύ, από διαπιστευμένο οργανισμό.
+•	ISO 22301:2019 ή νεότερο για την Επιχειρησιακή Συνέχεια ή ισοδύναμο, εν ισχύ, από διαπιστευμένο οργανισμό.
+•	ISO 29994:2021 ή νεότερο για την παροχή υπηρεσιών απομακρυσμένης εκπαίδευσης, ή ισοδύναμο, εν ισχύ, , από διαπιστευμένο οργανισμό.
+Εφόσον πρόκειται για διαγωνιζόμενες Κοινοπραξίες ή ενώσεις οικονομικών φορέων, ορίζεται ότι η παραπάνω απαίτηση μπορεί να καλύπτεται αθροιστικά από τα μέλη του διαγωνιζόμενου. 
+Η αναθέτουσα αρχή αναγνωρίζει ισοδύναμα πιστοποιητικά που έχουν εκδοθεί από φορείς διαπιστευμένους από ισοδύναμους Οργανισμούς διαπίστευσης, εδρεύοντες και σε άλλα κράτη - μέλη.
+Για τους σκοπούς του παρόντος, ισοδύναμος οργανισμός αξιολόγησης της συμμόρφωσης, θεωρείται και αυτός: α) που είναι εγκατεστημένος σε κράτος, που δεν είναι κράτος μέλος της Ευρωπαϊκής Ένωσης, β) είναι διαπιστευμένος από εθνικό οργανισμό διαπίστευσης, που δεν είναι εγκατεστημένος σε κράτος μέλος της Ευρωπαϊκής Ένωσης και είναι μέλος της Ευρωπαϊκής Συνεργασίας για τη Διαπίστευση (European Accreditation Multilateral Agreement - EA MLA) ή του Διεθνούς Οργανισμού Διαπίστευσης Εργαστηρίων (International Laboratory Accreditation Cooperation - ILAC) ή της Συμφωνίας Αμοιβαίας Αναγνώρισης του Διεθνούς Φόρουμ Διαπίστευσης (International Accreditation Forum Multilateral Recognition Agreement - IAF MRA). 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <cac:RequiredFinancialGuarantee>
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <cbc:Description languageID="ELL">Για την έγκυρη συμμετοχή στη διαδικασία σύναψης της παρούσας σύμβασης, κατατίθεται από τους συμμετέχοντες οικονομικούς φορείς (προσφέροντες), εγγυητική επιστολή συμμετοχής. Το ποσό της εγγυητικής επιστολής θα πρέπει να καλύπτει σε ευρώ (€) ποσοστό 2% της εκτιμώμενης αξίας της σύμβασης, ήτοι ποσού 43.802,94 €</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>ΑΡΙΘΜΟΣ ΕΣΗΔΗΣ: 502056</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://nepps-search.eprocurement.gov.gr/actSearch/resources/search/502056</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-notice</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>20</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">1. Περιβάλλον του έργου
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">2.Οριζόντιες Απαιτήσεις Συστήματος και Αρχιτεκτονική
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>20</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">3.Λειτουργικές Προδιαγραφές συστήματος
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>35</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">4.Υπηρεσίες Έργου
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">5.Μεθοδολογία υλοποίησης έργου 
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>5</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">6.Σχήμα Διοίκησης και Οργάνωσης έργου / Λειτουργία και οργάνωση της Ομάδας Έργου
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">Πλέον συμφέρουσα από οικονομική άποψη προσφορά είναι εκείνη που παρουσιάζει τη μεγαλύτερη τιμή (Α) της σχέσης:
+Α = 80*(Βj/Βmax) + 20*(Kmin/Kj)
+Βj = Συνολική Βαθμολογία της Τεχνικής Προσφοράς j
+Βmax = Συνολική Βαθμολογία που έλαβε η καλύτερη Τεχνική Προσφορά
+Κmin = Το συνολικό κόστος της Προσφοράς με τη μικρότερη τιμή
+Κj = Το συνολικό κόστος της Προσφοράς j.
+Aj = Το αποτέλεσμα της ανωτέρω πράξης, το οποίο στρογγυλοποιείται στα δύο δεκαδικά ψηφία.
+Επικρατέστερη είναι η προσφορά με το μεγαλύτερο A.
+Σε περίπτωση ισοψηφίας, επικρατέστερη είναι η προσφορά με το μεγαλύτερο Βj (βαθμολογία τεχνικής προσφοράς υποψηφίου), ενώ σε περίπτωση πλήρους ισοβαθμίας (Aj, Βj) διενεργείται δημόσια κλήρωση παρουσία όλων των ενδιαφερομένων.
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://portal.eprocurement.gov.gr/esidisportal/</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <cac:TenderEvaluationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderEvaluationParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">ΕΑΔΗΣΥ</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-12-08+02:00</cbc:EndDate>
+            <cbc:EndTime>17:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-12-10+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>12:00:00+02:00</cbc:OccurrenceTime>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">ΤΜΗΜΑ Α</cbc:ID>
+         <cbc:Name languageID="ELL">Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας  (ΨΥ), για την λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας
+</cbc:Name>
+         <cbc:Description languageID="ELL">Η σύμβαση αντιστοιχεί στο Υποέργο 2 «Aποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας  (ΨΥ), για την λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας» της Πράξης «Ολοκληρωμένη παρέμβαση αποτίμησης και κοστολόγησης υπηρεσιών Ψυχικής Υγείας και Ιατρικής Αποκατάστασης (ΨΥ &amp; ΙΑ), για την λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας» με Κωδικό ΟΠΣ 6019432 η οποία έχει ενταχθεί στο Πρόγραμμα «Ανθρώπινο Δυναμικό και Κοινωνική Συνοχή 2021-2027» με βάση την Απόφαση Ένταξης με Αρ. πρωτ. : 200164/19.11.2025 (ΑΔΑ 9ΣΑΝΗ-56Ω) της ΕΥΔ «ΑΝΘΡΩΠΙΝΟ ΔΥΝΑΜΙΚΟ &amp; ΚΟΙΝΩΝΙΚΗ ΣΥΝΟΧΗ», όπως ισχύει. 
+Στον τομέα της Ψυχικής Υγείας, η παρέμβαση θα περιλαμβάνει το σχεδιασμό και την εφαρμογή μεθοδολογιών καταγραφής της υφιστάμενης κατάστασης υπηρεσιών ψυχικής υγείας, μέτρηση και αξιολόγηση του παραγόμενου έργου καθώς και αναλυτική κοστολόγηση και αποζημίωση των παραγόμενων υπηρεσιών, ώστε να επιτευχθεί α) η ποσοτική καταγραφή και αποτύπωση εισροών - εκροών β) η ομαδοποίηση των ιατρικών δεδομένων, η κατηγοριοποίηση και ο υπολογισμός του κόστους των νοσηλειών και επισκέψεων γ) η ποιοτική αποτίμηση του συνολικού έργου συμπεριλαμβανομένων και των σχετικών ποιοτικών ελέγχων (quality audit) για την λειτουργία συστήματος λήψης αποφάσεων πολιτικών υγείας δ) η λειτουργική διασύνδεση των μονάδων μεταξύ τους και με τους εποπτεύοντες οργανισμούς και το ΚΕΤΕΚΝΥ. 
+</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">2190147.1</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72221000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72316000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">85312320</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72200000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:CityName>ΑΘΗΝΑ</cbc:CityName>
+               <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">30</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:Funding>
+                        <cbc:FundingProgramCode listName="eu-programme">ESF_PLUS</cbc:FundingProgramCode>
+                        <cbc:Description languageID="ELL">Φορέας χρηματοδότησης της παρούσας σύμβασης είναι το Υπουργείο Υγείας Κωδ. ΣΑ Ε6917. Η παρούσα σύμβαση χρηματοδοτείται από Πιστώσεις του Προγράμματος Δημοσίων Επενδύσεων (αριθ. ενάριθ. έργου 2025ΣΕ69170005). 
+Η σύμβαση αντιστοιχεί στο Υποέργο 3 «Αποτίμηση και κοστολόγηση των υπηρεσιών Ανακουφιστικής Φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για την λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας» της Πράξης «Ολοκληρωμένη παρέμβαση αποτίμησης και κοστολόγησης υπηρεσιών Ψυχικής Υγείας και Ιατρικής Αποκατάστασης (ΨΥ &amp; ΙΑ), για την λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας» με Κωδικό ΟΠΣ 6019432 η οποία έχει ενταχθεί στο Πρόγραμμα «Ανθρώπινο Δυναμικό και Κοινωνική Συνοχή 2021-2027» με βάση την Απόφαση Ένταξης με Αρ. πρωτ. : 200164/19.11.2025 (ΑΔΑ 9ΣΑΝΗ-56Ω) της ΕΥΔ «ΑΝΘΡΩΠΙΝΟ ΔΥΝΑΜΙΚΟ &amp; ΚΟΙΝΩΝΙΚΗ ΣΥΝΟΧΗ», όπως ισχύει. 
+</cbc:Description>
+                     </efac:Funding>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-stand-to-avg</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά στην οικονομική και χρηματοοικονομική επάρκεια για την παρούσα διαδικασία σύναψης σύμβασης, οι υποψήφιοι οικονομικοί φορείς θα πρέπει, επί ποινή αποκλεισμού να έχουν μέσο γενικό ετήσιο κύκλο εργασιών κατά τις τρεις (3) τελευταίες διαχειριστικές χρήσεις μεγαλύτερο ή ίσο του 150% του προϋπολογισμού της υπό ανάθεσης σύμβασης, εξαιρουμένου του ΦΠΑ.
+Σε περίπτωση που ο υποψήφιος δραστηριοποιείται για χρονικό διάστημα μικρότερο των τριών διαχειριστικών χρήσεων, τότε ο μέσος όρος του κύκλου εργασιών για όσες διαχειριστικές χρήσεις δραστηριοποιείται, θα πρέπει να είναι ίσος ή μεγαλύτερος του 150% του προϋπολογισμού της υπό ανάθεσης σύμβασης για κάθε επιμέρους τμήμα, εξαιρουμένου του ΦΠΑ. 
+Σε περίπτωση ένωσης /κοινοπραξίας η παραπάνω προϋπόθεση μπορεί να καλύπτεται αθροιστικά από όλα τα μέλη της ένωσης / κοινοπραξίας. Η ζητούμενη ικανότητα δεν επηρεάζεται από το ποσοστό συμμετοχής του κάθε φορέα στην ένωση / κοινοπραξία. 
+Ο υποψήφιος Ανάδοχος, σύμφωνα με την περί εταιρειών νομοθεσία της χώρας όπου είναι εγκατεστημένος, υποβάλλει Ισολογισμούς διαχειριστικών χρήσεων, σε περίπτωση που υποχρεούται στην έκδοση Ισολογισμών ή Δήλωση του συνολικού ύψους του ετήσιου κύκλου εργασιών, σε περίπτωση που δεν υποχρεούται στην έκδοση Ισολογισμών.
+Επί ποινή αποκλεισμού δεν μπορεί ο υποψήφιος οικονομικός φορέας να εμφανίζει στις δημοσιευμένες οικονομικές καταστάσεις είτε α) ζημιογόνα αποτελέσματα μετά φόρων σε κάθε μία χωριστά κατά τις τρεις τελευταίες χρήσεις είτε β) αρνητικά ίδια κεφάλαια σε κάθε μία χωριστά κατά τις τρεις τελευταίες χρήσεις. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-ref-services</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι υποψήφιοι οικονομικοί φορείς για την παραδεκτή συμμετοχή τους πρέπει, επί ποινή αποκλεισμού να πληρούν τα παρακάτω κριτήρια τεχνικής και επαγγελματικής ικανότητας ως ακολούθως:
+1. Κατά τη διάρκεια των τριών (3) τελευταίων ημερολογιακών ετών, πριν το έτος διενέργειας του διαγωνισμού, ο υποψήφιος θα πρέπει κατ' ελάχιστον να έχει προβεί σε εμπρόθεσμη και προσήκουσα ολοκλήρωση σχετικών έργων, ως εξής.
+Ένα (1) ή περισσότερα έργα συμβουλευτικών υπηρεσιών στον τομέα της υγείας, τα οποία να περιλαμβάνουν αθροιστικά: 
+•	ανάλυση δεδομένων σχετικά με οικονομικά της υγείας
+•	συμβουλευτικές υπηρεσίες σχετικά με σύστημα κοστολόγησης και αποζημίωσης υπηρεσιών υγείας κατά DRG’s
+•	υπηρεσίες  ποιοτικού ελέγχου εφαρμογής των ιατρικών κωδικοποιήσεων κατά DRG
+•	υλοποίηση κεντρικής κωδικοποίησης στον τομέα της υγείας 
+•	εκπαίδευση σε φορείς υγείας για την εφαρμογή κεντρικής κωδικοποίησης 
+•	υπηρεσίες για την αποτύπωση διαδικασιών διαχείρισης δεδομένων υγείας, με σκοπό την εφαρμογή τους σε εθνική κλίμακα.
+Ένα (1) ή περισσότερα ψηφιακά έργα στην Υγεία, τα οποία να περιλαμβάνουν αθροιστικά:
+•	την υλοποίηση κεντρικής εφαρμογής ή/και κεντρικού πληροφοριακού συστήματος σχετικά με την κωδικοποίηση κατά DRG 
+•	υλοποίηση συστήματος συλλογής και ανάλυσης δεδομένων υγείας σχετικά με την κωδικοποίηση ή/και κοστολόγηση κατά DRG 
+Σημειώνεται ότι αντικείμενο των ανωτέρω συμβάσεων δύναται να προκύπτει σωρευτικά, ήτοι μία (1) σύμβαση μπορεί να καλύπτει ταυτόχρονα περισσότερα του ενός εκ των ανωτέρω αντικειμένων.
+Επιτρέπεται η τεκμηρίωση εμπειρίας πέραν της τελευταίας τριετίας αλλά όχι πριν την τελευταία πενταετία για λόγους ανάπτυξης του ανταγωνισμού. Η τελευταία πενταετία αντιστοιχεί στο χρονικό διάστημα από 01.01.2021 έως και την καταληκτική ημερομηνία υποβολής προσφορών.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις δύναται να καλύπτονται αθροιστικά από όλα τα μέλη της ένωσης.
+Στην περίπτωση στήριξης στις ικανότητες άλλων φορέων (ενότητα 2.2.8), οι τελευταίοι θα πρέπει να αποδεικνύουν ότι θα εκτελέσουν τις εργασίες ή τις υπηρεσίες για τις οποίες απαιτούνται οι συγκεκριμένες ικανότητες.
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-staff-qual</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Ο υποψήφιος Ανάδοχος ή, σε περίπτωση Ένωσης/ Κοινοπραξίας, τα μέλη αυτής, θα πρέπει να διαθέτουν Ομάδα Έργου με κατάλληλο ανθρώπινο δυναμικό, ώστε να ανταποκρίνεται επιτυχώς στις απαιτήσεις του έργου. Κατ’ ελάχιστον, η Ομάδα Έργου θα πρέπει να περιλαμβάνει τους εξής βασικούς ρόλους (key experts):
+•	Έναν (1) Υπεύθυνο Έργου (ΥΕ), ο οποίος θα έχει τη συνολική ευθύνη των εργασιών του Αναδόχου, με τα παρακάτω προσόντα:	
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Θετικών Επιστημών ή Ανθρωπιστικών Επιστημών ή Επιστημών Υγείας
+o	Επαγγελματική εμπειρία τουλάχιστον δεκαπέντε (15) ετών, εκ των οποίων τουλάχιστον δεκαετή (10) εργασιακή εμπειρία σε έργα του τομέα υγείας, με τον ρόλο εμπειρογνώμονα ή/και μέλους της Ομάδας Διοίκησης Έργου.
+o	Συμμετοχή σε τουλάχιστον δύο (2) έργα συμβουλευτικών υπηρεσιών στον τομέα υγείας, εθνικής εμβέλειας.
+o	Εμπειρία σε έργα που περιλαμβάνουν τουλάχιστον δύο (2) από τα εξής αντικείμενα: ανάλυση δεδομένων σχετικά με οικονομικά της υγείας, συμβουλευτικές υπηρεσίες σχετικά με σύστημα κοστολόγησης και αποζημίωσης υπηρεσιών υγείας κατά DRG’s, υπηρεσίες ποιοτικού ελέγχου κωδικοποίησης κατά DRGs, υλοποίηση κωδικοποίησης για αγαθά ή/και υπηρεσίες υγείας και εκπαίδευσης σε φορείς υγείας για την εφαρμογή της, αποτύπωση διαδικασιών διαχείρισης δεδομένων υγείας, με σκοπό την εφαρμογή τους σε εθνική κλίμακα.
+•	Έναν (1) Αναπληρωτή Υπεύθυνο έργου με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Θετικών Επιστημών ή Ανθρωπιστικών Επιστημών ή Επιστημών Υγείας
+o	Επαγγελματική εμπειρία τουλάχιστον δέκα (10) ετών, εκ των οποίων τουλάχιστον πέντε (5) έτη στην υλοποίηση / διαχείριση έργων στον τομέα Υγείας.
+o	Συμμετοχή σε τουλάχιστον δύο (2) έργα συμβουλευτικών υπηρεσιών για ιατρική κωδικοποίηση κατά DRG’s 
+•	Έναν (1) Εμπειρογνώμονα σε θέματα κοστολόγησης και αποζημίωσης σε υπηρεσίες Υγείας με τα παρακάτω προσόντα: 
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Θετικών Επιστημών ή Ανθρωπιστικών Επιστημών ή Επιστημών Υγείας
+o	Μεταπτυχιακό τίτλο σπουδών με αντικείμενο συναφές με την κοστολόγηση και αποζημίωση υπηρεσιών Υγείας.
+o	Συμμετοχή σε τουλάχιστον δύο (2) έργα συμβουλευτικών υπηρεσιών για ιατρική κωδικοποίηση κατά DRG’s 
+•	Έναν (1) Εμπειρογνώμονα (Expert)  Μελετητή Πολιτικών Υγείας / Οικονομολόγο Υγείας με τα παρακάτω προσόντα: 
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Θετικών ή Ανθρωπιστικών Επιστημών
+o	Μεταπτυχιακό τίτλο σπουδών σε αντικείμενο συναφές με τα Οικονομικά της Υγείας, τις πολιτικές υγείας ή τη Διοίκηση της Υγείας
+o	Επαγγελματική εμπειρία τουλάχιστον δέκα (10) ετών στον τομέα της Υγείας, εκ των οποίων τουλάχιστον πέντε (5) έτη σε αντικείμενα συναφή με θέματα Πολιτικών Υγείας ή Οικονομικών της Υγείας.
+•	Έναν (1) Εμπειρογνώμονα (Expert) Στατιστικολόγο / Αναλυτή Δεδομένων Υγείας με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Θετικών Επιστημών ή Οικονομικών Επιστημών 
+o	Μεταπτυχιακό τίτλο σπουδών στον τομέα των Θετικών ή Οικονομικών Επιστημών
+o	Επαγγελματική εμπειρία τουλάχιστον δέκα (10) ετών στον τομέα των Data Analytics, εκ των οποίων τουλάχιστον πέντε (5) έτη ως Υπεύθυνος Έργου / Διευθυντής Έργου / Αναπληρωτής Υπεύθυνος Έργου / Υπεύθυνος Ομάδας Data &amp; Analytics. 
+o	Συμμετοχή σε τουλάχιστον ένα (1) έργο συναφές με τον τομέα της Υγείας
+•	Έναν (1) Εμπειρογνώμονα (Expert) Επιχειρησιακής Ανάπτυξης Υγείας με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, σε αντικείμενο συναφές με την υγεία
+o	Μεταπτυχιακό τίτλο σπουδών στα Οικονομικά της Υγείας, ή τη Διοίκηση της Υγείας ή την Πληροφορική της Υγείας
+o	Επαγγελματική εμπειρία τουλάχιστον δέκα (10) ετών, συμπεριλαμβανομένων θέσεων ανώτατης διοίκησης σε εταιρείες / φορείς του τομέα υγείας. 
+•	Ένα (1) στέλεχος κοστολόγησης και αποζημίωσης σε υπηρεσίες υγείας μεσαίου επιπέδου με τα παρακάτω προσόντα: 
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών ή Ανθρωπιστικών Επιστημών, 
+o	Επαγγελματική εμπειρία τουλάχιστον πέντε (5) ετών στον τομέα της Υγείας.
+•	Έναν (1) Εμπειρογνώμονα (Expert) Διοίκησης Υπηρεσιών Υγείας με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών ή Ανθρωπιστικών Επιστημών, 
+o	Μεταπτυχιακό τίτλο σπουδών στον τομέα των Θετικών Επιστημών ή των Οικονομικών ή της Διοίκησης Επιχειρήσεων,
+o	Επαγγελματική εμπειρία τουλάχιστον πέντε (5) ετών σε αντικείμενα συναφή με την καταγραφή και ανάλυση επιχειρησιακών διαδικασιών, εκ των οποίων τουλάχιστον δύο (2) έτη στον τομέα της Υγείας,
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-staff-qual</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">
+•	Ένα (1) στέλεχος Διοίκησης Υπηρεσιών Υγείας junior επιπέδου με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών ή Ανθρωπιστικών Επιστημών,
+o	Επαγγελματική εμπειρία τουλάχιστον δύο (2) ετών στον τομέα Υγείας, σε αντικείμενο συναφές με το έργο.
+•	Δύο (2) Ιατρούς ειδικούς στον ποιοτικό έλεγχο ιατρικής κωδικοποίησης με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  στην Ιατρική
+o	Επαγγελματική εμπειρία τουλάχιστον δύο (2) ετών στον κλινικό έλεγχο και στην ιατρική κωδικοποίηση νοσηλειών (ΚΕΝ, DRG ή συναφές σύστημα ταξινόμησης και αποζημίωσης νοσηλειών).
+•	Έναν (1) Νομικό Σύμβουλο (Expert) με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο, Νομικής
+o	Επαγγελματική εμπειρία τουλάχιστον πέντε (5) έτη στον τομέα της Υγείας
+•	Ένα (1) στέλεχος σε ρόλο Εμπειρογνώμονα (Expert) Ψηφιακού Μετασχηματισμού στην Υγεία με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών ή Τεχνολογικών Επιστημών ή Πληροφορικής
+o	Μεταπτυχιακό τίτλο σπουδών στον τομέα της Πληροφορικής Υγείας
+o	Επαγγελματική εμπειρία τουλάχιστον δέκα (10) ετών σε έργα ψηφιακής Υγείας
+•	Ένα (1) στέλεχος σε ρόλο Υπεύθυνου Υλοποίησης Πληροφοριακών Συστημάτων με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών ή Τεχνολογικών Επιστημών ή Πληροφορικής
+o	Επαγγελματική εμπειρία τουλάχιστον οχτώ (8) ετών σε έργα ψηφιακής Υγείας
+o	Συμμετοχή σε τουλάχιστον δύο (2) έργα ψηφιακής υγείας εθνικής εμβέλειας, μεταξύ των οποίων ένα (1) έργο που να περιλαμβάνει υλοποίηση κεντρικού εθνικού συστήματος σχετικά με κοστολόγηση ιατρικών πράξεων κατά DRG ή συστήματος DRGs σε μονάδες υγείας για διασύνδεση με σύστημα DRG-Grouper.
+•	Ένα (1) στέλεχος σε ρόλο  Μελετητή στην Πληροφορική Υγείας με τα παρακάτω προσόντα:
+o	Πανεπιστημιακό πτυχίο της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών Επιστημών ή Πληροφορικής
+o	Επαγγελματική εμπειρία τουλάχιστον δύο (2) ετών σε έργα ψηφιακής Υγείας
+o	Εμπειρία σε έργα που να περιλαμβάνουν την υλοποίηση κεντρικού εθνικού συστήματος σχετικά με κοστολόγηση ιατρικών πράξεων κατά DRG.
+•	Ένα (1) στέλεχος σε ρόλο Προγραμματιστή στην Πληροφορική Υγείας μεσαίου επιπέδου με τα παρακάτω προσόντα:
+o	Πτυχίο τριτοβάθμιας εκπαίδευσης της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο,  Θετικών Επιστημών ή Πληροφορικής
+o	Επαγγελματική εμπειρία τουλάχιστονδύο (2) ετών σε έργα ψηφιακής Υγείας.
+o	Εμπειρία σε έργα που να περιλαμβάνουν την υλοποίηση κεντρικού εθνικού συστήματος σχετικά με κοστολόγηση ιατρικών πράξεων κατά DRG.
+•	Ένα (1) στέλεχος Ασφάλειας Πληροφοριών, προστασίας δεδομένων και υπηρεσιών πληροφορικής μεσαίου επιπέδου, ο οποίος να διαθέτει τουλάχιστον  τα ακόλουθα προσόντα:
+o	Πανεπιστημιακό τίτλο σπουδών της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο Θετικών Επιστημών ή Πληροφορικής
+o	Συμμετοχή σε δύο (2) έργα συμβουλευτικών υπηρεσιών για λογαριασμό φορέα με εθνικό ρόλο στο σύστημα υγείας που να περιλαμβάνουν αθροιστικά συμβουλευτικές υπηρεσίες στην ασφάλεια δεδομένων και προστασία προσωπικών δεδομένων.
+o	Πιστοποιήσεις στα εξής αντικείμενα:
+	Certified Information Privacy Professional /Europe (CIPP/E)
+	Certified Information Security Manager (CISM) 
+	ISO 27001 Lead Auditor
+	ISO 20000-1:2018 Lead Auditor
+•	Έναν (1) στέλεχος διαχείρισης εκπαιδευτικών προγραμμάτων, το οποίο θα πρέπει να διαθέτει τουλάχιστον  τα ακόλουθα προσόντα:
+o	Πανεπιστημιακό τίτλο σπουδών της ημεδαπής ή ισότιμο αλλοδαπής, νομίμως αναγνωρισμένο 
+o	Επαγγελματική εμπειρία τουλάχιστον δύο (2) ετών στην εκπαίδευση.
+Διευκρινίζεται ότι σε περίπτωση που ο ίδιος οικονομικός φορέας συμμετέχει σε περισσότερα από ένα (1) Τμήματα της παρούσας σύμβασης, δύναται να προτείνει τα ίδια στελέχη για περισσότερα Τμήματα, εφόσον αυτά πληρούν τα ελάχιστα απαιτούμενα προσόντα του κάθε Τμήματος.
+Tα φυσικά πρόσωπα που δηλώνονται από τον προσφέροντα στην Ομάδα Έργου δύνανται να απασχολούνται με εξαρτημένη σχέση εργασίας ή σύμβαση ανεξαρτήτων υπηρεσιών, η οποία είναι σε ισχύ ήδη κατά τον χρόνο υποβολής της προσφοράς. Στην τελευταία αυτή περίπτωση θεωρούνται ίδιοι πόροι του οικονομικού φορέα και όχι τρίτοι δανείζοντες και δεν απαιτείται εκ μέρους τους η υποβολή ΕΕΕΣ και των σχετικών αποδεικτικών μέσων.
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-reg-trade</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">
+Οι οικονομικοί φορείς που συμμετέχουν στη διαδικασία σύναψης της παρούσας σύμβασης απαιτείται να ασκούν δραστηριότητα συναφή με το αντικείμενο της σύμβασης. 
+Οι οικονομικοί φορείς που είναι εγκατεστημένοι σε κράτος μέλος της Ευρωπαϊκής Ένωσης απαιτείται να είναι εγγεγραμμένοι σε ένα από τα επαγγελματικά μητρώα ή εμπορικά μητρώα  που τηρούνται στο κράτος εγκατάστασής τους ή να ικανοποιούν οποιαδήποτε άλλη απαίτηση ορίζεται στο Παράρτημα XI του Προσαρτήματος Α΄ του ν. 4412/2016. Εφόσον οι οικονομικοί φορείς απαιτείται να διαθέτουν ειδική έγκριση ή να είναι μέλη συγκεκριμένου οργανισμού για να μπορούν να παράσχουν τη σχετική υπηρεσία στη χώρα καταγωγής τους, η αναθέτουσα αρχή μπορεί να τους ζητεί να αποδείξουν ότι διαθέτουν την έγκριση αυτή ή ότι είναι μέλη του εν λόγω οργανισμού ή να τους καλέσει να προβούν σε ένορκη δήλωση ενώπιον συμβολαιογράφου σχετικά με την άσκηση του συγκεκριμένου επαγγέλματος.  
+Στην περίπτωση οικονομικών φορέων εγκατεστημένων σε κράτος μέλους του Ευρωπαϊκού Οικονομικού Χώρου (Ε.Ο.Χ) ή σε τρίτες χώρες που έχουν προσχωρήσει στη ΣΔΣ, ή σε τρίτες χώρες που δεν εμπίπτουν στην προηγούμενη περίπτωση και έχουν συνάψει διμερείς ή πολυμερείς συμφωνίες με την Ένωση σε θέματα διαδικασιών ανάθεσης δημοσίων συμβάσεων, απαιτείται να είναι εγγεγραμμένοι σε αντίστοιχα επαγγελματικά μητρώα. 
+Οι εγκατεστημένοι στην Ελλάδα οικονομικοί φορείς θα πρέπει να είναι εγγεγραμμένοι στο οικείο επαγγελματικό μητρώο, εφόσον, κατά την κείμενη νομοθεσία, απαιτείται η εγγραφή τους για την υπό ανάθεση υπηρεσία. 
+Σε περίπτωση Ένωσης φορέων/κοινοπραξίας, κάθε μέλος απαιτείται να είναι εγγεγραμμένο σε ένα από τα επαγγελματικά μητρώα ή εμπορικά μητρώα που τηρούνται στο κράτος της εγκατάστασής του. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-reg-prof</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">
+Οι οικονομικοί φορείς που συμμετέχουν στη διαδικασία σύναψης της παρούσας σύμβασης απαιτείται να ασκούν δραστηριότητα συναφή με το αντικείμενο της σύμβασης. 
+Οι οικονομικοί φορείς που είναι εγκατεστημένοι σε κράτος μέλος της Ευρωπαϊκής Ένωσης απαιτείται να είναι εγγεγραμμένοι σε ένα από τα επαγγελματικά μητρώα ή εμπορικά μητρώα  που τηρούνται στο κράτος εγκατάστασής τους ή να ικανοποιούν οποιαδήποτε άλλη απαίτηση ορίζεται στο Παράρτημα XI του Προσαρτήματος Α΄ του ν. 4412/2016. Εφόσον οι οικονομικοί φορείς απαιτείται να διαθέτουν ειδική έγκριση ή να είναι μέλη συγκεκριμένου οργανισμού για να μπορούν να παράσχουν τη σχετική υπηρεσία στη χώρα καταγωγής τους, η αναθέτουσα αρχή μπορεί να τους ζητεί να αποδείξουν ότι διαθέτουν την έγκριση αυτή ή ότι είναι μέλη του εν λόγω οργανισμού ή να τους καλέσει να προβούν σε ένορκη δήλωση ενώπιον συμβολαιογράφου σχετικά με την άσκηση του συγκεκριμένου επαγγέλματος.  
+Στην περίπτωση οικονομικών φορέων εγκατεστημένων σε κράτος μέλους του Ευρωπαϊκού Οικονομικού Χώρου (Ε.Ο.Χ) ή σε τρίτες χώρες που έχουν προσχωρήσει στη ΣΔΣ, ή σε τρίτες χώρες που δεν εμπίπτουν στην προηγούμενη περίπτωση και έχουν συνάψει διμερείς ή πολυμερείς συμφωνίες με την Ένωση σε θέματα διαδικασιών ανάθεσης δημοσίων συμβάσεων, απαιτείται να είναι εγγεγραμμένοι σε αντίστοιχα επαγγελματικά μητρώα. 
+Οι εγκατεστημένοι στην Ελλάδα οικονομικοί φορείς θα πρέπει να είναι εγγεγραμμένοι στο οικείο επαγγελματικό μητρώο, εφόσον, κατά την κείμενη νομοθεσία, απαιτείται η εγγραφή τους για την υπό ανάθεση υπηρεσία. 
+Σε περίπτωση Ένωσης φορέων/κοινοπραξίας, κάθε μέλος απαιτείται να είναι εγγεγραμμένο σε ένα από τα επαγγελματικά μητρώα ή εμπορικά μητρώα που τηρούνται στο κράτος της εγκατάστασής του. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-sche-qu-cert-indep</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς να διαθέτουν σε ισχύ τα ακόλουθα πιστοποιητικά:
+•	ISO 9001:2015 για τη Διαχείριση της Ποιότητας ή ισοδύναμο, εν ισχύ, από διαπιστευμένο οργανισμό. 
+•	ISO 27001:2022 για την Ασφάλεια των Πληροφοριών ή ισοδύναμο, εν ισχύ, από διαπιστευμένο οργανισμό. 
+•	ISO 20000:2018 για την παροχή υπηρεσιών πληροφορικής ή ισοδύναμο, εν ισχύ, από διαπιστευμένο οργανισμό.
+•	ISO 27701:2019 για τη Διαχείριση Προσωπικών Δεδομένων ή ισοδύναμο, εν ισχύ, από διαπιστευμένο οργανισμό.
+•	ISO 22301:2019 για την Επιχειρησιακή Συνέχεια ή ισοδύναμο, εν ισχύ, από διαπιστευμένο οργανισμό.
+•	ISO 29994:2021 ή άλλο ισοδύναμο, εν ισχύ, για την παροχή υπηρεσιών απομακρυσμένης εκπαίδευσης.
+Εφόσον πρόκειται για διαγωνιζόμενες Κοινοπραξίες ή ενώσεις οικονομικών φορέων, ορίζεται ότι η παραπάνω απαίτηση μπορεί να καλύπτεται αθροιστικά από τα μέλη του διαγωνιζόμενου. 
+Η αναθέτουσα αρχή αναγνωρίζει ισοδύναμα πιστοποιητικά που έχουν εκδοθεί από φορείς διαπιστευμένους από ισοδύναμους Οργανισμούς διαπίστευσης, εδρεύοντες και σε άλλα κράτη - μέλη.
+Για τους σκοπούς του παρόντος, ισοδύναμος οργανισμός αξιολόγησης της συμμόρφωσης, θεωρείται και αυτός: α) που είναι εγκατεστημένος σε κράτος, που δεν είναι κράτος μέλος της Ευρωπαϊκής Ένωσης, β) είναι διαπιστευμένος από εθνικό οργανισμό διαπίστευσης, που δεν είναι εγκατεστημένος σε κράτος μέλος της Ευρωπαϊκής Ένωσης και είναι μέλος της Ευρωπαϊκής Συνεργασίας για τη Διαπίστευση (European Accreditation Multilateral Agreement - EA MLA) ή του Διεθνούς Οργανισμού Διαπίστευσης Εργαστηρίων (International Laboratory Accreditation Cooperation - ILAC) ή της Συμφωνίας Αμοιβαίας Αναγνώρισης του Διεθνούς Φόρουμ Διαπίστευσης (International Accreditation Forum Multilateral Recognition Agreement - IAF MRA). 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <cac:RequiredFinancialGuarantee>
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <cbc:Description languageID="ELL">Για την έγκυρη συμμετοχή στη διαδικασία σύναψης της παρούσας σύμβασης, κατατίθεται από τους συμμετέχοντες οικονομικούς φορείς (προσφέροντες), εγγυητική επιστολή συμμετοχής. Το ποσό της εγγυητικής επιστολής θα πρέπει να καλύπτει σε ευρώ (€) ποσοστό 2% της εκτιμώμενης αξίας της σύμβασης, ήτοι ποσού 8.255,83  €</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>ΑΡΙΘΜΟΣ ΕΣΗΔΗΣ: 553083</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://nepps-search.eprocurement.gov.gr/actSearch/resources/search/553083</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-notice</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>20</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">1. Περιβάλλον του έργου
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">2.Οριζόντιες Απαιτήσεις Συστήματος και Αρχιτεκτονική
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>20</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">3.Λειτουργικές Προδιαγραφές συστήματος
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>35</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">4.Υπηρεσίες Έργου
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>10</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">5.Μεθοδολογία υλοποίησης έργου 
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>5</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">6.Σχήμα Διοίκησης και Οργάνωσης έργου / Λειτουργία και οργάνωση της Ομάδας Έργου
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">βάσει βέλτιστης σχέσης ποιότητας τιμής</cbc:Name>
+                  <cbc:Description languageID="ELL">Πλέον συμφέρουσα από οικονομική άποψη προσφορά είναι εκείνη που παρουσιάζει τη μεγαλύτερη τιμή (Α) της σχέσης:
+Α = 80*(Βj/Βmax) + 20*(Kmin/Kj)
+Βj = Συνολική Βαθμολογία της Τεχνικής Προσφοράς j
+Βmax = Συνολική Βαθμολογία που έλαβε η καλύτερη Τεχνική Προσφορά
+Κmin = Το συνολικό κόστος της Προσφοράς με τη μικρότερη τιμή
+Κj = Το συνολικό κόστος της Προσφοράς j.
+Aj = Το αποτέλεσμα της ανωτέρω πράξης, το οποίο στρογγυλοποιείται στα δύο δεκαδικά ψηφία.
+Επικρατέστερη είναι η προσφορά με το μεγαλύτερο A.
+Σε περίπτωση ισοψηφίας, επικρατέστερη είναι η προσφορά με το μεγαλύτερο Βj (βαθμολογία τεχνικής προσφοράς υποψηφίου), ενώ σε περίπτωση πλήρους ισοβαθμίας (Aj, Βj) διενεργείται δημόσια κλήρωση παρουσία όλων των ενδιαφερομένων.
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://portal.eprocurement.gov.gr/esidisportal/</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <cac:TenderEvaluationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderEvaluationParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">ΕΑΔΗΣΥ</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-12-08+02:00</cbc:EndDate>
+            <cbc:EndTime>17:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-12-10+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>12:00:00+02:00</cbc:OccurrenceTime>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">ΤΜΗΜΑ Β</cbc:ID>
+         <cbc:Name languageID="ELL">Αποτίμηση και κοστολόγηση των υπηρεσιών Ανακουφιστικής Φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για την λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας</cbc:Name>
+         <cbc:Description languageID="ELL">Η σύμβαση αντιστοιχεί στο Υποέργο 3 «Αποτίμηση και κοστολόγηση των υπηρεσιών Ανακουφιστικής Φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για την λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας» της Πράξης «Ολοκληρωμένη παρέμβαση αποτίμησης και κοστολόγησης υπηρεσιών Ψυχικής Υγείας και Ιατρικής Αποκατάστασης (ΨΥ &amp; ΙΑ), για την λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας» με Κωδικό ΟΠΣ 6019432 η οποία έχει ενταχθεί στο Πρόγραμμα «Ανθρώπινο Δυναμικό και Κοινωνική Συνοχή 2021-2027» με βάση την Απόφαση Ένταξης με Αρ. πρωτ. : 200164/19.11.2025 (ΑΔΑ 9ΣΑΝΗ-56Ω) της ΕΥΔ «ΑΝΘΡΩΠΙΝΟ ΔΥΝΑΜΙΚΟ &amp; ΚΟΙΝΩΝΙΚΗ ΣΥΝΟΧΗ», όπως ισχύει. 
+Στον τομέα που αφορά την Ανακουφιστική Φροντίδα στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), θα δημιουργηθεί ένα μοντέλο κοστολόγησης και αποζημίωσης των παραγόμενων υπηρεσιών των Μονάδων Ανακουφιστικής Φροντίδας Ασθενών (ΜΑΦΑ) που προβλέπονται στο άρθρο 6, σημείο δ, του Ν. 5007/2022. Το μοντέλο θα αφορά περιστατικά δευτεροβάθμιας και τριτοβάθμιας φροντίδας, του δημόσιου και ιδιωτικού τομέα, σε μονάδες που ανήκουν σε νοσοκομεία που είναι διασυνδεδεμένα με το υπάρχον λογισμικό σύστημα (GROUPER) του ΚΕΤΕΚΝΥ.
+Ειδικότερα, θα ενσωματωθεί/προστεθεί στο υφιστάμενο σύστημα DRG, σύστημα συλλογής, αποτύπωσης και παρακολούθησης των υπηρεσιών των Μονάδων Ανακουφιστικής Φροντίδας Ασθενών (ΜΑΦΑ) με σκοπό: α)  την ανάλυση οικονομικού περιβάλλοντος των υπηρεσιών Ανακουφιστικής Φροντίδας στην Ιατρική Αποκατάσταση  β) την ενσωμάτωση των υπηρεσιών ΑΦ-ΙΑ στο GROUPER DRG με κατηγοριοποίηση και υπολογισμό του κόστους των νοσηλειών και επισκέψεων γ) την ποιοτική αποτίμηση του συνολικού έργου, συμπεριλαμβανομένων και των σχετικών ποιοτικών ελέγχων (quality audit) για τη λειτουργία συστήματος λήψης αποφάσεων πολιτικών υγείας, δ) τη λειτουργική διασύνδεση των ΜΑΦΑ μεταξύ τους αλλά και με τους εποπτεύοντες οργανισμούς, με τους αποζημιωτές (ΕΟΠΥΥ) και το ΚΕΤΕΚΝΥ το οποίο θα έχει την εποπτεία και τον συντονισμό όλων των διαδικασιών. 
+</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">412791.29</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72221000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72316000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">85312320</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72200000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:CityName>ΑΘΗΝΑ</cbc:CityName>
+               <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">30</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>

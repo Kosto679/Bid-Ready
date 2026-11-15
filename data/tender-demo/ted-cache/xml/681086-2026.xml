@@ -1,0 +1,1901 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>www.nskoufas.gr</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">ΔΗΜΟΣ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>ΠΛΑΤΕΙΑ ΠΕΤΑ</cbc:StreetName>
+                           <cbc:CityName>ΑΡΤΑ</cbc:CityName>
+                           <cbc:PostalZone>47200</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL541</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>997681819</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Name>Ηλίας Σερβετάς</cbc:Name>
+                           <cbc:Telephone>+030 2681360413</cbc:Telephone>
+                           <cbc:Telefax>+030 2681083259</cbc:Telefax>
+                           <cbc:ElectronicMail>servetas@nskoufas.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>http://www.eadhsy.gr/</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">ΕΝΙΑΙΑ ΑΡΧΗ ΔΗΜΟΣΙΩΝ ΣΥΜΒΑΣΕΩΝ (Ε.Α.ΔΗ.ΣΥ.)</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Δώρου 7-9, 10432 Αθήνα</cbc:StreetName>
+                           <cbc:CityName>ΑΘΗΝΑ</cbc:CityName>
+                           <cbc:PostalZone>10432</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>997036228</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+30 2132141216</cbc:Telephone>
+                           <cbc:ElectronicMail>protokollo@eadhsy.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://op.europa.eu</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">Publications Office of the European Union</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <cbc:PostalZone>2417</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>PUBL</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+352 29291</cbc:Telephone>
+                           <cbc:ElectronicMail>ted@publications.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+            <efac:Publication><efbc:NoticePublicationID schemeName="ojs-notice-id">00681086-2026</efbc:NoticePublicationID><efbc:GazetteID schemeName="ojs-id">191/2026</efbc:GazetteID><efbc:PublicationDate>2026-10-02+02:00</efbc:PublicationDate></efac:Publication></efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-1.14</cbc:CustomizationID>
+   <cbc:ID schemeName="notice-id">f00af585-8e78-44c8-a444-7a65b4bca406</cbc:ID>
+   <cbc:ContractFolderID>b3a2ce3d-b4fc-441e-8513-ff51fab53d75</cbc:ContractFolderID>
+   <cbc:IssueDate>2026-10-01Z</cbc:IssueDate>
+   <cbc:IssueTime>07:07:24Z</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode listName="language">ELL</cbc:NoticeLanguageCode>
+   <cac:ContractingParty>
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:ServiceProviderParty>
+            <cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:Party>
+         </cac:ServiceProviderParty>
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:TenderingTerms>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-grounds-source">epo-notice</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-crim</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="ELL">α) συμμετοχή σε εγκληματική οργάνωση, όπως αυτή ορίζεται στο άρθρο 2 της απόφασης-πλαίσιο 2008/841/ΔΕΥ του Συμβουλίου της 24ης Οκτωβρίου 2008, για την καταπολέμηση του οργανωμένου εγκλήματος (ΕΕ L 300 της 11.11.2008 σ.42) και τα εγκλήματα του άρθρου 187 του Ποινικού Κώδικα (εγκληματική οργάνωση),
+β) ενεργητική δωροδοκία, όπως ορίζεται στο άρθρο 3 της σύμβασης περί της καταπολέμησης της διαφθοράς στην οποία ενέχονται υπάλληλοι των Ευρωπαϊκών Κοινοτήτων ή των κρατών-μελών της Ένωσης (ΕΕ C 195 της 25.6.1997, σ. 1) και στην παρ. 1 του άρθρου 2 της απόφασης-πλαίσιο 2003/568/ΔΕΥ του Συμβουλίου της 22ας Ιουλίου 2003, για την καταπολέμηση της δωροδοκίας στον ιδιωτικό τομέα (ΕΕ L 192 της 31.7.2003, σ. 54), καθώς και όπως ορίζεται στο εθνικό δίκαιο του οικονομικού φορέα, και τα εγκλήματα των άρθρων 159Α (δωροδοκία πολιτικών προσώπων), 236 (δωροδοκία υπαλλήλου), 237 παρ. 2-4 (δωροδοκία δικαστικών λειτουργών), 237Α παρ. 2 (εμπορία επιρροής – μεσάζοντες), 396 παρ. 2 (δωροδοκία στον ιδιωτικό τομέα) του Ποινικού Κώδικα,
+γ) απάτη εις βάρος των οικονομικών συμφερόντων της Ένωσης, κατά την έννοια των άρθρων 3 και 4 της Οδηγίας (ΕΕ) 2017/1371 του Ευρωπαϊκού Κοινοβουλίου και του Συμβουλίου της 5ης Ιουλίου 2017 σχετικά με την καταπολέμηση, μέσω του ποινικού δικαίου, της απάτης εις βάρος των οικονομικών συμφερόντων της Ένωσης (L 198/28.07.2017) και τα εγκλήματα των άρθρων 159Α (δωροδοκία πολιτικών προσώπων), 216 (πλαστογραφία), 236 (δωροδοκία υπαλλήλου), 237 παρ. 2-4 (δωροδοκία δικαστικών λειτουργών), 242 (ψευδής βεβαίωση, νόθευση κ.λπ.) 374 (διακεκριμένη κλοπή), 375 (υπεξαίρεση), 386 (απάτη), 386Α (απάτη με υπολογιστή), 386Β (απάτη σχετική με τις επιχορηγήσεις), 390 (απιστία) του Ποινικού Κώδικα και των άρθρων 155 επ. του Εθνικού Τελωνειακού Κώδικα (ν. 2960/2001, Α’ 265), όταν αυτά στρέφονται κατά των οικονομικών συμφερόντων της Ευρωπαϊκής Ένωσης ή συνδέονται με την προσβολή αυτών των συμφερόντων, καθώς και τα εγκλήματα των άρθρων 23 (διασυνοριακή απάτη σχετικά με τον ΦΠΑ) και 24 (επικουρικές διατάξεις για την ποινική προστασία των οικονομικών συμφερόντων της Ευρωπαϊκής Ένωσης) του ν. 4689/2020 (Α’ 103), 
+δ) τρομοκρατικά εγκλήματα ή εγκλήματα συνδεόμενα με τρομοκρατικές δραστηριότητες, όπως ορίζονται, αντιστοίχως, στα άρθρα 3-4 και 5-12 της Οδηγίας (ΕΕ) 2017/541 του Ευρωπαϊκού Κοινοβουλίου και του Συμβουλίου της 15ης Μαρτίου 2017 για την καταπολέμηση της τρομοκρατίας και την αντικατάσταση της απόφασης-πλαίσιο 2002/475/ΔΕΥ του Συμβουλίου και για την τροποποίηση της απόφασης 2005/671/ΔΕΥ του Συμβουλίου (ΕΕ L 88/31.03.2017) ή ηθική αυτουργία ή συνέργεια ή απόπειρα διάπραξης εγκλήματος, όπως ορίζονται στο άρθρο 14 αυτής, και τα εγκλήματα των άρθρων 187Α και 187Β του Ποινικού Κώδικα, καθώς και τα εγκλήματα των άρθρων 32-35 του ν. 4689/2020 (Α’103),
+ε) νομιμοποίηση εσόδων από παράνομες δραστηριότητες ή χρηματοδότηση της τρομοκρατίας, όπως αυτές ορίζονται στο άρθρο 1 της Οδηγίας (ΕΕ) 2015/849 του Ευρωπαϊκού Κοινοβουλίου και του Συμβουλίου της 20ης Μαΐου 2015, σχετικά με την πρόληψη της χρησιμοποίησης του χρηματοπιστωτικού συστήματος για τη νομιμοποίηση εσόδων από παράνομες δραστηριότητες ή για τη χρηματοδότηση της τρομοκρατίας, την τροποποίηση του κανονισμού (ΕΕ) αριθμ. 648/2012 του Ευρωπαϊκού Κοινοβουλίου και του Συμβουλίου και την κατάργηση της οδηγίας 2005/60/ΕΚ του Ευρωπαϊκού Κοινοβουλίου και του Συμβουλίου και της οδηγίας 2006/70/ΕΚ της Επιτροπής (ΕΕ L 141/05.06.2015) και τα εγκλήματα των άρθρων 2 και 39 του ν. 4557/2018 (Α’ 139),
+στ) παιδική εργασία και άλλες μορφές εμπορίας ανθρώπων, όπως ορίζονται στο άρθρο 2 της Οδηγίας 2011/36/ΕΕ του Ευρωπαϊκού Κοινοβουλίου και του Συμβουλίου της 5ης Απριλίου 2011, για την πρόληψη και την καταπολέμηση της εμπορίας ανθρώπων και για την προστασία των θυμάτων της, καθώς και για την αντικατάσταση της απόφασης-πλαίσιο 2002/629/ΔΕΥ του Συμβουλίου (ΕΕ L 101 της 15.4.2011, σ. 1), και τα εγκλήματα του άρθρου 323Α του Ποινικού Κώδικα (εμπορία ανθρώπων).
+Ο οικονομικός φορέας αποκλείεται, επίσης, όταν το πρόσωπο εις βάρος του οποίου εκδόθηκε  αμετάκλητη καταδικαστική απόφαση είναι μέλος του διοικητικού, διευθυντικού ή εποπτικού οργάνου του ή έχει εξουσία εκπροσώπησης, λήψης αποφάσεων ή ελέγχου σε αυτό. Η υποχρέωση του προηγούμενου εδαφίου αφορά: 
+- στις περιπτώσεις εταιρειών περιορισμένης ευθύνης (Ε.Π.Ε.) ιδιωτικών κεφαλαιουχικών εταιρειών (Ι.Κ.Ε.) και προσωπικών εταιρειών (Ο.Ε. και Ε.Ε.) τους διαχειριστές.
+- στις περιπτώσεις ανωνύμων εταιρειών (Α.Ε.), τον διευθύνοντα Σύμβουλο, τα μέλη του Διοικητικού Συμβουλίου, καθώς και τα πρόσωπα στα οποία με απόφαση του Διοικητικού Συμβουλίου έχει ανατεθεί το σύνολο της διαχείρισης και εκπροσώπησης της εταιρείας.
+- στις περιπτώσεις Συνεταιρισμών, τα μέλη του Διοικητικού Συμβουλίου.
+- σε όλες τις λοιπές περιπτώσεις νομικών προσώπων, τον κατά περίπτωση νόμιμο εκπρόσωπο
+</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-pmt</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="ELL">
+α) όταν ο οικονομικός φορέας έχει αθετήσει τις υποχρεώσεις του σχετικά με την καταβολή φόρων ή εισφορών κοινωνικής ασφάλισης και αυτό έχει διαπιστωθεί με δικαστική ή διοικητική απόφαση με τελεσίδικη και δεσμευτική ισχύ, σύμφωνα με διατάξεις της χώρας όπου είναι εγκατεστημένος  ή την εθνική νομοθεσία ή 
+β) όταν η αναθέτουσα αρχή μπορεί να αποδείξει με τα κατάλληλα μέσα ότι ο οικονομικός φορέας έχει αθετήσει τις υποχρεώσεις του όσον αφορά την καταβολή φόρων ή εισφορών κοινωνικής ασφάλισης.
+Αν ο οικονομικός φορέας είναι Έλληνας πολίτης ή έχει την εγκατάστασή του στην Ελλάδα, οι υποχρεώσεις του που αφορούν τις εισφορές κοινωνικής ασφάλισης καλύπτουν τόσο την κύρια όσο και την επικουρική ασφάλιση.
+Οι υποχρεώσεις των περ. α’ και β’ της παρ. 2.2.3.2  θεωρείται ότι δεν έχουν αθετηθεί εφόσον δεν έχουν καταστεί ληξιπρόθεσμες ή εφόσον αυτές έχουν υπαχθεί σε δεσμευτικό διακανονισμό που τηρείται.
+Δεν αποκλείεται ο οικονομικός φορέας, όταν έχει εκπληρώσει τις υποχρεώσεις του είτε καταβάλοντας τους φόρους ή τις εισφορές κοινωνικής ασφάλισης που οφείλει, συμπεριλαμβανομένων, κατά περίπτωση, των δεδουλευμένων τόκων ή των προστίμων, είτε υπαγόμενος σε δεσμευτικό διακανονισμό για την καταβολή τους στο μέτρο που τηρεί τους όρους του δεσμευτικού κανονισμού.
+</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-mis</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="ELL">(α) εάν έχει αθετήσει τις υποχρεώσεις που προβλέπονται στην παρ. 2 του άρθρου 18 του ν. 4412/2016 , περί αρχών που εφαρμόζονται στις διαδικασίες σύναψης δημοσίων συμβάσεων,
+(γ)εάν, με την επιφύλαξη της παραγράφου 3Γ του άρθρου 44 του ν. 3959/2011 περί ποινικών κυρώσεων και άλλων διοικητικών συνεπειών, υπάρχουν επαρκώς εύλογες ενδείξεις που οδηγούν στο συμπέρασμα ότι ο οικονομικός φορέας συνήψε συμφωνίες με άλλους οικονομικούς φορείς με στόχο τη στρέβλωση του ανταγωνισμού, 
+δ) εάν μία κατάσταση σύγκρουσης συμφερόντων κατά την έννοια του άρθρου 24 του ν. 4412/2016, δεν μπορεί να θεραπευτεί αποτελεσματικά με άλλα, λιγότερο παρεμβατικά, μέσα, 
+(ε) εάν μία κατάσταση στρέβλωσης του ανταγωνισμού από την πρότερη συμμετοχή του οικονομικού φορέα κατά την προετοιμασία της διαδικασίας σύναψης σύμβασης, σύμφωνα με όσα ορίζονται στο άρθρο 48 του ν. 4412/2016, δεν μπορεί να θεραπευτεί με άλλα, λιγότερο παρεμβατικά, μέσα, 
+(στ) εάν έχει επιδείξει σοβαρή ή επαναλαμβανόμενη πλημμέλεια κατά την εκτέλεση ουσιώδους απαίτησης στο πλαίσιο προηγούμενης δημόσιας σύμβασης, προηγούμενης σύμβασης με αναθέτοντα φορέα ή προηγούμενης σύμβασης παραχώρησης που είχε ως αποτέλεσμα την πρόωρη καταγγελία της προηγούμενης σύμβασης, αποζημιώσεις ή άλλες παρόμοιες κυρώσεις, 
+(ζ) εάν έχει κριθεί ένοχος εκ προθέσεως σοβαρών απατηλών δηλώσεων κατά την παροχή των πληροφοριών που απαιτούνται για την εξακρίβωση της απουσίας των λόγων αποκλεισμού ή την πλήρωση των κριτηρίων επιλογής, έχει αποκρύψει τις πληροφορίες αυτές ή δεν είναι σε θέση να προσκομίσει τα δικαιολογητικά που απαιτούνται κατ’ εφαρμογή της παραγράφου 2.2.9.2 της παρούσας, 
+(η) εάν επιχείρησε να επηρεάσει με αθέμιτο τρόπο τη διαδικασία λήψης αποφάσεων της αναθέτουσας αρχής, να αποκτήσει εμπιστευτικές πληροφορίες που ενδέχεται να του αποφέρουν αθέμιτο πλεονέκτημα στη διαδικασία σύναψης σύμβασης ή να παράσχει με απατηλό τρόπο παραπλανητικές πληροφορίες που ενδέχεται να επηρεάσουν ουσιωδώς τις αποφάσεις που αφορούν τον αποκλεισμό, την επιλογή ή την ανάθεση, 
+(θ) εάν η αναθέτουσα αρχή μπορεί να αποδείξει, με κατάλληλα μέσα, ότι έχει διαπράξει σοβαρό επαγγελματικό παράπτωμα, το οποίο θέτει εν αμφιβόλω την ακεραιότητά του . </cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-sitn-other</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="ELL">(β)εάν τελεί υπό πτώχευση ή έχει υπαχθεί σε διαδικασία ειδικής εκκαθάρισης ή τελεί υπό αναγκαστική διαχείριση από εκκαθαριστή ή από το δικαστήριο ή έχει υπαχθεί σε διαδικασία πτωχευτικού συμβιβασμού ή έχει αναστείλει τις επιχειρηματικές του δραστηριότητες ή έχει υπαχθεί σε διαδικασία εξυγίανσης και δεν τηρεί τους όρους αυτής ή εάν βρίσκεται σε οποιαδήποτε ανάλογη κατάσταση προκύπτουσα από παρόμοια διαδικασία, προβλεπόμενη σε εθνικές διατάξεις νόμου. Η αναθέτουσα αρχή μπορεί να μην αποκλείει έναν οικονομικό φορέα ο οποίος βρίσκεται σε μία εκ των καταστάσεων που αναφέρονται στην περίπτωση αυτή, υπό την προϋπόθεση ότι αποδεικνύει ότι ο εν λόγω φορέας είναι σε θέση να εκτελέσει τη σύμβαση, λαμβάνοντας υπόψη τις ισχύουσες διατάξεις και τα μέτρα για τη συνέχιση της επιχειρηματικής του λειτουργίας . </cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:LotDistribution>
+         <cbc:MaximumLotsAwardedNumeric>7</cbc:MaximumLotsAwardedNumeric>
+         <cbc:MaximumLotsSubmittedNumeric>7</cbc:MaximumLotsSubmittedNumeric>
+      </cac:LotDistribution>
+   </cac:TenderingTerms>
+   <cac:TenderingProcess>
+      <cbc:Description languageID="ELL">Ηλεκτρονικός Ανοιχτός Διεθνής Διαγωνισμός</cbc:Description>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <cac:ProcessJustification>
+         <cbc:ProcessReasonCode listName="accelerated-procedure">false</cbc:ProcessReasonCode>
+      </cac:ProcessJustification>
+   </cac:TenderingProcess>
+   <cac:ProcurementProject>
+      <cbc:Name languageID="ELL">Ευφυείς Εφαρμογές και δράσεις στο πλαίσιο του Ψηφιακού Μετασχηματισμού του Δήμου Νικολάου Σκουφά</cbc:Name>
+      <cbc:Description languageID="ELL">Η σύμβαση περιλαμβάνει: Πλατφόρμα διαχείρισης παιδικών σταθμών, ενημέρωσης γονέων με smart εφαρμογή κ.λπ.
+(#13 Marketplace), Σύστημα ηλεκτρονικής διακίνησης εγγράφων και ψηφιακών υπογραφών (#17 Marketplace), Σύστημα διαχείρισης
+ηλεκτρονικών πληρωμών (#18 Marketplace), Έξυπνο σύστημα προειδοποίησης και αντιμετώπισης κινδύνων (πλημμυρικών φαινομένων,
+πυρκαγιάς σεισμού κ.λπ.) εντός των ορίων του Δήμου και σύμφωνα με τις αρμοδιότητές του (#24 Marketplace), Ψηφιοποίηση τοπικής
+πολιτιστικής κληρονομίας (η κατοχή και νομή των οποίων ανήκει στον Δήμο) (#28 Marketplace), Ολοκληρωμένη υποδομή προστασίας από
+κυβερνοεπιθέσεις (Network Firewall,Endpoint security, κ.λπ.) και παροχή συστήματος τηλε-εργασίας (#34 Marketplace), Ηλεκτρονική
+Τιμολόγηση (#38 Marketplace).</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <cac:RequestedTenderTotal>
+         <cbc:EstimatedOverallContractAmount currencyID="EUR">275184.52</cbc:EstimatedOverallContractAmount>
+      </cac:RequestedTenderTotal>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">72210000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">48000000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>Κεντρική Πλατεία Πέτα</cbc:StreetName>
+            <cbc:CityName>Πέτα Άρτας</cbc:CityName>
+            <cbc:PostalZone>47150</cbc:PostalZone>
+            <cbc:CountrySubentityCode listName="nuts">EL541</cbc:CountrySubentityCode>
+            <cac:Country>
+               <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:Address>
+      </cac:RealizedLocation>
+   </cac:ProcurementProject>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-auth-mbrshp</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς που συμμετέχουν στη διαδικασία σύναψης της παρούσας σύμβασης απαιτείται να ασκούν εμπορική ή βιομηχανική ή βιοτεχνική δραστηριότητα συναφή με το αντικείμενο της σύμβασης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-stand-to-avg</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά την οικονομική και χρηματοοικονομική επάρκεια για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί που συμμετέχουν στη διαδικασία σύναψης της παρούσας απαιτείται να έχουν μέσο ετήσιο γενικό κύκλο εργασιών για τις τρεις (3) τελευταίες οικονομικές χρήσεις, πριν το έτος διεξαγωγής του διαγωνισμού, ήτοι για τα έτη 2023, 2024, 2025 ή για τις οικονομικές χρήσεις κατά τις οποίες ο οικονομικός φορέας δραστηριοποιείται, αν αυτές είναι λιγότερες από τρεις κατ’ ελάχιστον ίσο με το 100% του προϋπολογισμού του υπό ανάθεση τμήματος για το οποίο υποβάλλουν προσφορά, χωρίς ΦΠΑ.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-ref-services</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά στην τεχνική και επαγγελματική ικανότητα για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί φορείς απαιτείται:
+κατά τη διάρκεια των τριών (3) τελευταίων ετών,  να έχουν εκτελέσει και παραδώσει επιτυχώς τουλάχιστον δύο (2) έργα αντίστοιχα ΤΠΕ, προϋπολογισμού αθροιστικά ίσου ή μεγαλύτερου με το 100% του προϋπολογισμού χωρίς ΦΠΑ του υπό ανάθεση τμήματος 
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-qual-inst</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς (ή εναλλακτικά οι σχετικοί προμηθευτές τους) για την παρούσα διαδικασία σύναψης σύμβασης οφείλουν να διαθέτουν κατ’ ελάχιστον:
+•	σύστημα διαχείρισης ποιότητας κατά ISO 9001:2015. Το πεδίο εφαρμογής της πιστοποίησης θα πρέπει να αφορά κατ' ελάχιστον το σχεδιασμό, ανάπτυξη, κατασκευή και υποστήριξη πληροφοριακών συστημάτων ή δικτύων.
+και 
+•	σύστημα διαχείρισης ασφάλειας πληροφοριών κατά ISO 27001:2022
+Η αναθέτουσα αρχή αναγνωρίζει ισοδύναμα πιστοποιητικά που έχουν εκδοθεί από φορείς διαπιστευμένους από ισοδύναμους Οργανισμούς διαπίστευσης, οι οποίοι εδρεύουν και σε άλλα κράτη – μέλη, σύμφωνα με τον Κανονισμό 765/2008.  Επίσης, κάνει δεκτά άλλα αποδεικτικά στοιχεία για ισοδύναμα μέτρα διασφάλισης ποιότητας, εφόσον ο ενδιαφερόμενος οικονομικός φορέας δεν είχε τη δυνατότητα να αποκτήσει τα εν λόγω πιστοποιητικά εντός των σχετικών προθεσμιών για λόγους για τους οποίους δεν ευθύνεται ο ίδιος, υπό την προϋπόθεση ότι ο οικονομικός φορέας αποδεικνύει ότι τα προτεινόμενα μέτρα διασφάλισης ποιότητας πληρούν τα απαιτούμενα πρότυπα διασφάλισης ποιότητας.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται από όλα τα μέλη της ένωσης ξεχωριστά. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cbc:RequiredCurriculaCode listName="requirement-stage">not-requ</cbc:RequiredCurriculaCode>
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <cbc:MultipleTendersCode listName="permission">not-allowed</cbc:MultipleTendersCode>
+         <cac:RequiredFinancialGuarantee>
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <cbc:Description languageID="ELL">Εγγυητική επιστολή συμμετοχής, ποσού ίσο με το 2% της εκτιμώμενης αξίας της σύμβασης προ ΦΠΑ</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
+         <cac:FiscalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:FiscalLegislationDocumentReference>
+         <cac:EnvironmentalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EnvironmentalLegislationDocumentReference>
+         <cac:EmploymentLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EmploymentLegislationDocumentReference>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>ELL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>7203</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>www.nskoufas.gr</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-notice</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ELL">Όπως αποτυπώνεται αναλυτικά στην διακήρυξη.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cbc:CalculationExpression languageID="ELL">Η σύμβαση θα ανατεθεί με το κριτήριο της πλέον συμφέρουσας από οικονομική άποψη προσφοράς βάσει βέλτιστης σχέσης ποιότητας – τιμής.
+Πλέον συμφέρουσα από οικονομική άποψη προσφορά είναι εκείνη που παρουσιάζει τον μικρότερο λόγο της προσφερθείσας τιμής  προς τη συνολική βαθμολογία της τεχνικής προσφοράς (ήτοι αυτή στην οποία το Λ είναι ο μικρότερος αριθμός), σύμφωνα με τον τύπο που φαίνεται αναλυτικά στη διακήρυξη. </cbc:CalculationExpression>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <cac:DocumentProviderParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:DocumentProviderParty>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.promitheus.gov.gr</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <cac:TenderEvaluationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderEvaluationParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">Όπως αναφέρονται στην παρ. 3.4 της διακήρυξης και σύμφωνα με το Ν. 4412/2016</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0003</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-11-16+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:AdditionalInformationRequestPeriod>
+            <cbc:EndDate>2026-11-10+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:AdditionalInformationRequestPeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-11-19+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>10:00:00+02:00</cbc:OccurrenceTime>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="ELL">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΕΤΑ, ΔΗΜΑΡΧΕΙΟ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">Δράση 13</cbc:ID>
+         <cbc:Name languageID="ELL">ΤΜΗΜΑ 1: Δράση 13</cbc:Name>
+         <cbc:Description languageID="ELL">Δράση 13 - Πλατφόρμα διαχείρισης παιδικών σταθμών, ενημέρωσης γονέων με smart εφαρμογή κτλ</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cbc:EstimatedOverallContractQuantity unitCode="H87">1</cbc:EstimatedOverallContractQuantity>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="strategic-procurement">inn-pur</cbc:ProcurementTypeCode>
+            <cbc:ProcurementType languageID="ELL">Αντικείμενο του τμήματος εντάσσεται στην κατηγορία  νέων εφαρμογών και τεχνολογικών μέσων που θα βελτιώσουν τη διαχείριση και λειτουργικότητα του αστικού περιβάλλοντος στις ελληνικές πόλεις. Η υλοποίηση ψηφιακών λύσεων που υποστηρίζονται από τοπικά παραγόμενα δεδομένα στοχεύει σε πιο αποδοτικές, καινοτόμες και υψηλής ποιότητας υπηρεσίες, προς όφελος των κατοίκων, των επισκεπτών και των επιχειρήσεων. Η διαδικτυακή εφαρμογή που θα αναπτυχθεί  θα πρέπει να προσφέρει μια πλατφόρμα Αιτήσεων για την ένταξη στους παιδικούς σταθμούς, παρακολούθησης των τροφείων, παρακολούθησης των παρουσιών των εργαζομένων και των παιδιών, καθώς και των Βιβλιαρίων Υγείας.   Η εφαρμογή θα πρέπει να είναι σε θέση να διαχειρίζεται ταυτόχρονα διαφορετικές Δομές όπως π.χ Βρεφονηπιακοί Σταθμοί, ΚΔΑΠ με διαφορετικούς τρόπους ένταξης και χρήσης των υπηρεσιών που προσφέρουν κτλ.</cbc:ProcurementType>
+         </cac:ProcurementAdditionalType>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="innovative-acquisition">prod-innov</cbc:ProcurementTypeCode>
+         </cac:ProcurementAdditionalType>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">32250</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72210000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>ΔΗΜΟΣ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:StreetName>
+               <cbc:AdditionalStreetName>Κεντρική Πλατεία Πέτα</cbc:AdditionalStreetName>
+               <cbc:CityName>Πέτα Άρτας</cbc:CityName>
+               <cbc:PostalZone>47150</cbc:PostalZone>
+               <cbc:CountrySubentityCode listName="nuts">EL541</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <cac:ContractExtension>
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-auth-mbrshp</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς που συμμετέχουν στη διαδικασία σύναψης της παρούσας σύμβασης απαιτείται να ασκούν εμπορική ή βιομηχανική ή βιοτεχνική δραστηριότητα συναφή με το αντικείμενο της σύμβασης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-stand-to-avg</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά την οικονομική και χρηματοοικονομική επάρκεια για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί που συμμετέχουν στη διαδικασία σύναψης της παρούσας απαιτείται να έχουν μέσο ετήσιο γενικό κύκλο εργασιών για τις τρεις (3) τελευταίες οικονομικές χρήσεις, πριν το έτος διεξαγωγής του διαγωνισμού, ήτοι για τα έτη 2023, 2024, 2025 ή για τις οικονομικές χρήσεις κατά τις οποίες ο οικονομικός φορέας δραστηριοποιείται, αν αυτές είναι λιγότερες από τρεις κατ’ ελάχιστον ίσο με το 100% του προϋπολογισμού του υπό ανάθεση τμήματος για το οποίο υποβάλλουν προσφορά, χωρίς ΦΠΑ.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-ref-services</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά στην τεχνική και επαγγελματική ικανότητα για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί φορείς απαιτείται:
+κατά τη διάρκεια των τριών (3) τελευταίων ετών,  να έχουν εκτελέσει και παραδώσει επιτυχώς τουλάχιστον δύο (2) έργα αντίστοιχα ΤΠΕ, προϋπολογισμού αθροιστικά ίσου ή μεγαλύτερου με το 100% του προϋπολογισμού χωρίς ΦΠΑ του υπό ανάθεση τμήματος 
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-qual-inst</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς (ή εναλλακτικά οι σχετικοί προμηθευτές τους) για την παρούσα διαδικασία σύναψης σύμβασης οφείλουν να διαθέτουν κατ’ ελάχιστον:
+•	σύστημα διαχείρισης ποιότητας κατά ISO 9001:2015. Το πεδίο εφαρμογής της πιστοποίησης θα πρέπει να αφορά κατ' ελάχιστον το σχεδιασμό, ανάπτυξη, κατασκευή και υποστήριξη πληροφοριακών συστημάτων ή δικτύων.
+και 
+•	σύστημα διαχείρισης ασφάλειας πληροφοριών κατά ISO 27001:2022
+Η αναθέτουσα αρχή αναγνωρίζει ισοδύναμα πιστοποιητικά που έχουν εκδοθεί από φορείς διαπιστευμένους από ισοδύναμους Οργανισμούς διαπίστευσης, οι οποίοι εδρεύουν και σε άλλα κράτη – μέλη, σύμφωνα με τον Κανονισμό 765/2008.  Επίσης, κάνει δεκτά άλλα αποδεικτικά στοιχεία για ισοδύναμα μέτρα διασφάλισης ποιότητας, εφόσον ο ενδιαφερόμενος οικονομικός φορέας δεν είχε τη δυνατότητα να αποκτήσει τα εν λόγω πιστοποιητικά εντός των σχετικών προθεσμιών για λόγους για τους οποίους δεν ευθύνεται ο ίδιος, υπό την προϋπόθεση ότι ο οικονομικός φορέας αποδεικνύει ότι τα προτεινόμενα μέτρα διασφάλισης ποιότητας πληρούν τα απαιτούμενα πρότυπα διασφάλισης ποιότητας.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται από όλα τα μέλη της ένωσης ξεχωριστά. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cbc:RequiredCurriculaCode listName="requirement-stage">not-requ</cbc:RequiredCurriculaCode>
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <cbc:MultipleTendersCode listName="permission">not-allowed</cbc:MultipleTendersCode>
+         <cac:RequiredFinancialGuarantee>
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <cbc:Description languageID="ELL">Εγγυητική επιστολή συμμετοχής, ποσού ίσο με το 2% της εκτιμώμενης αξίας της σύμβασης προ ΦΠΑ</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
+         <cac:FiscalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:FiscalLegislationDocumentReference>
+         <cac:EnvironmentalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EnvironmentalLegislationDocumentReference>
+         <cac:EmploymentLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EmploymentLegislationDocumentReference>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>ELL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>7203</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>www.nskoufas.gr</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-notice</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ELL">Όπως αποτυπώνεται αναλυτικά στην διακήρυξη.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cbc:CalculationExpression languageID="ELL">Η σύμβαση θα ανατεθεί με το κριτήριο της πλέον συμφέρουσας από οικονομική άποψη προσφοράς βάσει βέλτιστης σχέσης ποιότητας – τιμής.
+Πλέον συμφέρουσα από οικονομική άποψη προσφορά είναι εκείνη που παρουσιάζει τον μικρότερο λόγο της προσφερθείσας τιμής  προς τη συνολική βαθμολογία της τεχνικής προσφοράς (ήτοι αυτή στην οποία το Λ είναι ο μικρότερος αριθμός), σύμφωνα με τον τύπο που φαίνεται αναλυτικά στη διακήρυξη. </cbc:CalculationExpression>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <cac:DocumentProviderParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:DocumentProviderParty>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.promitheus.gov.gr</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <cac:TenderEvaluationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderEvaluationParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">Όπως αναφέρονται στην παρ. 3.4 της διακήρυξης και σύμφωνα με το Ν. 4412/2016</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0003</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-11-16+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:AdditionalInformationRequestPeriod>
+            <cbc:EndDate>2026-11-10+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:AdditionalInformationRequestPeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-11-19+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>10:00:00+02:00</cbc:OccurrenceTime>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="ELL">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΕΤΑ, ΔΗΜΑΡΧΕΙΟ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">Δράση 17</cbc:ID>
+         <cbc:Name languageID="ELL">ΤΜΗΜΑ 2: Δράση 17</cbc:Name>
+         <cbc:Description languageID="ELL">Δράση 17 - Σύστημα ηλεκτρονικής διακίνησης εγγράφων και ψηφιακών υπογραφών</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cbc:EstimatedOverallContractQuantity unitCode="H87">1</cbc:EstimatedOverallContractQuantity>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="strategic-procurement">inn-pur</cbc:ProcurementTypeCode>
+            <cbc:ProcurementType languageID="ELL">Αφορά τη προμήθεια ΣΥΣΤΉΜΑΤΟΣ ΗΛΕΚΤΡΟΝΙΚΉΣ ΔΙΑΚΊΝΗΣΗΣ ΕΓΓΡΆΦΩΝ ΚΑΙ ΨΗΦΙΑΚΏΝ ΥΠΟΓΡΑΦΏΝ για την εύρυθμη λειτουργία των υπηρεσιών του Δήμου, Το Πληροφοριακό Σύστημα ηλεκτρονικού αποθετηρίου εγγράφων θα αποτελεί μία ολοκληρωμένη λύση ψηφιακής αρχειοθέτησης και διαχείρισης εγγράφων και με δυνατότητες εκτεταμένης αναζήτησης με φίλτρα. </cbc:ProcurementType>
+         </cac:ProcurementAdditionalType>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="innovative-acquisition">prod-innov</cbc:ProcurementTypeCode>
+         </cac:ProcurementAdditionalType>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">24189.52</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>ΔΗΜΟΣ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:StreetName>
+               <cbc:AdditionalStreetName>Κεντρική Πλατεία Πέτα</cbc:AdditionalStreetName>
+               <cbc:CityName>Πέτα Άρτας</cbc:CityName>
+               <cbc:PostalZone>47150</cbc:PostalZone>
+               <cbc:CountrySubentityCode listName="nuts">EL541</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <cac:ContractExtension>
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-auth-mbrshp</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς που συμμετέχουν στη διαδικασία σύναψης της παρούσας σύμβασης απαιτείται να ασκούν εμπορική ή βιομηχανική ή βιοτεχνική δραστηριότητα συναφή με το αντικείμενο της σύμβασης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-stand-to-avg</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά την οικονομική και χρηματοοικονομική επάρκεια για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί που συμμετέχουν στη διαδικασία σύναψης της παρούσας απαιτείται να έχουν μέσο ετήσιο γενικό κύκλο εργασιών για τις τρεις (3) τελευταίες οικονομικές χρήσεις, πριν το έτος διεξαγωγής του διαγωνισμού, ήτοι για τα έτη 2023, 2024, 2025 ή για τις οικονομικές χρήσεις κατά τις οποίες ο οικονομικός φορέας δραστηριοποιείται, αν αυτές είναι λιγότερες από τρεις κατ’ ελάχιστον ίσο με το 100% του προϋπολογισμού του υπό ανάθεση τμήματος για το οποίο υποβάλλουν προσφορά, χωρίς ΦΠΑ.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-ref-services</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά στην τεχνική και επαγγελματική ικανότητα για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί φορείς απαιτείται:
+κατά τη διάρκεια των τριών (3) τελευταίων ετών,  να έχουν εκτελέσει και παραδώσει επιτυχώς τουλάχιστον δύο (2) έργα αντίστοιχα ΤΠΕ, προϋπολογισμού αθροιστικά ίσου ή μεγαλύτερου με το 100% του προϋπολογισμού χωρίς ΦΠΑ του υπό ανάθεση τμήματος 
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-qual-inst</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς (ή εναλλακτικά οι σχετικοί προμηθευτές τους) για την παρούσα διαδικασία σύναψης σύμβασης οφείλουν να διαθέτουν κατ’ ελάχιστον:
+•	σύστημα διαχείρισης ποιότητας κατά ISO 9001:2015. Το πεδίο εφαρμογής της πιστοποίησης θα πρέπει να αφορά κατ' ελάχιστον το σχεδιασμό, ανάπτυξη, κατασκευή και υποστήριξη πληροφοριακών συστημάτων ή δικτύων.
+και 
+•	σύστημα διαχείρισης ασφάλειας πληροφοριών κατά ISO 27001:2022
+Η αναθέτουσα αρχή αναγνωρίζει ισοδύναμα πιστοποιητικά που έχουν εκδοθεί από φορείς διαπιστευμένους από ισοδύναμους Οργανισμούς διαπίστευσης, οι οποίοι εδρεύουν και σε άλλα κράτη – μέλη, σύμφωνα με τον Κανονισμό 765/2008.  Επίσης, κάνει δεκτά άλλα αποδεικτικά στοιχεία για ισοδύναμα μέτρα διασφάλισης ποιότητας, εφόσον ο ενδιαφερόμενος οικονομικός φορέας δεν είχε τη δυνατότητα να αποκτήσει τα εν λόγω πιστοποιητικά εντός των σχετικών προθεσμιών για λόγους για τους οποίους δεν ευθύνεται ο ίδιος, υπό την προϋπόθεση ότι ο οικονομικός φορέας αποδεικνύει ότι τα προτεινόμενα μέτρα διασφάλισης ποιότητας πληρούν τα απαιτούμενα πρότυπα διασφάλισης ποιότητας.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται από όλα τα μέλη της ένωσης ξεχωριστά. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cbc:RequiredCurriculaCode listName="requirement-stage">not-requ</cbc:RequiredCurriculaCode>
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <cbc:MultipleTendersCode listName="permission">not-allowed</cbc:MultipleTendersCode>
+         <cac:RequiredFinancialGuarantee>
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <cbc:Description languageID="ELL">Εγγυητική επιστολή συμμετοχής, ποσού ίσο με το 2% της εκτιμώμενης αξίας της σύμβασης προ ΦΠΑ</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
+         <cac:FiscalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:FiscalLegislationDocumentReference>
+         <cac:EnvironmentalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EnvironmentalLegislationDocumentReference>
+         <cac:EmploymentLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EmploymentLegislationDocumentReference>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>ELL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>7203</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>www.nskoufas.gr</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-notice</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ELL">Όπως αποτυπώνεται αναλυτικά στην διακήρυξη.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cbc:CalculationExpression languageID="ELL">Η σύμβαση θα ανατεθεί με το κριτήριο της πλέον συμφέρουσας από οικονομική άποψη προσφοράς βάσει βέλτιστης σχέσης ποιότητας – τιμής.
+Πλέον συμφέρουσα από οικονομική άποψη προσφορά είναι εκείνη που παρουσιάζει τον μικρότερο λόγο της προσφερθείσας τιμής  προς τη συνολική βαθμολογία της τεχνικής προσφοράς (ήτοι αυτή στην οποία το Λ είναι ο μικρότερος αριθμός), σύμφωνα με τον τύπο που φαίνεται αναλυτικά στη διακήρυξη. </cbc:CalculationExpression>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <cac:DocumentProviderParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:DocumentProviderParty>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.promitheus.gov.gr</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <cac:TenderEvaluationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderEvaluationParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">Όπως αναφέρονται στην παρ. 3.4 της διακήρυξης και σύμφωνα με το Ν. 4412/2016</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0003</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-11-16+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:AdditionalInformationRequestPeriod>
+            <cbc:EndDate>2026-11-10+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:AdditionalInformationRequestPeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-11-19+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>10:00:00+02:00</cbc:OccurrenceTime>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="ELL">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΕΤΑ, ΔΗΜΑΡΧΕΙΟ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">Δράση 18</cbc:ID>
+         <cbc:Name languageID="ELL">ΤΜΗΜΑ 3: Δράση 18</cbc:Name>
+         <cbc:Description languageID="ELL">Δράση 18 - Σύστημα διαχείρισης ηλεκτρονικών πληρωμών</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cbc:EstimatedOverallContractQuantity unitCode="H87">1</cbc:EstimatedOverallContractQuantity>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="strategic-procurement">inn-pur</cbc:ProcurementTypeCode>
+            <cbc:ProcurementType languageID="ELL">Το σύστημα διαχείρισης ηλεκτρονικών πληρωμών - φορά τη προμήθεια ΣΥΣΤΗΜΑΤΟΣ ΔΙΑΧΕΙΡΙΣΗΣ ΗΛΕΚΤΡΟΝΙΚΩΝ ΠΛΗΡΩΜΩΝ για την εύρυθμη λειτουργία των υπηρεσιών του Δήμου. Η υπηρεσία ηλεκτρονικών πληρωμών βεβαιωμένων και μη οφειλών, πρέπει να είναι μια σύγχρονη διαδικτυακή λύση νέας γενιάς βασισμένη σε ανοιχτά πρότυπα. Στόχος της υπηρεσίας πρέπει να είναι να παρέχει σε πολίτες και σε επιχειρήσεις προσωποποιημένη ενημέρωση και δυνατότητα πληρωμής οφειλών μέσω χρεωστικών, πιστωτικών καρτών και e-banking. </cbc:ProcurementType>
+         </cac:ProcurementAdditionalType>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="innovative-acquisition">prod-innov</cbc:ProcurementTypeCode>
+         </cac:ProcurementAdditionalType>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">24190</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72210000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>ΔΗΜΟΣ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:StreetName>
+               <cbc:AdditionalStreetName>Κεντρική Πλατεία Πέτα</cbc:AdditionalStreetName>
+               <cbc:CityName>Πέτα Άρτας</cbc:CityName>
+               <cbc:PostalZone>47150</cbc:PostalZone>
+               <cbc:CountrySubentityCode listName="nuts">EL541</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <cac:ContractExtension>
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0004</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-auth-mbrshp</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς που συμμετέχουν στη διαδικασία σύναψης της παρούσας σύμβασης απαιτείται να ασκούν εμπορική ή βιομηχανική ή βιοτεχνική δραστηριότητα συναφή με το αντικείμενο της σύμβασης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-stand-to-avg</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά την οικονομική και χρηματοοικονομική επάρκεια για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί που συμμετέχουν στη διαδικασία σύναψης της παρούσας απαιτείται να έχουν μέσο ετήσιο γενικό κύκλο εργασιών για τις τρεις (3) τελευταίες οικονομικές χρήσεις, πριν το έτος διεξαγωγής του διαγωνισμού, ήτοι για τα έτη 2023, 2024, 2025 ή για τις οικονομικές χρήσεις κατά τις οποίες ο οικονομικός φορέας δραστηριοποιείται, αν αυτές είναι λιγότερες από τρεις κατ’ ελάχιστον ίσο με το 100% του προϋπολογισμού του υπό ανάθεση τμήματος για το οποίο υποβάλλουν προσφορά, χωρίς ΦΠΑ.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-ref-services</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά στην τεχνική και επαγγελματική ικανότητα για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί φορείς απαιτείται:
+κατά τη διάρκεια των τριών (3) τελευταίων ετών,  να έχουν εκτελέσει και παραδώσει επιτυχώς τουλάχιστον δύο (2) έργα αντίστοιχα ΤΠΕ, προϋπολογισμού αθροιστικά ίσου ή μεγαλύτερου με το 100% του προϋπολογισμού χωρίς ΦΠΑ του υπό ανάθεση τμήματος 
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-qual-inst</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς (ή εναλλακτικά οι σχετικοί προμηθευτές τους) για την παρούσα διαδικασία σύναψης σύμβασης οφείλουν να διαθέτουν κατ’ ελάχιστον:
+•	σύστημα διαχείρισης ποιότητας κατά ISO 9001:2015. Το πεδίο εφαρμογής της πιστοποίησης θα πρέπει να αφορά κατ' ελάχιστον το σχεδιασμό, ανάπτυξη, κατασκευή και υποστήριξη πληροφοριακών συστημάτων ή δικτύων.
+και 
+•	σύστημα διαχείρισης ασφάλειας πληροφοριών κατά ISO 27001:2022
+Η αναθέτουσα αρχή αναγνωρίζει ισοδύναμα πιστοποιητικά που έχουν εκδοθεί από φορείς διαπιστευμένους από ισοδύναμους Οργανισμούς διαπίστευσης, οι οποίοι εδρεύουν και σε άλλα κράτη – μέλη, σύμφωνα με τον Κανονισμό 765/2008.  Επίσης, κάνει δεκτά άλλα αποδεικτικά στοιχεία για ισοδύναμα μέτρα διασφάλισης ποιότητας, εφόσον ο ενδιαφερόμενος οικονομικός φορέας δεν είχε τη δυνατότητα να αποκτήσει τα εν λόγω πιστοποιητικά εντός των σχετικών προθεσμιών για λόγους για τους οποίους δεν ευθύνεται ο ίδιος, υπό την προϋπόθεση ότι ο οικονομικός φορέας αποδεικνύει ότι τα προτεινόμενα μέτρα διασφάλισης ποιότητας πληρούν τα απαιτούμενα πρότυπα διασφάλισης ποιότητας.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται από όλα τα μέλη της ένωσης ξεχωριστά. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cbc:RequiredCurriculaCode listName="requirement-stage">not-requ</cbc:RequiredCurriculaCode>
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <cbc:MultipleTendersCode listName="permission">not-allowed</cbc:MultipleTendersCode>
+         <cac:RequiredFinancialGuarantee>
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <cbc:Description languageID="ELL">Εγγυητική επιστολή συμμετοχής, ποσού ίσο με το 2% της εκτιμώμενης αξίας της σύμβασης προ ΦΠΑ</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
+         <cac:FiscalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:FiscalLegislationDocumentReference>
+         <cac:EnvironmentalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EnvironmentalLegislationDocumentReference>
+         <cac:EmploymentLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EmploymentLegislationDocumentReference>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>ELL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>7203</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>www.nskoufas.gr</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-notice</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ELL">Όπως αποτυπώνεται αναλυτικά στην διακήρυξη.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cbc:CalculationExpression languageID="ELL">Η σύμβαση θα ανατεθεί με το κριτήριο της πλέον συμφέρουσας από οικονομική άποψη προσφοράς βάσει βέλτιστης σχέσης ποιότητας – τιμής.
+Πλέον συμφέρουσα από οικονομική άποψη προσφορά είναι εκείνη που παρουσιάζει τον μικρότερο λόγο της προσφερθείσας τιμής  προς τη συνολική βαθμολογία της τεχνικής προσφοράς (ήτοι αυτή στην οποία το Λ είναι ο μικρότερος αριθμός), σύμφωνα με τον τύπο που φαίνεται αναλυτικά στη διακήρυξη. </cbc:CalculationExpression>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <cac:DocumentProviderParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:DocumentProviderParty>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.promitheus.gov.gr</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <cac:TenderEvaluationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderEvaluationParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">Όπως αναφέρονται στην παρ. 3.4 της διακήρυξης και σύμφωνα με το Ν. 4412/2016</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0003</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-11-16+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:AdditionalInformationRequestPeriod>
+            <cbc:EndDate>2026-11-10+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:AdditionalInformationRequestPeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-11-19+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>10:00:00+02:00</cbc:OccurrenceTime>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="ELL">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΕΤΑ, ΔΗΜΑΡΧΕΙΟ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">Δράση 24</cbc:ID>
+         <cbc:Name languageID="ELL">ΤΜΗΜΑ 4: Δράση 24</cbc:Name>
+         <cbc:Description languageID="ELL">Δράση 24 - Έξυπνο σύστημα προειδοποίησης και αντιμετώπισης κινδύνων (πλημμυρικών φαινομένων, πυρκαγιάς , σεισμού κλπ.)  εντός των ορίων του δήμου και σύμφωνα με τις αρμοδιότητες τους</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cbc:EstimatedOverallContractQuantity unitCode="H87">1</cbc:EstimatedOverallContractQuantity>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="strategic-procurement">inn-pur</cbc:ProcurementTypeCode>
+            <cbc:ProcurementType languageID="ELL">Ο συνολικός αριθμός καμένων εκτάσεων, και κατά αντιστοιχία και των καμένων δασών και δασικών εκτάσεων τα τελευταία χρόνια έχει ιδιαίτερα  αυξητικές τάσεις. Για την αντιμετώπιση του προβλήματος  η δράση αφορά ένα έξυπνο σύστημα πρόληψης πυρκαγιών και έντονων πλημμυρικών φαινομένων.  Το σύστημα αποτελείται από ένα μετεωρολογικό σταθμό, έναν IoT κόμβο (node) στον οποίο συνδέεται ο μετεωρολογικός σταθμός και ένα φωτοβολταϊκό πάνελ για παροχή ενεργειακής αυτονομίας στο node.</cbc:ProcurementType>
+         </cac:ProcurementAdditionalType>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="innovative-acquisition">prod-innov</cbc:ProcurementTypeCode>
+         </cac:ProcurementAdditionalType>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">13000</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>ΔΗΜΟΣ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:StreetName>
+               <cbc:AdditionalStreetName>Κεντρική Πλατεία Πέτα</cbc:AdditionalStreetName>
+               <cbc:CityName>Πέτα Άρτας</cbc:CityName>
+               <cbc:PostalZone>47150</cbc:PostalZone>
+               <cbc:CountrySubentityCode listName="nuts">EL541</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <cac:ContractExtension>
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0005</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-auth-mbrshp</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς που συμμετέχουν στη διαδικασία σύναψης της παρούσας σύμβασης απαιτείται να ασκούν εμπορική ή βιομηχανική ή βιοτεχνική δραστηριότητα συναφή με το αντικείμενο της σύμβασης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-stand-to-avg</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά την οικονομική και χρηματοοικονομική επάρκεια για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί που συμμετέχουν στη διαδικασία σύναψης της παρούσας απαιτείται να έχουν μέσο ετήσιο γενικό κύκλο εργασιών για τις τρεις (3) τελευταίες οικονομικές χρήσεις, πριν το έτος διεξαγωγής του διαγωνισμού, ήτοι για τα έτη 2023, 2024, 2025 ή για τις οικονομικές χρήσεις κατά τις οποίες ο οικονομικός φορέας δραστηριοποιείται, αν αυτές είναι λιγότερες από τρεις κατ’ ελάχιστον ίσο με το 100% του προϋπολογισμού του υπό ανάθεση τμήματος για το οποίο υποβάλλουν προσφορά, χωρίς ΦΠΑ.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-ref-services</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά στην τεχνική και επαγγελματική ικανότητα για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί φορείς απαιτείται:
+κατά τη διάρκεια των τριών (3) τελευταίων ετών,  να έχουν εκτελέσει και παραδώσει επιτυχώς τουλάχιστον δύο (2) έργα αντίστοιχα ΤΠΕ, προϋπολογισμού αθροιστικά ίσου ή μεγαλύτερου με το 100% του προϋπολογισμού χωρίς ΦΠΑ του υπό ανάθεση τμήματος 
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-qual-inst</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς (ή εναλλακτικά οι σχετικοί προμηθευτές τους) για την παρούσα διαδικασία σύναψης σύμβασης οφείλουν να διαθέτουν κατ’ ελάχιστον:
+•	σύστημα διαχείρισης ποιότητας κατά ISO 9001:2015. Το πεδίο εφαρμογής της πιστοποίησης θα πρέπει να αφορά κατ' ελάχιστον το σχεδιασμό, ανάπτυξη, κατασκευή και υποστήριξη πληροφοριακών συστημάτων ή δικτύων.
+και 
+•	σύστημα διαχείρισης ασφάλειας πληροφοριών κατά ISO 27001:2022
+Η αναθέτουσα αρχή αναγνωρίζει ισοδύναμα πιστοποιητικά που έχουν εκδοθεί από φορείς διαπιστευμένους από ισοδύναμους Οργανισμούς διαπίστευσης, οι οποίοι εδρεύουν και σε άλλα κράτη – μέλη, σύμφωνα με τον Κανονισμό 765/2008.  Επίσης, κάνει δεκτά άλλα αποδεικτικά στοιχεία για ισοδύναμα μέτρα διασφάλισης ποιότητας, εφόσον ο ενδιαφερόμενος οικονομικός φορέας δεν είχε τη δυνατότητα να αποκτήσει τα εν λόγω πιστοποιητικά εντός των σχετικών προθεσμιών για λόγους για τους οποίους δεν ευθύνεται ο ίδιος, υπό την προϋπόθεση ότι ο οικονομικός φορέας αποδεικνύει ότι τα προτεινόμενα μέτρα διασφάλισης ποιότητας πληρούν τα απαιτούμενα πρότυπα διασφάλισης ποιότητας.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται από όλα τα μέλη της ένωσης ξεχωριστά. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cbc:RequiredCurriculaCode listName="requirement-stage">not-requ</cbc:RequiredCurriculaCode>
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <cbc:MultipleTendersCode listName="permission">not-allowed</cbc:MultipleTendersCode>
+         <cac:RequiredFinancialGuarantee>
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <cbc:Description languageID="ELL">Εγγυητική επιστολή συμμετοχής, ποσού ίσο με το 2% της εκτιμώμενης αξίας της σύμβασης προ ΦΠΑ</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
+         <cac:FiscalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:FiscalLegislationDocumentReference>
+         <cac:EnvironmentalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EnvironmentalLegislationDocumentReference>
+         <cac:EmploymentLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EmploymentLegislationDocumentReference>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>ELL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>7203</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>www.nskoufas.gr</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-notice</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ELL">Όπως αποτυπώνεται αναλυτικά στην διακήρυξη.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cbc:CalculationExpression languageID="ELL">Η σύμβαση θα ανατεθεί με το κριτήριο της πλέον συμφέρουσας από οικονομική άποψη προσφοράς βάσει βέλτιστης σχέσης ποιότητας – τιμής.
+Πλέον συμφέρουσα από οικονομική άποψη προσφορά είναι εκείνη που παρουσιάζει τον μικρότερο λόγο της προσφερθείσας τιμής  προς τη συνολική βαθμολογία της τεχνικής προσφοράς (ήτοι αυτή στην οποία το Λ είναι ο μικρότερος αριθμός), σύμφωνα με τον τύπο που φαίνεται αναλυτικά στη διακήρυξη. </cbc:CalculationExpression>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <cac:DocumentProviderParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:DocumentProviderParty>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.promitheus.gov.gr</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <cac:TenderEvaluationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderEvaluationParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">Όπως αναφέρονται στην παρ. 3.4 της διακήρυξης και σύμφωνα με το Ν. 4412/2016</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0003</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-11-16+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:AdditionalInformationRequestPeriod>
+            <cbc:EndDate>2026-11-10+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:AdditionalInformationRequestPeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-11-19+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>10:00:00+02:00</cbc:OccurrenceTime>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="ELL">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΕΤΑ, ΔΗΜΑΡΧΕΙΟ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">Δράση 28</cbc:ID>
+         <cbc:Name languageID="ELL">ΤΜΗΜΑ 5: Δράση 28</cbc:Name>
+         <cbc:Description languageID="ELL">Δράση 28 - Ψηφιοποίηση τοπικής πολιτιστικής κληρονομιάς (η κατοχή και νομή των οποίων ανήκει στον δήμο)</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cbc:EstimatedOverallContractQuantity unitCode="H87">1</cbc:EstimatedOverallContractQuantity>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="strategic-procurement">inn-pur</cbc:ProcurementTypeCode>
+            <cbc:ProcurementType languageID="ELL">Αντικείμενο του έργου είναι η οργάνωση, τεκμηρίωση, ψηφιοποίηση, διαχείριση και προβολή του πολιτιστικού και επιστημονικού περιεχομένου που αφορά την Μάχη του Πέτα στις 4 Ιουλίου 1822 αλλά και η ανάπτυξη μιας σειρά διαδραστικών εφαρμογών για το μεγάλο εθνικό ιστορικό γεγονός. Το ήδη υπάρχον ψηφιοποιημένο και τεκμηριωμένο υλικό είναι σχετικά περιορισμένο και επομένως η  ψηφιοποίηση και τεκμηρίωση έχει κεντρική πολιτιστική σημασία, καθώς με αυτό τον τρόπο θα επιτραπεί η διάσωση, η αξιοποίηση και η προβολή των ιστορικών γεγονότων που συνδέονται με την Μάχη του Πέτα στις 4 Ιουλίου 1822.</cbc:ProcurementType>
+         </cac:ProcurementAdditionalType>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="innovative-acquisition">prod-innov</cbc:ProcurementTypeCode>
+         </cac:ProcurementAdditionalType>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="accessibility">inc</cbc:ProcurementTypeCode>
+         </cac:ProcurementAdditionalType>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">149580</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72210000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>ΔΗΜΟΣ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:StreetName>
+               <cbc:AdditionalStreetName>Κεντρική Πλατεία Πέτα</cbc:AdditionalStreetName>
+               <cbc:CityName>Πέτα Άρτας</cbc:CityName>
+               <cbc:PostalZone>47150</cbc:PostalZone>
+               <cbc:CountrySubentityCode listName="nuts">EL541</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <cac:ContractExtension>
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0006</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-auth-mbrshp</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς που συμμετέχουν στη διαδικασία σύναψης της παρούσας σύμβασης απαιτείται να ασκούν εμπορική ή βιομηχανική ή βιοτεχνική δραστηριότητα συναφή με το αντικείμενο της σύμβασης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-stand-to-avg</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά την οικονομική και χρηματοοικονομική επάρκεια για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί που συμμετέχουν στη διαδικασία σύναψης της παρούσας απαιτείται να έχουν μέσο ετήσιο γενικό κύκλο εργασιών για τις τρεις (3) τελευταίες οικονομικές χρήσεις, πριν το έτος διεξαγωγής του διαγωνισμού, ήτοι για τα έτη 2023, 2024, 2025 ή για τις οικονομικές χρήσεις κατά τις οποίες ο οικονομικός φορέας δραστηριοποιείται, αν αυτές είναι λιγότερες από τρεις κατ’ ελάχιστον ίσο με το 100% του προϋπολογισμού του υπό ανάθεση τμήματος για το οποίο υποβάλλουν προσφορά, χωρίς ΦΠΑ.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-ref-services</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά στην τεχνική και επαγγελματική ικανότητα για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί φορείς απαιτείται:
+κατά τη διάρκεια των τριών (3) τελευταίων ετών,  να έχουν εκτελέσει και παραδώσει επιτυχώς τουλάχιστον δύο (2) έργα αντίστοιχα ΤΠΕ, προϋπολογισμού αθροιστικά ίσου ή μεγαλύτερου με το 100% του προϋπολογισμού χωρίς ΦΠΑ του υπό ανάθεση τμήματος 
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-qual-inst</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς (ή εναλλακτικά οι σχετικοί προμηθευτές τους) για την παρούσα διαδικασία σύναψης σύμβασης οφείλουν να διαθέτουν κατ’ ελάχιστον:
+•	σύστημα διαχείρισης ποιότητας κατά ISO 9001:2015. Το πεδίο εφαρμογής της πιστοποίησης θα πρέπει να αφορά κατ' ελάχιστον το σχεδιασμό, ανάπτυξη, κατασκευή και υποστήριξη πληροφοριακών συστημάτων ή δικτύων.
+και 
+•	σύστημα διαχείρισης ασφάλειας πληροφοριών κατά ISO 27001:2022
+Η αναθέτουσα αρχή αναγνωρίζει ισοδύναμα πιστοποιητικά που έχουν εκδοθεί από φορείς διαπιστευμένους από ισοδύναμους Οργανισμούς διαπίστευσης, οι οποίοι εδρεύουν και σε άλλα κράτη – μέλη, σύμφωνα με τον Κανονισμό 765/2008.  Επίσης, κάνει δεκτά άλλα αποδεικτικά στοιχεία για ισοδύναμα μέτρα διασφάλισης ποιότητας, εφόσον ο ενδιαφερόμενος οικονομικός φορέας δεν είχε τη δυνατότητα να αποκτήσει τα εν λόγω πιστοποιητικά εντός των σχετικών προθεσμιών για λόγους για τους οποίους δεν ευθύνεται ο ίδιος, υπό την προϋπόθεση ότι ο οικονομικός φορέας αποδεικνύει ότι τα προτεινόμενα μέτρα διασφάλισης ποιότητας πληρούν τα απαιτούμενα πρότυπα διασφάλισης ποιότητας.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται από όλα τα μέλη της ένωσης ξεχωριστά. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cbc:RequiredCurriculaCode listName="requirement-stage">not-requ</cbc:RequiredCurriculaCode>
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <cbc:MultipleTendersCode listName="permission">not-allowed</cbc:MultipleTendersCode>
+         <cac:RequiredFinancialGuarantee>
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <cbc:Description languageID="ELL">Εγγυητική επιστολή συμμετοχής, ποσού ίσο με το 2% της εκτιμώμενης αξίας της σύμβασης προ ΦΠΑ</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
+         <cac:FiscalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:FiscalLegislationDocumentReference>
+         <cac:EnvironmentalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EnvironmentalLegislationDocumentReference>
+         <cac:EmploymentLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EmploymentLegislationDocumentReference>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>ELL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>7203</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>www.nskoufas.gr</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-notice</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ELL">Όπως αποτυπώνεται αναλυτικά στην διακήρυξη.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cbc:CalculationExpression languageID="ELL">Η σύμβαση θα ανατεθεί με το κριτήριο της πλέον συμφέρουσας από οικονομική άποψη προσφοράς βάσει βέλτιστης σχέσης ποιότητας – τιμής.
+Πλέον συμφέρουσα από οικονομική άποψη προσφορά είναι εκείνη που παρουσιάζει τον μικρότερο λόγο της προσφερθείσας τιμής  προς τη συνολική βαθμολογία της τεχνικής προσφοράς (ήτοι αυτή στην οποία το Λ είναι ο μικρότερος αριθμός), σύμφωνα με τον τύπο που φαίνεται αναλυτικά στη διακήρυξη. </cbc:CalculationExpression>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <cac:DocumentProviderParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:DocumentProviderParty>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.promitheus.gov.gr</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <cac:TenderEvaluationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderEvaluationParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">Όπως αναφέρονται στην παρ. 3.4 της διακήρυξης και σύμφωνα με το Ν. 4412/2016</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0003</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-11-16+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:AdditionalInformationRequestPeriod>
+            <cbc:EndDate>2026-11-10+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:AdditionalInformationRequestPeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-11-19+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>10:00:00+02:00</cbc:OccurrenceTime>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="ELL">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΕΤΑ, ΔΗΜΑΡΧΕΙΟ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">Δράση 34</cbc:ID>
+         <cbc:Name languageID="ELL">ΤΜΗΜΑ 6: Δράση 34</cbc:Name>
+         <cbc:Description languageID="ELL">Δράση 34 - Ολοκληρωμένη υποδομή  προστασίας από κυβερνοεπιθέσεις  (Network Firewall,Endpoint security, κλπ) και παροχή συστήματος τηλε-εργασίας</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cbc:EstimatedOverallContractQuantity unitCode="H87">1</cbc:EstimatedOverallContractQuantity>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="strategic-procurement">inn-pur</cbc:ProcurementTypeCode>
+            <cbc:ProcurementType languageID="ELL">Αφορά τη προμήθεια  ΟΛΟΚΛΗΡΩΜΕΝΗΣ ΥΠΟΔΟΜΗΣ ΠΡΟΣΤΑΣΙΑΣ ΑΠΟ ΚΥΒΕΡΝΟΕΠΙΘΕΣΕΙΣ για την εύρυθμη λειτουργία των υπηρεσιών του Δήμου. Η υπηρεσία προστασίας της καθημερινής λειτουργίας από επιθέσεις, από μη ασφαλή λογισμικά, από ιούς η malware με παράλληλο τον συχνό έλεγχο και την εκπαίδευση των υπαλλήλων σε θέματα Κυβερνοασφάλειας, πρέπει να είναι μια σύγχρονη διαδικτυακή λύση νέας γενιάς βασισμένη στα τελευταία διεθνή και ευρωπαϊκά πρότυπα και συμμορφώσεις. Στόχος της υπηρεσίας πρέπει να είναι να παρέχει στους υπαλλήλους, ασφάλεια σε μόνιμη βάση και επιχειρησιακή συνέχεια σε περίπτωση ύπαρξης οποιουδήποτε συμβάντος παραβίασης της πολιτικής ασφαλείας του κάθε Οργανισμού, με προκαθορισμένο χρόνο (ελάχιστο η ακόμα και μηδενικό) στην προηγούμενη φυσιολογική λειτουργία.</cbc:ProcurementType>
+         </cac:ProcurementAdditionalType>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="innovative-acquisition">prod-innov</cbc:ProcurementTypeCode>
+         </cac:ProcurementAdditionalType>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">15850</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>ΔΗΜΟΣ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:StreetName>
+               <cbc:AdditionalStreetName>Κεντρική Πλατεία Πέτα</cbc:AdditionalStreetName>
+               <cbc:CityName>Πέτα Άρτας</cbc:CityName>
+               <cbc:PostalZone>47150</cbc:PostalZone>
+               <cbc:CountrySubentityCode listName="nuts">EL541</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <cac:ContractExtension>
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0007</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-auth-mbrshp</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς που συμμετέχουν στη διαδικασία σύναψης της παρούσας σύμβασης απαιτείται να ασκούν εμπορική ή βιομηχανική ή βιοτεχνική δραστηριότητα συναφή με το αντικείμενο της σύμβασης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-stand-to-avg</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά την οικονομική και χρηματοοικονομική επάρκεια για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί που συμμετέχουν στη διαδικασία σύναψης της παρούσας απαιτείται να έχουν μέσο ετήσιο γενικό κύκλο εργασιών για τις τρεις (3) τελευταίες οικονομικές χρήσεις, πριν το έτος διεξαγωγής του διαγωνισμού, ήτοι για τα έτη 2023, 2024, 2025 ή για τις οικονομικές χρήσεις κατά τις οποίες ο οικονομικός φορέας δραστηριοποιείται, αν αυτές είναι λιγότερες από τρεις κατ’ ελάχιστον ίσο με το 100% του προϋπολογισμού του υπό ανάθεση τμήματος για το οποίο υποβάλλουν προσφορά, χωρίς ΦΠΑ.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-ref-services</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Όσον αφορά στην τεχνική και επαγγελματική ικανότητα για την παρούσα διαδικασία σύναψης σύμβασης, οι οικονομικοί φορείς απαιτείται:
+κατά τη διάρκεια των τριών (3) τελευταίων ετών,  να έχουν εκτελέσει και παραδώσει επιτυχώς τουλάχιστον δύο (2) έργα αντίστοιχα ΤΠΕ, προϋπολογισμού αθροιστικά ίσου ή μεγαλύτερου με το 100% του προϋπολογισμού χωρίς ΦΠΑ του υπό ανάθεση τμήματος 
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται αθροιστικά από τα μέλη της ένωσης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-qual-inst</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς (ή εναλλακτικά οι σχετικοί προμηθευτές τους) για την παρούσα διαδικασία σύναψης σύμβασης οφείλουν να διαθέτουν κατ’ ελάχιστον:
+•	σύστημα διαχείρισης ποιότητας κατά ISO 9001:2015. Το πεδίο εφαρμογής της πιστοποίησης θα πρέπει να αφορά κατ' ελάχιστον το σχεδιασμό, ανάπτυξη, κατασκευή και υποστήριξη πληροφοριακών συστημάτων ή δικτύων.
+και 
+•	σύστημα διαχείρισης ασφάλειας πληροφοριών κατά ISO 27001:2022
+Η αναθέτουσα αρχή αναγνωρίζει ισοδύναμα πιστοποιητικά που έχουν εκδοθεί από φορείς διαπιστευμένους από ισοδύναμους Οργανισμούς διαπίστευσης, οι οποίοι εδρεύουν και σε άλλα κράτη – μέλη, σύμφωνα με τον Κανονισμό 765/2008.  Επίσης, κάνει δεκτά άλλα αποδεικτικά στοιχεία για ισοδύναμα μέτρα διασφάλισης ποιότητας, εφόσον ο ενδιαφερόμενος οικονομικός φορέας δεν είχε τη δυνατότητα να αποκτήσει τα εν λόγω πιστοποιητικά εντός των σχετικών προθεσμιών για λόγους για τους οποίους δεν ευθύνεται ο ίδιος, υπό την προϋπόθεση ότι ο οικονομικός φορέας αποδεικνύει ότι τα προτεινόμενα μέτρα διασφάλισης ποιότητας πληρούν τα απαιτούμενα πρότυπα διασφάλισης ποιότητας.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις καλύπτονται από όλα τα μέλη της ένωσης ξεχωριστά. 
+</cbc:Description>
+                     </efac:SelectionCriteria>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cbc:RequiredCurriculaCode listName="requirement-stage">not-requ</cbc:RequiredCurriculaCode>
+         <cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+         <cbc:MultipleTendersCode listName="permission">not-allowed</cbc:MultipleTendersCode>
+         <cac:RequiredFinancialGuarantee>
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <cbc:Description languageID="ELL">Εγγυητική επιστολή συμμετοχής, ποσού ίσο με το 2% της εκτιμώμενης αξίας της σύμβασης προ ΦΠΑ</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
+         <cac:FiscalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:FiscalLegislationDocumentReference>
+         <cac:EnvironmentalLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EnvironmentalLegislationDocumentReference>
+         <cac:EmploymentLegislationDocumentReference>
+            <cbc:ID>unused-id</cbc:ID>
+            <cac:IssuerParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:IssuerParty>
+         </cac:EmploymentLegislationDocumentReference>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>ELL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>7203</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>www.nskoufas.gr</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-notice</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ELL">Όπως αποτυπώνεται αναλυτικά στην διακήρυξη.</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cbc:CalculationExpression languageID="ELL">Η σύμβαση θα ανατεθεί με το κριτήριο της πλέον συμφέρουσας από οικονομική άποψη προσφοράς βάσει βέλτιστης σχέσης ποιότητας – τιμής.
+Πλέον συμφέρουσα από οικονομική άποψη προσφορά είναι εκείνη που παρουσιάζει τον μικρότερο λόγο της προσφερθείσας τιμής  προς τη συνολική βαθμολογία της τεχνικής προσφοράς (ήτοι αυτή στην οποία το Λ είναι ο μικρότερος αριθμός), σύμφωνα με τον τύπο που φαίνεται αναλυτικά στη διακήρυξη. </cbc:CalculationExpression>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <cac:DocumentProviderParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:DocumentProviderParty>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>http://www.promitheus.gov.gr</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <cac:TenderEvaluationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderEvaluationParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">Όπως αναφέρονται στην παρ. 3.4 της διακήρυξης και σύμφωνα με το Ν. 4412/2016</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0003</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-11-16+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:AdditionalInformationRequestPeriod>
+            <cbc:EndDate>2026-11-10+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:AdditionalInformationRequestPeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-11-19+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>10:00:00+02:00</cbc:OccurrenceTime>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="ELL">ΚΕΝΤΡΙΚΗ ΠΛΑΤΕΙΑ ΠΕΤΑ, ΔΗΜΑΡΧΕΙΟ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">Δράση 38</cbc:ID>
+         <cbc:Name languageID="ELL">ΤΜΗΜΑ 7: Δράση 38</cbc:Name>
+         <cbc:Description languageID="ELL">Δράση 38 - Ηλεκτρονική Τιμολόγηση</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cbc:EstimatedOverallContractQuantity unitCode="H87">1</cbc:EstimatedOverallContractQuantity>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="strategic-procurement">inn-pur</cbc:ProcurementTypeCode>
+            <cbc:ProcurementType languageID="ELL">Αφορά τη προμήθεια ΣΥΣΤΗΜΑΤΟΣ ΗΛΕΚΤΡΟΝΙΚΗΣ ΤΙΜΟΛΟΓΗΣΗΣ για την εύρυθμη λειτουργία των υπηρεσιών του Δήμου. Το σύστημα ηλεκτρονικής τιμολόγησης αποτελεί αναγκαιότητα στους ΟΤΑ σύμφωνα με την κείμενη νομοθεσία στο πλαίσιο εκτέλεσης δημοσίων συμβάσεων.</cbc:ProcurementType>
+         </cac:ProcurementAdditionalType>
+         <cac:ProcurementAdditionalType>
+            <cbc:ProcurementTypeCode listName="innovative-acquisition">prod-innov</cbc:ProcurementTypeCode>
+         </cac:ProcurementAdditionalType>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">16125</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:StreetName>ΔΗΜΟΣ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ</cbc:StreetName>
+               <cbc:AdditionalStreetName>Κεντρική Πλατεία Πέτα</cbc:AdditionalStreetName>
+               <cbc:CityName>Πέτα Άρτας</cbc:CityName>
+               <cbc:PostalZone>47150</cbc:PostalZone>
+               <cbc:CountrySubentityCode listName="nuts">EL541</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <cac:ContractExtension>
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>

@@ -1,0 +1,154 @@
+{
+ "notices": [
+  {
+   "place-of-performance": [
+    "EL303",
+    "GRC",
+    "EL303",
+    "GRC"
+   ],
+   "deadline-receipt-tender-date-lot": [
+    "2026-12-11+02:00"
+   ],
+   "notice-type": "cn-standard",
+   "publication-number": "782964-2026",
+   "estimated-value-lot": [
+    "916000"
+   ],
+   "estimated-value-cur-proc": "EUR",
+   "buyer-country": [
+    "GRC"
+   ],
+   "deadline-receipt-tender-time-lot": [
+    "12:00:00+02:00"
+   ],
+   "classification-cpv": [
+    "72267000",
+    "72267000"
+   ],
+   "buyer-name": {
+    "ell": [
+     "ΚΕΝΤΡΙΚΗ ΕΝΩΣΗ ΕΠΙΜΕΛΗΤΗΡΙΩΝ ΕΛΛΑΔΟΣ (ΚΕΕΕ)"
+    ]
+   },
+   "publication-date": "2026-11-11+01:00",
+   "estimated-value-proc": "916000",
+   "links": {
+    "xml": {
+     "MUL": "https://ted.europa.eu/en/notice/782964-2026/xml"
+    },
+    "pdf": {
+     "BUL": "https://ted.europa.eu/bg/notice/782964-2026/pdf",
+     "SPA": "https://ted.europa.eu/es/notice/782964-2026/pdf",
+     "CES": "https://ted.europa.eu/cs/notice/782964-2026/pdf",
+     "DAN": "https://ted.europa.eu/da/notice/782964-2026/pdf",
+     "DEU": "https://ted.europa.eu/de/notice/782964-2026/pdf",
+     "EST": "https://ted.europa.eu/et/notice/782964-2026/pdf",
+     "ELL": "https://ted.europa.eu/el/notice/782964-2026/pdf",
+     "ENG": "https://ted.europa.eu/en/notice/782964-2026/pdf",
+     "FRA": "https://ted.europa.eu/fr/notice/782964-2026/pdf",
+     "GLE": "https://ted.europa.eu/ga/notice/782964-2026/pdf",
+     "HRV": "https://ted.europa.eu/hr/notice/782964-2026/pdf",
+     "ITA": "https://ted.europa.eu/it/notice/782964-2026/pdf",
+     "LAV": "https://ted.europa.eu/lv/notice/782964-2026/pdf",
+     "LIT": "https://ted.europa.eu/lt/notice/782964-2026/pdf",
+     "HUN": "https://ted.europa.eu/hu/notice/782964-2026/pdf",
+     "MLT": "https://ted.europa.eu/mt/notice/782964-2026/pdf",
+     "NLD": "https://ted.europa.eu/nl/notice/782964-2026/pdf",
+     "POL": "https://ted.europa.eu/pl/notice/782964-2026/pdf",
+     "POR": "https://ted.europa.eu/pt/notice/782964-2026/pdf",
+     "RON": "https://ted.europa.eu/ro/notice/782964-2026/pdf",
+     "SLK": "https://ted.europa.eu/sk/notice/782964-2026/pdf",
+     "SLV": "https://ted.europa.eu/sl/notice/782964-2026/pdf",
+     "FIN": "https://ted.europa.eu/fi/notice/782964-2026/pdf",
+     "SWE": "https://ted.europa.eu/sv/notice/782964-2026/pdf"
+    },
+    "pdfs": {
+     "ELL": "https://ted.europa.eu/el/notice/782964-2026/pdfs"
+    },
+    "html": {
+     "BUL": "https://ted.europa.eu/bg/notice/-/detail/782964-2026",
+     "SPA": "https://ted.europa.eu/es/notice/-/detail/782964-2026",
+     "CES": "https://ted.europa.eu/cs/notice/-/detail/782964-2026",
+     "DAN": "https://ted.europa.eu/da/notice/-/detail/782964-2026",
+     "DEU": "https://ted.europa.eu/de/notice/-/detail/782964-2026",
+     "EST": "https://ted.europa.eu/et/notice/-/detail/782964-2026",
+     "ELL": "https://ted.europa.eu/el/notice/-/detail/782964-2026",
+     "ENG": "https://ted.europa.eu/en/notice/-/detail/782964-2026",
+     "FRA": "https://ted.europa.eu/fr/notice/-/detail/782964-2026",
+     "GLE": "https://ted.europa.eu/ga/notice/-/detail/782964-2026",
+     "HRV": "https://ted.europa.eu/hr/notice/-/detail/782964-2026",
+     "ITA": "https://ted.europa.eu/it/notice/-/detail/782964-2026",
+     "LAV": "https://ted.europa.eu/lv/notice/-/detail/782964-2026",
+     "LIT": "https://ted.europa.eu/lt/notice/-/detail/782964-2026",
+     "HUN": "https://ted.europa.eu/hu/notice/-/detail/782964-2026",
+     "MLT": "https://ted.europa.eu/mt/notice/-/detail/782964-2026",
+     "NLD": "https://ted.europa.eu/nl/notice/-/detail/782964-2026",
+     "POL": "https://ted.europa.eu/pl/notice/-/detail/782964-2026",
+     "POR": "https://ted.europa.eu/pt/notice/-/detail/782964-2026",
+     "RON": "https://ted.europa.eu/ro/notice/-/detail/782964-2026",
+     "SLK": "https://ted.europa.eu/sk/notice/-/detail/782964-2026",
+     "SLV": "https://ted.europa.eu/sl/notice/-/detail/782964-2026",
+     "FIN": "https://ted.europa.eu/fi/notice/-/detail/782964-2026",
+     "SWE": "https://ted.europa.eu/sv/notice/-/detail/782964-2026"
+    },
+    "htmlDirect": {
+     "BUL": "https://ted.europa.eu/bg/notice/782964-2026/html",
+     "SPA": "https://ted.europa.eu/es/notice/782964-2026/html",
+     "CES": "https://ted.europa.eu/cs/notice/782964-2026/html",
+     "DAN": "https://ted.europa.eu/da/notice/782964-2026/html",
+     "DEU": "https://ted.europa.eu/de/notice/782964-2026/html",
+     "EST": "https://ted.europa.eu/et/notice/782964-2026/html",
+     "ELL": "https://ted.europa.eu/el/notice/782964-2026/html",
+     "ENG": "https://ted.europa.eu/en/notice/782964-2026/html",
+     "FRA": "https://ted.europa.eu/fr/notice/782964-2026/html",
+     "GLE": "https://ted.europa.eu/ga/notice/782964-2026/html",
+     "HRV": "https://ted.europa.eu/hr/notice/782964-2026/html",
+     "ITA": "https://ted.europa.eu/it/notice/782964-2026/html",
+     "LAV": "https://ted.europa.eu/lv/notice/782964-2026/html",
+     "LIT": "https://ted.europa.eu/lt/notice/782964-2026/html",
+     "HUN": "https://ted.europa.eu/hu/notice/782964-2026/html",
+     "MLT": "https://ted.europa.eu/mt/notice/782964-2026/html",
+     "NLD": "https://ted.europa.eu/nl/notice/782964-2026/html",
+     "POL": "https://ted.europa.eu/pl/notice/782964-2026/html",
+     "POR": "https://ted.europa.eu/pt/notice/782964-2026/html",
+     "RON": "https://ted.europa.eu/ro/notice/782964-2026/html",
+     "SLK": "https://ted.europa.eu/sk/notice/782964-2026/html",
+     "SLV": "https://ted.europa.eu/sl/notice/782964-2026/html",
+     "FIN": "https://ted.europa.eu/fi/notice/782964-2026/html",
+     "SWE": "https://ted.europa.eu/sv/notice/782964-2026/html"
+    }
+   },
+   "notice-title": {
+    "hun": "Görögország – Szoftver-karbantartási és -javítási szolgáltatások – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "lav": "Grieķija – Programmatūras uzturēšanas un labošanas pakalpojumi – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "swe": "Grekland – Underhåll och reparation av programvara – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "gle": "An Ghréig – Software maintenance and repair services – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "ell": "Ελλάδα – Υπηρεσίες συντήρησης και επισκευής λογισμικού – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "spa": "Grecia – Servicios de mantenimiento y reparación de software – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "est": "Kreeka – Tarkvara hooldus- ja parandusteenused – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "nld": "Griekenland – Onderhouds- en reparatiediensten voor software – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "fin": "Kreikka – Ohjelmistojen ylläpito- ja korjauspalvelut – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "pol": "Grecja – Usługi w zakresie konserwacji i napraw oprogramowania – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "hrv": "Grčka – Usluge održavanja i popravaka programske podrške – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "ces": "Řecko – Údržba a opravy programového vybavení – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "dan": "Grækenland – Programmelvedligeholdelses- og reparationstjenester – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "ron": "Grecia – Servicii de întreţinere şi reparaţii de software – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "por": "Grécia – Serviços de manutenção e reparação de software – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "slk": "Grécko – Služby na údržbu a opravu softvéru – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "fra": "Grèce – Services de maintenance et de réparation de logiciels – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "mlt": "Il-Greċja – Servizzi ta' tiswija u manutenzjoni ta' softwer – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "deu": "Griechenland – Software-Wartung und -Reparatur – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "lit": "Graikija – Programinės įrangos priežiūros ir tvarkymo paslaugos – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "ita": "Grecia – Servizi di manutenzione e riparazione di software – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "bul": "Гъpция – Услуги по поддържане и ремонт на софтуер – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "slv": "Grčija – Storitve vzdrževanja in popravila programske opreme – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS",
+    "eng": "Greece – Software maintenance and repair services – Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΓΕΜΗ και του συστήματος διασύνδεσης του ΓΕΜΗ με το δίκτυο BRIS"
+   },
+   "form-type": "competition"
+  }
+ ],
+ "totalNoticeCount": 1,
+ "iterationNextToken": null,
+ "timedOut": false
+}

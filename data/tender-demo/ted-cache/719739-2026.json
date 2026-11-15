@@ -1,0 +1,154 @@
+{
+ "notices": [
+  {
+   "place-of-performance": [
+    "EL303",
+    "GRC",
+    "EL303",
+    "GRC"
+   ],
+   "deadline-receipt-tender-date-lot": [
+    "2026-11-23+02:00"
+   ],
+   "notice-type": "cn-standard",
+   "publication-number": "719739-2026",
+   "estimated-value-lot": [
+    "220000"
+   ],
+   "estimated-value-cur-proc": "EUR",
+   "buyer-country": [
+    "GRC"
+   ],
+   "deadline-receipt-tender-time-lot": [
+    "15:00:00+02:00"
+   ],
+   "classification-cpv": [
+    "72262000",
+    "72262000"
+   ],
+   "buyer-name": {
+    "ell": [
+     "ΥΠΟΥΡΓΕΙΟ ΕΘΝΙΚΗΣ ΟΙΚΟΝΟΜΙΑΣ ΚΑΙ ΟΙΚΟΝΟΜΙΚΩΝ"
+    ]
+   },
+   "publication-date": "2026-10-19+02:00",
+   "estimated-value-proc": "220000",
+   "links": {
+    "xml": {
+     "MUL": "https://ted.europa.eu/en/notice/719739-2026/xml"
+    },
+    "pdf": {
+     "BUL": "https://ted.europa.eu/bg/notice/719739-2026/pdf",
+     "SPA": "https://ted.europa.eu/es/notice/719739-2026/pdf",
+     "CES": "https://ted.europa.eu/cs/notice/719739-2026/pdf",
+     "DAN": "https://ted.europa.eu/da/notice/719739-2026/pdf",
+     "DEU": "https://ted.europa.eu/de/notice/719739-2026/pdf",
+     "EST": "https://ted.europa.eu/et/notice/719739-2026/pdf",
+     "ELL": "https://ted.europa.eu/el/notice/719739-2026/pdf",
+     "ENG": "https://ted.europa.eu/en/notice/719739-2026/pdf",
+     "FRA": "https://ted.europa.eu/fr/notice/719739-2026/pdf",
+     "GLE": "https://ted.europa.eu/ga/notice/719739-2026/pdf",
+     "HRV": "https://ted.europa.eu/hr/notice/719739-2026/pdf",
+     "ITA": "https://ted.europa.eu/it/notice/719739-2026/pdf",
+     "LAV": "https://ted.europa.eu/lv/notice/719739-2026/pdf",
+     "LIT": "https://ted.europa.eu/lt/notice/719739-2026/pdf",
+     "HUN": "https://ted.europa.eu/hu/notice/719739-2026/pdf",
+     "MLT": "https://ted.europa.eu/mt/notice/719739-2026/pdf",
+     "NLD": "https://ted.europa.eu/nl/notice/719739-2026/pdf",
+     "POL": "https://ted.europa.eu/pl/notice/719739-2026/pdf",
+     "POR": "https://ted.europa.eu/pt/notice/719739-2026/pdf",
+     "RON": "https://ted.europa.eu/ro/notice/719739-2026/pdf",
+     "SLK": "https://ted.europa.eu/sk/notice/719739-2026/pdf",
+     "SLV": "https://ted.europa.eu/sl/notice/719739-2026/pdf",
+     "FIN": "https://ted.europa.eu/fi/notice/719739-2026/pdf",
+     "SWE": "https://ted.europa.eu/sv/notice/719739-2026/pdf"
+    },
+    "pdfs": {
+     "ELL": "https://ted.europa.eu/el/notice/719739-2026/pdfs"
+    },
+    "html": {
+     "BUL": "https://ted.europa.eu/bg/notice/-/detail/719739-2026",
+     "SPA": "https://ted.europa.eu/es/notice/-/detail/719739-2026",
+     "CES": "https://ted.europa.eu/cs/notice/-/detail/719739-2026",
+     "DAN": "https://ted.europa.eu/da/notice/-/detail/719739-2026",
+     "DEU": "https://ted.europa.eu/de/notice/-/detail/719739-2026",
+     "EST": "https://ted.europa.eu/et/notice/-/detail/719739-2026",
+     "ELL": "https://ted.europa.eu/el/notice/-/detail/719739-2026",
+     "ENG": "https://ted.europa.eu/en/notice/-/detail/719739-2026",
+     "FRA": "https://ted.europa.eu/fr/notice/-/detail/719739-2026",
+     "GLE": "https://ted.europa.eu/ga/notice/-/detail/719739-2026",
+     "HRV": "https://ted.europa.eu/hr/notice/-/detail/719739-2026",
+     "ITA": "https://ted.europa.eu/it/notice/-/detail/719739-2026",
+     "LAV": "https://ted.europa.eu/lv/notice/-/detail/719739-2026",
+     "LIT": "https://ted.europa.eu/lt/notice/-/detail/719739-2026",
+     "HUN": "https://ted.europa.eu/hu/notice/-/detail/719739-2026",
+     "MLT": "https://ted.europa.eu/mt/notice/-/detail/719739-2026",
+     "NLD": "https://ted.europa.eu/nl/notice/-/detail/719739-2026",
+     "POL": "https://ted.europa.eu/pl/notice/-/detail/719739-2026",
+     "POR": "https://ted.europa.eu/pt/notice/-/detail/719739-2026",
+     "RON": "https://ted.europa.eu/ro/notice/-/detail/719739-2026",
+     "SLK": "https://ted.europa.eu/sk/notice/-/detail/719739-2026",
+     "SLV": "https://ted.europa.eu/sl/notice/-/detail/719739-2026",
+     "FIN": "https://ted.europa.eu/fi/notice/-/detail/719739-2026",
+     "SWE": "https://ted.europa.eu/sv/notice/-/detail/719739-2026"
+    },
+    "htmlDirect": {
+     "BUL": "https://ted.europa.eu/bg/notice/719739-2026/html",
+     "SPA": "https://ted.europa.eu/es/notice/719739-2026/html",
+     "CES": "https://ted.europa.eu/cs/notice/719739-2026/html",
+     "DAN": "https://ted.europa.eu/da/notice/719739-2026/html",
+     "DEU": "https://ted.europa.eu/de/notice/719739-2026/html",
+     "EST": "https://ted.europa.eu/et/notice/719739-2026/html",
+     "ELL": "https://ted.europa.eu/el/notice/719739-2026/html",
+     "ENG": "https://ted.europa.eu/en/notice/719739-2026/html",
+     "FRA": "https://ted.europa.eu/fr/notice/719739-2026/html",
+     "GLE": "https://ted.europa.eu/ga/notice/719739-2026/html",
+     "HRV": "https://ted.europa.eu/hr/notice/719739-2026/html",
+     "ITA": "https://ted.europa.eu/it/notice/719739-2026/html",
+     "LAV": "https://ted.europa.eu/lv/notice/719739-2026/html",
+     "LIT": "https://ted.europa.eu/lt/notice/719739-2026/html",
+     "HUN": "https://ted.europa.eu/hu/notice/719739-2026/html",
+     "MLT": "https://ted.europa.eu/mt/notice/719739-2026/html",
+     "NLD": "https://ted.europa.eu/nl/notice/719739-2026/html",
+     "POL": "https://ted.europa.eu/pl/notice/719739-2026/html",
+     "POR": "https://ted.europa.eu/pt/notice/719739-2026/html",
+     "RON": "https://ted.europa.eu/ro/notice/719739-2026/html",
+     "SLK": "https://ted.europa.eu/sk/notice/719739-2026/html",
+     "SLV": "https://ted.europa.eu/sl/notice/719739-2026/html",
+     "FIN": "https://ted.europa.eu/fi/notice/719739-2026/html",
+     "SWE": "https://ted.europa.eu/sv/notice/719739-2026/html"
+    }
+   },
+   "notice-title": {
+    "hun": "Görögország – Szoftverfejlesztési szolgáltatások – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "lav": "Grieķija – Programmatūras izstrādes pakalpojumi – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "swe": "Grekland – Utveckling av programvara – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "gle": "An Ghréig – Software development services – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "ell": "Ελλάδα – Υπηρεσίες ανάπτυξης λογισμικού – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "spa": "Grecia – Servicios de desarrollo de software – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "est": "Kreeka – Tarkvara arendusteenused – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "nld": "Griekenland – Ontwikkeling van software – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "fin": "Kreikka – Ohjelmiston kehittämispalvelut – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "pol": "Grecja – Usługi rozbudowy oprogramowania – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "hrv": "Grčka – Usluge razvoja programske podrške – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "ces": "Řecko – Vývoj programového vybavení – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "dan": "Grækenland – Programmeludvikling – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "ron": "Grecia – Servicii de dezvoltare software – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "por": "Grécia – Serviços de desenvolvimento de software – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "slk": "Grécko – Vývoj softvéru – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "fra": "Grèce – Services de développement de logiciels – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "mlt": "Il-Greċja – Servizzi ta' l-iżvulupp tas-software – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "deu": "Griechenland – Software-Entwicklung – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "lit": "Graikija – Programinės įrangos kūrimo paslaugos – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "ita": "Grecia – Servizi di sviluppo di software – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "bul": "Гъpция – Услуги по разработване на софтуер – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "slv": "Grčija – Storitve razvoja programske opreme – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»",
+    "eng": "Greece – Software development services – Έργο: «Βελτιώσεις και Αναβαθμίσεις λογισμικού του ΠΣ ΨΥΔΗΠΕΕΚ, με διάρκεια δύο (2) έτη, για τις ανάγκες του ΥΠΕΘΟΟ»"
+   },
+   "form-type": "competition"
+  }
+ ],
+ "totalNoticeCount": 1,
+ "iterationNextToken": null,
+ "timedOut": false
+}

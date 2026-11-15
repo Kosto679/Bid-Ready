@@ -1,0 +1,164 @@
+{
+ "notices": [
+  {
+   "place-of-performance": [
+    "EL411",
+    "GRC",
+    "EL411",
+    "GRC"
+   ],
+   "deadline-receipt-tender-date-lot": [
+    "2026-12-08+02:00"
+   ],
+   "notice-type": "cn-standard",
+   "publication-number": "765388-2026",
+   "estimated-value-lot": [
+    "2564102.56"
+   ],
+   "estimated-value-cur-proc": "EUR",
+   "buyer-country": [
+    "GRC"
+   ],
+   "deadline-receipt-tender-time-lot": [
+    "20:00:00+02:00"
+   ],
+   "classification-cpv": [
+    "72262000",
+    "72261000",
+    "35120000",
+    "35112000",
+    "80510000",
+    "72224000",
+    "72262000",
+    "72261000",
+    "35120000",
+    "35112000",
+    "80510000",
+    "72224000"
+   ],
+   "buyer-name": {
+    "ell": [
+     "ΠΕΡΙΦΕΡΕΙΑ ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ"
+    ]
+   },
+   "publication-date": "2026-11-04+01:00",
+   "estimated-value-proc": "2564102.56",
+   "links": {
+    "xml": {
+     "MUL": "https://ted.europa.eu/en/notice/765388-2026/xml"
+    },
+    "pdf": {
+     "BUL": "https://ted.europa.eu/bg/notice/765388-2026/pdf",
+     "SPA": "https://ted.europa.eu/es/notice/765388-2026/pdf",
+     "CES": "https://ted.europa.eu/cs/notice/765388-2026/pdf",
+     "DAN": "https://ted.europa.eu/da/notice/765388-2026/pdf",
+     "DEU": "https://ted.europa.eu/de/notice/765388-2026/pdf",
+     "EST": "https://ted.europa.eu/et/notice/765388-2026/pdf",
+     "ELL": "https://ted.europa.eu/el/notice/765388-2026/pdf",
+     "ENG": "https://ted.europa.eu/en/notice/765388-2026/pdf",
+     "FRA": "https://ted.europa.eu/fr/notice/765388-2026/pdf",
+     "GLE": "https://ted.europa.eu/ga/notice/765388-2026/pdf",
+     "HRV": "https://ted.europa.eu/hr/notice/765388-2026/pdf",
+     "ITA": "https://ted.europa.eu/it/notice/765388-2026/pdf",
+     "LAV": "https://ted.europa.eu/lv/notice/765388-2026/pdf",
+     "LIT": "https://ted.europa.eu/lt/notice/765388-2026/pdf",
+     "HUN": "https://ted.europa.eu/hu/notice/765388-2026/pdf",
+     "MLT": "https://ted.europa.eu/mt/notice/765388-2026/pdf",
+     "NLD": "https://ted.europa.eu/nl/notice/765388-2026/pdf",
+     "POL": "https://ted.europa.eu/pl/notice/765388-2026/pdf",
+     "POR": "https://ted.europa.eu/pt/notice/765388-2026/pdf",
+     "RON": "https://ted.europa.eu/ro/notice/765388-2026/pdf",
+     "SLK": "https://ted.europa.eu/sk/notice/765388-2026/pdf",
+     "SLV": "https://ted.europa.eu/sl/notice/765388-2026/pdf",
+     "FIN": "https://ted.europa.eu/fi/notice/765388-2026/pdf",
+     "SWE": "https://ted.europa.eu/sv/notice/765388-2026/pdf"
+    },
+    "pdfs": {
+     "ELL": "https://ted.europa.eu/el/notice/765388-2026/pdfs"
+    },
+    "html": {
+     "BUL": "https://ted.europa.eu/bg/notice/-/detail/765388-2026",
+     "SPA": "https://ted.europa.eu/es/notice/-/detail/765388-2026",
+     "CES": "https://ted.europa.eu/cs/notice/-/detail/765388-2026",
+     "DAN": "https://ted.europa.eu/da/notice/-/detail/765388-2026",
+     "DEU": "https://ted.europa.eu/de/notice/-/detail/765388-2026",
+     "EST": "https://ted.europa.eu/et/notice/-/detail/765388-2026",
+     "ELL": "https://ted.europa.eu/el/notice/-/detail/765388-2026",
+     "ENG": "https://ted.europa.eu/en/notice/-/detail/765388-2026",
+     "FRA": "https://ted.europa.eu/fr/notice/-/detail/765388-2026",
+     "GLE": "https://ted.europa.eu/ga/notice/-/detail/765388-2026",
+     "HRV": "https://ted.europa.eu/hr/notice/-/detail/765388-2026",
+     "ITA": "https://ted.europa.eu/it/notice/-/detail/765388-2026",
+     "LAV": "https://ted.europa.eu/lv/notice/-/detail/765388-2026",
+     "LIT": "https://ted.europa.eu/lt/notice/-/detail/765388-2026",
+     "HUN": "https://ted.europa.eu/hu/notice/-/detail/765388-2026",
+     "MLT": "https://ted.europa.eu/mt/notice/-/detail/765388-2026",
+     "NLD": "https://ted.europa.eu/nl/notice/-/detail/765388-2026",
+     "POL": "https://ted.europa.eu/pl/notice/-/detail/765388-2026",
+     "POR": "https://ted.europa.eu/pt/notice/-/detail/765388-2026",
+     "RON": "https://ted.europa.eu/ro/notice/-/detail/765388-2026",
+     "SLK": "https://ted.europa.eu/sk/notice/-/detail/765388-2026",
+     "SLV": "https://ted.europa.eu/sl/notice/-/detail/765388-2026",
+     "FIN": "https://ted.europa.eu/fi/notice/-/detail/765388-2026",
+     "SWE": "https://ted.europa.eu/sv/notice/-/detail/765388-2026"
+    },
+    "htmlDirect": {
+     "BUL": "https://ted.europa.eu/bg/notice/765388-2026/html",
+     "SPA": "https://ted.europa.eu/es/notice/765388-2026/html",
+     "CES": "https://ted.europa.eu/cs/notice/765388-2026/html",
+     "DAN": "https://ted.europa.eu/da/notice/765388-2026/html",
+     "DEU": "https://ted.europa.eu/de/notice/765388-2026/html",
+     "EST": "https://ted.europa.eu/et/notice/765388-2026/html",
+     "ELL": "https://ted.europa.eu/el/notice/765388-2026/html",
+     "ENG": "https://ted.europa.eu/en/notice/765388-2026/html",
+     "FRA": "https://ted.europa.eu/fr/notice/765388-2026/html",
+     "GLE": "https://ted.europa.eu/ga/notice/765388-2026/html",
+     "HRV": "https://ted.europa.eu/hr/notice/765388-2026/html",
+     "ITA": "https://ted.europa.eu/it/notice/765388-2026/html",
+     "LAV": "https://ted.europa.eu/lv/notice/765388-2026/html",
+     "LIT": "https://ted.europa.eu/lt/notice/765388-2026/html",
+     "HUN": "https://ted.europa.eu/hu/notice/765388-2026/html",
+     "MLT": "https://ted.europa.eu/mt/notice/765388-2026/html",
+     "NLD": "https://ted.europa.eu/nl/notice/765388-2026/html",
+     "POL": "https://ted.europa.eu/pl/notice/765388-2026/html",
+     "POR": "https://ted.europa.eu/pt/notice/765388-2026/html",
+     "RON": "https://ted.europa.eu/ro/notice/765388-2026/html",
+     "SLK": "https://ted.europa.eu/sk/notice/765388-2026/html",
+     "SLV": "https://ted.europa.eu/sl/notice/765388-2026/html",
+     "FIN": "https://ted.europa.eu/fi/notice/765388-2026/html",
+     "SWE": "https://ted.europa.eu/sv/notice/765388-2026/html"
+    }
+   },
+   "notice-title": {
+    "hun": "Görögország – Szoftverfejlesztési szolgáltatások – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "lav": "Grieķija – Programmatūras izstrādes pakalpojumi – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "swe": "Grekland – Utveckling av programvara – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "gle": "An Ghréig – Software development services – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "ell": "Ελλάδα – Υπηρεσίες ανάπτυξης λογισμικού – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "spa": "Grecia – Servicios de desarrollo de software – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "est": "Kreeka – Tarkvara arendusteenused – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "nld": "Griekenland – Ontwikkeling van software – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "fin": "Kreikka – Ohjelmiston kehittämispalvelut – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "pol": "Grecja – Usługi rozbudowy oprogramowania – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "hrv": "Grčka – Usluge razvoja programske podrške – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "ces": "Řecko – Vývoj programového vybavení – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "dan": "Grækenland – Programmeludvikling – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "ron": "Grecia – Servicii de dezvoltare software – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "por": "Grécia – Serviços de desenvolvimento de software – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "slk": "Grécko – Vývoj softvéru – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "fra": "Grèce – Services de développement de logiciels – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "mlt": "Il-Greċja – Servizzi ta' l-iżvulupp tas-software – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "deu": "Griechenland – Software-Entwicklung – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "lit": "Graikija – Programinės įrangos kūrimo paslaugos – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "ita": "Grecia – Servizi di sviluppo di software – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "bul": "Гъpция – Услуги по разработване на софтуер – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "slv": "Grčija – Storitve razvoja programske opreme – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)",
+    "eng": "Greece – Software development services – Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)"
+   },
+   "form-type": "competition"
+  }
+ ],
+ "totalNoticeCount": 1,
+ "iterationNextToken": null,
+ "timedOut": false
+}

@@ -1,0 +1,169 @@
+{
+ "notices": [
+  {
+   "place-of-performance": [
+    "EL422",
+    "GRC",
+    "EL422",
+    "EL422",
+    "GRC",
+    "GRC"
+   ],
+   "deadline-receipt-tender-date-lot": [
+    "2026-11-30+02:00",
+    "2026-11-30+02:00"
+   ],
+   "notice-type": "cn-standard",
+   "publication-number": "676547-2026",
+   "estimated-value-lot": [
+    "673000",
+    "400000"
+   ],
+   "estimated-value-cur-proc": "EUR",
+   "buyer-country": [
+    "GRC"
+   ],
+   "deadline-receipt-tender-time-lot": [
+    "15:00:00+02:00",
+    "15:00:00+02:00"
+   ],
+   "classification-cpv": [
+    "92110000",
+    "39154000",
+    "72212000",
+    "79822500",
+    "31523200",
+    "79800000",
+    "32320000",
+    "79530000",
+    "38970000",
+    "39162100",
+    "92110000",
+    "38970000"
+   ],
+   "buyer-name": {
+    "ell": [
+     "ΔΗΜΟΣ ΘΗΡΑΣ"
+    ]
+   },
+   "publication-date": "2026-10-01+02:00",
+   "estimated-value-proc": "1073000",
+   "links": {
+    "xml": {
+     "MUL": "https://ted.europa.eu/en/notice/676547-2026/xml"
+    },
+    "pdf": {
+     "BUL": "https://ted.europa.eu/bg/notice/676547-2026/pdf",
+     "SPA": "https://ted.europa.eu/es/notice/676547-2026/pdf",
+     "CES": "https://ted.europa.eu/cs/notice/676547-2026/pdf",
+     "DAN": "https://ted.europa.eu/da/notice/676547-2026/pdf",
+     "DEU": "https://ted.europa.eu/de/notice/676547-2026/pdf",
+     "EST": "https://ted.europa.eu/et/notice/676547-2026/pdf",
+     "ELL": "https://ted.europa.eu/el/notice/676547-2026/pdf",
+     "ENG": "https://ted.europa.eu/en/notice/676547-2026/pdf",
+     "FRA": "https://ted.europa.eu/fr/notice/676547-2026/pdf",
+     "GLE": "https://ted.europa.eu/ga/notice/676547-2026/pdf",
+     "HRV": "https://ted.europa.eu/hr/notice/676547-2026/pdf",
+     "ITA": "https://ted.europa.eu/it/notice/676547-2026/pdf",
+     "LAV": "https://ted.europa.eu/lv/notice/676547-2026/pdf",
+     "LIT": "https://ted.europa.eu/lt/notice/676547-2026/pdf",
+     "HUN": "https://ted.europa.eu/hu/notice/676547-2026/pdf",
+     "MLT": "https://ted.europa.eu/mt/notice/676547-2026/pdf",
+     "NLD": "https://ted.europa.eu/nl/notice/676547-2026/pdf",
+     "POL": "https://ted.europa.eu/pl/notice/676547-2026/pdf",
+     "POR": "https://ted.europa.eu/pt/notice/676547-2026/pdf",
+     "RON": "https://ted.europa.eu/ro/notice/676547-2026/pdf",
+     "SLK": "https://ted.europa.eu/sk/notice/676547-2026/pdf",
+     "SLV": "https://ted.europa.eu/sl/notice/676547-2026/pdf",
+     "FIN": "https://ted.europa.eu/fi/notice/676547-2026/pdf",
+     "SWE": "https://ted.europa.eu/sv/notice/676547-2026/pdf"
+    },
+    "pdfs": {
+     "ELL": "https://ted.europa.eu/el/notice/676547-2026/pdfs"
+    },
+    "html": {
+     "BUL": "https://ted.europa.eu/bg/notice/-/detail/676547-2026",
+     "SPA": "https://ted.europa.eu/es/notice/-/detail/676547-2026",
+     "CES": "https://ted.europa.eu/cs/notice/-/detail/676547-2026",
+     "DAN": "https://ted.europa.eu/da/notice/-/detail/676547-2026",
+     "DEU": "https://ted.europa.eu/de/notice/-/detail/676547-2026",
+     "EST": "https://ted.europa.eu/et/notice/-/detail/676547-2026",
+     "ELL": "https://ted.europa.eu/el/notice/-/detail/676547-2026",
+     "ENG": "https://ted.europa.eu/en/notice/-/detail/676547-2026",
+     "FRA": "https://ted.europa.eu/fr/notice/-/detail/676547-2026",
+     "GLE": "https://ted.europa.eu/ga/notice/-/detail/676547-2026",
+     "HRV": "https://ted.europa.eu/hr/notice/-/detail/676547-2026",
+     "ITA": "https://ted.europa.eu/it/notice/-/detail/676547-2026",
+     "LAV": "https://ted.europa.eu/lv/notice/-/detail/676547-2026",
+     "LIT": "https://ted.europa.eu/lt/notice/-/detail/676547-2026",
+     "HUN": "https://ted.europa.eu/hu/notice/-/detail/676547-2026",
+     "MLT": "https://ted.europa.eu/mt/notice/-/detail/676547-2026",
+     "NLD": "https://ted.europa.eu/nl/notice/-/detail/676547-2026",
+     "POL": "https://ted.europa.eu/pl/notice/-/detail/676547-2026",
+     "POR": "https://ted.europa.eu/pt/notice/-/detail/676547-2026",
+     "RON": "https://ted.europa.eu/ro/notice/-/detail/676547-2026",
+     "SLK": "https://ted.europa.eu/sk/notice/-/detail/676547-2026",
+     "SLV": "https://ted.europa.eu/sl/notice/-/detail/676547-2026",
+     "FIN": "https://ted.europa.eu/fi/notice/-/detail/676547-2026",
+     "SWE": "https://ted.europa.eu/sv/notice/-/detail/676547-2026"
+    },
+    "htmlDirect": {
+     "BUL": "https://ted.europa.eu/bg/notice/676547-2026/html",
+     "SPA": "https://ted.europa.eu/es/notice/676547-2026/html",
+     "CES": "https://ted.europa.eu/cs/notice/676547-2026/html",
+     "DAN": "https://ted.europa.eu/da/notice/676547-2026/html",
+     "DEU": "https://ted.europa.eu/de/notice/676547-2026/html",
+     "EST": "https://ted.europa.eu/et/notice/676547-2026/html",
+     "ELL": "https://ted.europa.eu/el/notice/676547-2026/html",
+     "ENG": "https://ted.europa.eu/en/notice/676547-2026/html",
+     "FRA": "https://ted.europa.eu/fr/notice/676547-2026/html",
+     "GLE": "https://ted.europa.eu/ga/notice/676547-2026/html",
+     "HRV": "https://ted.europa.eu/hr/notice/676547-2026/html",
+     "ITA": "https://ted.europa.eu/it/notice/676547-2026/html",
+     "LAV": "https://ted.europa.eu/lv/notice/676547-2026/html",
+     "LIT": "https://ted.europa.eu/lt/notice/676547-2026/html",
+     "HUN": "https://ted.europa.eu/hu/notice/676547-2026/html",
+     "MLT": "https://ted.europa.eu/mt/notice/676547-2026/html",
+     "NLD": "https://ted.europa.eu/nl/notice/676547-2026/html",
+     "POL": "https://ted.europa.eu/pl/notice/676547-2026/html",
+     "POR": "https://ted.europa.eu/pt/notice/676547-2026/html",
+     "RON": "https://ted.europa.eu/ro/notice/676547-2026/html",
+     "SLK": "https://ted.europa.eu/sk/notice/676547-2026/html",
+     "SLV": "https://ted.europa.eu/sl/notice/676547-2026/html",
+     "FIN": "https://ted.europa.eu/fi/notice/676547-2026/html",
+     "SWE": "https://ted.europa.eu/sv/notice/676547-2026/html"
+    }
+   },
+   "notice-title": {
+    "hun": "Görögország – Mozifilm és videoszalag-gyártás és kapcsolódó szolgáltatások – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "lav": "Grieķija – Kinofilmu un videofilmu ražošana un saistītie pakalpojumi – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "swe": "Grekland – Film- och videoproduktion samt tillhörande tjänster – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "gle": "An Ghréig – Motion picture and video tape production and related services – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "ell": "Ελλάδα – Υπηρεσίες παραγωγής κινηματογραφικών ταινιών και βιντεοταινιών και σχετικές υπηρεσίες – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "spa": "Grecia – Servicios de producción de películas de cine y videocintas y servicios conexos – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "est": "Kreeka – Kino- ja videofilmide tootmine ja sellega seotud teenused – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "nld": "Griekenland – Productie van films en video's en aanverwante diensten – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "fin": "Kreikka – Elokuvien ja videonauhojen tuotanto ja vastaavat palvelut – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "pol": "Grecja – Produkcja filmów kinowych i wideo oraz podobne usługi – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "hrv": "Grčka – Usluge produkcije kinematografskih filmova i videofilmova i srodne usluge – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "ces": "Řecko – Výroba filmů a videa a související služby – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "dan": "Grækenland – Produktion af spillefilm og videobånd samt tilhørende aktiviteter – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "ron": "Grecia – Servicii de producţie de filme cinematografice şi de casete video şi servicii conexe – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "por": "Grécia – Serviços de produção de filmes e fitas de vídeo e afins – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "slk": "Grécko – Výroba (tvorba) filmov a videozáznamov a príbuzné služby – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "fra": "Grèce – Services de production de films cinématographique et de vidéos et services connexes – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "mlt": "Il-Greċja – Servizzi ta' produzzjoni ta' films u vidjows u servizzi relatati – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "deu": "Griechenland – Film- und Videofilmherstellung und verbundene Dienstleistungen – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "lit": "Graikija – Kino filmų ir vaizdajuosčių gamybos bei susijusios paslaugos – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "ita": "Grecia – Servizi di produzione di film e videocassette e servizi connessi – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "bul": "Гъpция – Услуги в областта на кино- и видеопродукцията и други свързани с тях услуги – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "slv": "Grčija – Produkcija filmov in video filmov ter s tem povezane storitve – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης",
+    "eng": "Greece – Motion picture and video tape production and related services – Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης"
+   },
+   "form-type": "competition"
+  }
+ ],
+ "totalNoticeCount": 1,
+ "iterationNextToken": null,
+ "timedOut": false
+}

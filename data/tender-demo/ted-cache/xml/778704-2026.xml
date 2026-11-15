@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://tsc.edu.gr</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">ΚΡΑΤΙΚΟ ΩΔΕΙΟ ΘΕΣΣΑΛΟΝΙΚΗΣ</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Β. Όλγας 116-Π.Συνδίκα 8</cbc:StreetName>
+                           <cbc:CityName>Θεσσαλονίκη</cbc:CityName>
+                           <cbc:PostalZone>54645</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL522</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>1022.E00372.0001</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>2310 510 551</cbc:Telephone>
+                           <cbc:ElectronicMail>supplies@tsc.edu.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://www.eadhsy.gr</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">Ενιαία Αρχή Δημόσιων Συμβάσεων (Ε.Α.ΔΗ.ΣΥ.)</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Δώρου 7-9 (όπισθεν ΜΙΝΙΟΝ)</cbc:StreetName>
+                           <cbc:CityName>Αθήνα</cbc:CityName>
+                           <cbc:PostalZone>10432</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>1000.E00961.0001</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+302132141227</cbc:Telephone>
+                           <cbc:Telefax>+302132141227</cbc:Telefax>
+                           <cbc:ElectronicMail>grafeioproedrou@aepp-procurement.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://op.europa.eu</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">Publications Office of the European Union</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <cbc:PostalZone>2417</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>PUBL</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+352 29291</cbc:Telephone>
+                           <cbc:ElectronicMail>ted@publications.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+            <efac:Publication><efbc:NoticePublicationID schemeName="ojs-notice-id">00778704-2026</efbc:NoticePublicationID><efbc:GazetteID schemeName="ojs-id">217/2026</efbc:GazetteID><efbc:PublicationDate>2026-11-09+01:00</efbc:PublicationDate></efac:Publication></efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-1.14</cbc:CustomizationID>
+   <cbc:ID schemeName="notice-id">a4fda015-47e8-4f25-9689-7f46170498a2</cbc:ID>
+   <cbc:ContractFolderID>f80130a0-d32e-4b67-b26c-e6a43516b537</cbc:ContractFolderID>
+   <cbc:IssueDate>2026-11-06Z</cbc:IssueDate>
+   <cbc:IssueTime>09:08:52Z</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode listName="language">ELL</cbc:NoticeLanguageCode>
+   <cac:ContractingParty>
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">body-pl-cga</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">rcr</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:ServiceProviderParty>
+            <cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:Party>
+         </cac:ServiceProviderParty>
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:TenderingTerms>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-grounds-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+   </cac:TenderingTerms>
+   <cac:TenderingProcess>
+      <cbc:Description languageID="ELL">ΔΙΑΚΗΡΥΞΗ 6020946</cbc:Description>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <cac:ProcessJustification>
+         <cbc:ProcessReasonCode listName="accelerated-procedure">false</cbc:ProcessReasonCode>
+      </cac:ProcessJustification>
+   </cac:TenderingProcess>
+   <cac:ProcurementProject>
+      <cbc:Name languageID="ELL">Υπηρεσίες ψηφιοποίησης, τεκμηρίωσης, ψηφιακής προβολής και ανάδειξης του πολιτιστικού αποθέματος του Κρατικού Ωδείου Θεσσαλονίκης </cbc:Name>
+      <cbc:Description languageID="ELL">Αντικείμενο της σύμβασης  είναι η ψηφιακή αναβάθμιση του Κρατικού Ωδείου Θεσσαλονίκης (ΚΩΘ), μέσω της υλοποίησης σύγχρονων ψηφιακών και διαδραστικών τεχνολογιών.  Σκοπός της είναι η διατήρηση, προβολή και ανάδειξη της πλούσιας πολιτιστικής κληρονομιάς του Ωδείου, η ενίσχυση της λειτουργικότητάς του και η βελτίωση της εμπειρίας του κοινού, τόσο σε φυσικό όσο και σε ψηφιακό επίπεδο. Το έργο περιλαμβάνει την ψηφιοποίηση και τεκμηρίωση του αρχειακού υλικού υψηλής ιστορικής και πολιτιστικής αξίας, τη δημιουργία ενός ολοκληρωμένου ψηφιακού αποθετηρίου με διεθνείς προδιαγραφές και τη σχεδίαση εφαρμογών, όπως ηλεκτρονικό σύστημα εισιτηρίων (e-ticketing), ηλεκτρονικό κατάστημα (e-shop) κ.α. Επιπλέον, αναπτύσσονται νέες ψηφιακές υπηρεσίες, όπως εικονικές περιηγήσεις, ειδικές εφαρμογές για παιδιά, ΑΜΕΑ και διεθνές κοινό, καθώς και ένα φιλικό προς τον χρήστη ιστότοπο, που ενσωματώνει σύγχρονα εργαλεία και τεχνολογίες. Το έργο αποσκοπεί στην ενίσχυση της διαδραστικότητας και της προσβασιμότητας, την προσέλκυση νέων ακροατηρίων, τη σύνδεση με την εκπαιδευτική και τουριστική κοινότητα, καθώς και τη μακροπρόθεσμη βιωσιμότητα του Ωδείου. Το έργο συνδυάζει την ιστορική ταυτότητα του ΚΩΘ με καινοτόμες πρακτικές, εδραιώνοντάς το ως έναν σύγχρονο και ανοιχτό πολιτιστικό οργανισμό με διεθνή εμβέλεια</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <cac:RequestedTenderTotal>
+         <cbc:EstimatedOverallContractAmount currencyID="EUR">687764.52</cbc:EstimatedOverallContractAmount>
+      </cac:RequestedTenderTotal>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">72000000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">79822500</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">30200000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:CountrySubentityCode listName="nuts">EL522</cbc:CountrySubentityCode>
+            <cac:Country>
+               <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:Address>
+      </cac:RealizedLocation>
+   </cac:ProcurementProject>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:Funding>
+                        <cbc:FundingProgramCode listName="eu-programme">ERDF_2021</cbc:FundingProgramCode>
+                        <cbc:Description languageID="ELL">Η σύμβαση περιλαμβάνεται στο υποέργο Νο 1 της Πράξης:
+«Ψηφιακή Αναβάθμιση του Κρατικού Ωδείου Θεσσαλονίκης» η οποία έχει ενταχθεί στο Επιχειρησιακό Πρόγραμμα «Κεντρική Μακεδονία 2021-2027» με βάση την Απόφαση Ένταξης με αρ. πρωτ  3767/24.07.2025 του Περιφερειάρχη Κεντρικής Μακεδονίας και έχει λάβει κωδικό MIS 6020946. Η παρούσα σύμβαση χρηματοδοτείται από την Ευρωπαϊκή Ένωση (Ευρωπαϊκό Ταμείο Περιφερειακής Ανάπτυξης) και από εθνικούς πόρους μέσω του ΠΔΕ
+</cbc:Description>
+                     </efac:Funding>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>ELL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>590315</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>www.promitheus.gov.gr</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="nda">false</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>www.promitheus.gov.gr</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">Όπως προβλέπεται στη Διακήρυξη</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-12-11+02:00</cbc:EndDate>
+            <cbc:EndTime>15:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-12-15+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>10:00:00+02:00</cbc:OccurrenceTime>
+            <cbc:Description languageID="ELL">Επιτροπή Διαγωνισμού</cbc:Description>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">ΔΙΑΚΗΡΥΞΗ 6020946</cbc:ID>
+         <cbc:Name languageID="ELL">Υπηρεσίες ψηφιοποίησης, τεκμηρίωσης, ψηφιακής προβολής και ανάδειξης του πολιτιστικού αποθέματος του Κρατικού Ωδείου Θεσσαλονίκης </cbc:Name>
+         <cbc:Description languageID="ELL">Αντικείμενο της σύμβασης  είναι η ψηφιακή αναβάθμιση του Κρατικού Ωδείου Θεσσαλονίκης (ΚΩΘ), μέσω της υλοποίησης σύγχρονων ψηφιακών και διαδραστικών τεχνολογιών.  Σκοπός της είναι η διατήρηση, προβολή και ανάδειξη της πλούσιας πολιτιστικής κληρονομιάς του Ωδείου, η ενίσχυση της λειτουργικότητάς του και η βελτίωση της εμπειρίας του κοινού, τόσο σε φυσικό όσο και σε ψηφιακό επίπεδο. Το έργο περιλαμβάνει την ψηφιοποίηση και τεκμηρίωση του αρχειακού υλικού υψηλής ιστορικής και πολιτιστικής αξίας, τη δημιουργία ενός ολοκληρωμένου ψηφιακού αποθετηρίου με διεθνείς προδιαγραφές και τη σχεδίαση εφαρμογών, όπως ηλεκτρονικό σύστημα εισιτηρίων (e-ticketing), ηλεκτρονικό κατάστημα (e-shop) κ.α. Επιπλέον, αναπτύσσονται νέες ψηφιακές υπηρεσίες, όπως εικονικές περιηγήσεις, ειδικές εφαρμογές για παιδιά, ΑΜΕΑ και διεθνές κοινό, καθώς και ένα φιλικό προς τον χρήστη ιστότοπο, που ενσωματώνει σύγχρονα εργαλεία και τεχνολογίες. Το έργο αποσκοπεί στην ενίσχυση της διαδραστικότητας και της προσβασιμότητας, την προσέλκυση νέων ακροατηρίων, τη σύνδεση με την εκπαιδευτική και τουριστική κοινότητα, καθώς και τη μακροπρόθεσμη βιωσιμότητα του Ωδείου. Το έργο συνδυάζει την ιστορική ταυτότητα του ΚΩΘ με καινοτόμες πρακτικές, εδραιώνοντάς το ως έναν σύγχρονο και ανοιχτό πολιτιστικό οργανισμό με διεθνή εμβέλεια</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">687764.52</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">79822500</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">30200000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:CountrySubentityCode listName="nuts">EL522</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">30</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>

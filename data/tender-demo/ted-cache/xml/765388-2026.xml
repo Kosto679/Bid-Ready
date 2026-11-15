@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efbc:AcquiringCPBIndicator>false</efbc:AcquiringCPBIndicator>
+                     <efbc:AwardingCPBIndicator>false</efbc:AwardingCPBIndicator>
+                     <efac:Company>
+                        <cbc:WebsiteURI>www.pvaigaiou.gov.gr</cbc:WebsiteURI>
+                        <cbc:EndpointID>https://www.pvaigaiou.gov.gr/</cbc:EndpointID>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">ΠΕΡΙΦΕΡΕΙΑ ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Κουντουριώτη 1</cbc:StreetName>
+                           <cbc:Department>Γενική Διεύθυνση Περιφερειακής Αγροτικής Οικονομίας, Κτηνιατρικής και Αλιείας</cbc:Department>
+                           <cbc:CityName>ΜΥΤΙΛΗΝΗ</cbc:CityName>
+                           <cbc:PostalZone>81100</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL411</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>1007.911.0001</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Name>Δήμητρα Παπαδοπούλου, Γενική Διευθύντρια – Γενική Διεύθυνση Περιφερειακής Αγροτικής Οικονομίας, Κτηνιατρικής και Αλιείας, Καραντώνη 2, 811 00 Μυτιλήνη</cbc:Name>
+                           <cbc:Telephone>+30 2251046667-660</cbc:Telephone>
+                           <cbc:ElectronicMail>d.papadopoulou@pvaigaiou.gov.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://www.aeppprocurement.gr/</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">Ενιαία Αρχή Δημοσίων Συμβάσεων (ΕΑΔΗΣΥ)</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>ΔΩΡΟΥ 7-9</cbc:StreetName>
+                           <cbc:CityName>ΑΘΗΝΑ</cbc:CityName>
+                           <cbc:PostalZone>10432</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>1000.E00961.0001</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+302132141227</cbc:Telephone>
+                           <cbc:Telefax>+302132141227</cbc:Telefax>
+                           <cbc:ElectronicMail>grafeioproedrou@aepp.procurement.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://op.europa.eu</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">Publications Office of the European Union</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <cbc:PostalZone>2417</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>PUBL</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+352 29291</cbc:Telephone>
+                           <cbc:ElectronicMail>ted@publications.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+            <efac:Publication><efbc:NoticePublicationID schemeName="ojs-notice-id">00765388-2026</efbc:NoticePublicationID><efbc:GazetteID schemeName="ojs-id">214/2026</efbc:GazetteID><efbc:PublicationDate>2026-11-04+01:00</efbc:PublicationDate></efac:Publication></efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-1.14</cbc:CustomizationID>
+   <cbc:ID schemeName="notice-id">c94f8461-9b1a-46da-8b90-a2369b51120b</cbc:ID>
+   <cbc:ContractFolderID>ceabe541-1232-4824-9123-e99d7c564870</cbc:ContractFolderID>
+   <cbc:IssueDate>2026-11-02Z</cbc:IssueDate>
+   <cbc:IssueTime>21:20:56Z</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode listName="language">ELL</cbc:NoticeLanguageCode>
+   <cac:ContractingParty>
+      <cbc:BuyerProfileURI>https://www.pvaigaiou.gov.gr/</cbc:BuyerProfileURI>
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">ra</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:ServiceProviderParty>
+            <cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:Party>
+         </cac:ServiceProviderParty>
+         <cac:ServiceProviderParty>
+            <cbc:ServiceTypeCode listName="organisation-role">serv-prov</cbc:ServiceTypeCode>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:Party>
+         </cac:ServiceProviderParty>
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:TenderingTerms>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-grounds-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+   </cac:TenderingTerms>
+   <cac:TenderingProcess>
+      <cbc:Description languageID="ELL">Ο διαγωνισμός θα διεξαχθεί με την ανοικτή διαδικασία του άρθρου 27 του ν. 4412/16, όπως ισχύει.</cbc:Description>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <cac:ProcessJustification>
+         <cbc:ProcessReasonCode listName="accelerated-procedure">false</cbc:ProcessReasonCode>
+      </cac:ProcessJustification>
+   </cac:TenderingProcess>
+   <cac:ProcurementProject>
+      <cbc:Name languageID="ELL">Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)</cbc:Name>
+      <cbc:Description languageID="ELL">Αντικείμενο της σύμβασης είναι η υλοποίηση του Πακέτου Εργασίας 4 (WP4) «Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό» της Πράξης «Socioeconomic Development of Just Transition areas of the Region of North Aegean» (Project 101284802 – 2025-10-EL-LS-SETRNA): η δημιουργία και λειτουργία ενός ολοκληρωμένου, πολυεπίπεδου και διαλειτουργικού συστήματος πρόληψης, επιτήρησης και έγκαιρης διαχείρισης συμβάντων ασφάλειας σε παράκτιες περιοχές της Περιφέρειας Βορείου Αιγαίου. Περιλαμβάνει τρεις (3) έξυπνους πολυλειτουργικούς πυλώνες παράκτιας ασφάλειας και περιβαλλοντικής παρακολούθησης, δίκτυο αισθητήρων πεδίου και οπτικής επιτήρησης, δεκαοκτώ (18) τηλεκατευθυνόμενα αυτόνομα επιφανειακά μέσα διάσωσης (USV) και ρομποτικά σωσίβια, ψηφιακή πλατφόρμα ενημέρωσης με εφαρμογή για κατοίκους και επισκέπτες, κεντρικό περιβάλλον διαχείρισης και ελέγχου (Command &amp; Control Center), ολοκλήρωση, δοκιμές και επιχειρησιακή επικύρωση, καθώς και τουλάχιστον τέσσερις (4) δράσεις εκπαίδευσης. Παραδοτέα: D4.1 – Τεχνικός σχεδιασμός και σχέδιο υλοποίησης του συστήματος Ασφαλούς Τουρισμού· D4.2 – Εγκατάσταση έξυπνων πυλώνων ασφάλειας παραλίας και εξοπλισμού υποστήριξης διάσωσης· D4.3 – Ψηφιακή πλατφόρμα και κεντρικό σύστημα διαχείρισης· D4.4 – Εκπαίδευση, δοκιμές και επιχειρησιακή ετοιμότητα του συστήματος Ασφαλούς Τουρισμού. Η αναλυτική περιγραφή περιλαμβάνεται στο Παράρτημα Ι της Διακήρυξης.</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <cbc:Note languageID="ELL">Η σύμβαση αποτελεί το υποέργο «Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό» του έργου «Οικονομική Διαφοροποίηση στην Περιφέρεια Βορείου Αιγαίου» (κωδικός έργου ΑΠΔΕ 101246513, ενάριθμος ΠΔΕ 2026ΕΠ08820000). Το έργο εντάχθηκε στη ΣΑ ΕΠ0882 του Προγράμματος Δημοσίων Επενδύσεων με την υπ’ αριθ. 1831 απόφαση του Αναπληρωτή Υπουργού Εθνικής Οικονομίας και Οικονομικών (αρ. πρωτ. 2148/26-10-2026, ΑΔΑ: 96Θ9Η-Ξ1Ν) και χρηματοδοτείται από τον Μηχανισμό Δανειακής Διευκόλυνσης του Δημόσιου Τομέα στο πλαίσιο του Πυλώνα ΙΙΙ του Μηχανισμού Δίκαιης Μετάβασης. Πρωτογενές αίτημα ΚΗΜΔΗΣ: ΑΔΑΜ 26REQ020103211· εγκεκριμένο αίτημα ΚΗΜΔΗΣ: ΑΔΑΜ 26REQ020103256.</cbc:Note>
+      <cac:RequestedTenderTotal>
+         <cbc:EstimatedOverallContractAmount currencyID="EUR">2564102.56</cbc:EstimatedOverallContractAmount>
+      </cac:RequestedTenderTotal>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">72262000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">72261000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">35120000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">35112000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">80510000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">72224000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:StreetName>ΚΟΥΝΤΟΥΡΙΩΤΗ 1</cbc:StreetName>
+            <cbc:CityName>ΜΥΤΙΛΗΝΗ</cbc:CityName>
+            <cbc:PostalZone>81100</cbc:PostalZone>
+            <cbc:CountrySubentityCode listName="nuts">EL411</cbc:CountrySubentityCode>
+            <cac:Country>
+               <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:Address>
+      </cac:RealizedLocation>
+   </cac:ProcurementProject>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:Funding>
+                        <efbc:FinancingIdentifier>Η σύμβαση εντάσσεται στην Πράξη «Socioeconomic Development of Just Transition areas of the Region of North Aegean» (Project 101284802 – 2025-10-EL-LS-SETRNA), Πυλώνας ΙΙΙ του Μηχανισμού Δίκαιης Μετάβασης (Just Transition Mechanism). Χρηματοδότηση (3.000.000,00 € με ΦΠΑ): 72% (2.160.000,00 €) δανειακή χρηματοδότηση της Ευρωπαϊκής Τράπεζας Επενδύσεων (FI No 99.261), 18% (540.000,00 €) επιχορήγηση της Ευρωπαϊκής Ένωσης (Grant Agreement CINEA, Ref. Ares(2026)6647616 – 02/07/2026) και 10% (300.000,00 €) εθνικοί πόροι. Η σύμβαση αποτελεί υποέργο του έργου «Οικονομική Διαφοροποίηση στην Περιφέρεια Βορείου Αιγαίου» (κωδικός έργου ΑΠΔΕ 101246513, ενάριθμος ΠΔΕ 2026ΕΠ08820000). Το έργο εντάχθηκε στη ΣΑ ΕΠ0882 του Προγράμματος Δημοσίων Επενδύσεων με την υπ’ αριθ. 1831 απόφαση του Αναπληρωτή Υπουργού Εθνικής Οικονομίας και Οικονομικών (αρ. πρωτ. 2148/26-10-2026, ΑΔΑ: 96Θ9Η-Ξ1Ν) και χρηματοδοτείται από τον Μηχανισμό Δανειακής Διευκόλυνσης του Δημόσιου Τομέα στο πλαίσιο του Πυλώνα ΙΙΙ του Μηχανισμού Δίκαιης Μετάβασης.</efbc:FinancingIdentifier>
+                     </efac:Funding>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <cac:RequiredFinancialGuarantee>
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <cbc:Description languageID="ELL">Εγγυητική επιστολή συμμετοχής ποσού 51.282,05 € (2% της εκτιμώμενης αξίας χωρίς ΦΠΑ), με ισχύ τουλάχιστον 90 ημέρες μετά τη λήξη της ισχύος της προσφοράς, ήτοι έως 07/03/2028 (παρ. 2.2.2 της Διακήρυξης).</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>WP4</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://www.promitheus.gov.gr,https://www.pvaigaiou.gov.gr</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cbc:CalculationExpression languageID="ELL">Πλέον συμφέρουσα από οικονομική άποψη προσφορά βάσει της βέλτιστης σχέσης ποιότητας – τιμής. Λi = 80 × (Bi / Bmax) + 20 × (Kmin / Ki), όπου Bi η σταθμισμένη βαθμολογία της τεχνικής προσφοράς και Ki το συγκριτικό κόστος της προσφοράς (παρ. 2.3.2.2 της Διακήρυξης).</cbc:CalculationExpression>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">Κ1 – Συνολική αρχιτεκτονική και ολοκλήρωση υποσυστημάτων.</cbc:Name>
+                  <cbc:Description languageID="ELL">Συντελεστής βαρύτητας 15% επί της βαθμολογίας της τεχνικής προσφοράς· βαθμολογία 100–150 κατά την παρ. 2.3.1 της Διακήρυξης. Βαρύτητα (ποσοστό): 12</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">Κ2 – Έξυπνες υποδομές πεδίου. </cbc:Name>
+                  <cbc:Description languageID="ELL">Συντελεστής βαρύτητας 25% επί της βαθμολογίας της τεχνικής προσφοράς· βαθμολογία 100–150 κατά την παρ. 2.3.1 της Διακήρυξης. Βαρύτητα (ποσοστό): 20</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">Κ3 – Επιχειρησιακά μέσα και εξοπλισμός υποστήριξης διάσωσης. </cbc:Name>
+                  <cbc:Description languageID="ELL">Συντελεστής βαρύτητας 15% επί της βαθμολογίας της τεχνικής προσφοράς· βαθμολογία 100–150 κατά την παρ. 2.3.1 της Διακήρυξης. Βαρύτητα (ποσοστό): 12</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">Κ4 – Μεθοδολογία υλοποίησης, ολοκλήρωσης, δοκιμών, εκπαίδευσης και τεχνικής υποστήριξης. </cbc:Name>
+                  <cbc:Description languageID="ELL">Συντελεστής βαρύτητας 10% επί της βαθμολογίας της τεχνικής προσφοράς· βαθμολογία 100–150 κατά την παρ. 2.3.1 της Διακήρυξης. Βαρύτητα (ποσοστό): 8</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">Κ5 – Πληροφοριακά Συστήματα και Ψηφιακές Υποδομές. </cbc:Name>
+                  <cbc:Description languageID="ELL">Συντελεστής βαρύτητας 35% επί της βαθμολογίας της τεχνικής προσφοράς· βαθμολογία 100–150 κατά την παρ. 2.3.1 της Διακήρυξης. Περιλαμβάνει παράμετρο ανεξάρτητης αξιολόγησης ασφάλειας της προσφερόμενης λύσης (25 επιπλέον μονάδες). Βαρύτητα (ποσοστό): 28</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="ELL">Τιμή</cbc:Name>
+                  <cbc:Description languageID="ELL">Συγκριτικό κόστος κατά την παρ. 2.3.2 της Διακήρυξης. Βαρύτητα (ποσοστό): 20</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://www.promitheus.gov.gr</cbc:EndpointID>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderRecipientParty>
+         <cac:TenderEvaluationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:TenderEvaluationParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-12-08+02:00</cbc:EndDate>
+            <cbc:EndTime>20:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-12-14+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>12:00:00+02:00</cbc:OccurrenceTime>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="ELL">Ηλεκτρονικά, μέσω της πλατφόρμας ΕΣΗΔΗΣ (www.promitheus.gov.gr), από την Επιτροπή Διενέργειας του Διαγωνισμού στα γραφεία της Περιφέρειας Βορείου Αιγαίου, Κουντουριώτη 1, 811 00 Μυτιλήνη</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:Name languageID="ELL">Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό (Πακέτο Εργασίας 4 – WP4, Ασφαλής Τουρισμός – Safe Tourism)</cbc:Name>
+         <cbc:Description languageID="ELL">Αντικείμενο της σύμβασης είναι η υλοποίηση του Πακέτου Εργασίας 4 (WP4) «Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό» της Πράξης «Socioeconomic Development of Just Transition areas of the Region of North Aegean» (Project 101284802 – 2025-10-EL-LS-SETRNA): η δημιουργία και λειτουργία ενός ολοκληρωμένου, πολυεπίπεδου και διαλειτουργικού συστήματος πρόληψης, επιτήρησης και έγκαιρης διαχείρισης συμβάντων ασφάλειας σε παράκτιες περιοχές της Περιφέρειας Βορείου Αιγαίου. Περιλαμβάνει τρεις (3) έξυπνους πολυλειτουργικούς πυλώνες παράκτιας ασφάλειας και περιβαλλοντικής παρακολούθησης, δίκτυο αισθητήρων πεδίου και οπτικής επιτήρησης, δεκαοκτώ (18) τηλεκατευθυνόμενα αυτόνομα επιφανειακά μέσα διάσωσης (USV) και ρομποτικά σωσίβια, ψηφιακή πλατφόρμα ενημέρωσης με εφαρμογή για κατοίκους και επισκέπτες, κεντρικό περιβάλλον διαχείρισης και ελέγχου (Command &amp; Control Center), ολοκλήρωση, δοκιμές και επιχειρησιακή επικύρωση, καθώς και τουλάχιστον τέσσερις (4) δράσεις εκπαίδευσης. Παραδοτέα: D4.1 – Τεχνικός σχεδιασμός και σχέδιο υλοποίησης του συστήματος Ασφαλούς Τουρισμού· D4.2 – Εγκατάσταση έξυπνων πυλώνων ασφάλειας παραλίας και εξοπλισμού υποστήριξης διάσωσης· D4.3 – Ψηφιακή πλατφόρμα και κεντρικό σύστημα διαχείρισης· D4.4 – Εκπαίδευση, δοκιμές και επιχειρησιακή ετοιμότητα του συστήματος Ασφαλούς Τουρισμού. Η αναλυτική περιγραφή περιλαμβάνεται στο Παράρτημα Ι της Διακήρυξης.</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cbc:Note languageID="ELL">Η σύμβαση αποτελεί το υποέργο «Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό» του έργου «Οικονομική Διαφοροποίηση στην Περιφέρεια Βορείου Αιγαίου» (κωδικός έργου ΑΠΔΕ 101246513, ενάριθμος ΠΔΕ 2026ΕΠ08820000). Το έργο εντάχθηκε στη ΣΑ ΕΠ0882 του Προγράμματος Δημοσίων Επενδύσεων με την υπ’ αριθ. 1831 απόφαση του Αναπληρωτή Υπουργού Εθνικής Οικονομίας και Οικονομικών (αρ. πρωτ. 2148/26-10-2026, ΑΔΑ: 96Θ9Η-Ξ1Ν) και χρηματοδοτείται από τον Μηχανισμό Δανειακής Διευκόλυνσης του Δημόσιου Τομέα στο πλαίσιο του Πυλώνα ΙΙΙ του Μηχανισμού Δίκαιης Μετάβασης. Πρωτογενές αίτημα ΚΗΜΔΗΣ: ΑΔΑΜ 26REQ020103211· εγκεκριμένο αίτημα ΚΗΜΔΗΣ: ΑΔΑΜ 26REQ020103256.</cbc:Note>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">2564102.56</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72262000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72261000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">35120000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">35112000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">80510000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72224000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:RealizedLocation>
+            <cbc:Description languageID="ELL">ΟΠΩΣ ΠΡΟΒΛΕΠΕΤΑΙ ΣΤΗΝ ΔΙΑΚΗΡΥΞΗ</cbc:Description>
+            <cac:Address>
+               <cbc:CityName>ΜΥΤΙΛΗΝΗ</cbc:CityName>
+               <cbc:PostalZone>81100</cbc:PostalZone>
+               <cbc:CountrySubentityCode listName="nuts">EL411</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">22</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>

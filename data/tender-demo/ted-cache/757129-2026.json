@@ -1,0 +1,176 @@
+{
+ "notices": [
+  {
+   "place-of-performance": [
+    "EL303",
+    "GRC",
+    "EL303",
+    "GRC"
+   ],
+   "deadline-receipt-tender-date-lot": [
+    "2026-12-04+02:00"
+   ],
+   "notice-type": "cn-standard",
+   "publication-number": "757129-2026",
+   "estimated-value-lot": [
+    "6200000"
+   ],
+   "estimated-value-cur-proc": "EUR",
+   "buyer-country": [
+    "GRC"
+   ],
+   "deadline-receipt-tender-time-lot": [
+    "14:00:00+02:00"
+   ],
+   "classification-cpv": [
+    "66171000",
+    "72000000",
+    "79111000",
+    "79400000",
+    "79340000",
+    "79416200",
+    "79342200",
+    "92111210",
+    "79341000",
+    "72413000",
+    "79341400",
+    "79341200",
+    "72000000",
+    "66171000",
+    "79111000",
+    "79410000",
+    "79340000",
+    "79416200",
+    "79342200",
+    "92111210",
+    "79341000",
+    "79341400",
+    "79341200",
+    "72413000"
+   ],
+   "buyer-name": {
+    "ell": [
+     "ΟΙΚΟΝΟΜΙΚΟ ΕΠΙΜΕΛΗΤΗΡΙΟ ΤΗΣ ΕΛΛΑΔΑΣ"
+    ]
+   },
+   "publication-date": "2026-11-02+01:00",
+   "estimated-value-proc": "6200000",
+   "links": {
+    "xml": {
+     "MUL": "https://ted.europa.eu/en/notice/757129-2026/xml"
+    },
+    "pdf": {
+     "BUL": "https://ted.europa.eu/bg/notice/757129-2026/pdf",
+     "SPA": "https://ted.europa.eu/es/notice/757129-2026/pdf",
+     "CES": "https://ted.europa.eu/cs/notice/757129-2026/pdf",
+     "DAN": "https://ted.europa.eu/da/notice/757129-2026/pdf",
+     "DEU": "https://ted.europa.eu/de/notice/757129-2026/pdf",
+     "EST": "https://ted.europa.eu/et/notice/757129-2026/pdf",
+     "ELL": "https://ted.europa.eu/el/notice/757129-2026/pdf",
+     "ENG": "https://ted.europa.eu/en/notice/757129-2026/pdf",
+     "FRA": "https://ted.europa.eu/fr/notice/757129-2026/pdf",
+     "GLE": "https://ted.europa.eu/ga/notice/757129-2026/pdf",
+     "HRV": "https://ted.europa.eu/hr/notice/757129-2026/pdf",
+     "ITA": "https://ted.europa.eu/it/notice/757129-2026/pdf",
+     "LAV": "https://ted.europa.eu/lv/notice/757129-2026/pdf",
+     "LIT": "https://ted.europa.eu/lt/notice/757129-2026/pdf",
+     "HUN": "https://ted.europa.eu/hu/notice/757129-2026/pdf",
+     "MLT": "https://ted.europa.eu/mt/notice/757129-2026/pdf",
+     "NLD": "https://ted.europa.eu/nl/notice/757129-2026/pdf",
+     "POL": "https://ted.europa.eu/pl/notice/757129-2026/pdf",
+     "POR": "https://ted.europa.eu/pt/notice/757129-2026/pdf",
+     "RON": "https://ted.europa.eu/ro/notice/757129-2026/pdf",
+     "SLK": "https://ted.europa.eu/sk/notice/757129-2026/pdf",
+     "SLV": "https://ted.europa.eu/sl/notice/757129-2026/pdf",
+     "FIN": "https://ted.europa.eu/fi/notice/757129-2026/pdf",
+     "SWE": "https://ted.europa.eu/sv/notice/757129-2026/pdf"
+    },
+    "pdfs": {
+     "ELL": "https://ted.europa.eu/el/notice/757129-2026/pdfs"
+    },
+    "html": {
+     "BUL": "https://ted.europa.eu/bg/notice/-/detail/757129-2026",
+     "SPA": "https://ted.europa.eu/es/notice/-/detail/757129-2026",
+     "CES": "https://ted.europa.eu/cs/notice/-/detail/757129-2026",
+     "DAN": "https://ted.europa.eu/da/notice/-/detail/757129-2026",
+     "DEU": "https://ted.europa.eu/de/notice/-/detail/757129-2026",
+     "EST": "https://ted.europa.eu/et/notice/-/detail/757129-2026",
+     "ELL": "https://ted.europa.eu/el/notice/-/detail/757129-2026",
+     "ENG": "https://ted.europa.eu/en/notice/-/detail/757129-2026",
+     "FRA": "https://ted.europa.eu/fr/notice/-/detail/757129-2026",
+     "GLE": "https://ted.europa.eu/ga/notice/-/detail/757129-2026",
+     "HRV": "https://ted.europa.eu/hr/notice/-/detail/757129-2026",
+     "ITA": "https://ted.europa.eu/it/notice/-/detail/757129-2026",
+     "LAV": "https://ted.europa.eu/lv/notice/-/detail/757129-2026",
+     "LIT": "https://ted.europa.eu/lt/notice/-/detail/757129-2026",
+     "HUN": "https://ted.europa.eu/hu/notice/-/detail/757129-2026",
+     "MLT": "https://ted.europa.eu/mt/notice/-/detail/757129-2026",
+     "NLD": "https://ted.europa.eu/nl/notice/-/detail/757129-2026",
+     "POL": "https://ted.europa.eu/pl/notice/-/detail/757129-2026",
+     "POR": "https://ted.europa.eu/pt/notice/-/detail/757129-2026",
+     "RON": "https://ted.europa.eu/ro/notice/-/detail/757129-2026",
+     "SLK": "https://ted.europa.eu/sk/notice/-/detail/757129-2026",
+     "SLV": "https://ted.europa.eu/sl/notice/-/detail/757129-2026",
+     "FIN": "https://ted.europa.eu/fi/notice/-/detail/757129-2026",
+     "SWE": "https://ted.europa.eu/sv/notice/-/detail/757129-2026"
+    },
+    "htmlDirect": {
+     "BUL": "https://ted.europa.eu/bg/notice/757129-2026/html",
+     "SPA": "https://ted.europa.eu/es/notice/757129-2026/html",
+     "CES": "https://ted.europa.eu/cs/notice/757129-2026/html",
+     "DAN": "https://ted.europa.eu/da/notice/757129-2026/html",
+     "DEU": "https://ted.europa.eu/de/notice/757129-2026/html",
+     "EST": "https://ted.europa.eu/et/notice/757129-2026/html",
+     "ELL": "https://ted.europa.eu/el/notice/757129-2026/html",
+     "ENG": "https://ted.europa.eu/en/notice/757129-2026/html",
+     "FRA": "https://ted.europa.eu/fr/notice/757129-2026/html",
+     "GLE": "https://ted.europa.eu/ga/notice/757129-2026/html",
+     "HRV": "https://ted.europa.eu/hr/notice/757129-2026/html",
+     "ITA": "https://ted.europa.eu/it/notice/757129-2026/html",
+     "LAV": "https://ted.europa.eu/lv/notice/757129-2026/html",
+     "LIT": "https://ted.europa.eu/lt/notice/757129-2026/html",
+     "HUN": "https://ted.europa.eu/hu/notice/757129-2026/html",
+     "MLT": "https://ted.europa.eu/mt/notice/757129-2026/html",
+     "NLD": "https://ted.europa.eu/nl/notice/757129-2026/html",
+     "POL": "https://ted.europa.eu/pl/notice/757129-2026/html",
+     "POR": "https://ted.europa.eu/pt/notice/757129-2026/html",
+     "RON": "https://ted.europa.eu/ro/notice/757129-2026/html",
+     "SLK": "https://ted.europa.eu/sk/notice/757129-2026/html",
+     "SLV": "https://ted.europa.eu/sl/notice/757129-2026/html",
+     "FIN": "https://ted.europa.eu/fi/notice/757129-2026/html",
+     "SWE": "https://ted.europa.eu/sv/notice/757129-2026/html"
+    }
+   },
+   "notice-title": {
+    "hun": "Görögország – Pénzügyi tanácsadó szolgáltatások – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "lav": "Grieķija – Finanšu konsultāciju pakalpojumi – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "swe": "Grekland – Finansiell rådgivning – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "gle": "An Ghréig – Financial consultancy services – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "ell": "Ελλάδα – Υπηρεσίες παροχής οικονομικών συμβουλών – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "spa": "Grecia – Servicios de asesoramiento financiero – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "est": "Kreeka – Finantskonsultatsiooniteenused – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "nld": "Griekenland – Diensten voor financieel advies – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "fin": "Kreikka – Rahoitusneuvonta – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "pol": "Grecja – Doradztwo finansowe – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "hrv": "Grčka – Usluge financijskog savjetovanja – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "ces": "Řecko – Finanční poradenství – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "dan": "Grækenland – Finansielle konsulentydelser – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "ron": "Grecia – Servicii de consultanţă financiară – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "por": "Grécia – Serviços de consultoria financeira – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "slk": "Grécko – Finančné poradenstvo – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "fra": "Grèce – Services de conseils financiers – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "mlt": "Il-Greċja – Servizzi ta' konsulenza finanzjarja – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "deu": "Griechenland – Finanzberatung – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "lit": "Graikija – Finansų konsultacinės paslaugos – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "ita": "Grecia – Servizi di consulenza finanziaria – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "bul": "Гъpция – Финансови консултантски услуги – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "slv": "Grčija – Storitve finančnega svetovanja – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα",
+    "eng": "Greece – Financial consultancy services – Ανάπτυξη Οικοσυστήματος FinTech στην Ελλάδα"
+   },
+   "form-type": "competition"
+  }
+ ],
+ "totalNoticeCount": 1,
+ "iterationNextToken": null,
+ "timedOut": false
+}

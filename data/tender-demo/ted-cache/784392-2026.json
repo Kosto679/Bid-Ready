@@ -1,0 +1,151 @@
+{
+ "notices": [
+  {
+   "place-of-performance": [
+    "EL301",
+    "GRC",
+    "EL301",
+    "GRC"
+   ],
+   "deadline-receipt-tender-date-lot": [
+    "2031-11-09+02:00"
+   ],
+   "notice-type": "cn-standard",
+   "deadline-receipt-tender-time-lot": [
+    "23:59:00+02:00"
+   ],
+   "publication-number": "784392-2026",
+   "classification-cpv": [
+    "72000000",
+    "79000000",
+    "72000000",
+    "79000000"
+   ],
+   "buyer-name": {
+    "eng": [
+     "European Union Agency for Cybersecurity"
+    ]
+   },
+   "publication-date": "2026-11-11+01:00",
+   "links": {
+    "xml": {
+     "MUL": "https://ted.europa.eu/en/notice/784392-2026/xml"
+    },
+    "pdf": {
+     "BUL": "https://ted.europa.eu/bg/notice/784392-2026/pdf",
+     "SPA": "https://ted.europa.eu/es/notice/784392-2026/pdf",
+     "CES": "https://ted.europa.eu/cs/notice/784392-2026/pdf",
+     "DAN": "https://ted.europa.eu/da/notice/784392-2026/pdf",
+     "DEU": "https://ted.europa.eu/de/notice/784392-2026/pdf",
+     "EST": "https://ted.europa.eu/et/notice/784392-2026/pdf",
+     "ELL": "https://ted.europa.eu/el/notice/784392-2026/pdf",
+     "ENG": "https://ted.europa.eu/en/notice/784392-2026/pdf",
+     "FRA": "https://ted.europa.eu/fr/notice/784392-2026/pdf",
+     "GLE": "https://ted.europa.eu/ga/notice/784392-2026/pdf",
+     "HRV": "https://ted.europa.eu/hr/notice/784392-2026/pdf",
+     "ITA": "https://ted.europa.eu/it/notice/784392-2026/pdf",
+     "LAV": "https://ted.europa.eu/lv/notice/784392-2026/pdf",
+     "LIT": "https://ted.europa.eu/lt/notice/784392-2026/pdf",
+     "HUN": "https://ted.europa.eu/hu/notice/784392-2026/pdf",
+     "MLT": "https://ted.europa.eu/mt/notice/784392-2026/pdf",
+     "NLD": "https://ted.europa.eu/nl/notice/784392-2026/pdf",
+     "POL": "https://ted.europa.eu/pl/notice/784392-2026/pdf",
+     "POR": "https://ted.europa.eu/pt/notice/784392-2026/pdf",
+     "RON": "https://ted.europa.eu/ro/notice/784392-2026/pdf",
+     "SLK": "https://ted.europa.eu/sk/notice/784392-2026/pdf",
+     "SLV": "https://ted.europa.eu/sl/notice/784392-2026/pdf",
+     "FIN": "https://ted.europa.eu/fi/notice/784392-2026/pdf",
+     "SWE": "https://ted.europa.eu/sv/notice/784392-2026/pdf"
+    },
+    "pdfs": {
+     "ENG": "https://ted.europa.eu/en/notice/784392-2026/pdfs"
+    },
+    "html": {
+     "BUL": "https://ted.europa.eu/bg/notice/-/detail/784392-2026",
+     "SPA": "https://ted.europa.eu/es/notice/-/detail/784392-2026",
+     "CES": "https://ted.europa.eu/cs/notice/-/detail/784392-2026",
+     "DAN": "https://ted.europa.eu/da/notice/-/detail/784392-2026",
+     "DEU": "https://ted.europa.eu/de/notice/-/detail/784392-2026",
+     "EST": "https://ted.europa.eu/et/notice/-/detail/784392-2026",
+     "ELL": "https://ted.europa.eu/el/notice/-/detail/784392-2026",
+     "ENG": "https://ted.europa.eu/en/notice/-/detail/784392-2026",
+     "FRA": "https://ted.europa.eu/fr/notice/-/detail/784392-2026",
+     "GLE": "https://ted.europa.eu/ga/notice/-/detail/784392-2026",
+     "HRV": "https://ted.europa.eu/hr/notice/-/detail/784392-2026",
+     "ITA": "https://ted.europa.eu/it/notice/-/detail/784392-2026",
+     "LAV": "https://ted.europa.eu/lv/notice/-/detail/784392-2026",
+     "LIT": "https://ted.europa.eu/lt/notice/-/detail/784392-2026",
+     "HUN": "https://ted.europa.eu/hu/notice/-/detail/784392-2026",
+     "MLT": "https://ted.europa.eu/mt/notice/-/detail/784392-2026",
+     "NLD": "https://ted.europa.eu/nl/notice/-/detail/784392-2026",
+     "POL": "https://ted.europa.eu/pl/notice/-/detail/784392-2026",
+     "POR": "https://ted.europa.eu/pt/notice/-/detail/784392-2026",
+     "RON": "https://ted.europa.eu/ro/notice/-/detail/784392-2026",
+     "SLK": "https://ted.europa.eu/sk/notice/-/detail/784392-2026",
+     "SLV": "https://ted.europa.eu/sl/notice/-/detail/784392-2026",
+     "FIN": "https://ted.europa.eu/fi/notice/-/detail/784392-2026",
+     "SWE": "https://ted.europa.eu/sv/notice/-/detail/784392-2026"
+    },
+    "htmlDirect": {
+     "BUL": "https://ted.europa.eu/bg/notice/784392-2026/html",
+     "SPA": "https://ted.europa.eu/es/notice/784392-2026/html",
+     "CES": "https://ted.europa.eu/cs/notice/784392-2026/html",
+     "DAN": "https://ted.europa.eu/da/notice/784392-2026/html",
+     "DEU": "https://ted.europa.eu/de/notice/784392-2026/html",
+     "EST": "https://ted.europa.eu/et/notice/784392-2026/html",
+     "ELL": "https://ted.europa.eu/el/notice/784392-2026/html",
+     "ENG": "https://ted.europa.eu/en/notice/784392-2026/html",
+     "FRA": "https://ted.europa.eu/fr/notice/784392-2026/html",
+     "GLE": "https://ted.europa.eu/ga/notice/784392-2026/html",
+     "HRV": "https://ted.europa.eu/hr/notice/784392-2026/html",
+     "ITA": "https://ted.europa.eu/it/notice/784392-2026/html",
+     "LAV": "https://ted.europa.eu/lv/notice/784392-2026/html",
+     "LIT": "https://ted.europa.eu/lt/notice/784392-2026/html",
+     "HUN": "https://ted.europa.eu/hu/notice/784392-2026/html",
+     "MLT": "https://ted.europa.eu/mt/notice/784392-2026/html",
+     "NLD": "https://ted.europa.eu/nl/notice/784392-2026/html",
+     "POL": "https://ted.europa.eu/pl/notice/784392-2026/html",
+     "POR": "https://ted.europa.eu/pt/notice/784392-2026/html",
+     "RON": "https://ted.europa.eu/ro/notice/784392-2026/html",
+     "SLK": "https://ted.europa.eu/sk/notice/784392-2026/html",
+     "SLV": "https://ted.europa.eu/sl/notice/784392-2026/html",
+     "FIN": "https://ted.europa.eu/fi/notice/784392-2026/html",
+     "SWE": "https://ted.europa.eu/sv/notice/784392-2026/html"
+    }
+   },
+   "buyer-country": [
+    "GRC"
+   ],
+   "notice-title": {
+    "hun": "Görögország – IT-szolgáltatások: tanácsadás, szoftverfejlesztés, internet és támogatás – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "lav": "Grieķija – IT pakalpojumi konsultēšana, programmatūras izstrāde, internets un atbalsts – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "swe": "Grekland – IT-tjänster: konsultverksamhet, programvaruutveckling, Internet och stöd – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "gle": "An Ghréig – IT services: consulting, software development, Internet and support – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "ell": "Ελλάδα – Υπηρεσίες τεχνολογίας των πληροφοριών: παροχή συμβουλών, ανάπτυξη λογισμικού, Διαδίκτυο και υποστήριξη – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "spa": "Grecia – Servicios TI: consultoría, desarrollo de software, Internet y apoyo – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "est": "Kreeka – IT-teenused: nõuande-, tarkvaraarendus-, Interneti- ja tugiteenused – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "nld": "Griekenland – IT-diensten: adviezen, softwareontwikkeling, internet en ondersteuning – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "fin": "Kreikka – Tietotekniset palvelut: neuvonta, ohjelmistojen kehittäminen, Internet ja tuki – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "pol": "Grecja – Usługi informatyczne: konsultacyjne, opracowywania oprogramowania, internetowe i wsparcia – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "hrv": "Grčka – Usluge informacijske tehnologije: savjetovanje, razvoj programske podrške, internet i podrška – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "ces": "Řecko – Informační technologie: poradenství, vývoj programového vybavení, internet a podpora – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "dan": "Grækenland – It-tjenester: rådgivning, programmeludvikling, internet og support – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "ron": "Grecia – Servicii IT: consultanţă, dezvoltare de software, internet şi asistenţă – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "por": "Grécia – Serviços de TI: consultoria, desenvolvimento de software, Internet e apoio – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "slk": "Grécko – Služby informačných technológií: konzultácie, vývoj softvéru, internet a podpora – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "fra": "Grèce – Services de technologies de l'information, conseil, développement de logiciels, internet et appui – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "mlt": "Il-Greċja – Servizzi ta' IT: konsulenza, żvilupp ta' softwer, Internet u appoġġ – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "deu": "Griechenland – IT-Dienste: Beratung, Software-Entwicklung, Internet und Hilfestellung – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "lit": "Graikija – IT paslaugos: konsultavimas, programinės įrangos kūrimas, internetas ir aptarnavimo paslaugos – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "ita": "Grecia – Servizi informatici: consulenza, sviluppo di software, Internet e supporto – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "bul": "Гъpция – ИТ услуги: консултации, разработване на софтуер, Интернет и поддръжка – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "slv": "Grčija – Storitve informacijske tehnologije: svetovanje, razvoj programske opreme, internet in podpora – Call for expression of interest (CEI) for the establishment of a list of external expert",
+    "eng": "Greece – IT services: consulting, software development, Internet and support – Call for expression of interest (CEI) for the establishment of a list of external expert"
+   },
+   "form-type": "competition"
+  }
+ ],
+ "totalNoticeCount": 1,
+ "iterationNextToken": null,
+ "timedOut": false
+}

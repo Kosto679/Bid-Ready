@@ -1,0 +1,166 @@
+{
+ "notices": [
+  {
+   "place-of-performance": [
+    "EL303",
+    "EL303",
+    "GRC",
+    "GRC",
+    "EL303",
+    "GRC"
+   ],
+   "deadline-receipt-tender-date-lot": [
+    "2026-12-04+02:00"
+   ],
+   "notice-type": "cn-standard",
+   "publication-number": "756230-2026",
+   "estimated-value-lot": [
+    "4045000"
+   ],
+   "estimated-value-cur-proc": "EUR",
+   "buyer-country": [
+    "GRC"
+   ],
+   "deadline-receipt-tender-time-lot": [
+    "14:00:00+02:00"
+   ],
+   "classification-cpv": [
+    "72212482",
+    "72223000",
+    "72224100",
+    "72221000",
+    "72316000",
+    "72261000",
+    "72263000",
+    "72268000",
+    "72267000",
+    "80533100",
+    "72212482",
+    "72223000"
+   ],
+   "buyer-name": {
+    "ell": [
+     "Υπουργείο Εθνικής Οικονομίας και Οικονομικών/Ειδική Γραμματεία Διαχείρισης Προγραμμάτων ΕΤΠΑ και ΤΣ/Ειδική Υπηρεσία Διαχείρισης Προγράμματος Ανταγωνιστικότητα"
+    ]
+   },
+   "publication-date": "2026-10-30+01:00",
+   "estimated-value-proc": "4045000",
+   "links": {
+    "xml": {
+     "MUL": "https://ted.europa.eu/en/notice/756230-2026/xml"
+    },
+    "pdf": {
+     "BUL": "https://ted.europa.eu/bg/notice/756230-2026/pdf",
+     "SPA": "https://ted.europa.eu/es/notice/756230-2026/pdf",
+     "CES": "https://ted.europa.eu/cs/notice/756230-2026/pdf",
+     "DAN": "https://ted.europa.eu/da/notice/756230-2026/pdf",
+     "DEU": "https://ted.europa.eu/de/notice/756230-2026/pdf",
+     "EST": "https://ted.europa.eu/et/notice/756230-2026/pdf",
+     "ELL": "https://ted.europa.eu/el/notice/756230-2026/pdf",
+     "ENG": "https://ted.europa.eu/en/notice/756230-2026/pdf",
+     "FRA": "https://ted.europa.eu/fr/notice/756230-2026/pdf",
+     "GLE": "https://ted.europa.eu/ga/notice/756230-2026/pdf",
+     "HRV": "https://ted.europa.eu/hr/notice/756230-2026/pdf",
+     "ITA": "https://ted.europa.eu/it/notice/756230-2026/pdf",
+     "LAV": "https://ted.europa.eu/lv/notice/756230-2026/pdf",
+     "LIT": "https://ted.europa.eu/lt/notice/756230-2026/pdf",
+     "HUN": "https://ted.europa.eu/hu/notice/756230-2026/pdf",
+     "MLT": "https://ted.europa.eu/mt/notice/756230-2026/pdf",
+     "NLD": "https://ted.europa.eu/nl/notice/756230-2026/pdf",
+     "POL": "https://ted.europa.eu/pl/notice/756230-2026/pdf",
+     "POR": "https://ted.europa.eu/pt/notice/756230-2026/pdf",
+     "RON": "https://ted.europa.eu/ro/notice/756230-2026/pdf",
+     "SLK": "https://ted.europa.eu/sk/notice/756230-2026/pdf",
+     "SLV": "https://ted.europa.eu/sl/notice/756230-2026/pdf",
+     "FIN": "https://ted.europa.eu/fi/notice/756230-2026/pdf",
+     "SWE": "https://ted.europa.eu/sv/notice/756230-2026/pdf"
+    },
+    "pdfs": {
+     "ELL": "https://ted.europa.eu/el/notice/756230-2026/pdfs"
+    },
+    "html": {
+     "BUL": "https://ted.europa.eu/bg/notice/-/detail/756230-2026",
+     "SPA": "https://ted.europa.eu/es/notice/-/detail/756230-2026",
+     "CES": "https://ted.europa.eu/cs/notice/-/detail/756230-2026",
+     "DAN": "https://ted.europa.eu/da/notice/-/detail/756230-2026",
+     "DEU": "https://ted.europa.eu/de/notice/-/detail/756230-2026",
+     "EST": "https://ted.europa.eu/et/notice/-/detail/756230-2026",
+     "ELL": "https://ted.europa.eu/el/notice/-/detail/756230-2026",
+     "ENG": "https://ted.europa.eu/en/notice/-/detail/756230-2026",
+     "FRA": "https://ted.europa.eu/fr/notice/-/detail/756230-2026",
+     "GLE": "https://ted.europa.eu/ga/notice/-/detail/756230-2026",
+     "HRV": "https://ted.europa.eu/hr/notice/-/detail/756230-2026",
+     "ITA": "https://ted.europa.eu/it/notice/-/detail/756230-2026",
+     "LAV": "https://ted.europa.eu/lv/notice/-/detail/756230-2026",
+     "LIT": "https://ted.europa.eu/lt/notice/-/detail/756230-2026",
+     "HUN": "https://ted.europa.eu/hu/notice/-/detail/756230-2026",
+     "MLT": "https://ted.europa.eu/mt/notice/-/detail/756230-2026",
+     "NLD": "https://ted.europa.eu/nl/notice/-/detail/756230-2026",
+     "POL": "https://ted.europa.eu/pl/notice/-/detail/756230-2026",
+     "POR": "https://ted.europa.eu/pt/notice/-/detail/756230-2026",
+     "RON": "https://ted.europa.eu/ro/notice/-/detail/756230-2026",
+     "SLK": "https://ted.europa.eu/sk/notice/-/detail/756230-2026",
+     "SLV": "https://ted.europa.eu/sl/notice/-/detail/756230-2026",
+     "FIN": "https://ted.europa.eu/fi/notice/-/detail/756230-2026",
+     "SWE": "https://ted.europa.eu/sv/notice/-/detail/756230-2026"
+    },
+    "htmlDirect": {
+     "BUL": "https://ted.europa.eu/bg/notice/756230-2026/html",
+     "SPA": "https://ted.europa.eu/es/notice/756230-2026/html",
+     "CES": "https://ted.europa.eu/cs/notice/756230-2026/html",
+     "DAN": "https://ted.europa.eu/da/notice/756230-2026/html",
+     "DEU": "https://ted.europa.eu/de/notice/756230-2026/html",
+     "EST": "https://ted.europa.eu/et/notice/756230-2026/html",
+     "ELL": "https://ted.europa.eu/el/notice/756230-2026/html",
+     "ENG": "https://ted.europa.eu/en/notice/756230-2026/html",
+     "FRA": "https://ted.europa.eu/fr/notice/756230-2026/html",
+     "GLE": "https://ted.europa.eu/ga/notice/756230-2026/html",
+     "HRV": "https://ted.europa.eu/hr/notice/756230-2026/html",
+     "ITA": "https://ted.europa.eu/it/notice/756230-2026/html",
+     "LAV": "https://ted.europa.eu/lv/notice/756230-2026/html",
+     "LIT": "https://ted.europa.eu/lt/notice/756230-2026/html",
+     "HUN": "https://ted.europa.eu/hu/notice/756230-2026/html",
+     "MLT": "https://ted.europa.eu/mt/notice/756230-2026/html",
+     "NLD": "https://ted.europa.eu/nl/notice/756230-2026/html",
+     "POL": "https://ted.europa.eu/pl/notice/756230-2026/html",
+     "POR": "https://ted.europa.eu/pt/notice/756230-2026/html",
+     "RON": "https://ted.europa.eu/ro/notice/756230-2026/html",
+     "SLK": "https://ted.europa.eu/sk/notice/756230-2026/html",
+     "SLV": "https://ted.europa.eu/sl/notice/756230-2026/html",
+     "FIN": "https://ted.europa.eu/fi/notice/756230-2026/html",
+     "SWE": "https://ted.europa.eu/sv/notice/756230-2026/html"
+    }
+   },
+   "notice-title": {
+    "hun": "Görögország – Üzletiintelligencia-szoftverek fejlesztésével kapcsolatos szolgáltatások – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "lav": "Grieķija – Komercizpētes programmatūras izstrādes pakalpojumi – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "swe": "Grekland – Programvaruutvecklingstjänster för affärsunderrättelser – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "gle": "An Ghréig – Business intelligence software development services – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "ell": "Ελλάδα – Υπηρεσίες ανάπτυξης λογισμικού επιχειρηματικών πληροφοριών – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "spa": "Grecia – Servicios de desarrollo de software de inteligencia empresarial – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "est": "Kreeka – Ettevõtlusteabe tarkvara arendusteenused – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "nld": "Griekenland – Diensten voor ontwikkeling van business intelligence software – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "fin": "Kreikka – Liiketoimintatiedon hallintaohjelmistojen kehittämispalvelut – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "pol": "Grecja – Usługi opracowywania oprogramowania dla wywiadu gospodarczego – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "hrv": "Grčka – Usluge razvoja programske podrške za poslovne informacije – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "ces": "Řecko – Vývoj programového vybavení pro business intelligence – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "dan": "Grækenland – Udvikling af programmel til business intelligence-formål – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "ron": "Grecia – Servicii de dezvoltare de software pentru informaţii de afaceri – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "por": "Grécia – Serviços de desenvolvimento de software para apoio a decisões empresariais (business intelligence) – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "slk": "Grécko – Služby na vývoj softvéru pre business intelligence – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "fra": "Grèce – Services de développement de logiciels de veille économique – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "mlt": "Il-Greċja – Servizzi ta' żvilupp ta' softwer għall-informazjzoni tan-negozju – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "deu": "Griechenland – Entwicklung von Business-Intelligence-Software – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "lit": "Graikija – Verslo žvalgybos programinės įrangos kūrimo paslaugos – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "ita": "Grecia – Servizi di programmazione di software per informazioni imprenditoriali – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "bul": "Гъpция – Услуги по разработване на софтуер за икономическо разузнаване (BI) – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "slv": "Grčija – Storitve razvoja programske opreme za poslovne informacije – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084",
+    "eng": "Greece – Business intelligence software development services – Διακήρυξη υπ' αριθ.πρωτ.:............................. - Αύξων αριθμός συστήματος στη διαδικτυακή πύλη του ΕΣΗΔΗΣ:543084"
+   },
+   "form-type": "competition"
+  }
+ ],
+ "totalNoticeCount": 1,
+ "iterationNextToken": null,
+ "timedOut": false
+}

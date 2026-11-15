@@ -1,0 +1,911 @@
+{
+ "654298-2026": {
+  "adam": "26PROC019844380",
+  "how": "ΕΣΗΔΗΣ number 532020, deadline 2026-11-17, same value",
+  "record": {
+   "adam": "26PROC019844380",
+   "title": "ΑΝΑΒΑΘΜΙΣΗ ΑΝΤΛΙΟΣΤΑΣΙΩΝ ΔΗΜΟΥ ΑΝΑΤΟΛΙΚΗΣ ΣΑΜΟΥ",
+   "buyer_name": "ΔΗΜΟΣ ΑΝΑΤΟΛΙΚΗΣ ΣΑΜΟΥ",
+   "buyer_vat": "997966689",
+   "deadline": "2026-11-17T15:00:00",
+   "cost_ex_vat": 480000.0,
+   "option_right": "Ναι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL412",
+   "esidis": [
+    "532020"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC019844380"
+  }
+ },
+ "697900-2026": {
+  "adam": "26PROC019957818",
+  "how": "Gemini's pick among 3 with the same deadline 2026-11-16 and value",
+  "record": {
+   "adam": "26PROC019957818",
+   "title": "Προμήθεια λογισμικού για την Ανάπτυξη Εφαρμογών Έξυπνων Πόλεων και  Τεχνολογιών για το Διαδίκτυο ",
+   "buyer_name": "ΔΗΜΟΣ ΜΕΤΑΜΟΡΦΩΣΗΣ",
+   "buyer_vat": "090107358",
+   "deadline": "2026-11-16T14:00:00",
+   "cost_ex_vat": 482258.06,
+   "option_right": "Όχι",
+   "notice_type": "Προκήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL301",
+   "esidis": [
+    "515047"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC019957818"
+  }
+ },
+ "699202-2026": {
+  "adam": "26PROC019954513",
+  "how": "ΕΣΗΔΗΣ number 547020, deadline 2026-11-17, same value",
+  "record": {
+   "adam": "26PROC019954513",
+   "title": "Διακήρυξη ΝΕΥΡΟΕΚΦΥΛΙΣΤΙΚΕΣ ΠΑΘΗΣΕΙΣ με κωδικό ΟΠΣ (MIS): 5228153",
+   "buyer_name": "ΟΡΓΑΝΙΣΜΟΣ ΔΙΑΣΦΑΛΙΣΗΣ ΤΗΣ ΠΟΙΟΤΗΤΑΣ ΣΤΗΝ ΥΓΕΙΑ",
+   "buyer_vat": "996763354",
+   "deadline": "2026-11-17T13:00:00",
+   "cost_ex_vat": 6451612.9,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL303",
+   "esidis": [
+    "547020"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC019954513"
+  }
+ },
+ "775864-2026": {
+  "adam": "26PROC020153451",
+  "how": "Gemini's pick among 2 with the same deadline 2026-12-21 and value",
+  "record": {
+   "adam": "26PROC020153451",
+   "title": "Υπηρεσίες Συντήρησης και Τεχνικής Υποστήριξης σε ΟΠΣ-eServices, χρονικής διάρκειας 12 μηνών για τη Δημόσια Υπηρεσία Απασχόλησης (Δ.ΥΠ.Α.) ",
+   "buyer_name": "ΔΗΜΟΣΙΑ ΥΠΗΡΕΣΙΑ ΑΠΑΣΧΟΛΗΣΗΣ",
+   "buyer_vat": "090010376",
+   "deadline": "2026-12-21T15:00:00",
+   "cost_ex_vat": 305000.0,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL",
+   "esidis": [
+    "591172"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020153451"
+  }
+ },
+ "702609-2026": {
+  "adam": "26PROC019979670",
+  "how": "Gemini's pick among 6 with the same deadline 2026-11-17 and value",
+  "record": {
+   "adam": "26PROC019979670",
+   "title": "ΔΙΑΚΗΡΥΞΗ Δράσεις για τον Ψηφιακό Μετασχηματισμό του Δήμου Νέας Σμύρνης",
+   "buyer_name": "ΔΗΜΟΣ ΝΕΑΣ ΣΜΥΡΝΗΣ",
+   "buyer_vat": "099041081",
+   "deadline": "2026-11-17T15:00:00",
+   "cost_ex_vat": 1014068.19,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL304",
+   "esidis": [
+    "545089"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC019979670"
+  }
+ },
+ "719739-2026": {
+  "adam": "26PROC020022381",
+  "how": "Gemini's pick among 2 with the same deadline 2026-11-23 and value",
+  "record": {
+   "adam": "26PROC020022381",
+   "title": "Προκήρυξη του έργου: \"Βελτιώσεις & Αναβαθμίσεις λογισμικού ΠΣ ΨΥΔΗΠΕΕΚ του ΥΠΕΘΟΟ\", για δύο (2) έτη",
+   "buyer_name": "ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΚΩΝ",
+   "buyer_vat": "090165560",
+   "deadline": "2026-11-23T15:00:00",
+   "cost_ex_vat": 220000.0,
+   "option_right": "Ναι",
+   "notice_type": "Προκήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL303",
+   "esidis": [
+    "548056"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020022381"
+  }
+ },
+ "724090-2026": {
+  "adam": "26PROC020021443",
+  "how": "Gemini's pick among 2 with the same deadline 2026-11-27 and value",
+  "record": {
+   "adam": "26PROC020021443",
+   "title": "ΔΡΑΣΕΙΣ ΨΗΦΙΑΚΟΥ ΜΕΤΑΣΧΗΜΑΤΙΣΜΟΥ ΤΟΥ ΔΗΜΟΥ ΚΡΩΠΙΑΣ",
+   "buyer_name": "ΔΗΜΟΣ ΚΡΩΠΙΑΣ",
+   "buyer_vat": "090125604",
+   "deadline": "2026-11-27T15:00:00",
+   "cost_ex_vat": 416619.19,
+   "option_right": "Όχι",
+   "notice_type": "Προκήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL305",
+   "esidis": [
+    "454049"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020021443"
+  }
+ },
+ "730070-2026": {
+  "adam": "26PROC020043811",
+  "how": "same deadline 2026-11-23, same value and title",
+  "record": {
+   "adam": "26PROC020043811",
+   "title": "ΔΙΑΚΗΡΥΞΗ 40/2026",
+   "buyer_name": "ΠΑΝΕΠΙΣΤΗΜΙΑΚΟ ΓΕΝΙΚΟ ΝΟΣΟΚΟΜΕΙΟ ΕΒΡΟΥ",
+   "buyer_vat": "999387835",
+   "deadline": "2026-11-23T15:00:00",
+   "cost_ex_vat": 271200.0,
+   "option_right": "Ναι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL511",
+   "esidis": [
+    "559220"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020043811"
+  }
+ },
+ "730090-2026": {
+  "adam": "26PROC020051611",
+  "how": "same deadline 2026-11-30, same value and title",
+  "record": {
+   "adam": "26PROC020051611",
+   "title": "Ανάπτυξη και  εφαρμογή ενεργειών Δημοσιότητας  για την προβολή και την διάχυση των δράσεων της Δ.ΥΠ.Α. στο ΠΑΔΚΣ 2021-2027",
+   "buyer_name": "ΔΗΜΟΣΙΑ ΥΠΗΡΕΣΙΑ ΑΠΑΣΧΟΛΗΣΗΣ",
+   "buyer_vat": "090010376",
+   "deadline": "2026-11-30T15:00:00",
+   "cost_ex_vat": 604838.71,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL",
+   "esidis": [
+    "499028"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020051611"
+  }
+ },
+ "732099-2026": {
+  "adam": "26PROC020054758",
+  "how": "same deadline 2026-11-30, same value and title",
+  "record": {
+   "adam": "26PROC020054758",
+   "title": "Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Μαραθώνα",
+   "buyer_name": "ΔΗΜΟΣ ΜΑΡΑΘΩΝΟΣ",
+   "buyer_vat": "997606752",
+   "deadline": "2026-11-30T15:00:00",
+   "cost_ex_vat": 545482.5,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL305",
+   "esidis": [
+    "579004"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020054758"
+  }
+ },
+ "738102-2026": {
+  "adam": "26PROC020084626",
+  "how": "same deadline 2026-12-01, same value and title",
+  "record": {
+   "adam": "26PROC020084626",
+   "title": "Παροχή Υπηρεσιών Συντήρησης για το Ενιαίο Σύστημα Υπηρεσιών Ακαδημαϊκής Διοίκησης Πανεπιστημίου Πατρών SAP για το χρονικό διάστημα 01.01.2027 – 31.12.2027",
+   "buyer_name": "ΠΑΝΕΠΙΣΤΗΜΙΟ ΠΑΤΡΩΝ",
+   "buyer_vat": "090061075",
+   "deadline": "2026-12-01T15:00:00",
+   "cost_ex_vat": 217866.0,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL632",
+   "esidis": [
+    "Α/Α ΑΣΗΔΗΣ: 559025"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020084626"
+  }
+ },
+ "743945-2026": {
+  "adam": "26PROC020069039",
+  "how": "Gemini's pick among 2 with the same deadline 2026-12-08 and value",
+  "record": {
+   "adam": "26PROC020069039",
+   "title": "Προκήρυξη στην ΕΕ για την «Ανάπτυξη Εθνικής Πύλης Ποιότητας»",
+   "buyer_name": "ΕΛΛΗΝΙΚΗ ΕΤΑΙΡΕΙΑ ΣΥΜΜΕΤΟΧΩΝ ΚΑΙ ΠΕΡΙΟΥΣΙΑΣ ΑΕ",
+   "buyer_vat": "998007857",
+   "deadline": "2026-12-08T13:00:00",
+   "cost_ex_vat": 6520000.0,
+   "option_right": "Ναι",
+   "notice_type": "Προκήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL303",
+   "esidis": [
+    "578015"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020069039"
+  }
+ },
+ "752767-2026": {
+  "adam": "26PROC020092984",
+  "how": "same deadline 2026-12-04, same value and title",
+  "record": {
+   "adam": "26PROC020092984",
+   "title": "Ψηφιακή Αναβάθμιση Υποδομών ΤΠΕ της 3ης ΥΠΕ ΥΠΟΕΡΓΟ 2 ΕΣΠΑ",
+   "buyer_name": "3Η ΔΥΠΕ ΜΑΚΕΔΟΝΙΑΣ",
+   "buyer_vat": "999122114",
+   "deadline": "2026-12-04T14:00:00",
+   "cost_ex_vat": 248461.48,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL52",
+   "esidis": [
+    "478010"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020092984"
+  }
+ },
+ "755476-2026": {
+  "adam": "26PROC020107388",
+  "how": "same deadline 2026-12-09, same value and title",
+  "record": {
+   "adam": "26PROC020107388",
+   "title": "Προτυποποίηση,Επικαιροποίηση και Ανάπτυξη Πρωτοκόλλων και Επιχειρησιακών Σχεδίων για την αποτελεσματικότητα του ΕΚΑΒ",
+   "buyer_name": "ΕΘΝΙΚΟ ΚΕΝΤΡΟ ΑΜΕΣΗΣ ΒΟΗΘΕΙΑΣ (ΕΚΑΒ)",
+   "buyer_vat": "090073326",
+   "deadline": "2026-12-09T10:00:00",
+   "cost_ex_vat": 1099382.0,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL301",
+   "esidis": [
+    "548027"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020107388"
+  }
+ },
+ "757129-2026": {
+  "adam": "26PROC020104761",
+  "how": "Gemini's pick among 2 with the same deadline 2026-12-04 and value",
+  "record": {
+   "adam": "26PROC020104761",
+   "title": "Προκήρυξη  \"Ανάπτυξη Οικοσυστήματος FINTECH στην Ελλάδα\" δημοσιευμένη στην Υπηρεσία Εκδόσεων της Ευρωπαϊκής Ένωσης ",
+   "buyer_name": "ΟΙΚΟΝΟΜΙΚΟ ΕΠΙΜΕΛΗΤΗΡΙΟ ΕΛΛΑΔΟΣ",
+   "buyer_vat": "090013053",
+   "deadline": "2026-12-04T14:00:00",
+   "cost_ex_vat": 6200000.0,
+   "option_right": "Όχι",
+   "notice_type": "Προκήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL",
+   "esidis": [
+    "589020"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020104761"
+  }
+ },
+ "758524-2026": {
+  "adam": "26PROC020098869",
+  "how": "Gemini's pick among 2 with the same deadline 2026-12-09 and value",
+  "record": {
+   "adam": "26PROC020098869",
+   "title": "Προκήρυξη για την προμήθεια oλοκληρωμένου συστήματος ηλεκτρονικού πρωτοκόλλου",
+   "buyer_name": "ΓΕΝΙΚΟ ΝΟΣΟΚΟΜΕΙΟ ΘΕΣΣΑΛΟΝΙΚΗΣ «Γ. ΓΕΝΝΗΜΑΤΑΣ»",
+   "buyer_vat": "999476217",
+   "deadline": "2026-12-09T15:00:00",
+   "cost_ex_vat": 158000.0,
+   "option_right": "Όχι",
+   "notice_type": "Προκήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL522",
+   "esidis": [
+    "535119"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020098869"
+  }
+ },
+ "760215-2026": {
+  "adam": "26PROC020184608",
+  "how": "ΕΣΗΔΗΣ number 507184, deadline 2026-11-18, same value",
+  "record": {
+   "adam": "26PROC020184608",
+   "title": "ΔΙΕΥΚΡΙΝΙΣΕΙΣ ΣΧΕΤΙΚΑ ΜΕ ΤΟΝ ΔΙΑΓΩΝΙΣΜΟ - 2ο ΕΙΔΙΚΟ ΤΕΥΧΟΣ ΑΠΑΝΤΗΣΕΩΝ",
+   "buyer_name": "ΥΠΟΥΡΓΕΙΟ ΔΙΚΑΙΟΣΥΝΗΣ",
+   "buyer_vat": "090169674",
+   "deadline": "2026-11-18T15:00:00",
+   "cost_ex_vat": 4112922.26,
+   "option_right": "Ναι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL",
+   "esidis": [
+    "507184"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020184608"
+  }
+ },
+ "762542-2026": {
+  "adam": "26PROC020122505",
+  "how": "ΕΣΗΔΗΣ number 584008, deadline 2026-11-30, same value",
+  "record": {
+   "adam": "26PROC020122505",
+   "title": "Διενέργεια..Ηλεκτρονικού Διεθνούς..ποιότητας-τιμής..«Ανάπτυξη..Υποδομών..Λειτουργία..Κάρτας Εργασίας στον Δημόσιο Τομέα»",
+   "buyer_name": "ΚΟΙΝΩΝΙΑ ΤΗΣ ΠΛΗΡΟΦΟΡΙΑΣ ΑΕ",
+   "buyer_vat": "999983307",
+   "deadline": "2026-11-30T14:00:00",
+   "cost_ex_vat": 28221000.0,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL304",
+   "esidis": [
+    "584008"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020122505"
+  }
+ },
+ "763955-2026": {
+  "adam": "26PROC020144093",
+  "how": "Gemini's pick among 3 with the same deadline 2026-12-08 and value",
+  "record": {
+   "adam": "26PROC020144093",
+   "title": "ΔΙΑΚΗΡΥΞΗ: «Δομή Υποστήριξης Γαλάζιας Οικονομίας στην Περιφέρεια Βορείου Αιγαίου» (Πακέτο Εργασίας 5 – WP5)",
+   "buyer_name": "ΠΕΡΙΦΕΡΕΙΑ ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ",
+   "buyer_vat": "997817101",
+   "deadline": "2026-12-08T20:00:00",
+   "cost_ex_vat": 4273504.27,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL411",
+   "esidis": [
+    "590106"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020144093"
+  }
+ },
+ "765388-2026": {
+  "adam": "26PROC020144091",
+  "how": "Gemini's pick among 5 with the same deadline 2026-12-08 and value",
+  "record": {
+   "adam": "26PROC020144091",
+   "title": "ΔΙΑΚΗΡΥΞΗ: «Περιφερειακό Κέντρο Πρόληψης και Έγκαιρης Παρέμβασης για Ασφαλή Τουρισμό» (WP4) (Ασφαλής Τουρισμός – Safe Tourism)",
+   "buyer_name": "ΠΕΡΙΦΕΡΕΙΑ ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ",
+   "buyer_vat": "997817101",
+   "deadline": "2026-12-08T20:00:00",
+   "cost_ex_vat": 2564102.56,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL411",
+   "esidis": [
+    "590105"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020144091"
+  }
+ },
+ "765500-2026": {
+  "adam": "26PROC020115549",
+  "how": "same deadline 2026-12-08, same value and title",
+  "record": {
+   "adam": "26PROC020115549",
+   "title": "Υλοποίηση Δράσεων του marketplace για τον ψηφιακό μετασχηματισμό του Δήμου Μαρωνείας Σαπών",
+   "buyer_name": "ΔΗΜΟΣ ΜΑΡΩΝΕΙΑΣ - ΣΑΠΩΝ",
+   "buyer_vat": "800281907",
+   "deadline": "2026-12-08T15:00:00",
+   "cost_ex_vat": 301000.0,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL513",
+   "esidis": [
+    "506050"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020115549"
+  }
+ },
+ "766055-2026": {
+  "adam": "26PROC020144088",
+  "how": "Gemini's pick among 6 with the same deadline 2026-12-08 and value",
+  "record": {
+   "adam": "26PROC020144088",
+   "title": "ΔΙΑΚΗΡΥΞΗ: «Κέντρο Αγροδιατροφικής Καινοτομίας στην Περιφέρεια Βορείου Αιγαίου» (Πακέτο Εργασίας 2 – WP2)",
+   "buyer_name": "ΠΕΡΙΦΕΡΕΙΑ ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ",
+   "buyer_vat": "997817101",
+   "deadline": "2026-12-08T20:00:00",
+   "cost_ex_vat": 5128205.13,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL411",
+   "esidis": [
+    "590110"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020144088"
+  }
+ },
+ "767048-2026": {
+  "adam": "26PROC020144089",
+  "how": "Gemini's pick among 6 with the same deadline 2026-12-08 and value",
+  "record": {
+   "adam": "26PROC020144089",
+   "title": "ΔΙΑΚΗΡΥΞΗ: «Ευφυής Κτηνοτροφία στην Περιφέρεια Βορείου Αιγαίου — Smart Livestock Farming» (Πακέτο Εργασίας 3 – WP3)",
+   "buyer_name": "ΠΕΡΙΦΕΡΕΙΑ ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ",
+   "buyer_vat": "997817101",
+   "deadline": "2026-12-08T20:00:00",
+   "cost_ex_vat": 5128205.13,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL411",
+   "esidis": [
+    "590108"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020144089"
+  }
+ },
+ "769674-2026": {
+  "adam": "26PROC020137847",
+  "how": "ΕΣΗΔΗΣ number 589064, deadline 2026-12-07, same value",
+  "record": {
+   "adam": "26PROC020137847",
+   "title": "Διενέργεια_Άνω των Ορίων_«Παροχή Υπηρεσιών Συντήρησης, Υποστήριξης και παραμετροποίησης του Πληροφοριακού Συστήματος Μηχανισμού Πληρωμών Προγραμμάτων Επιδοτήσεων (Escrow Accounts) της ΚτΠ Μ.Α.Ε.»",
+   "buyer_name": "ΚΟΙΝΩΝΙΑ ΤΗΣ ΠΛΗΡΟΦΟΡΙΑΣ ΑΕ",
+   "buyer_vat": "999983307",
+   "deadline": "2026-12-07T14:00:00",
+   "cost_ex_vat": 200000.0,
+   "option_right": "Ναι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL304",
+   "esidis": [
+    "589064"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020137847"
+  }
+ },
+ "676547-2026": {
+  "adam": "26PROC019895501",
+  "how": "ΕΣΗΔΗΣ number 541008, deadline 2026-11-30, same value",
+  "record": {
+   "adam": "26PROC019895501",
+   "title": "Διακήρυξη Παροχής Υπηρεσίας με τίτλο \"Κέντρο Τεκμηρίωσης και Πληροφόρησης Ηφαιστείου Σαντορίνης\"",
+   "buyer_name": "ΔΗΜΟΣ ΘΗΡΑΣ",
+   "buyer_vat": "997877331",
+   "deadline": "2026-11-30T15:00:00",
+   "cost_ex_vat": 1073000.0,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL422",
+   "esidis": [
+    "541008",
+    "537014 "
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC019895501"
+  }
+ },
+ "681086-2026": {
+  "adam": "26PROC019907258",
+  "how": "same deadline 2026-11-16, same value and title",
+  "record": {
+   "adam": "26PROC019907258",
+   "title": "Ευφυείς Εφαρμογές και δράσεις στο πλαίσιο του Ψηφιακού Μετασχηματισμού του Δήμου Νικολάου Σκουφά",
+   "buyer_name": "ΔΗΜΟΣ ΝΙΚΟΛΑΟΥ ΣΚΟΥΦΑ",
+   "buyer_vat": "997681819",
+   "deadline": "2026-11-16T15:00:00",
+   "cost_ex_vat": 275184.52,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL",
+   "esidis": [
+    "524036"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC019907258"
+  }
+ },
+ "699630-2026": {
+  "adam": "26PROC019952695",
+  "how": "Gemini's pick among 6 with the same deadline 2026-11-16 and value",
+  "record": {
+   "adam": "26PROC019952695",
+   "title": "ΠΡΟΚΗΡΥΞΗ: ΑΝΑΠΤΥΞΗ ΔΡΑΣΕΩΝ MARKET PLACE ΤΟΥ ΔΗΜΟΥ ΑΜΠΕΛΟΚΗΠΩΝ ΜΕΝΕΜΕΝΗΣ, ΟΠΣ 603084",
+   "buyer_name": "ΔΗΜΟΣ ΑΜΠΕΛΟΚΗΠΩΝ - ΜΕΝΕΜΕΝΗΣ",
+   "buyer_vat": "997742400",
+   "deadline": "2026-11-16T00:00:00",
+   "cost_ex_vat": 1107782.38,
+   "option_right": "Όχι",
+   "notice_type": "Προκήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL522",
+   "esidis": [
+    "543013"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC019952695"
+  }
+ },
+ "702796-2026": {
+  "adam": "26PROC019969482",
+  "how": "Gemini's pick among 2 with the same deadline 2026-11-18 and value",
+  "record": {
+   "adam": "26PROC019969482",
+   "title": "«Ψηφιακός Μετασχηματισμός Δήμου Αγίας Παρασκευής» ",
+   "buyer_name": "ΔΗΜΟΣ ΑΓΙΑΣ ΠΑΡΑΣΚΕΥΗΣ",
+   "buyer_vat": "090085626",
+   "deadline": "2026-11-18T10:00:00",
+   "cost_ex_vat": 1284516.13,
+   "option_right": "Όχι",
+   "notice_type": "Προκήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL301",
+   "esidis": [
+    "551069"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC019969482"
+  }
+ },
+ "714342-2026": {
+  "adam": "26PROC019989172",
+  "how": "same deadline 2026-11-20, same value and title",
+  "record": {
+   "adam": "26PROC019989172",
+   "title": "ΕΞΕ 4016 - 14/10/2026 10/ΚΔ/2026 Παροχή ολοκληρωμένων Λύσεων Κυβερνοασφάλειας",
+   "buyer_name": "ΕΛΛΗΝΙΚΑ ΑΜΥΝΤΙΚΑ ΣΥΣΤΗΜΑΤΑ  ΑΒΕΕ",
+   "buyer_vat": "997180750",
+   "deadline": "2026-11-20T23:59:00",
+   "cost_ex_vat": 1478800.0,
+   "option_right": "Ναι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL",
+   "esidis": [
+    "545160"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC019989172"
+  }
+ },
+ "723650-2026": {
+  "adam": "26PROC020020101",
+  "how": "Gemini's pick among 6 with the same deadline 2026-11-23 and value",
+  "record": {
+   "adam": "26PROC020020101",
+   "title": "Προκήρυξη_Ψηφιακός Συμπαραστάτης των χρηστών ψηφιακών υπηρεσιών του Ελληνικού Κτηματολογίου",
+   "buyer_name": "ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+   "buyer_vat": "997003848",
+   "deadline": "2026-11-23T13:00:00",
+   "cost_ex_vat": 3015325.6,
+   "option_right": "Όχι",
+   "notice_type": "Προκήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL",
+   "esidis": [
+    "554036, 554047, 554048"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020020101"
+  }
+ },
+ "746891-2026": {
+  "adam": "26PROC020088786",
+  "how": "ΕΣΗΔΗΣ number 513032, deadline 2026-12-07, same value",
+  "record": {
+   "adam": "26PROC020088786",
+   "title": "3η Μετάθεση_20407/06-08-26/ΟΕ 18-08-26 Διακ_Αναδιαμόρφωση του Προγράμματος ΔΙΑΥΓΕΙΑ - ΔΙΑΥΓΕΙΑ ΙΙΙ",
+   "buyer_name": "ΚΟΙΝΩΝΙΑ ΤΗΣ ΠΛΗΡΟΦΟΡΙΑΣ ΑΕ",
+   "buyer_vat": "999983307",
+   "deadline": "2026-12-07T14:00:00",
+   "cost_ex_vat": 3920000.0,
+   "option_right": "Ναι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL304",
+   "esidis": [
+    "513032"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020088786"
+  }
+ },
+ "755866-2026": null,
+ "756230-2026": {
+  "adam": "26PROC020094250",
+  "how": "ΕΣΗΔΗΣ number 543084, deadline 2026-12-04, same value",
+  "record": {
+   "adam": "26PROC020094250",
+   "title": "Έγκριση διενέργειας Ανοικτού Ηλεκτρονικού Διαγωνισμού για την ανάθεση σύμβασης  με τίτλο: «Ολοκληρωμένη Πλατφόρμα Επιχειρησιακής Νοημοσύνης και Στρατηγικής Τεκμηρίωσης ΚΕ Ε",
+   "buyer_name": "ΥΠΟΥΡΓΕΙΟ ΟΙΚΟΝΟΜΙΚΩΝ",
+   "buyer_vat": "999962348",
+   "deadline": "2026-12-04T14:00:00",
+   "cost_ex_vat": 4045000.0,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL303",
+   "esidis": [
+    "543084"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020094250"
+  }
+ },
+ "758852-2026": {
+  "adam": "26PROC020097592",
+  "how": "same deadline 2026-12-08, same value and title",
+  "record": {
+   "adam": "26PROC020097592",
+   "title": "«Υλοποίηση Δράσεων του Marketplace για τον Ψηφιακό Μετασχηματισμό του Δήμου Χίου» ",
+   "buyer_name": "ΔΗΜΟΣ ΧΙΟΥ",
+   "buyer_vat": "997895268",
+   "deadline": "2026-12-08T17:00:00",
+   "cost_ex_vat": 619044.85,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL413",
+   "esidis": [
+    "500101, 500102, 500103"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020097592"
+  }
+ },
+ "770279-2026": null,
+ "773303-2026": {
+  "adam": "26PROC020153071",
+  "how": "ΕΣΗΔΗΣ number 558045, deadline 2026-12-10, same value",
+  "record": {
+   "adam": "26PROC020153071",
+   "title": "ΔΙΑΚΗΡΥΞΗ ΔΙΕΘΝΟΥΣ (ΑΝΩ ΤΩΝ ΟΡΙΩΝ) ΑΝΟΙΚΤΟΥ ΗΛΕΚΤΡΟΝΙΚΟΥ ΔΙΑΓΩΝΙΣΜΟΥ «Εθνική Πλατφόρμα Ανάλυσης Κόστους και Δεδομένων Επεμβατικών Ιατρικών Πράξεων και Χειρουργείων» με Κωδικό ΟΠΣ 5229032",
+   "buyer_name": "ΚΕΝΤΡΟ ΤΕΚΜΗΡΙΩΣΗΣ ΚΑΙ ΚΟΣΤΟΛΟΓΗΣΗΣ ΝΟΣΟΚΟΜΕΙΑΚΩΝ ΥΠΗΡΕΣΙΩΝ  ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ",
+   "buyer_vat": "997181340",
+   "deadline": "2026-12-10T17:00:00",
+   "cost_ex_vat": 5480000.0,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL303",
+   "esidis": [
+    "558045"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020153071"
+  }
+ },
+ "773780-2026": {
+  "adam": "26PROC020130008",
+  "how": "same deadline 2026-11-19, same value and title",
+  "record": {
+   "adam": "26PROC020130008",
+   "title": "ΔΙΑΚΗΡΥΞΗ ΕΠΑΝΑΛΗΠΤΙΚΟΥ ΑΝΟΙΧΤΟΥ ΗΛΕΚΤΡΟΝΙΚΟΥ ΔΙΑΓΩΝΙΣΜΟΥ  ΑΝΩ ΤΩΝ ΟΡΙΩΝ ΣΕ ΕΥΡΩ (€) «Ανανέωση του Προγράμματος Συντήρησης και Υποστήριξης (Software Assurance - SA) των Αδειών Λογισμικού Microsoft του",
+   "buyer_name": "ΥΠΟΥΡΓΕΙΟ ΠΑΙΔΕΙΑΣ, ΘΡΗΣΚΕΥΜΑΤΩΝ ΚΑΙ ΑΘΛΗΤΙΣΜΟΥ",
+   "buyer_vat": "090055799",
+   "deadline": "2026-11-19T23:59:00",
+   "cost_ex_vat": 41000.0,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL301",
+   "esidis": [
+    "561007"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020130008"
+  }
+ },
+ "774438-2026": {
+  "adam": "26PROC020136518",
+  "how": "ΕΣΗΔΗΣ number 590225, deadline 2026-12-14, same value",
+  "record": {
+   "adam": "26PROC020136518",
+   "title": "ΨΗΦΙΑΚΟ ΑΠΟΘΕΤΗΡΙΟ ΑΠΟΘΕΜΑΤΟΣ ΒΙΟΣΦΑΙΡΑΣ ΑΣΤΕΡΟΥΣΙΩΝ",
+   "buyer_name": "ΔΗΜΟΣ ΓΟΡΤΥΝΑΣ",
+   "buyer_vat": "999174215",
+   "deadline": "2026-12-14T15:00:00",
+   "cost_ex_vat": 125100.81,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL431",
+   "esidis": [
+    "590225"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020136518"
+  }
+ },
+ "774462-2026": {
+  "adam": "26PROC020147269",
+  "how": "ΕΣΗΔΗΣ number 573003, deadline 2026-12-14, same value",
+  "record": {
+   "adam": "26PROC020147269",
+   "title": "Διενέργεια..Διεθνούς Ανοικτού..ποιότητας-τιμής..Παροχή Υπηρεσιών Δημόσιου..Κυβερνητικό Νέφος»..ΟΠΣ: 5229392",
+   "buyer_name": "ΚΟΙΝΩΝΙΑ ΤΗΣ ΠΛΗΡΟΦΟΡΙΑΣ ΑΕ",
+   "buyer_vat": "999983307",
+   "deadline": "2026-12-14T14:00:00",
+   "cost_ex_vat": 126612903.23,
+   "option_right": "Ναι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL",
+   "esidis": [
+    "573003"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020147269"
+  }
+ },
+ "777499-2026": null,
+ "778704-2026": {
+  "adam": "26PROC020158277",
+  "how": "same deadline 2026-12-11, same value and title",
+  "record": {
+   "adam": "26PROC020158277",
+   "title": "Υπηρεσίες ψηφιοποίησης, τεκμηρίωσης, ψηφιακής προβολής και ανάδειξης του πολιτιστικού αποθέματος",
+   "buyer_name": "ΚΡΑΤΙΚΟ ΩΔΕΙΟ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+   "buyer_vat": "090067737",
+   "deadline": "2026-12-11T15:00:00",
+   "cost_ex_vat": 687764.52,
+   "option_right": "Όχι",
+   "notice_type": "Προκήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL522",
+   "esidis": [
+    "590315"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020158277"
+  }
+ },
+ "779323-2026": {
+  "adam": "26PROC020155785",
+  "how": "ΕΣΗΔΗΣ number 543081, deadline 2026-12-09, same value",
+  "record": {
+   "adam": "26PROC020155785",
+   "title": "Τροποποίηση όρων και μετάθεση της καταληκτικής_24922_Άνω_\"Σύστημα Οικονομικής Διαχείρισης_Ψυχικής Υγείας\"..",
+   "buyer_name": "ΚΟΙΝΩΝΙΑ ΤΗΣ ΠΛΗΡΟΦΟΡΙΑΣ ΑΕ",
+   "buyer_vat": "999983307",
+   "deadline": "2026-12-09T14:00:00",
+   "cost_ex_vat": 1350000.0,
+   "option_right": "Ναι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL304",
+   "esidis": [
+    "543081"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020155785"
+  }
+ },
+ "782964-2026": {
+  "adam": "26PROC020195188",
+  "how": "ΕΣΗΔΗΣ number 590346, deadline 2026-12-11, same value",
+  "record": {
+   "adam": "26PROC020195188",
+   "title": "ΥΠΟΣΤΗΡΙΞΗ ΠΑΡΑΓ. ΛΕΙΤΟΥΡΓΙΑΣ ΚΑΙ ΑΝΑΠΤΥΞΗ ΕΦΑΡΜΟΓΩΝ ΤΟΥ ΠΣ ΓΕΜΗ ΚΑΙ ΤΟΥ ΣΥΣΤΗΜΑΤΟΣ ΜΕ BRIS.",
+   "buyer_name": "ΚΕΝΤΡΙΚΗ ΕΝΩΣΗ ΕΠΙΜΕΛΗΤΗΡΙΩΝ",
+   "buyer_vat": "090165823",
+   "deadline": "2026-12-11T12:00:00",
+   "cost_ex_vat": 916000.0,
+   "option_right": "Ναι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL303",
+   "esidis": [
+    "590346"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020195188"
+  }
+ },
+ "784392-2026": null,
+ "784783-2026": null,
+ "784922-2026": {
+  "adam": "26PROC020195227",
+  "how": "ΕΣΗΔΗΣ number 590352, deadline 2026-12-11, same value",
+  "record": {
+   "adam": "26PROC020195227",
+   "title": "Υπηρεσίες υποστήριξης παραγωγικής λειτουργίας και ανάπτυξη εφαρμογών του ΠΣ ΥΜΣ.",
+   "buyer_name": "ΚΕΝΤΡΙΚΗ ΕΝΩΣΗ ΕΠΙΜΕΛΗΤΗΡΙΩΝ",
+   "buyer_vat": "090165823",
+   "deadline": "2026-12-11T13:00:00",
+   "cost_ex_vat": 772000.0,
+   "option_right": "Ναι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL303",
+   "esidis": [
+    "590352"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020195227"
+  }
+ },
+ "788665-2026": {
+  "adam": "26PROC020181891",
+  "how": "same deadline 2026-12-14, same value and title",
+  "record": {
+   "adam": "26PROC020181891",
+   "title": "ΔΕΑ-526080-Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+   "buyer_name": "ΑΝΕΞΑΡΤΗΤΟΣ ΔΙΑΧΕΙΡΙΣΤΗΣ ΜΕΤΑΦΟΡΑΣ ΗΛΕΚΤΡΙΚΗΣ ΕΝΕΡΓΕΙΑΣ ΑΔΜΗΕ ΑΕ",
+   "buyer_vat": "099877486",
+   "deadline": "2026-12-14T14:00:00",
+   "cost_ex_vat": 5100000.0,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL",
+   "esidis": [
+    "ΔΕΑ-526080"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020181891"
+  }
+ },
+ "790272-2026": {
+  "adam": "26PROC020194246",
+  "how": "same deadline 2026-12-08, same value and title",
+  "record": {
+   "adam": "26PROC020194246",
+   "title": " ΠΑΡΑΤΑΣΗ ΚΑΤΑΛΗΚΤΙΚΗΣ ΗΜΕΡΟΜΗΝΙΑΣ ΥΠΟΒΟΛΗΣ ΠΡΟΣΦΟΡΩΝ - ΜΕΤΑΘΕΣΗ ΔΙΕΝΕΡΓΕΙΑΣ ΔΙΑΓΩΝΙΣΜΟΥ “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας'",
+   "buyer_name": "ΚΕΝΤΡΟ ΤΕΚΜΗΡΙΩΣΗΣ ΚΑΙ ΚΟΣΤΟΛΟΓΗΣΗΣ ΝΟΣΟΚΟΜΕΙΑΚΩΝ ΥΠΗΡΕΣΙΩΝ  ΑΝΩΝΥΜΗ ΕΤΑΙΡΕΙΑ",
+   "buyer_vat": "997181340",
+   "deadline": "2026-12-08T17:00:00",
+   "cost_ex_vat": 2602938.39,
+   "option_right": "Όχι",
+   "notice_type": "Διακήρυξη",
+   "procedure": "Ανοιχτή διαδικασία",
+   "nuts": "EL303",
+   "esidis": [
+    "ΤΜΗΜΑ Α' 502056, ΤΜΗΜΑ Β'  553083"
+   ],
+   "cancelled": false,
+   "url": "https://cerpp.eprocurement.gov.gr/khmdhs-opendata/notice/attachment/26PROC020194246"
+  }
+ }
+}

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efbc:AwardingCPBIndicator>true</efbc:AwardingCPBIndicator>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">ΥΠΟΥΡΓΕΙΟ ΠΑΙΔΕΙΑΣ ΘΡΗΣΚΕΥΜΑΤΩΝ ΚΑΙ ΑΘΛΗΤΙΣMΟΥ</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>ΑΝΔΡΕΑ ΠΑΠΑΝΔΡΕΟΥ 37</cbc:StreetName>
+                           <cbc:CityName>ΜΑΡΟΥΣΙ ΝΟΜΟΥ ΑΤΤΙΚΗΣ</cbc:CityName>
+                           <cbc:PostalZone>15180</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL301</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>1020.0000000000.0001</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Name>ΠΑΡΑΣΚΕΥΗ ΣΙΑΦΛΙΑΚΗ, ΕΛΕΝΗ ΧΗΝΟΠΟΥΛΟΥ</cbc:Name>
+                           <cbc:Telephone>2103443252</cbc:Telephone>
+                           <cbc:ElectronicMail>dpdy.tma@minedu.gov.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">ΕΝΙΑΙΑ ΑΡΧΗ ΔΗΜΟΣΙΩΝ ΣΥΜΒΑΣΕΩΝ (Ε.Α.ΔΗ.ΣΥ.)</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:CityName>ΑΘΗΝΑ</cbc:CityName>
+                           <cbc:PostalZone>10432</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>1000.E00961.0001</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://op.europa.eu</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">Publications Office of the European Union</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <cbc:PostalZone>2417</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>PUBL</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+352 29291</cbc:Telephone>
+                           <cbc:ElectronicMail>ted@publications.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+            <efac:Publication><efbc:NoticePublicationID schemeName="ojs-notice-id">00773780-2026</efbc:NoticePublicationID><efbc:GazetteID schemeName="ojs-id">216/2026</efbc:GazetteID><efbc:PublicationDate>2026-11-06+01:00</efbc:PublicationDate></efac:Publication></efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-1.14</cbc:CustomizationID>
+   <cbc:ID schemeName="notice-id">413d853f-0f9b-4c7f-845d-f98d6e518116</cbc:ID>
+   <cbc:ContractFolderID>d82f162a-8d14-4514-85f8-9724be8408be</cbc:ContractFolderID>
+   <cbc:IssueDate>2026-11-04Z</cbc:IssueDate>
+   <cbc:IssueTime>14:29:38Z</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode listName="language">ELL</cbc:NoticeLanguageCode>
+   <cac:ContractingParty>
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">cga</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">education</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:ServiceProviderParty>
+            <cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:Party>
+         </cac:ServiceProviderParty>
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:TenderingTerms>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-grounds-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+   </cac:TenderingTerms>
+   <cac:TenderingProcess>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <cac:ProcessJustification>
+         <cbc:ProcessReasonCode listName="accelerated-procedure">false</cbc:ProcessReasonCode>
+      </cac:ProcessJustification>
+   </cac:TenderingProcess>
+   <cac:ProcurementProject>
+      <cbc:Name languageID="ELL">Ανανέωση του Προγράμματος Συντήρησης και Υποστήριξης (Software Assurance - SA) των Αδειών Λογισμικού Microsoft του Υπουργείου Παιδείας, Θρησκευμάτων και Αθλητισμού</cbc:Name>
+      <cbc:Description languageID="ELL">Η παρούσα διακήρυξη αφορά στην επιλογή Αναδόχου/-ων για την  προμήθεια ειδών και την παροχή υπηρεσιών με αντικείμενα πληροφορικής (αρμοδιότητας της Διεύθυνσης Ηλεκτρονικών και Δικτυακών Συστημάτων του Υ.ΠΑΙ.Θ.Α.).
+Οι τεχνικές προδιαγραφές των ζητούμενων ειδών περιγράφονται αναλυτικά στο Παράρτημα Ε΄ της παρούσας διακήρυξης. Η προσφορά θα αφορά στο σύνολο του αντικειμένου και εφόσον δε το καλύπτει, θα απορρίπτεται ως απαράδεκτη.
+Δεν επιτρέπεται η υποβολή εναλλακτικών προσφορών. Αντικείμενο της σύμβασης αφορά την ανανέωση του Προγράμματος Συντήρησης και Υποστήριξης (Software Assurance - SA) των Αδειών Λογισμικού Microsoft του Υπουργείου.Η ζητούμενη παροχή υπηρεσιών αφορά στην ανανέωση του προγράμματος  συντήρησης και υποστήριξης (Software Assurance - SA) των αδειών λογισμικού της εταιρείας Microsoft που διαθέτει η Υπηρεσία. Επισημαίνεται ότι, κατόπιν διαγωνιστικής διαδικασίας σύναψης σύμβασης από τις αρμόδιες οικονομικές υπηρεσίες, πραγματοποιήθηκε η προμήθειά του, με ισχύ έως τον Οκτώβριο του 2026 (31-10-2026). Ωστόσο, καθώς το εν λόγω πρόγραμμα θεωρείται απαραίτητο για την απρόσκοπτη λειτουργία, την ασφάλεια και τη συνεχή υποστήριξη των πληροφοριακών συστημάτων του Υπουργείου, κρίνεται απαραίτητη η ανανέωση  του για τρία (3) έτη.
+</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+      <cac:RequestedTenderTotal>
+         <cbc:EstimatedOverallContractAmount currencyID="EUR">41000</cbc:EstimatedOverallContractAmount>
+      </cac:RequestedTenderTotal>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">48000000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">72261000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:CountrySubentityCode listName="nuts">EL301</cbc:CountrySubentityCode>
+            <cac:Country>
+               <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:Address>
+      </cac:RealizedLocation>
+   </cac:ProcurementProject>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <cac:TenderingTerms>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cac:CallForTendersDocumentReference>
+            <cbc:ID>150459/Β4/04-11-2026</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://www.minedu.gov.gr/</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">not-known</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <cbc:Description languageID="ELL">Κριτήριο κατακύρωσης είναι η πλέον συμφέρουσα από οικονομική άποψη προσφορά βάσει τιμής (χαμηλότερη τιμή)</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://nepps.eprocurement.gov.gr</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">Σύμφωνα με το άρθρο 3.4 της διακήρυξης του διαγωνισμού</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-11-19+02:00</cbc:EndDate>
+            <cbc:EndTime>23:59:59+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-11-20+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>10:00:00+02:00</cbc:OccurrenceTime>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:Name languageID="ELL">Ανανέωση του Προγράμματος Συντήρησης και Υποστήριξης (Software Assurance - SA) των Αδειών Λογισμικού Microsoft του Υπουργείου Παιδείας, Θρησκευμάτων και Αθλητισμού</cbc:Name>
+         <cbc:Description languageID="ELL">Η παρούσα διακήρυξη αφορά στην επιλογή Αναδόχου/-ων για την  προμήθεια ειδών και την παροχή υπηρεσιών με αντικείμενα πληροφορικής (αρμοδιότητας της Διεύθυνσης Ηλεκτρονικών και Δικτυακών Συστημάτων του Υ.ΠΑΙ.Θ.Α.).
+Οι τεχνικές προδιαγραφές των ζητούμενων ειδών περιγράφονται αναλυτικά στο Παράρτημα Ε΄ της παρούσας διακήρυξης. Η προσφορά θα αφορά στο σύνολο του αντικειμένου και εφόσον δε το καλύπτει, θα απορρίπτεται ως απαράδεκτη.
+Δεν επιτρέπεται η υποβολή εναλλακτικών προσφορών.
+Αντικείμενο της σύμβασης αφορά την ανανέωση του Προγράμματος Συντήρησης και Υποστήριξης (Software Assurance - SA) των Αδειών Λογισμικού Microsoft του Υπουργείου
+Η ζητούμενη παροχή υπηρεσιών αφορά στην ανανέωση του προγράμματος  συντήρησης και υποστήριξης (Software Assurance - SA) των αδειών λογισμικού της εταιρείας Microsoft που διαθέτει η Υπηρεσία. Επισημαίνεται ότι, κατόπιν διαγωνιστικής διαδικασίας σύναψης σύμβασης από τις αρμόδιες οικονομικές υπηρεσίες, πραγματοποιήθηκε η προμήθειά του, με ισχύ έως τον Οκτώβριο του 2026 (31-10-2026). Ωστόσο, καθώς το εν λόγω πρόγραμμα θεωρείται απαραίτητο για την απρόσκοπτη λειτουργία, την ασφάλεια και τη συνεχή υποστήριξη των πληροφοριακών συστημάτων του Υπουργείου, κρίνεται απαραίτητη η ανανέωση  του για τρία (3) έτη.
+</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cbc:Note languageID="ELL">Φορέας χρηματοδότησης της παρούσας διαδικασίας σύναψης σύμβασης είναι το Υπουργείο Παιδείας, Θρησκευμάτων και Αθλητισμού (Υ.ΠΑΙ.Θ.Α.), με τη δαπάνη να βαρύνει τις πιστώσεις του προϋπολογισμού εξόδων του Υ.ΠΑΙ.Θ.A., και συγκεκριμένα τον Λογαριασμό 6ου βαθμού (Α.Λ.Ε.) 2420389001, του Φορέα με Κωδ. Ταξινόμησης 1020-501-0000000. </cbc:Note>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">41000</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72261000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:CountrySubentityCode listName="nuts">EL301</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="YEAR">3</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>

@@ -1,0 +1,168 @@
+{
+ "notices": [
+  {
+   "place-of-performance": [
+    "EL305",
+    "GRC",
+    "EL305",
+    "GRC"
+   ],
+   "deadline-receipt-tender-date-lot": [
+    "2026-11-27+02:00"
+   ],
+   "notice-type": "cn-standard",
+   "publication-number": "724090-2026",
+   "estimated-value-lot": [
+    "416619.19"
+   ],
+   "estimated-value-cur-proc": "EUR",
+   "buyer-country": [
+    "GRC"
+   ],
+   "deadline-receipt-tender-time-lot": [
+    "15:00:00+02:00"
+   ],
+   "classification-cpv": [
+    "48422000",
+    "32580000",
+    "48219300",
+    "35125100",
+    "48730000",
+    "71354100",
+    "72212730",
+    "72230000",
+    "48422000",
+    "32580000",
+    "35125100",
+    "48219300",
+    "48730000",
+    "71354100",
+    "72212730",
+    "72230000"
+   ],
+   "buyer-name": {
+    "ell": [
+     "ΔΗΜΟΣ ΚΡΩΠΙΑΣ"
+    ]
+   },
+   "publication-date": "2026-10-20+02:00",
+   "estimated-value-proc": "416619.19",
+   "links": {
+    "xml": {
+     "MUL": "https://ted.europa.eu/en/notice/724090-2026/xml"
+    },
+    "pdf": {
+     "BUL": "https://ted.europa.eu/bg/notice/724090-2026/pdf",
+     "SPA": "https://ted.europa.eu/es/notice/724090-2026/pdf",
+     "CES": "https://ted.europa.eu/cs/notice/724090-2026/pdf",
+     "DAN": "https://ted.europa.eu/da/notice/724090-2026/pdf",
+     "DEU": "https://ted.europa.eu/de/notice/724090-2026/pdf",
+     "EST": "https://ted.europa.eu/et/notice/724090-2026/pdf",
+     "ELL": "https://ted.europa.eu/el/notice/724090-2026/pdf",
+     "ENG": "https://ted.europa.eu/en/notice/724090-2026/pdf",
+     "FRA": "https://ted.europa.eu/fr/notice/724090-2026/pdf",
+     "GLE": "https://ted.europa.eu/ga/notice/724090-2026/pdf",
+     "HRV": "https://ted.europa.eu/hr/notice/724090-2026/pdf",
+     "ITA": "https://ted.europa.eu/it/notice/724090-2026/pdf",
+     "LAV": "https://ted.europa.eu/lv/notice/724090-2026/pdf",
+     "LIT": "https://ted.europa.eu/lt/notice/724090-2026/pdf",
+     "HUN": "https://ted.europa.eu/hu/notice/724090-2026/pdf",
+     "MLT": "https://ted.europa.eu/mt/notice/724090-2026/pdf",
+     "NLD": "https://ted.europa.eu/nl/notice/724090-2026/pdf",
+     "POL": "https://ted.europa.eu/pl/notice/724090-2026/pdf",
+     "POR": "https://ted.europa.eu/pt/notice/724090-2026/pdf",
+     "RON": "https://ted.europa.eu/ro/notice/724090-2026/pdf",
+     "SLK": "https://ted.europa.eu/sk/notice/724090-2026/pdf",
+     "SLV": "https://ted.europa.eu/sl/notice/724090-2026/pdf",
+     "FIN": "https://ted.europa.eu/fi/notice/724090-2026/pdf",
+     "SWE": "https://ted.europa.eu/sv/notice/724090-2026/pdf"
+    },
+    "pdfs": {
+     "ELL": "https://ted.europa.eu/el/notice/724090-2026/pdfs"
+    },
+    "html": {
+     "BUL": "https://ted.europa.eu/bg/notice/-/detail/724090-2026",
+     "SPA": "https://ted.europa.eu/es/notice/-/detail/724090-2026",
+     "CES": "https://ted.europa.eu/cs/notice/-/detail/724090-2026",
+     "DAN": "https://ted.europa.eu/da/notice/-/detail/724090-2026",
+     "DEU": "https://ted.europa.eu/de/notice/-/detail/724090-2026",
+     "EST": "https://ted.europa.eu/et/notice/-/detail/724090-2026",
+     "ELL": "https://ted.europa.eu/el/notice/-/detail/724090-2026",
+     "ENG": "https://ted.europa.eu/en/notice/-/detail/724090-2026",
+     "FRA": "https://ted.europa.eu/fr/notice/-/detail/724090-2026",
+     "GLE": "https://ted.europa.eu/ga/notice/-/detail/724090-2026",
+     "HRV": "https://ted.europa.eu/hr/notice/-/detail/724090-2026",
+     "ITA": "https://ted.europa.eu/it/notice/-/detail/724090-2026",
+     "LAV": "https://ted.europa.eu/lv/notice/-/detail/724090-2026",
+     "LIT": "https://ted.europa.eu/lt/notice/-/detail/724090-2026",
+     "HUN": "https://ted.europa.eu/hu/notice/-/detail/724090-2026",
+     "MLT": "https://ted.europa.eu/mt/notice/-/detail/724090-2026",
+     "NLD": "https://ted.europa.eu/nl/notice/-/detail/724090-2026",
+     "POL": "https://ted.europa.eu/pl/notice/-/detail/724090-2026",
+     "POR": "https://ted.europa.eu/pt/notice/-/detail/724090-2026",
+     "RON": "https://ted.europa.eu/ro/notice/-/detail/724090-2026",
+     "SLK": "https://ted.europa.eu/sk/notice/-/detail/724090-2026",
+     "SLV": "https://ted.europa.eu/sl/notice/-/detail/724090-2026",
+     "FIN": "https://ted.europa.eu/fi/notice/-/detail/724090-2026",
+     "SWE": "https://ted.europa.eu/sv/notice/-/detail/724090-2026"
+    },
+    "htmlDirect": {
+     "BUL": "https://ted.europa.eu/bg/notice/724090-2026/html",
+     "SPA": "https://ted.europa.eu/es/notice/724090-2026/html",
+     "CES": "https://ted.europa.eu/cs/notice/724090-2026/html",
+     "DAN": "https://ted.europa.eu/da/notice/724090-2026/html",
+     "DEU": "https://ted.europa.eu/de/notice/724090-2026/html",
+     "EST": "https://ted.europa.eu/et/notice/724090-2026/html",
+     "ELL": "https://ted.europa.eu/el/notice/724090-2026/html",
+     "ENG": "https://ted.europa.eu/en/notice/724090-2026/html",
+     "FRA": "https://ted.europa.eu/fr/notice/724090-2026/html",
+     "GLE": "https://ted.europa.eu/ga/notice/724090-2026/html",
+     "HRV": "https://ted.europa.eu/hr/notice/724090-2026/html",
+     "ITA": "https://ted.europa.eu/it/notice/724090-2026/html",
+     "LAV": "https://ted.europa.eu/lv/notice/724090-2026/html",
+     "LIT": "https://ted.europa.eu/lt/notice/724090-2026/html",
+     "HUN": "https://ted.europa.eu/hu/notice/724090-2026/html",
+     "MLT": "https://ted.europa.eu/mt/notice/724090-2026/html",
+     "NLD": "https://ted.europa.eu/nl/notice/724090-2026/html",
+     "POL": "https://ted.europa.eu/pl/notice/724090-2026/html",
+     "POR": "https://ted.europa.eu/pt/notice/724090-2026/html",
+     "RON": "https://ted.europa.eu/ro/notice/724090-2026/html",
+     "SLK": "https://ted.europa.eu/sk/notice/724090-2026/html",
+     "SLV": "https://ted.europa.eu/sl/notice/724090-2026/html",
+     "FIN": "https://ted.europa.eu/fi/notice/724090-2026/html",
+     "SWE": "https://ted.europa.eu/sv/notice/724090-2026/html"
+    }
+   },
+   "notice-title": {
+    "hun": "Görögország – Szoftvercsomag-sorozat – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "lav": "Grieķija – Programmatūras pakotņu kompleksi – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "swe": "Grekland – Programsviter – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "gle": "An Ghréig – Software package suites – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "ell": "Ελλάδα – Πλατφόρμες πακέτων λογισμικού – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "spa": "Grecia – \"Suites\" de paquetes de software – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "est": "Kreeka – Lisatarkvarapakett – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "nld": "Griekenland – Opvolgingssoftware – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "fin": "Kreikka – Ohjelmatuotesarjat – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "pol": "Grecja – Zestawy pakietów oprogramowania – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "hrv": "Grčka – Zbirka programskih paketa – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "ces": "Řecko – Sady balíků programů – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "dan": "Grækenland – Programpakke suites – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "ron": "Grecia – Suite de pachete software – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "por": "Grécia – Séries de pacotes de software – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "slk": "Grécko – Súbor softvérového balíka – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "fra": "Grèce – Suites logicielles – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "mlt": "Il-Greċja – Sensiela ta’ pakketti ta’ softwer – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "deu": "Griechenland – Softwarepaketreihen – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "lit": "Graikija – Programinės įrangos paketų rinkiniai – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "ita": "Grecia – Suite di pacchetti software – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "bul": "Гъpция – Комплекти от софтуерни пакети – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "slv": "Grčija – Zbirke programskih paketov – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας",
+    "eng": "Greece – Software package suites – Δράσεις Ψηφιακού Μετασχηματισμού του Δήμου Κρωπίας"
+   },
+   "form-type": "competition"
+  }
+ ],
+ "totalNoticeCount": 1,
+ "iterationNextToken": null,
+ "timedOut": false
+}

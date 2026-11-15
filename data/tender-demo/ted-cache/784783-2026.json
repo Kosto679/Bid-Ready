@@ -1,0 +1,175 @@
+{
+ "notices": [
+  {
+   "place-of-performance": [
+    "EL433",
+    "GRC",
+    "EL433",
+    "EL433",
+    "GRC",
+    "GRC"
+   ],
+   "deadline-receipt-tender-date-lot": [
+    "2026-11-16+02:00",
+    "2026-11-16+02:00"
+   ],
+   "notice-type": "cn-standard",
+   "publication-number": "784783-2026",
+   "estimated-value-lot": [
+    "385119.39",
+    "530890"
+   ],
+   "estimated-value-cur-proc": "EUR",
+   "buyer-country": [
+    "GRC"
+   ],
+   "deadline-receipt-tender-time-lot": [
+    "15:30:00+02:00",
+    "15:30:00+02:00"
+   ],
+   "classification-cpv": [
+    "48000000",
+    "34992100",
+    "34996000",
+    "35261100",
+    "35125100",
+    "38551000",
+    "48210000",
+    "72210000",
+    "48000000",
+    "48000000",
+    "34992100",
+    "34990000",
+    "35261100",
+    "35125100",
+    "38551000",
+    "48210000",
+    "72210000",
+    "72210000"
+   ],
+   "buyer-name": {
+    "ell": [
+     "ΔΗΜΟΣ ΡΕΘΥΜΝΗΣ"
+    ]
+   },
+   "publication-date": "2026-11-11+01:00",
+   "estimated-value-proc": "916009.39",
+   "links": {
+    "xml": {
+     "MUL": "https://ted.europa.eu/en/notice/784783-2026/xml"
+    },
+    "pdf": {
+     "BUL": "https://ted.europa.eu/bg/notice/784783-2026/pdf",
+     "SPA": "https://ted.europa.eu/es/notice/784783-2026/pdf",
+     "CES": "https://ted.europa.eu/cs/notice/784783-2026/pdf",
+     "DAN": "https://ted.europa.eu/da/notice/784783-2026/pdf",
+     "DEU": "https://ted.europa.eu/de/notice/784783-2026/pdf",
+     "EST": "https://ted.europa.eu/et/notice/784783-2026/pdf",
+     "ELL": "https://ted.europa.eu/el/notice/784783-2026/pdf",
+     "ENG": "https://ted.europa.eu/en/notice/784783-2026/pdf",
+     "FRA": "https://ted.europa.eu/fr/notice/784783-2026/pdf",
+     "GLE": "https://ted.europa.eu/ga/notice/784783-2026/pdf",
+     "HRV": "https://ted.europa.eu/hr/notice/784783-2026/pdf",
+     "ITA": "https://ted.europa.eu/it/notice/784783-2026/pdf",
+     "LAV": "https://ted.europa.eu/lv/notice/784783-2026/pdf",
+     "LIT": "https://ted.europa.eu/lt/notice/784783-2026/pdf",
+     "HUN": "https://ted.europa.eu/hu/notice/784783-2026/pdf",
+     "MLT": "https://ted.europa.eu/mt/notice/784783-2026/pdf",
+     "NLD": "https://ted.europa.eu/nl/notice/784783-2026/pdf",
+     "POL": "https://ted.europa.eu/pl/notice/784783-2026/pdf",
+     "POR": "https://ted.europa.eu/pt/notice/784783-2026/pdf",
+     "RON": "https://ted.europa.eu/ro/notice/784783-2026/pdf",
+     "SLK": "https://ted.europa.eu/sk/notice/784783-2026/pdf",
+     "SLV": "https://ted.europa.eu/sl/notice/784783-2026/pdf",
+     "FIN": "https://ted.europa.eu/fi/notice/784783-2026/pdf",
+     "SWE": "https://ted.europa.eu/sv/notice/784783-2026/pdf"
+    },
+    "pdfs": {
+     "ELL": "https://ted.europa.eu/el/notice/784783-2026/pdfs"
+    },
+    "html": {
+     "BUL": "https://ted.europa.eu/bg/notice/-/detail/784783-2026",
+     "SPA": "https://ted.europa.eu/es/notice/-/detail/784783-2026",
+     "CES": "https://ted.europa.eu/cs/notice/-/detail/784783-2026",
+     "DAN": "https://ted.europa.eu/da/notice/-/detail/784783-2026",
+     "DEU": "https://ted.europa.eu/de/notice/-/detail/784783-2026",
+     "EST": "https://ted.europa.eu/et/notice/-/detail/784783-2026",
+     "ELL": "https://ted.europa.eu/el/notice/-/detail/784783-2026",
+     "ENG": "https://ted.europa.eu/en/notice/-/detail/784783-2026",
+     "FRA": "https://ted.europa.eu/fr/notice/-/detail/784783-2026",
+     "GLE": "https://ted.europa.eu/ga/notice/-/detail/784783-2026",
+     "HRV": "https://ted.europa.eu/hr/notice/-/detail/784783-2026",
+     "ITA": "https://ted.europa.eu/it/notice/-/detail/784783-2026",
+     "LAV": "https://ted.europa.eu/lv/notice/-/detail/784783-2026",
+     "LIT": "https://ted.europa.eu/lt/notice/-/detail/784783-2026",
+     "HUN": "https://ted.europa.eu/hu/notice/-/detail/784783-2026",
+     "MLT": "https://ted.europa.eu/mt/notice/-/detail/784783-2026",
+     "NLD": "https://ted.europa.eu/nl/notice/-/detail/784783-2026",
+     "POL": "https://ted.europa.eu/pl/notice/-/detail/784783-2026",
+     "POR": "https://ted.europa.eu/pt/notice/-/detail/784783-2026",
+     "RON": "https://ted.europa.eu/ro/notice/-/detail/784783-2026",
+     "SLK": "https://ted.europa.eu/sk/notice/-/detail/784783-2026",
+     "SLV": "https://ted.europa.eu/sl/notice/-/detail/784783-2026",
+     "FIN": "https://ted.europa.eu/fi/notice/-/detail/784783-2026",
+     "SWE": "https://ted.europa.eu/sv/notice/-/detail/784783-2026"
+    },
+    "htmlDirect": {
+     "BUL": "https://ted.europa.eu/bg/notice/784783-2026/html",
+     "SPA": "https://ted.europa.eu/es/notice/784783-2026/html",
+     "CES": "https://ted.europa.eu/cs/notice/784783-2026/html",
+     "DAN": "https://ted.europa.eu/da/notice/784783-2026/html",
+     "DEU": "https://ted.europa.eu/de/notice/784783-2026/html",
+     "EST": "https://ted.europa.eu/et/notice/784783-2026/html",
+     "ELL": "https://ted.europa.eu/el/notice/784783-2026/html",
+     "ENG": "https://ted.europa.eu/en/notice/784783-2026/html",
+     "FRA": "https://ted.europa.eu/fr/notice/784783-2026/html",
+     "GLE": "https://ted.europa.eu/ga/notice/784783-2026/html",
+     "HRV": "https://ted.europa.eu/hr/notice/784783-2026/html",
+     "ITA": "https://ted.europa.eu/it/notice/784783-2026/html",
+     "LAV": "https://ted.europa.eu/lv/notice/784783-2026/html",
+     "LIT": "https://ted.europa.eu/lt/notice/784783-2026/html",
+     "HUN": "https://ted.europa.eu/hu/notice/784783-2026/html",
+     "MLT": "https://ted.europa.eu/mt/notice/784783-2026/html",
+     "NLD": "https://ted.europa.eu/nl/notice/784783-2026/html",
+     "POL": "https://ted.europa.eu/pl/notice/784783-2026/html",
+     "POR": "https://ted.europa.eu/pt/notice/784783-2026/html",
+     "RON": "https://ted.europa.eu/ro/notice/784783-2026/html",
+     "SLK": "https://ted.europa.eu/sk/notice/784783-2026/html",
+     "SLV": "https://ted.europa.eu/sl/notice/784783-2026/html",
+     "FIN": "https://ted.europa.eu/fi/notice/784783-2026/html",
+     "SWE": "https://ted.europa.eu/sv/notice/784783-2026/html"
+    }
+   },
+   "notice-title": {
+    "hun": "Görögország – Szoftvercsomag és információs rendszerek – 36624/2026",
+    "lav": "Grieķija – Programmatūras pakotne un informācijas sistēmas – 36624/2026",
+    "swe": "Grekland – Programvara och informationssystem – 36624/2026",
+    "gle": "An Ghréig – Software package and information systems – 36624/2026",
+    "ell": "Ελλάδα – Πακέτα λογισμικού και συστήματα πληροφορικής – 36624/2026",
+    "spa": "Grecia – Paquetes de software y sistemas de información – 36624/2026",
+    "est": "Kreeka – Tarkvarapaketid ja infosüsteemid – 36624/2026",
+    "nld": "Griekenland – Software en informatiesystemen – 36624/2026",
+    "fin": "Kreikka – Ohjelmatuotteet ja tietojärjestelmät – 36624/2026",
+    "pol": "Grecja – Pakiety oprogramowania i systemy informatyczne – 36624/2026",
+    "hrv": "Grčka – Programski paketi i informacijski sustavi – 36624/2026",
+    "ces": "Řecko – Balíky programů a informační systémy – 36624/2026",
+    "dan": "Grækenland – Programpakker og informationssystemer – 36624/2026",
+    "ron": "Grecia – Pachete software şi sisteme informatice – 36624/2026",
+    "por": "Grécia – Pacotes de software e sistemas de informação – 36624/2026",
+    "slk": "Grécko – Softvérové balíky a informačné systémy – 36624/2026",
+    "fra": "Grèce – Logiciels et systèmes d'information – 36624/2026",
+    "mlt": "Il-Greċja – Pakketti tas-softwer u sistemi ta' informazzjoni – 36624/2026",
+    "deu": "Griechenland – Softwarepaket und Informationssysteme – 36624/2026",
+    "lit": "Graikija – Programinės įrangos paketai ir informacinės sistemos – 36624/2026",
+    "ita": "Grecia – Pacchetti software e sistemi di informazione – 36624/2026",
+    "bul": "Гъpция – Софтуерни пакети и информационни системи – 36624/2026",
+    "slv": "Grčija – Programski paketi in informacijski sistemi – 36624/2026",
+    "eng": "Greece – Software package and information systems – 36624/2026"
+   },
+   "form-type": "competition"
+  }
+ ],
+ "totalNoticeCount": 1,
+ "iterationNextToken": null,
+ "timedOut": false
+}

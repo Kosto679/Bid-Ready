@@ -1,0 +1,158 @@
+{
+ "notices": [
+  {
+   "place-of-performance": [
+    "EL301",
+    "GRC",
+    "EL301",
+    "GRC"
+   ],
+   "deadline-receipt-tender-date-lot": [
+    "2026-11-26+02:00"
+   ],
+   "notice-type": "cn-standard",
+   "publication-number": "770279-2026",
+   "estimated-value-lot": [
+    "1607400"
+   ],
+   "estimated-value-cur-proc": "EUR",
+   "buyer-country": [
+    "GRC"
+   ],
+   "deadline-receipt-tender-time-lot": [
+    "13:00:00+02:00"
+   ],
+   "classification-cpv": [
+    "72200000",
+    "79417000",
+    "80330000",
+    "72200000",
+    "79417000",
+    "80330000"
+   ],
+   "buyer-name": {
+    "ell": [
+     "ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ"
+    ]
+   },
+   "publication-date": "2026-11-05+01:00",
+   "estimated-value-proc": "1607400",
+   "links": {
+    "xml": {
+     "MUL": "https://ted.europa.eu/en/notice/770279-2026/xml"
+    },
+    "pdf": {
+     "BUL": "https://ted.europa.eu/bg/notice/770279-2026/pdf",
+     "SPA": "https://ted.europa.eu/es/notice/770279-2026/pdf",
+     "CES": "https://ted.europa.eu/cs/notice/770279-2026/pdf",
+     "DAN": "https://ted.europa.eu/da/notice/770279-2026/pdf",
+     "DEU": "https://ted.europa.eu/de/notice/770279-2026/pdf",
+     "EST": "https://ted.europa.eu/et/notice/770279-2026/pdf",
+     "ELL": "https://ted.europa.eu/el/notice/770279-2026/pdf",
+     "ENG": "https://ted.europa.eu/en/notice/770279-2026/pdf",
+     "FRA": "https://ted.europa.eu/fr/notice/770279-2026/pdf",
+     "GLE": "https://ted.europa.eu/ga/notice/770279-2026/pdf",
+     "HRV": "https://ted.europa.eu/hr/notice/770279-2026/pdf",
+     "ITA": "https://ted.europa.eu/it/notice/770279-2026/pdf",
+     "LAV": "https://ted.europa.eu/lv/notice/770279-2026/pdf",
+     "LIT": "https://ted.europa.eu/lt/notice/770279-2026/pdf",
+     "HUN": "https://ted.europa.eu/hu/notice/770279-2026/pdf",
+     "MLT": "https://ted.europa.eu/mt/notice/770279-2026/pdf",
+     "NLD": "https://ted.europa.eu/nl/notice/770279-2026/pdf",
+     "POL": "https://ted.europa.eu/pl/notice/770279-2026/pdf",
+     "POR": "https://ted.europa.eu/pt/notice/770279-2026/pdf",
+     "RON": "https://ted.europa.eu/ro/notice/770279-2026/pdf",
+     "SLK": "https://ted.europa.eu/sk/notice/770279-2026/pdf",
+     "SLV": "https://ted.europa.eu/sl/notice/770279-2026/pdf",
+     "FIN": "https://ted.europa.eu/fi/notice/770279-2026/pdf",
+     "SWE": "https://ted.europa.eu/sv/notice/770279-2026/pdf"
+    },
+    "pdfs": {
+     "ELL": "https://ted.europa.eu/el/notice/770279-2026/pdfs"
+    },
+    "html": {
+     "BUL": "https://ted.europa.eu/bg/notice/-/detail/770279-2026",
+     "SPA": "https://ted.europa.eu/es/notice/-/detail/770279-2026",
+     "CES": "https://ted.europa.eu/cs/notice/-/detail/770279-2026",
+     "DAN": "https://ted.europa.eu/da/notice/-/detail/770279-2026",
+     "DEU": "https://ted.europa.eu/de/notice/-/detail/770279-2026",
+     "EST": "https://ted.europa.eu/et/notice/-/detail/770279-2026",
+     "ELL": "https://ted.europa.eu/el/notice/-/detail/770279-2026",
+     "ENG": "https://ted.europa.eu/en/notice/-/detail/770279-2026",
+     "FRA": "https://ted.europa.eu/fr/notice/-/detail/770279-2026",
+     "GLE": "https://ted.europa.eu/ga/notice/-/detail/770279-2026",
+     "HRV": "https://ted.europa.eu/hr/notice/-/detail/770279-2026",
+     "ITA": "https://ted.europa.eu/it/notice/-/detail/770279-2026",
+     "LAV": "https://ted.europa.eu/lv/notice/-/detail/770279-2026",
+     "LIT": "https://ted.europa.eu/lt/notice/-/detail/770279-2026",
+     "HUN": "https://ted.europa.eu/hu/notice/-/detail/770279-2026",
+     "MLT": "https://ted.europa.eu/mt/notice/-/detail/770279-2026",
+     "NLD": "https://ted.europa.eu/nl/notice/-/detail/770279-2026",
+     "POL": "https://ted.europa.eu/pl/notice/-/detail/770279-2026",
+     "POR": "https://ted.europa.eu/pt/notice/-/detail/770279-2026",
+     "RON": "https://ted.europa.eu/ro/notice/-/detail/770279-2026",
+     "SLK": "https://ted.europa.eu/sk/notice/-/detail/770279-2026",
+     "SLV": "https://ted.europa.eu/sl/notice/-/detail/770279-2026",
+     "FIN": "https://ted.europa.eu/fi/notice/-/detail/770279-2026",
+     "SWE": "https://ted.europa.eu/sv/notice/-/detail/770279-2026"
+    },
+    "htmlDirect": {
+     "BUL": "https://ted.europa.eu/bg/notice/770279-2026/html",
+     "SPA": "https://ted.europa.eu/es/notice/770279-2026/html",
+     "CES": "https://ted.europa.eu/cs/notice/770279-2026/html",
+     "DAN": "https://ted.europa.eu/da/notice/770279-2026/html",
+     "DEU": "https://ted.europa.eu/de/notice/770279-2026/html",
+     "EST": "https://ted.europa.eu/et/notice/770279-2026/html",
+     "ELL": "https://ted.europa.eu/el/notice/770279-2026/html",
+     "ENG": "https://ted.europa.eu/en/notice/770279-2026/html",
+     "FRA": "https://ted.europa.eu/fr/notice/770279-2026/html",
+     "GLE": "https://ted.europa.eu/ga/notice/770279-2026/html",
+     "HRV": "https://ted.europa.eu/hr/notice/770279-2026/html",
+     "ITA": "https://ted.europa.eu/it/notice/770279-2026/html",
+     "LAV": "https://ted.europa.eu/lv/notice/770279-2026/html",
+     "LIT": "https://ted.europa.eu/lt/notice/770279-2026/html",
+     "HUN": "https://ted.europa.eu/hu/notice/770279-2026/html",
+     "MLT": "https://ted.europa.eu/mt/notice/770279-2026/html",
+     "NLD": "https://ted.europa.eu/nl/notice/770279-2026/html",
+     "POL": "https://ted.europa.eu/pl/notice/770279-2026/html",
+     "POR": "https://ted.europa.eu/pt/notice/770279-2026/html",
+     "RON": "https://ted.europa.eu/ro/notice/770279-2026/html",
+     "SLK": "https://ted.europa.eu/sk/notice/770279-2026/html",
+     "SLV": "https://ted.europa.eu/sl/notice/770279-2026/html",
+     "FIN": "https://ted.europa.eu/fi/notice/770279-2026/html",
+     "SWE": "https://ted.europa.eu/sv/notice/770279-2026/html"
+    }
+   },
+   "notice-title": {
+    "hun": "Görögország – Szoftverprogramozási és tanácsadási szolgáltatások – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "lav": "Grieķija – Programmatūras izstrādes un konsultāciju pakalpojumi – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "swe": "Grekland – Programmering av mjukvara samt rådgivning – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "gle": "An Ghréig – Software programming and consultancy services – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "ell": "Ελλάδα – Υπηρεσίες προγραμματισμού λογισμικού και παροχής συμβουλών – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "spa": "Grecia – Servicios de programación de software y de consultoría – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "est": "Kreeka – Tarkvara programmeerimis- ja nõustamisteenused – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "nld": "Griekenland – Softwareprogrammering en -advies – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "fin": "Kreikka – Ohjelmointi ja siihen liittyvät neuvontapalvelut – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "pol": "Grecja – Usługi doradcze w zakresie programowania oprogramowania – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "hrv": "Grčka – Usluge programiranja i usluge savjetovanja – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "ces": "Řecko – Programování programového vybavení a poradenské služby – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "dan": "Grækenland – Programmering af software og konsulentvirksomhed – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "ron": "Grecia – Servicii de programare şi de consultanţă software – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "por": "Grécia – Serviços de consultoria e de programação de software – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "slk": "Grécko – Programovanie softvéru a poradenstvo – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "fra": "Grèce – Services de programmation et de conseil en logiciels – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "mlt": "Il-Greċja – Servizzi ta' konsulenza dwar il-programmizzar tas-software – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "deu": "Griechenland – Softwareprogrammierung und -beratung – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "lit": "Graikija – Programinės įrangos programavimo ir konsultacinės paslaugos – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "ita": "Grecia – Programmazione di software e servizi di consulenza – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "bul": "Гъpция – Програмиране и софтуерни консултантски услуги – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "slv": "Grčija – Storitve programiranja programske opreme in svetovanja pri programski opremi – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ",
+    "eng": "Greece – Software programming and consultancy services – Διακήρυξη Ηλεκτρονικού Ανοικτού (Διεθνούς) Άνω των Ορίων Διαγωνισμού για το Έργο «Ψηφιακό σύστημα καταγραφής, παρακολούθησης και διαχείρισης κινδύνων του ΝΠΔΔ ΕΛΛΗΝΙΚΟ ΚΤΗΜΑΤΟΛΟΓΙΟ"
+   },
+   "form-type": "competition"
+  }
+ ],
+ "totalNoticeCount": 1,
+ "iterationNextToken": null,
+ "timedOut": false
+}

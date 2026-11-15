@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:Changes>
+                  <efbc:ChangedNoticeIdentifier>697099-2026</efbc:ChangedNoticeIdentifier>
+                  <efac:ChangeReason>
+                     <cbc:ReasonCode listName="change-corrig-justification">update-add</cbc:ReasonCode>
+                  </efac:ChangeReason>
+               </efac:Changes>
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://www.rethymno.gr</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">ΔΗΜΟΣ ΡΕΘΥΜΝΗΣ</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>ΑΔΕΛΕ ΡΕΘΥΜΝΟ Δ/ΝΣΗ ΟΙΚΟΝΟΜΙΚΩΝ ΥΠΗΡΕΣΙΩΝ</cbc:StreetName>
+                           <cbc:CityName>ΡΕΘΥΜΝΟ</cbc:CityName>
+                           <cbc:PostalZone>74100</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL433</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>1007.E87301.0001</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Name>ΚΛΑΨΙΝΟΥ ΒΑΣΙΛΙΚΗ</cbc:Name>
+                           <cbc:Telephone>+302831341041</cbc:Telephone>
+                           <cbc:Telefax>+302831341041</cbc:Telefax>
+                           <cbc:ElectronicMail>Klapsinou@rethymno.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>http://www.eadhsy.gr</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">ΕΝΙΑΙΑ ΑΡΧΗ ΔΗΜΟΣΙΩΝ ΣΥΜΒΑΣΕΩΝ</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>ΔΩΡΟΥ 7-9</cbc:StreetName>
+                           <cbc:CityName>ΑΘΗΝΑ</cbc:CityName>
+                           <cbc:PostalZone>10432</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>1000.E00961.0001</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+302132141227</cbc:Telephone>
+                           <cbc:Telefax>+302132141227</cbc:Telefax>
+                           <cbc:ElectronicMail>grafeioproedrou@aepp-procurement.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://op.europa.eu</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">Publications Office of the European Union</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <cbc:PostalZone>2417</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>PUBL</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+352 29291</cbc:Telephone>
+                           <cbc:ElectronicMail>ted@publications.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+            <efac:Publication><efbc:NoticePublicationID schemeName="ojs-notice-id">00784783-2026</efbc:NoticePublicationID><efbc:GazetteID schemeName="ojs-id">219/2026</efbc:GazetteID><efbc:PublicationDate>2026-11-11+01:00</efbc:PublicationDate></efac:Publication></efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-1.14</cbc:CustomizationID>
+   <cbc:ID schemeName="notice-id">c0f62148-ffe5-4755-b5a8-8039e9fd1a36</cbc:ID>
+   <cbc:ContractFolderID>51fd5044-dbe3-4ada-8c91-dbd50fed2887</cbc:ContractFolderID>
+   <cbc:IssueDate>2026-11-09Z</cbc:IssueDate>
+   <cbc:IssueTime>15:07:02Z</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode listName="language">ELL</cbc:NoticeLanguageCode>
+   <cac:ContractingParty>
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">la</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">gen-pub</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:ServiceProviderParty>
+            <cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:Party>
+         </cac:ServiceProviderParty>
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:TenderingTerms>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-grounds-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:LotDistribution>
+         <cbc:MaximumLotsAwardedNumeric>2</cbc:MaximumLotsAwardedNumeric>
+         <cbc:MaximumLotsSubmittedNumeric>2</cbc:MaximumLotsSubmittedNumeric>
+         <cac:LotsGroup>
+            <cbc:LotsGroupID schemeName="LotsGroup">GLO-0001</cbc:LotsGroupID>
+            <cac:ProcurementProjectLotReference>
+               <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+            </cac:ProcurementProjectLotReference>
+            <cac:ProcurementProjectLotReference>
+               <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+            </cac:ProcurementProjectLotReference>
+         </cac:LotsGroup>
+      </cac:LotDistribution>
+   </cac:TenderingTerms>
+   <cac:TenderingProcess>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <cac:ProcessJustification>
+         <cbc:ProcessReasonCode listName="accelerated-procedure">false</cbc:ProcessReasonCode>
+      </cac:ProcessJustification>
+   </cac:TenderingProcess>
+   <cac:ProcurementProject>
+      <cbc:Name languageID="ELL">36624/2026</cbc:Name>
+      <cbc:Description languageID="ELL">Υλοποίηση Δράσεων του marketplace για τον ψηφιακό μετασχηματισμό του Δήμου Ρεθύμνης</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+      <cac:RequestedTenderTotal>
+         <cbc:EstimatedOverallContractAmount currencyID="EUR">916009.39</cbc:EstimatedOverallContractAmount>
+      </cac:RequestedTenderTotal>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">48000000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">34992100</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">34996000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">35261100</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">35125100</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">38551000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">48210000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">72210000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:CountrySubentityCode listName="nuts">EL433</cbc:CountrySubentityCode>
+            <cac:Country>
+               <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:Address>
+      </cac:RealizedLocation>
+   </cac:ProcurementProject>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:Funding>
+                        <efbc:FinancingIdentifier>A/A Πρόσκλησης ΟΠΣ241</efbc:FinancingIdentifier>
+                        <cbc:FundingProgramCode listName="eu-programme">ERDF_2021</cbc:FundingProgramCode>
+                        <cbc:Description languageID="ELL">Η σύμβαση αφορά στο Υποέργο Νο1 της Πράξης "Δράσεις Ψηφιακού Μετασχημαρτισμού του Δήμου Ρεθύμνης" η οποία έχει ενταχθεί στο πρόγραμμα "Ψηφιακός Μετασχηματισμός 2021-2027" με κωδικό MIS 6000365</cbc:Description>
+                     </efac:Funding>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>ELL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>36624/2026</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://portal.eprocurement.gov.gr/webcenter/portal/TestPortal</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Description languageID="ELL">Κριτήριο ανάθεσης της Σύμβασης είναι η πλέον συμφέρουσα από οικονομική άποψη προσφορά βάσει βέλτιστης σχέσης ποιότητας – τιμής, για το σύνολο των ειδών του κάθε τμήματος, η οποία εκτιμάται βάσει των κάτωθι κριτηρίων: 
+ΤΜΗΜΑ Α
+ΚΡΙΤΗΡΙΟ (Κi)	ΠΕΡΙΓΡΑΦΗ		ΣΥΝΤΕΛΕΣΤΗΣ ΒΑΡΥΤΗΤΑΣ  (σi)
+Κ1	Κατανόηση έργου 
+-	Ορθότητα αντίληψης προσφέροντος για το αντικείμενο και τις απαιτήσεις του έργου
+-	Κατανόηση ειδικών απαιτήσεων – ιδιαιτεροτήτων. Αναγνώριση κρίσιμων παραγόντων επιτυχίας, 
+-	Εντοπισμός ενδεχόμενων προβλημάτων/ κινδύνων και προτάσεις αντιμετώπισης αυτών	ΠΑΡΑΡΤΗΜΑ I
+Α.1., Α.2., Α.3., 01.01, 03.01, , 13.01, 16.7 19, 20
+ΠΑΡΑΡΤΗΜΑ IV
+19, 21, 22	20%
+Κ2	Προδιαγραφές Τεχνικής Λύσης 
+-	Αρχιτεκτονική προτεινόμενης λύσης
+-	Τεχνικά και τεχνολογικά χαρακτηριστικά λύσης
+-	Σαφήνεια και πληρότητα ανάλυσης των προσφερόμενων Εφαρμογών 	ΠΑΡΑΡΤΗΜΑ I
+01.02, 01.03, 01.04,  03.02, 03.03, 13.02, 13.03, 13.04, 16.1, 16.2, 16.3, 16.4
+ΠΑΡΑΡΤΗΜΑ IV
+01.1, 01.2, 01.3, 02.1, 02.2, 03.1, 03.2, 03.3, 03.4, 03.5, 13.1, 13.2, 14, 15, 16	50%
+Κ3	Μεθοδολογία διοίκησης - Προτεινόμενο σχήμα Διοίκησης Έργου
+-	Σχήμα διοίκησης και οργάνωσης υλοποίησης έργου
+-	Καθορισμός των ρόλων και των αρμοδιοτήτων των προτεινόμενων μελών της Ομάδας Έργου, σε συνάρτηση με το αντικείμενο και τις υπηρεσίες του έργου
+-	Συνολικός χρόνος απασχόλησης του εκάστοτε μέλους της Ομάδας Έργου	ΠΑΡΑΡΤΗΜΑ I
+18
+ΠΑΡΑΡΤΗΜΑ IV
+	15%
+Κ4	Οργάνωση Υλοποίησης Έργου (Χρονοδιάγραμμα, Παραδοτέα)
+-	Ανάλυση του αντικειμένου του έργου σε φάσεις και η σύνδεσή τους με τα παραδοτέα
+-	Ρεαλιστικό χρονοδιάγραμμα υλοποίησης του έργου
+-	Λίστα ορόσημων έργου που αφορούν κρίσιμα σημεία του χρονοδιαγράμματος	ΠΑΡΑΡΤΗΜΑ I
+17
+ΠΑΡΑΡΤΗΜΑ IV
+23	10%
+Κ5	Εκπαίδευση Χρηστών και Περίοδος Καλής λειτουργίας
+-	Υπηρεσίες εκπαίδευσης και τεχνικής υποστήριξης μετά την παράδοση της προμήθειας. 
+-	Περίοδος καλής λειτουργίας. 	ΠΑΡΑΡΤΗΜΑ I
+16.5, 16.6, , 16.8
+ΠΑΡΑΡΤΗΜΑ IV
+17, 18, 20	5%
+ΑΘΡΟΙΣΜΑ ΣΥΝΟΛΟΥ ΣΥΝΤΕΛΕΣΤΩΝ ΒΑΡΥΤΗΤΑΣ		100%
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <cac:DocumentProviderParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:DocumentProviderParty>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://portal.eprocurement.gov.gr/webcenter/portal/TestPortal</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">Όπως προβλέπεται στη Διακήρυξη (άρθρο 3.4)</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+            <cac:MediationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:MediationParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-11-16+02:00</cbc:EndDate>
+            <cbc:EndTime>15:30:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-11-20+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>09:30:00+02:00</cbc:OccurrenceTime>
+            <cbc:Description languageID="ELL">ΕΠΙΤΡΟΠΗ ΔΙΑΓΩΝΙΣΜΟΥ</cbc:Description>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="ELL">Όπως προβλέπεται στη διακήρυξη</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">ΤΜΗΜΑ Α</cbc:ID>
+         <cbc:Name languageID="ELL">TMHMA A </cbc:Name>
+         <cbc:Description languageID="ELL">Προμήθεια εξοπλισμού για την εφαρμογή έξυπνων συστημάτων για τη βελτίωση της ποιότητας ζωής και ανάπτυξη ολοκληρωμένης υποδομής προστασίας από Κυβερνοεπιθέσεις.</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cbc:EstimatedOverallContractQuantity>1</cbc:EstimatedOverallContractQuantity>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">385119.39</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">34992100</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">34990000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">35261100</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">35125100</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">38551000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48210000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72210000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:CountrySubentityCode listName="nuts">EL433</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:Funding>
+                        <efbc:FinancingIdentifier>A/A Πρόσκλησης ΟΠΣ241</efbc:FinancingIdentifier>
+                        <cbc:FundingProgramCode listName="eu-programme">ERDF_2021</cbc:FundingProgramCode>
+                        <cbc:Description languageID="ELL">Η σύμβαση αφορά στο Υποέργο Νο1 της Πράξης "Δράσεις Ψηφιακού Μετασχημαρτισμού του Δήμου Ρεθύμνης" η οποία έχει ενταχθεί στο πρόγραμμα "Ψηφιακός Μετασχηματισμός 2021-2027" με κωδικό MIS 6000365</cbc:Description>
+                     </efac:Funding>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>ELL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>ΧΧΧΧΧ/2026</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://portal.eprocurement.gov.gr/webcenter/portal/TestPortal</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">required</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Description languageID="ELL">Κριτήριο ανάθεσης της Σύμβασης είναι η πλέον συμφέρουσα από οικονομική άποψη προσφορά βάσει βέλτιστης σχέσης ποιότητας – τιμής, για το σύνολο των ειδών του κάθε τμήματος, η οποία εκτιμάται βάσει των κάτωθι κριτηρίων: 
+ΤΜΗΜΑ Β
+ΚΡΙΤΗΡΙΟ (Κi)	ΠΕΡΙΓΡΑΦΗ		ΣΥΝΤΕΛΕΣΤΗΣ ΒΑΡΥΤΗΤΑΣ  (σi)
+Κ1	Κατανόηση έργου 
+-	Ορθότητα αντίληψης προσφέροντος για το αντικείμενο και τις απαιτήσεις του έργου
+-	Κατανόηση ειδικών απαιτήσεων – ιδιαιτεροτήτων. Αναγνώριση κρίσιμων παραγόντων επιτυχίας, 
+-	Εντοπισμός ενδεχόμενων προβλημάτων/ κινδύνων και προτάσεις αντιμετώπισης αυτών	ΠΑΡΑΡΤΗΜΑ I
+Α.1., Α.2., Α.3., 04.01, 05.01, 06.01, 07.01, 08.01, 08.04, 10.01, 11.01, 12,01, 14.01, 16.7 19, 20
+ΠΑΡΑΡΤΗΜΑ IV
+16.6, 16.8, 16.9	20%
+Κ2	Προδιαγραφές Τεχνικής Λύσης 
+-	Αρχιτεκτονική προτεινόμενης λύσης
+-	Τεχνικά και τεχνολογικά χαρακτηριστικά λύσης
+-	Σαφήνεια και πληρότητα ανάλυσης των προσφερόμενων Εφαρμογών 	ΠΑΡΑΡΤΗΜΑ I
+04.02, 04.03, 04.04, 05.02, 05.03, 05.04, 05.05, 05.06, 06.02, 06.03, 06.04, 06.05, 07.02, 07.03, 08.02, 08.03, 10.02, 10.03, 10.04, 10.05, 11.02, 11.03, 11.04, 11.05, 12.02, 12.03, 12.04, 14.02, 14.03, 14.04, 14.05, 16.1, 16.2, 16.3, 16.4
+ΠΑΡΑΡΤΗΜΑ IV
+04.01, 04.02, 04.03, 05, 06, 07.01, 07.02, 08.01, 08.02, 09.01, 09.02. 10.1, 10.2, 10.3, 10.4, 11.01, 12.01, 12.02, 12.03, 14.01, 14.02, 14.03, 15.01, 15.02, 16.1, 16.2, 16.3	50%
+Κ3	Μεθοδολογία διοίκησης - Προτεινόμενο σχήμα Διοίκησης Έργου
+-	Σχήμα διοίκησης και οργάνωσης υλοποίησης έργου
+-	Καθορισμός των ρόλων και των αρμοδιοτήτων των προτεινόμενων μελών της Ομάδας Έργου, σε συνάρτηση με το αντικείμενο και τις υπηρεσίες του έργου
+-	Συνολικός χρόνος απασχόλησης του εκάστοτε μέλους της Ομάδας Έργου	ΠΑΡΑΡΤΗΜΑ I
+18
+ΠΑΡΑΡΤΗΜΑ IV
+	15%
+Κ4	Οργάνωση Υλοποίησης Έργου (Χρονοδιάγραμμα, Παραδοτέα)
+-	Ανάλυση του αντικειμένου του έργου σε φάσεις και η σύνδεσή τους με τα παραδοτέα
+-	Ρεαλιστικό χρονοδιάγραμμα υλοποίησης του έργου
+-	Λίστα ορόσημων έργου που αφορούν κρίσιμα σημεία του χρονοδιαγράμματος	ΠΑΡΑΡΤΗΜΑ I
+17
+ΠΑΡΑΡΤΗΜΑ IV
+16.10	10%
+Κ5	Εκπαίδευση Χρηστών και Περίοδος Καλής λειτουργίας
+-	Υπηρεσίες εκπαίδευσης και τεχνικής υποστήριξης μετά την παράδοση της προμήθειας. 
+-	Περίοδος καλής λειτουργίας. 	ΠΑΡΑΡΤΗΜΑ I
+16.5, 16.6, 16.8
+ΠΑΡΑΡΤΗΜΑ IV
+16.4, 16.5, 16.7	5%
+ΑΘΡΟΙΣΜΑ ΣΥΝΟΛΟΥ ΣΥΝΤΕΛΕΣΤΩΝ ΒΑΡΥΤΗΤΑΣ		100%
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <cac:DocumentProviderParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:DocumentProviderParty>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://portal.eprocurement.gov.gr/webcenter/portal/TestPortal</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">12</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">Όπως προβλέπεται στη Διακήρυξη (άρθρο 3.4)</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+            <cac:MediationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:MediationParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>false</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-11-16+02:00</cbc:EndDate>
+            <cbc:EndTime>15:30:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-11-20+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>09:30:00+02:00</cbc:OccurrenceTime>
+            <cbc:Description languageID="ELL">ΕΠΙΤΡΟΠΗ ΔΙΑΓΩΝΙΣΜΟΥ</cbc:Description>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="ELL">Όπως προβλέπεται στη διακήρυξη</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">ΤΜΗΜΑ Β</cbc:ID>
+         <cbc:Name languageID="ELL">TMHMA Β</cbc:Name>
+         <cbc:Description languageID="ELL">Προμήθεια πακέτων λογισμικού για την ανάπτυξη της επιχειρηματικότητας, τη βελτίωση της ηλεκτρονικής διακυβέρνησης, της ποιότητας ζωής και την ενίσχυση της ανταγωνιστικότητας και της εξωστρέφειας της τοπικής οικονομίας.</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">530890</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">48000000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72210000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:CountrySubentityCode listName="nuts">EL433</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="LotsGroup">GLO-0001</cbc:ID>
+      <cac:TenderingTerms>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Description languageID="ELL">Κριτήριο ανάθεσης της Σύμβασης είναι η πλέον συμφέρουσα από οικονομική άποψη προσφορά βάσει βέλτιστης σχέσης ποιότητας – τιμής, για το σύνολο των ειδών του κάθε τμήματος, η οποία εκτιμάται βάσει των κάτωθι κριτηρίων: 
+ΤΜΗΜΑ Α
+ΚΡΙΤΗΡΙΟ (Κi)	ΠΕΡΙΓΡΑΦΗ		ΣΥΝΤΕΛΕΣΤΗΣ ΒΑΡΥΤΗΤΑΣ  (σi)
+Κ1	Κατανόηση έργου 
+-	Ορθότητα αντίληψης προσφέροντος για το αντικείμενο και τις απαιτήσεις του έργου
+-	Κατανόηση ειδικών απαιτήσεων – ιδιαιτεροτήτων. Αναγνώριση κρίσιμων παραγόντων επιτυχίας, 
+-	Εντοπισμός ενδεχόμενων προβλημάτων/ κινδύνων και προτάσεις αντιμετώπισης αυτών	ΠΑΡΑΡΤΗΜΑ I
+Α.1., Α.2., Α.3., 01.01, , 02.01, 03.01, , 13.01, 16.7 19, 20
+ΠΑΡΑΡΤΗΜΑ IV
+19, 21, 22	20%
+Κ2	Προδιαγραφές Τεχνικής Λύσης 
+-	Αρχιτεκτονική προτεινόμενης λύσης
+-	Τεχνικά και τεχνολογικά χαρακτηριστικά λύσης
+-	Σαφήνεια και πληρότητα ανάλυσης των προσφερόμενων Εφαρμογών 	ΠΑΡΑΡΤΗΜΑ I
+01.02, 01.03, 01.04, 02.02, 02.03, 03.02, 03.03, 13.02, 13.03, 13.04, 16.1, 16.2, 16.3, 16.4
+ΠΑΡΑΡΤΗΜΑ IV
+01.1, 01.2, 01.3, 02.1, 02.2, 03.1, 03.2, 03.3, 03.4, 03.5, 13.1, 13.2, 14, 15, 16	50%
+Κ3	Μεθοδολογία διοίκησης - Προτεινόμενο σχήμα Διοίκησης Έργου
+-	Σχήμα διοίκησης και οργάνωσης υλοποίησης έργου
+-	Καθορισμός των ρόλων και των αρμοδιοτήτων των προτεινόμενων μελών της Ομάδας Έργου, σε συνάρτηση με το αντικείμενο και τις υπηρεσίες του έργου
+-	Συνολικός χρόνος απασχόλησης του εκάστοτε μέλους της Ομάδας Έργου	ΠΑΡΑΡΤΗΜΑ I
+18
+ΠΑΡΑΡΤΗΜΑ IV
+	15%
+Κ4	Οργάνωση Υλοποίησης Έργου (Χρονοδιάγραμμα, Παραδοτέα)
+-	Ανάλυση του αντικειμένου του έργου σε φάσεις και η σύνδεσή τους με τα παραδοτέα
+-	Ρεαλιστικό χρονοδιάγραμμα υλοποίησης του έργου
+-	Λίστα ορόσημων έργου που αφορούν κρίσιμα σημεία του χρονοδιαγράμματος	ΠΑΡΑΡΤΗΜΑ I
+17
+ΠΑΡΑΡΤΗΜΑ IV
+23	10%
+Κ5	Εκπαίδευση Χρηστών και Περίοδος Καλής λειτουργίας
+-	Υπηρεσίες εκπαίδευσης και τεχνικής υποστήριξης μετά την παράδοση της προμήθειας. 
+-	Περίοδος καλής λειτουργίας. 	ΠΑΡΑΡΤΗΜΑ I
+16.5, 16.6, , 16.8
+ΠΑΡΑΡΤΗΜΑ IV
+17, 18, 20	5%
+ΑΘΡΟΙΣΜΑ ΣΥΝΟΛΟΥ ΣΥΝΤΕΛΕΣΤΩΝ ΒΑΡΥΤΗΤΑΣ		100%
+ΤΜΗΜΑ Β
+ΚΡΙΤΗΡΙΟ (Κi)	ΠΕΡΙΓΡΑΦΗ		ΣΥΝΤΕΛΕΣΤΗΣ ΒΑΡΥΤΗΤΑΣ  (σi)
+Κ1	Κατανόηση έργου 
+-	Ορθότητα αντίληψης προσφέροντος για το αντικείμενο και τις απαιτήσεις του έργου
+-	Κατανόηση ειδικών απαιτήσεων – ιδιαιτεροτήτων. Αναγνώριση κρίσιμων παραγόντων επιτυχίας, 
+-	Εντοπισμός ενδεχόμενων προβλημάτων/ κινδύνων και προτάσεις αντιμετώπισης αυτών	ΠΑΡΑΡΤΗΜΑ I
+Α.1., Α.2., Α.3., 04.01, 05.01, 06.01, 07.01, 08.01, 09.01, , 10.01, , 11.01, 12,01, 14.01, , 16.7 19, 20
+ΠΑΡΑΡΤΗΜΑ IV
+16.6, 16.8, 16.9	20%
+Κ2	Προδιαγραφές Τεχνικής Λύσης 
+-	Αρχιτεκτονική προτεινόμενης λύσης
+-	Τεχνικά και τεχνολογικά χαρακτηριστικά λύσης
+-	Σαφήνεια και πληρότητα ανάλυσης των προσφερόμενων Εφαρμογών 	ΠΑΡΑΡΤΗΜΑ I
+04.02, 04.03, 04.04, 05.02, 05.03, 05.04, 05.05, 05.06, 06.02, 06.03, 06.04, 06.05, 07.02, 07.03, 08.02, 08.03, 09.02, 09.03, 09.04, 10.02, 10.03, 10.04, 10.05, 11.02, 11.03, 11.04, 11.05, 12.02, 12.03, 12.04, 14.02, 14.03, 14.04, 14.05, 15.01, 15.02, 15.03, 16.1, 16.2, 16.3, 16.4
+ΠΑΡΑΡΤΗΜΑ IV
+04.01, 04.02, 04.03, 05, 06, 07.01, 07.02, 08.01, 08.02, 09.01, 09.02. 10.1, 10.2, 10.3, 10.4, 11.01, 12.01, 12.02, 12.03, 14.01, 14.02, 14.03, 15.01, 15.02, 16.1, 16.2, 16.3	50%
+Κ3	Μεθοδολογία διοίκησης - Προτεινόμενο σχήμα Διοίκησης Έργου
+-	Σχήμα διοίκησης και οργάνωσης υλοποίησης έργου
+-	Καθορισμός των ρόλων και των αρμοδιοτήτων των προτεινόμενων μελών της Ομάδας Έργου, σε συνάρτηση με το αντικείμενο και τις υπηρεσίες του έργου
+-	Συνολικός χρόνος απασχόλησης του εκάστοτε μέλους της Ομάδας Έργου	ΠΑΡΑΡΤΗΜΑ I
+18
+ΠΑΡΑΡΤΗΜΑ IV
+	15%
+Κ4	Οργάνωση Υλοποίησης Έργου (Χρονοδιάγραμμα, Παραδοτέα)
+-	Ανάλυση του αντικειμένου του έργου σε φάσεις και η σύνδεσή τους με τα παραδοτέα
+-	Ρεαλιστικό χρονοδιάγραμμα υλοποίησης του έργου
+-	Λίστα ορόσημων έργου που αφορούν κρίσιμα σημεία του χρονοδιαγράμματος	ΠΑΡΑΡΤΗΜΑ I
+17
+ΠΑΡΑΡΤΗΜΑ IV
+16.10	10%
+Κ5	Εκπαίδευση Χρηστών και Περίοδος Καλής λειτουργίας
+-	Υπηρεσίες εκπαίδευσης και τεχνικής υποστήριξης μετά την παράδοση της προμήθειας. 
+-	Περίοδος καλής λειτουργίας. 	ΠΑΡΑΡΤΗΜΑ I
+16.5, 16.6, 16.8
+ΠΑΡΑΡΤΗΜΑ IV
+16.4, 16.5, 16.7	5%
+ΑΘΡΟΙΣΜΑ ΣΥΝΟΛΟΥ ΣΥΝΤΕΛΕΣΤΩΝ ΒΑΡΥΤΗΤΑΣ		100%
+2.3.2	Βαθμολόγηση και κατάταξη προσφορών 
+Η βαθμολόγηση κάθε κριτηρίου αξιολόγησης κυμαίνεται από 100 βαθμούς στην περίπτωση που ικανοποιούνται ακριβώς όλοι οι όροι των τεχνικών προδιαγραφών, αυξάνεται δε μέχρι τους 120  βαθμούς όταν υπερκαλύπτονται οι απαιτήσεις του συγκεκριμένου κριτηρίου. 
+Κάθε κριτήριο αξιολόγησης βαθμολογείται αυτόνομα με βάση τα στοιχεία της προσφοράς. 
+Η σταθμισμένη βαθμολογία του κάθε κριτηρίου θα προκύπτει από το γινόμενο του επιμέρους συντελεστή βαρύτητας επί τη βαθμολογία του, η δε συνολική βαθμολογία της προσφοράς θα προκύπτει από το άθροισμα των σταθμισμένων βαθμολογιών όλων των κριτηρίων.
+Η συνολική βαθμολογία της τεχνικής προσφοράς υπολογίζεται με βάση τον παρακάτω τύπο : 
+U = σ1χΚ1 + σ2χΚ2 +……+σνχΚν
+Κριτήρια με βαθμολογία μικρότερη από 100 βαθμούς (ήτοι που δεν καλύπτουν/παρουσιάζουν αποκλίσεις από τις τεχνικές προδιαγραφές της παρούσας) επιφέρουν την απόρριψη της προσφοράς.
+Η αξιολόγηση θα γίνει με κριτήριο ανάθεσης την πλέον συμφέρουσα από οικονομική άποψη Προσφορά. 
+Πλέον συμφέρουσα από οικονομική άποψη προσφορά είναι εκείνη που παρουσιάζει τον μικρότερο λόγο της προσφερθείσας τιμής  προς τη συνολική βαθμολογία της τεχνικής προσφοράς (ήτοι αυτή στην οποία το Λ είναι ο μικρότερος αριθμός), σύμφωνα με τον τύπο που ακολουθεί. 
+Λ	=	Προσφερθείσα τιμή
+		Συνολική βαθμολογία τεχνικής προσφοράς
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+      </cac:TenderingTerms>
+      <cac:ProcurementProject>
+         <cac:RequestedTenderTotal>
+            <cbc:EstimatedOverallContractAmount currencyID="EUR">916009.39</cbc:EstimatedOverallContractAmount>
+         </cac:RequestedTenderTotal>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>

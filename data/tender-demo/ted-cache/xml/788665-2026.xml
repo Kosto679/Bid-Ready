@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">17</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>www.admie.gr</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">ΑΝΕΞΑΡΤΗΤΟΣ ΔΙΑΧΕΙΡΙΣΤΗΣ ΜΕΤΑΦΟΡΑΣ ΗΛΕΚΤΡΙΚΗΣ ΕΝΕΡΓΕΙΑΣ Α.Ε. (ΑΔΜΗΕ Α.Ε.)</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>ΔΥΡΡΑΧΙΟΥ 89</cbc:StreetName>
+                           <cbc:CityName>ΑΘΗΝΑ</cbc:CityName>
+                           <cbc:PostalZone>104 43</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>1031.F01175.0001</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Name>Νίκα Παναγιώτα</cbc:Name>
+                           <cbc:Telephone>+30 210 519 2329</cbc:Telephone>
+                           <cbc:ElectronicMail>p.nika@admie.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>www.aepp-procurement.gr</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">ΕΝΙΑΙΑ ΑΡΧΗ ΔΗΜΟΣΙΩΝ ΣΥΜΒΑΣΕΩΝ (ΕΑΔΗΣΥ)</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>ΔΩΡΟΥ 7-9</cbc:StreetName>
+                           <cbc:CityName>ΑΘΗΝΑ</cbc:CityName>
+                           <cbc:PostalZone>104 32</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>1000.e00961.00001</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+30 2132141227</cbc:Telephone>
+                           <cbc:ElectronicMail>grafeioproedrou@aepp-procurement.gr</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://op.europa.eu</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="ELL">Publications Office of the European Union</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <cbc:PostalZone>2417</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>PUBL</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+352 29291</cbc:Telephone>
+                           <cbc:ElectronicMail>ted@publications.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+            <efac:Publication><efbc:NoticePublicationID schemeName="ojs-notice-id">00788665-2026</efbc:NoticePublicationID><efbc:GazetteID schemeName="ojs-id">220/2026</efbc:GazetteID><efbc:PublicationDate>2026-11-12+01:00</efbc:PublicationDate></efac:Publication></efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-1.14</cbc:CustomizationID>
+   <cbc:ID schemeName="notice-id">fdeb3c22-49ce-4421-8317-215aeac22642</cbc:ID>
+   <cbc:ContractFolderID>904414a1-ebc6-4c94-95e6-3204f38db394</cbc:ContractFolderID>
+   <cbc:IssueDate>2026-11-11Z</cbc:IssueDate>
+   <cbc:IssueTime>13:38:23Z</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0025</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode listName="language">ELL</cbc:NoticeLanguageCode>
+   <cac:ContractingParty>
+      <cbc:BuyerProfileURI>https://www.admie.gr</cbc:BuyerProfileURI>
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">pub-undert-cga</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="entity-activity">electricity</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:ServiceProviderParty>
+            <cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:Party>
+         </cac:ServiceProviderParty>
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:TenderingTerms>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-grounds-source">epo-acc-espd-request</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+   </cac:TenderingTerms>
+   <cac:TenderingProcess>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <cac:ProcessJustification>
+         <cbc:ProcessReasonCode listName="accelerated-procedure">false</cbc:ProcessReasonCode>
+      </cac:ProcessJustification>
+   </cac:TenderingProcess>
+   <cac:ProcurementProject>
+      <cbc:Name languageID="ELL">ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)</cbc:Name>
+      <cbc:Description languageID="ELL">Στο αντικείμενο της Συμφωνίας Πλαίσιο, συνοπτικά, περιλαμβάνεται η παροχή υπηρεσιών ανάπτυξης νέων λειτουργιών και τροποποιήσεων για την κάλυψη των μελλοντικών αλλαγών της Αγοράς Εξισορρόπησης και η παροχή υπηρεσιών συντήρησης  για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS). Το Σύστημα Διαχείρισης Αγοράς Εξισορρόπησης (BMMS) του ΑΔΜΗΕ, τέθηκε σε εμπορική λειτουργία την 1η Νοεμβρίου 2020. Οι εφαρμογές του λογισμικού αποτελούν πνευματική ιδιοκτησία της GE και υπόκεινται σε περιορισμούς που απορρέουν από διπλώματα ευρεσιτεχνίας, εμπορικά απόρρητα, δικαιώματα πνευματικής ιδιοκτησίας κ.λπ.
+Το BMMS υποστηρίζει τη λειτουργία της Αγοράς Εξισορρόπησης στην Ελλάδα. Επιπλέον, υποστηρίζει την αλληλεπίδραση με τους Συμμετέχοντες στην Αγορά, με το Ελληνικό Χρηματιστήριο Ενέργειας (ΕΧΕ – HEnEx), καθώς και την αλληλεπίδραση του Συστήματος Διαχείρισης Ενέργειας (Energy Management System – EMS) με την Αγορά Εξισορρόπησης. Το BMMS είναι ζωτικής σημασίας για την ομαλή και ασφαλή λειτουργία της ηλεκτρικής αγοράς της χώρας και φιλοξενείται στις εγκαταστάσεις του ΑΔΜΗΕ στο Κρυονέρι Αττικής.
+Η αδιάλειπτη και αξιόπιστη λειτουργία του BMMS θεωρείται απολύτως απαραίτητη και μπορεί να διασφαλιστεί μόνο μέσω της συνεχούς συντήρησης και τεχνικής υποστήριξής του.
+Το αντικείμενο συνοπτικά και κατά περίπτωση περιλαμβάνει την παροχή υπηρεσιών:
+Υποέργο 1 :
+• Υπηρεσίες Συντήρησης και Τεχνικής Υποστήριξης,
+Υποέργο 2 :
+• Υλοποίηση νέων περιβαλλόντων συστήματος, με την ανάπτυξη νέων λειτουργιών και τροποποιήσεων για την κάλυψη μελλοντικών αναγκών από την εξέλιξη της Αγοράς Εξισορρόπησης.
+</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <cac:RequestedTenderTotal>
+         <cbc:EstimatedOverallContractAmount currencyID="EUR">5100000</cbc:EstimatedOverallContractAmount>
+      </cac:RequestedTenderTotal>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">72267100</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">72230000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:RealizedLocation>
+         <cbc:Description languageID="ELL">www.marketsite.gr</cbc:Description>
+         <cac:Address>
+            <cbc:Region>anyw-cou</cbc:Region>
+            <cac:Country>
+               <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:Address>
+      </cac:RealizedLocation>
+   </cac:ProcurementProject>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-reg-prof</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς που συμμετέχουν στη διαδικασία σύναψης της παρούσας συμφωνίας πλαίσιο απαιτείται να ασκούν δραστηριότητα συναφή με το αντικείμενο της Συμφωνίας Πλαίσιο.
+Οι οικονομικοί φορείς που είναι εγκατεστημένοι σε κράτος μέλος της Ευρωπαϊκής Ένωσης απαιτείται να είναι εγγεγραμμένοι σε ένα από τα εμπορικά ή/και επαγγελματικά μητρώα που τηρούνται στο κράτος εγκατάστασής τους ή να ικανοποιούν οποιαδήποτε άλλη απαίτηση ορίζεται στο Παράρτημα XI του Προσαρτήματος Α΄ του ν. 4412/2016. Εφόσον οι οικονομικοί φορείς απαιτείται να διαθέτουν ειδική έγκριση ή να είναι μέλη συγκεκριμένου οργανισμού για να μπορούν να παράσχουν τη σχετική υπηρεσία στη χώρα καταγωγής τους, η αναθέτουσα αρχή μπορεί να τους ζητεί να αποδείξουν ότι διαθέτουν την έγκριση αυτή ή ότι είναι μέλη του εν λόγω οργανισμού ή να τους καλέσει να προβούν σε ένορκη δήλωση ενώπιον συμβολαιογράφου σχετικά με την άσκηση του συγκεκριμένου επαγγέλματος. Στην περίπτωση οικονομικών φορέων εγκατεστημένων σε κράτος μέλους του Ευρωπαϊκού Οικονομικού Χώρου (Ε.Ο.Χ) ή σε τρίτες χώρες που προσχωρήσει στη ΣΔΣ, ή σε τρίτες χώρες που δεν εμπίπτουν στην προηγούμενη περίπτωση και έχουν συνάψει διμερείς ή πολυμερείς συμφωνίες με την Ένωση σε θέματα διαδικασιών ανάθεσης δημοσίων συμβάσεων, απαιτείται να είναι εγγεγραμμένοι σε αντίστοιχα επαγγελματικά μητρώα.
+Οι εγκατεστημένοι στην Ελλάδα οικονομικοί φορείς θα πρέπει να είναι εγγεγραμμένοι στο οικείο μητρώο και να ασκούν δραστηριότητα συναφή με το αντικείμενο της Συμφωνίας Πλαίσιο.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-ref-work</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Να έχουν υλοποιήσει τα τελευταία πέντε (5) έτη:
+I. Ένα (1) ή περισσότερα έργα που αφορούν τη συντήρηση Συστημάτων Διαχείρισης Αγοράς για τη λειτουργία της Αγοράς Εξισορρόπησης, σε εταιρεία που έχει τον ρόλο του Διαχειριστή του Συστήματος Μεταφοράς και είναι μέλος του ENTSO-E. Η συνολική αξία του συνόλου των έργων που θα προσκομιστούν για την κάλυψη της παρούσας απαίτησης θα πρέπει να ανέρχεται τουλάχιστον σε πεντακόσιες χιλιάδες ευρώ (500.000,00 €).
+II. Ένα (1) ή περισσότερα έργα ανάπτυξης νέων λειτουργιών με ενσωμάτωσή τους σε πληροφοριακή πλατφόρμα Διαχείρισης Αγοράς Εξισορρόπησης, σε εταιρεία που έχει τον ρόλο του Διαχειριστή του Συστήματος Μεταφοράς και είναι μέλος του ENTSO-E. Η συνολική αξία του συνόλου των έργων που θα προσκομιστούν για την κάλυψη της παρούσας απαίτησης θα πρέπει να ανέρχεται τουλάχιστον σε ένα εκατομμύριο ευρώ (1.000.000,00 €).
+Ένα έργο δύναται να χρησιμοποιηθεί για την κάλυψη μίας ή και των δύο ανωτέρω απαιτήσεων (I και II), εφόσον πληροί τα αντίστοιχα τεχνικά και οικονομικά κριτήρια. Σε περίπτωση που για την κάλυψη μίας απαίτησης προσκομίζονται περισσότερα έργα, λαμβάνεται υπόψη το άθροισμα της αξίας τους.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-suit-auth-mbrshp</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Να έχουν εξασφαλίσει γραπτή άδεια από τον κατασκευαστή του BMMS του ΑΔΜΗΕ, δηλαδή από την εταιρεία GE Vernova η οποία έχει το copyright και όλα τα πνευματικά δικαιώματα για τα προϊόντα της “e-terraTDF Market” και “e-terramarketclearing” πάνω στα οποία αναπτύχθηκε το BMMS του ΑΔΜΗΕ, που θα τους δίνει το δικαίωμα να προσφέρουν συντήρηση και τεχνική υποστήριξη στο BMMS  του ΑΔΜΗΕ και να επεμβαίνουν στο λογισμικό των εφαρμογών των “e-terraTDF Market” και “e-terramarketclearing” για τροποποιήσεις, βελτιώσεις και επαυξήσεις με νέες λειτουργίες κατά τις ανάγκες του ΑΔΜΗΕ χωρίς κανένα περιορισμό ως προς το μέγεθος των ανωτέρω επεμβάσεων.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-abil-staff-qual</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Να διαθέτουν ομάδα έργου με μέλη που διαθέτουν κατάλληλες ειδικότητες, προσόντα και εμπειρία, η οποία θα απαρτίζεται τουλάχιστον από τα παρακάτω μέλη:
+• Project Manager (Υπεύθυνος Έργου), με εμπειρία τουλάχιστον δύο (2) ετών στην παροχή συναφών υπηρεσιών με αυτές της παρούσας
+• Business Architect (Υπεύθυνος Σχεδιασμού Επιχειρησιακών Λειτουργιών), με εμπειρία τουλάχιστον δύο (2) ετών στην παροχή συναφών υπηρεσιών με αυτές της παρούσας.
+• Software Architect (Υπεύθυνος Σχεδιασμού και Υλοποίησης Λογισμικού), με εμπειρία τουλάχιστον δύο (2) ετών στην παροχή συναφών υπηρεσιών με αυτές της παρούσας.
+• Maintenance and Support Manager (Υπεύθυνος Συντήρησης και Υποστήριξης), με εμπειρία τουλάχιστον δύο (2) ετών στην παροχή συναφών υπηρεσιών με αυτές της παρούσας.
+• Maintenance and Support Engineer (Μηχανικός Συντήρησης και Υποστήριξης), με εμπειρία τουλάχιστον δύο (2) ετών στην παροχή συναφών υπηρεσιών με αυτές της παρούσας.
+• E-terraTDF Market Application expert (ειδικός στο λογισμικό e-terraTDF της εταιρείας GE Vernova, σε θέματα Αγοράς), με εμπειρία τουλάχιστον δύο (2) ετών στην παροχή συναφών υπηρεσιών με αυτές της παρούσας.
+• Software engineer (Μηχανικός Ανάπτυξης Λογισμικού), με εμπειρία τουλάχιστον δύο (2) ετών στην παροχή συναφών υπηρεσιών με αυτές της παρούσας.
+• Electricity Markets &amp; Optimization expert specialized on AIMMS and CPLEX solver with at least one year of experience (Ειδικός στις Αγορές Ενέργειας και σε θέματα βελτιστοποίησης, εξειδικευμένος στο σύστημα μαθηματικής μοντελοποίησης AIMMS και στο λογισμικό βελτιστοποίησης CPLEX, με εμπειρία τουλάχιστον ενός (1) έτους σε αυτά).
+• ORACLE DataBase Administrator (Διαχειριστής Βάσεων Δεδομένων ORACLE), με εμπειρία τουλάχιστον δύο (2) ετών στην παροχή συναφών υπηρεσιών με αυτές της παρούσας.
+Σε περίπτωση ένωσης οικονομικών φορέων, οι παραπάνω ελάχιστες απαιτήσεις δύναται να  καλύπτονται αθροιστικά από τα μέλη της ένωσης.</cbc:Description>
+                     </efac:SelectionCriteria>
+                     <efac:SelectionCriteria>
+                        <cbc:TendererRequirementTypeCode listName="selection-criterion">slc-stand-to-avg</cbc:TendererRequirementTypeCode>
+                        <cbc:Description languageID="ELL">Οι οικονομικοί φορείς πρέπει να διαθέτουν μέσο γενικό ετήσιο κύκλο εργασιών των τριών (3) τελευταίων οικονομικών χρήσεων, μεγαλύτερο ή ίσο με τον διπλάσιο ετήσιο προϋπολογισμό του αντικειμένου της παρούσας, ήτοι μεγαλύτερο ή ίσο του ποσού των €2.550.000,00, μη συμπεριλαμβανομένου του ΦΠΑ. Σε περίπτωση που ο υποψήφιος οικονομικός φορέας δραστηριοποιείται για χρονικό διάστημα μικρότερο των τριών τελευταίων διαχειριστικών χρήσεων, η ως άνω απαίτηση για τον μέσο γενικό ετήσιο κύκλο εργασιών αφορά σε όσες διαχειριστικές χρήσεις δραστηριοποιείται. Οι κύκλοι εργασιών δεν πρέπει να εμφανίζουν ζημίες σε καμία χρήση.
+Σε περίπτωση ένωσης/κοινοπραξίας Οικονομικών Φορέων, τα μέλη της δύνανται να πληρούν αθροιστικά την απαίτηση του κριτηρίου Γ.
+Η μη ικανοποίηση των επιμέρους απαιτήσεων των ανωτέρω (Α, Β και Γ) κριτηρίων επιλογής αποτελεί λόγο απόρριψης της προσφοράς.</cbc:Description>
+                     </efac:SelectionCriteria>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:RequiredCurriculaCode listName="requirement-stage">t-requ</cbc:RequiredCurriculaCode>
+         <cac:RequiredFinancialGuarantee>
+            <cbc:GuaranteeTypeCode listName="tender-guarantee-required">true</cbc:GuaranteeTypeCode>
+            <cbc:Description languageID="ELL">0.5% του προϋπολογισμού του αντικειμένου της Συμφωνίας Πλαίσιο, χωρίς ΦΠΑ</cbc:Description>
+         </cac:RequiredFinancialGuarantee>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>ELL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>ΔΕΑ-526080</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://www.marketsite.gr</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:PaymentTerms>
+            <cbc:Note languageID="ELL">Όπως περιγράφεται στην Διακήρυξη</cbc:Note>
+         </cac:PaymentTerms>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-notice</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cbc:CompanyLegalFormCode listName="required">true</cbc:CompanyLegalFormCode>
+            <cbc:CompanyLegalForm languageID="ELL">Εάν ο επιλεγείς ανάδοχος αποτελεί Ένωση Οικονομικών Φορέων, καθίσταται υποχρεωτική η σύσταση κοινοπραξίας μεταξύ των μελών της, η οποία και θα συμβληθεί για την υπογραφή της Συμφωνίας-Πλαίσιο. Οι όροι λειτουργίας, η μερίδα συμμετοχής, το συμβατικό αντικείμενο και οι ευθύνες των μελών της κοινοπραξίας πρέπει να ταυτίζονται απολύτως και κατ’ αναλογίαν με τα στοιχεία της Ένωσης, όπως αυτά υποβλήθηκαν κατά τη φάση του διαγωνισμού.</cbc:CompanyLegalForm>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="conditions">performance</cbc:ExecutionRequirementCode>
+            <cbc:Description languageID="ELL">Όπως περιγράφεται στην διακήρυξη</cbc:Description>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AdditionalInformationParty>
+            <cac:PartyIdentification>
+               <cbc:ID>ORG-0001</cbc:ID>
+            </cac:PartyIdentification>
+         </cac:AdditionalInformationParty>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://www.marketsite.gr</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="DAY">180</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="ELL">2.	Σε περίπτωση προσφυγής κατά πράξης του ΑΔΜΗΕ, η προθεσμία για την άσκηση της προδικαστικής προσφυγής είναι:
+(α) 	δέκα (10) ημέρες από την κοινοποίηση της προσβαλλόμενης πράξης στον ενδιαφερόμενο Οικονομικό Φορέα αν η πράξη κοινοποιήθηκε με ηλεκτρονικά μέσα ή τηλεομοιοτυπία ή 
+(β) 	δεκαπέντε (15) ημέρες από την κοινοποίηση της προσβαλλόμενης πράξης σε αυτόν αν χρησιμοποιήθηκαν άλλα μέσα επικοινωνίας, άλλως 
+(γ) 	δέκα (10) ημέρες από την πλήρη, πραγματική ή τεκμαιρόμενη, γνώση της πράξης που βλάπτει τα συμφέροντα του ενδιαφερόμενου Οικονομικού Φορέα. 
+(δ)  	σε περίπτωση παράλειψης, η προθεσμία για την άσκηση της προδικαστικής προσφυγής είναι δεκαπέντε (15) ημέρες από την επομένη της συντέλεσης της προσβαλλόμενης παράλειψης.</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>ELL</cbc:ID>
+         </cac:Language>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>true</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2026-12-14+02:00</cbc:EndDate>
+            <cbc:EndTime>14:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2026-12-14+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>15:00:00+02:00</cbc:OccurrenceTime>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">fa-wo-rc</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:Name languageID="ELL">ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)</cbc:Name>
+         <cbc:Description languageID="ELL">Η συνολική εκτιμώμενη αξία της Συμφωνίας Πλαίσιο ανέρχεται στο ποσό των πέντε εκατομμυρίων εκατό χιλιάδων ευρώ (€5.100.000,00), πλέον Φ.Π.Α., για χρονικό διάστημα τεσσάρων (4) ετών. Το ποσό του προϋπολογισμού του αντικειμένου αποτελεί ανώτατο όριο προσφοράς.</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72267100</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">72230000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:RealizedLocation>
+            <cac:Address>
+               <cbc:CountrySubentityCode listName="nuts">EL303</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">GRC</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:DurationMeasure unitCode="YEAR">4</cbc:DurationMeasure>
+         </cac:PlannedPeriod>
+         <cac:ContractExtension>
+            <cbc:MaximumNumberNumeric>0</cbc:MaximumNumberNumeric>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>

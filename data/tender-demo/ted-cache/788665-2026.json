@@ -1,0 +1,152 @@
+{
+ "notices": [
+  {
+   "place-of-performance": [
+    "GRC",
+    "EL303",
+    "GRC"
+   ],
+   "deadline-receipt-tender-date-lot": [
+    "2026-12-14+02:00"
+   ],
+   "notice-type": "cn-standard",
+   "publication-number": "788665-2026",
+   "estimated-value-cur-proc": "EUR",
+   "buyer-country": [
+    "GRC"
+   ],
+   "deadline-receipt-tender-time-lot": [
+    "14:00:00+02:00"
+   ],
+   "classification-cpv": [
+    "72267100",
+    "72230000",
+    "72267100",
+    "72230000"
+   ],
+   "buyer-name": {
+    "ell": [
+     "ΑΝΕΞΑΡΤΗΤΟΣ ΔΙΑΧΕΙΡΙΣΤΗΣ ΜΕΤΑΦΟΡΑΣ ΗΛΕΚΤΡΙΚΗΣ ΕΝΕΡΓΕΙΑΣ Α.Ε. (ΑΔΜΗΕ Α.Ε.)"
+    ]
+   },
+   "publication-date": "2026-11-12+01:00",
+   "estimated-value-proc": "5100000",
+   "links": {
+    "xml": {
+     "MUL": "https://ted.europa.eu/en/notice/788665-2026/xml"
+    },
+    "pdf": {
+     "BUL": "https://ted.europa.eu/bg/notice/788665-2026/pdf",
+     "SPA": "https://ted.europa.eu/es/notice/788665-2026/pdf",
+     "CES": "https://ted.europa.eu/cs/notice/788665-2026/pdf",
+     "DAN": "https://ted.europa.eu/da/notice/788665-2026/pdf",
+     "DEU": "https://ted.europa.eu/de/notice/788665-2026/pdf",
+     "EST": "https://ted.europa.eu/et/notice/788665-2026/pdf",
+     "ELL": "https://ted.europa.eu/el/notice/788665-2026/pdf",
+     "ENG": "https://ted.europa.eu/en/notice/788665-2026/pdf",
+     "FRA": "https://ted.europa.eu/fr/notice/788665-2026/pdf",
+     "GLE": "https://ted.europa.eu/ga/notice/788665-2026/pdf",
+     "HRV": "https://ted.europa.eu/hr/notice/788665-2026/pdf",
+     "ITA": "https://ted.europa.eu/it/notice/788665-2026/pdf",
+     "LAV": "https://ted.europa.eu/lv/notice/788665-2026/pdf",
+     "LIT": "https://ted.europa.eu/lt/notice/788665-2026/pdf",
+     "HUN": "https://ted.europa.eu/hu/notice/788665-2026/pdf",
+     "MLT": "https://ted.europa.eu/mt/notice/788665-2026/pdf",
+     "NLD": "https://ted.europa.eu/nl/notice/788665-2026/pdf",
+     "POL": "https://ted.europa.eu/pl/notice/788665-2026/pdf",
+     "POR": "https://ted.europa.eu/pt/notice/788665-2026/pdf",
+     "RON": "https://ted.europa.eu/ro/notice/788665-2026/pdf",
+     "SLK": "https://ted.europa.eu/sk/notice/788665-2026/pdf",
+     "SLV": "https://ted.europa.eu/sl/notice/788665-2026/pdf",
+     "FIN": "https://ted.europa.eu/fi/notice/788665-2026/pdf",
+     "SWE": "https://ted.europa.eu/sv/notice/788665-2026/pdf"
+    },
+    "pdfs": {
+     "ELL": "https://ted.europa.eu/el/notice/788665-2026/pdfs"
+    },
+    "html": {
+     "BUL": "https://ted.europa.eu/bg/notice/-/detail/788665-2026",
+     "SPA": "https://ted.europa.eu/es/notice/-/detail/788665-2026",
+     "CES": "https://ted.europa.eu/cs/notice/-/detail/788665-2026",
+     "DAN": "https://ted.europa.eu/da/notice/-/detail/788665-2026",
+     "DEU": "https://ted.europa.eu/de/notice/-/detail/788665-2026",
+     "EST": "https://ted.europa.eu/et/notice/-/detail/788665-2026",
+     "ELL": "https://ted.europa.eu/el/notice/-/detail/788665-2026",
+     "ENG": "https://ted.europa.eu/en/notice/-/detail/788665-2026",
+     "FRA": "https://ted.europa.eu/fr/notice/-/detail/788665-2026",
+     "GLE": "https://ted.europa.eu/ga/notice/-/detail/788665-2026",
+     "HRV": "https://ted.europa.eu/hr/notice/-/detail/788665-2026",
+     "ITA": "https://ted.europa.eu/it/notice/-/detail/788665-2026",
+     "LAV": "https://ted.europa.eu/lv/notice/-/detail/788665-2026",
+     "LIT": "https://ted.europa.eu/lt/notice/-/detail/788665-2026",
+     "HUN": "https://ted.europa.eu/hu/notice/-/detail/788665-2026",
+     "MLT": "https://ted.europa.eu/mt/notice/-/detail/788665-2026",
+     "NLD": "https://ted.europa.eu/nl/notice/-/detail/788665-2026",
+     "POL": "https://ted.europa.eu/pl/notice/-/detail/788665-2026",
+     "POR": "https://ted.europa.eu/pt/notice/-/detail/788665-2026",
+     "RON": "https://ted.europa.eu/ro/notice/-/detail/788665-2026",
+     "SLK": "https://ted.europa.eu/sk/notice/-/detail/788665-2026",
+     "SLV": "https://ted.europa.eu/sl/notice/-/detail/788665-2026",
+     "FIN": "https://ted.europa.eu/fi/notice/-/detail/788665-2026",
+     "SWE": "https://ted.europa.eu/sv/notice/-/detail/788665-2026"
+    },
+    "htmlDirect": {
+     "BUL": "https://ted.europa.eu/bg/notice/788665-2026/html",
+     "SPA": "https://ted.europa.eu/es/notice/788665-2026/html",
+     "CES": "https://ted.europa.eu/cs/notice/788665-2026/html",
+     "DAN": "https://ted.europa.eu/da/notice/788665-2026/html",
+     "DEU": "https://ted.europa.eu/de/notice/788665-2026/html",
+     "EST": "https://ted.europa.eu/et/notice/788665-2026/html",
+     "ELL": "https://ted.europa.eu/el/notice/788665-2026/html",
+     "ENG": "https://ted.europa.eu/en/notice/788665-2026/html",
+     "FRA": "https://ted.europa.eu/fr/notice/788665-2026/html",
+     "GLE": "https://ted.europa.eu/ga/notice/788665-2026/html",
+     "HRV": "https://ted.europa.eu/hr/notice/788665-2026/html",
+     "ITA": "https://ted.europa.eu/it/notice/788665-2026/html",
+     "LAV": "https://ted.europa.eu/lv/notice/788665-2026/html",
+     "LIT": "https://ted.europa.eu/lt/notice/788665-2026/html",
+     "HUN": "https://ted.europa.eu/hu/notice/788665-2026/html",
+     "MLT": "https://ted.europa.eu/mt/notice/788665-2026/html",
+     "NLD": "https://ted.europa.eu/nl/notice/788665-2026/html",
+     "POL": "https://ted.europa.eu/pl/notice/788665-2026/html",
+     "POR": "https://ted.europa.eu/pt/notice/788665-2026/html",
+     "RON": "https://ted.europa.eu/ro/notice/788665-2026/html",
+     "SLK": "https://ted.europa.eu/sk/notice/788665-2026/html",
+     "SLV": "https://ted.europa.eu/sl/notice/788665-2026/html",
+     "FIN": "https://ted.europa.eu/fi/notice/788665-2026/html",
+     "SWE": "https://ted.europa.eu/sv/notice/788665-2026/html"
+    }
+   },
+   "notice-title": {
+    "hun": "Görögország – Informatikai szoftver karbantartása – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "lav": "Grieķija – Informācijas tehnoloģiju programmatūras tehniskā uzturēšana – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "swe": "Grekland – Underhåll av IT-programvara – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "gle": "An Ghréig – Maintenance of information technology software – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "ell": "Ελλάδα – Συντήρηση λογισμικού τεχνολογίας των πληροφοριών – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "spa": "Grecia – Mantenimiento de software de tecnología de la información – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "est": "Kreeka – Infotehnoloogia tarkvara hooldus – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "nld": "Griekenland – Onderhoud van software voor informatietechnologie – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "fin": "Kreikka – ATK-ohjelmiston ylläpito – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "pol": "Grecja – Konserwacja oprogramowania technologii informacji – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "hrv": "Grčka – Održavanje programske podrške za informacijsku tehnologiju – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "ces": "Řecko – Údržba programového vybavení pro informační technologie – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "dan": "Grækenland – Vedligeholdelse af programmel til informationsteknologi – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "ron": "Grecia – Întreţinerea resurselor logice de tehnologie a informaţiei – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "por": "Grécia – Manutenção de software para as tecnologias da infomação – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "slk": "Grécko – Údržba programového vybavenia (softvér) informačných technológií – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "fra": "Grèce – Maintenance de logiciels de technologies de l'information – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "mlt": "Il-Greċja – Tiswija tas-software tat-teknoloġija ta' l-informatika – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "deu": "Griechenland – Wartung von Informationstechnologiesoftware – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "lit": "Graikija – Informacijos technologijos programinės įrangos priežiūra – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "ita": "Grecia – Manutenzione di software di tecnologia dell'informazione – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "bul": "Гъpция – Услуги по поддържане на софтуер на информационните технологии – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "slv": "Grčija – Vzdrževanje programske opreme za informacijsko tehnologijo – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)",
+    "eng": "Greece – Maintenance of information technology software – ΔΕΑ-526080 - Παροχή υπηρεσιών για το Πληροφοριακό Σύστημα Διαχείρισης της Αγοράς Εξισορρόπησης Ηλεκτρικής Ενέργειας (BMMS)"
+   },
+   "form-type": "competition"
+  }
+ ],
+ "totalNoticeCount": 1,
+ "iterationNextToken": null,
+ "timedOut": false
+}

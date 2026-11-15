@@ -1,0 +1,169 @@
+{
+ "notices": [
+  {
+   "place-of-performance": [
+    "EL303",
+    "GRC",
+    "EL303",
+    "EL303",
+    "GRC",
+    "GRC"
+   ],
+   "deadline-receipt-tender-date-lot": [
+    "2026-12-08+02:00",
+    "2026-12-08+02:00"
+   ],
+   "notice-type": "cn-standard",
+   "publication-number": "790272-2026",
+   "estimated-value-lot": [
+    "2190147.1",
+    "412791.29"
+   ],
+   "estimated-value-cur-proc": "EUR",
+   "buyer-country": [
+    "GRC"
+   ],
+   "deadline-receipt-tender-time-lot": [
+    "17:00:00+02:00",
+    "17:00:00+02:00"
+   ],
+   "classification-cpv": [
+    "72221000",
+    "72316000",
+    "85312320",
+    "72200000",
+    "72221000",
+    "72221000",
+    "72316000",
+    "85312320",
+    "72200000",
+    "72316000",
+    "85312320",
+    "72200000"
+   ],
+   "buyer-name": {
+    "ell": [
+     "Κέντρο Τεκμηρίωσης και Κοστολόγησης Νοσοκομειακών Υπηρεσιών Ανώνυμη Εταιρεία (ΚΕ.ΤΕ.Κ.Ν.Υ. Α.Ε.)"
+    ]
+   },
+   "publication-date": "2026-11-13+01:00",
+   "estimated-value-proc": "2602938.39",
+   "links": {
+    "xml": {
+     "MUL": "https://ted.europa.eu/en/notice/790272-2026/xml"
+    },
+    "pdf": {
+     "BUL": "https://ted.europa.eu/bg/notice/790272-2026/pdf",
+     "SPA": "https://ted.europa.eu/es/notice/790272-2026/pdf",
+     "CES": "https://ted.europa.eu/cs/notice/790272-2026/pdf",
+     "DAN": "https://ted.europa.eu/da/notice/790272-2026/pdf",
+     "DEU": "https://ted.europa.eu/de/notice/790272-2026/pdf",
+     "EST": "https://ted.europa.eu/et/notice/790272-2026/pdf",
+     "ELL": "https://ted.europa.eu/el/notice/790272-2026/pdf",
+     "ENG": "https://ted.europa.eu/en/notice/790272-2026/pdf",
+     "FRA": "https://ted.europa.eu/fr/notice/790272-2026/pdf",
+     "GLE": "https://ted.europa.eu/ga/notice/790272-2026/pdf",
+     "HRV": "https://ted.europa.eu/hr/notice/790272-2026/pdf",
+     "ITA": "https://ted.europa.eu/it/notice/790272-2026/pdf",
+     "LAV": "https://ted.europa.eu/lv/notice/790272-2026/pdf",
+     "LIT": "https://ted.europa.eu/lt/notice/790272-2026/pdf",
+     "HUN": "https://ted.europa.eu/hu/notice/790272-2026/pdf",
+     "MLT": "https://ted.europa.eu/mt/notice/790272-2026/pdf",
+     "NLD": "https://ted.europa.eu/nl/notice/790272-2026/pdf",
+     "POL": "https://ted.europa.eu/pl/notice/790272-2026/pdf",
+     "POR": "https://ted.europa.eu/pt/notice/790272-2026/pdf",
+     "RON": "https://ted.europa.eu/ro/notice/790272-2026/pdf",
+     "SLK": "https://ted.europa.eu/sk/notice/790272-2026/pdf",
+     "SLV": "https://ted.europa.eu/sl/notice/790272-2026/pdf",
+     "FIN": "https://ted.europa.eu/fi/notice/790272-2026/pdf",
+     "SWE": "https://ted.europa.eu/sv/notice/790272-2026/pdf"
+    },
+    "pdfs": {
+     "ELL": "https://ted.europa.eu/el/notice/790272-2026/pdfs"
+    },
+    "html": {
+     "BUL": "https://ted.europa.eu/bg/notice/-/detail/790272-2026",
+     "SPA": "https://ted.europa.eu/es/notice/-/detail/790272-2026",
+     "CES": "https://ted.europa.eu/cs/notice/-/detail/790272-2026",
+     "DAN": "https://ted.europa.eu/da/notice/-/detail/790272-2026",
+     "DEU": "https://ted.europa.eu/de/notice/-/detail/790272-2026",
+     "EST": "https://ted.europa.eu/et/notice/-/detail/790272-2026",
+     "ELL": "https://ted.europa.eu/el/notice/-/detail/790272-2026",
+     "ENG": "https://ted.europa.eu/en/notice/-/detail/790272-2026",
+     "FRA": "https://ted.europa.eu/fr/notice/-/detail/790272-2026",
+     "GLE": "https://ted.europa.eu/ga/notice/-/detail/790272-2026",
+     "HRV": "https://ted.europa.eu/hr/notice/-/detail/790272-2026",
+     "ITA": "https://ted.europa.eu/it/notice/-/detail/790272-2026",
+     "LAV": "https://ted.europa.eu/lv/notice/-/detail/790272-2026",
+     "LIT": "https://ted.europa.eu/lt/notice/-/detail/790272-2026",
+     "HUN": "https://ted.europa.eu/hu/notice/-/detail/790272-2026",
+     "MLT": "https://ted.europa.eu/mt/notice/-/detail/790272-2026",
+     "NLD": "https://ted.europa.eu/nl/notice/-/detail/790272-2026",
+     "POL": "https://ted.europa.eu/pl/notice/-/detail/790272-2026",
+     "POR": "https://ted.europa.eu/pt/notice/-/detail/790272-2026",
+     "RON": "https://ted.europa.eu/ro/notice/-/detail/790272-2026",
+     "SLK": "https://ted.europa.eu/sk/notice/-/detail/790272-2026",
+     "SLV": "https://ted.europa.eu/sl/notice/-/detail/790272-2026",
+     "FIN": "https://ted.europa.eu/fi/notice/-/detail/790272-2026",
+     "SWE": "https://ted.europa.eu/sv/notice/-/detail/790272-2026"
+    },
+    "htmlDirect": {
+     "BUL": "https://ted.europa.eu/bg/notice/790272-2026/html",
+     "SPA": "https://ted.europa.eu/es/notice/790272-2026/html",
+     "CES": "https://ted.europa.eu/cs/notice/790272-2026/html",
+     "DAN": "https://ted.europa.eu/da/notice/790272-2026/html",
+     "DEU": "https://ted.europa.eu/de/notice/790272-2026/html",
+     "EST": "https://ted.europa.eu/et/notice/790272-2026/html",
+     "ELL": "https://ted.europa.eu/el/notice/790272-2026/html",
+     "ENG": "https://ted.europa.eu/en/notice/790272-2026/html",
+     "FRA": "https://ted.europa.eu/fr/notice/790272-2026/html",
+     "GLE": "https://ted.europa.eu/ga/notice/790272-2026/html",
+     "HRV": "https://ted.europa.eu/hr/notice/790272-2026/html",
+     "ITA": "https://ted.europa.eu/it/notice/790272-2026/html",
+     "LAV": "https://ted.europa.eu/lv/notice/790272-2026/html",
+     "LIT": "https://ted.europa.eu/lt/notice/790272-2026/html",
+     "HUN": "https://ted.europa.eu/hu/notice/790272-2026/html",
+     "MLT": "https://ted.europa.eu/mt/notice/790272-2026/html",
+     "NLD": "https://ted.europa.eu/nl/notice/790272-2026/html",
+     "POL": "https://ted.europa.eu/pl/notice/790272-2026/html",
+     "POR": "https://ted.europa.eu/pt/notice/790272-2026/html",
+     "RON": "https://ted.europa.eu/ro/notice/790272-2026/html",
+     "SLK": "https://ted.europa.eu/sk/notice/790272-2026/html",
+     "SLV": "https://ted.europa.eu/sl/notice/790272-2026/html",
+     "FIN": "https://ted.europa.eu/fi/notice/790272-2026/html",
+     "SWE": "https://ted.europa.eu/sv/notice/790272-2026/html"
+    }
+   },
+   "notice-title": {
+    "hun": "Görögország – Üzleti elemzési tanácsadó szolgáltatások – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "lav": "Grieķija – Uzņēmējdarbības analīzes konsultāciju pakalpojumi – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "swe": "Grekland – Konsulttjänster för företagsanalys – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "gle": "An Ghréig – Business analysis consultancy services – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "ell": "Ελλάδα – Υπηρεσίες παροχής συμβουλών επιχειρησιακής ανάλυσης – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "spa": "Grecia – Servicios de consultoría en análisis empresarial – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "est": "Kreeka – Ärianalüüsi nõustamisteenused – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "nld": "Griekenland – Bedrijfsanalyseadviezen – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "fin": "Kreikka – Yritysanalyysejä koskevat konsulttipalvelut – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "pol": "Grecja – Usługi doradcze w zakresie analizy biznesowej – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "hrv": "Grčka – Usluge savjetovanja na području poslovnih analiza – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "ces": "Řecko – Poradenské služby v oblasti obchodní analýzy – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "dan": "Grækenland – Konsulentvirksomhed i forbindelse med forretningsanalyser – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "ron": "Grecia – Servicii de consultanţă privind analiza economică – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "por": "Grécia – Serviços de consultoria em matéria de análise de gestão – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "slk": "Grécko – Poradenstvo pri analýze podnikania – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "fra": "Grèce – Services de conseil en analyse d'exploitation – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "mlt": "Il-Greċja – Servizzi ta' konsulenza dwar l-analiżi tan-negozju – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "deu": "Griechenland – Beratung im Bereich Unternehmensanalyse – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "lit": "Graikija – Verslo analizės konsultacinės paslaugos – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "ita": "Grecia – Servizi di consulenza per analisi economiche – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "bul": "Гъpция – Консултантски услуги по бизнес анализи на експлоатацията на системата – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "slv": "Grčija – Storitve svetovanja na področju poslovnih analiz – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432",
+    "eng": "Greece – Business analysis consultancy services – “Αποτίμηση και κοστολόγηση των υπηρεσιών Ψυχικής Υγείας (ΨΥ) και Ανακουφιστικής φροντίδας στην Ιατρική Αποκατάσταση (ΑΦ-ΙΑ), για τη λήψη τεκμηριωμένων αποφάσεων Πολιτικής Υγείας” της πράξης με Κωδικό ΟΠΣ 6019432"
+   },
+   "form-type": "competition"
+  }
+ ],
+ "totalNoticeCount": 1,
+ "iterationNextToken": null,
+ "timedOut": false
+}
