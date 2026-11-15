@@ -10,6 +10,10 @@ Bid-Ready
 
 From two lines about your company to a checked bid pack for Greek public tenders, and nothing is marked ready until an independent verifier re-reads the tender itself.
 
+## Who it's for
+
+Small Greek companies (a 5–50 person software studio, an engineering firm, a consultancy) that could deliver public contracts but never bid, because nobody has time to read a 137-page tender.
+
 ## Problem
 
 Greek SMEs mostly stay out of public procurement. A 2024 Powergame report found 67.9% of Greek startups have never bid on a public contract, and 55% wanted help preparing the dossier. Tender documents run past 100 pages, mix three different "budgets", and hide hard eligibility rules in numbered clauses. An LLM can summarise them, but it will also confidently repeat the wrong number.
@@ -48,7 +52,7 @@ Every wrong answer was the same trap: given the headline, Gemini reported €300
 
 ## How it's built
 
-Python 3.11+ · FastAPI · MCP Python SDK (FastMCP, stdio) · SQLite receipts · TED Search API v3 · Gemini on Vertex AI (Google Cloud) for profile reading, CPV codes, the letter rewrite and the eval harness · python-docx. 39 offline tests, including a golden end-to-end test on TED 769674-2026.
+Python 3.11+ · FastAPI · MCP Python SDK (FastMCP, stdio) · SQLite receipts · TED Search API v3 · ΚΗΜΔΗΣ open data · Firecrawl (website onboarding) · Oumi (second opinion) · Gemini on Vertex AI (Google Cloud) for profile reading, CPV codes, the letter rewrite and the eval harness · python-docx. 74 offline tests, including a golden end-to-end test on TED 769674-2026.
 
 ## Honest notes
 
@@ -62,6 +66,6 @@ MCP tools that scan tenders with filters across TED and the Greek ΚΗΜΔΗΣ r
 
 ## Links
 
-- Repo: [private GitHub repo; add access for judges if required]
-- Video: [link]
+- Repo: https://github.com/Kosto679/Bid-Ready (public)
+- Video (1 min, YouTube unlisted): [link]
 - Team: [names]

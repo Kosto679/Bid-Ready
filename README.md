@@ -1,8 +1,58 @@
-# Bid-Ready
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="web/brand/logo-dark.svg">
+    <img src="web/brand/logo-light.svg" alt="Bid-Ready" width="420">
+  </picture>
+</p>
 
-A guided path from a two-line company profile to a checked bid pack for Greek/EU public tenders. Nothing is marked ready until an independent verifier re-reads the tender itself and issues a receipt.
+<p align="center"><b>From two lines about your company to a checked bid pack for Greek public tenders.<br>Nothing is marked ready until an independent verifier re-reads the tender itself.</b></p>
 
-**Problem.** A 2024 Powergame report found 67.9% of Greek startups have never bid on a public contract, and 55% wanted help preparing the dossier ([source](https://www.powergame.gr/start-ups-digital/1039587/i-athanati-grafeiokratia-krata-tis-ellinikes-startups-makria-apo-ta-erga-tou-dimosiou/)).
+<p align="center"><a href="[YOUTUBE-UNLISTED-LINK]">▶ 1-minute demo video</a></p>
+
+## Who it's for
+
+Small Greek companies (a 5–50 person software studio, an engineering firm, a consultancy) that could deliver public contracts but never bid, because nobody on the team has time to read a 137-page tender.
+
+## The problem
+
+A 2024 Powergame report found **67.9% of Greek startups have never bid on a public contract**, and 55% wanted help preparing the dossier ([source](https://www.powergame.gr/start-ups-digital/1039587/i-athanati-grafeiokratia-krata-tis-ellinikes-startups-makria-apo-ta-erga-tou-dimosiou/)).
+
+Tenders are long PDFs that mix several "budgets" and hide hard eligibility rules in numbered clauses. One wrong figure (a guarantee, a turnover threshold) gets a bid excluded. A chatbot can summarise a tender, but it will also confidently repeat the wrong number.
+
+## The solution
+
+Bid-Ready walks a company from a short profile to a bid pack a human can sign:
+
+1. **Onboard.** Two typed lines or a website become a profile with CPV codes. It asks only what it can't work out: turnover, certificates, public-sector projects.
+2. **Match.** A live search of TED (EU tenders), ranked by a visible fit formula: CPV, value vs turnover, place, days to deadline.
+3. **Read the rules.** For each tender, every eligibility rule comes back ✓ / ✗ / ? with the clause and the PDF page, plus what you'd have to provide (guarantee, documents, deadline).
+4. **Verify.** A separate verifier re-opens each cited page and grades every figure and quote: `VERIFIED`, `FAILED` or `UNVERIFIED`. Each check is a receipt in SQLite. A pack is never "ready" while a check has failed.
+5. **Hand over.** A ZIP: a to-do checklist, the tender, the receipts, a deadline calendar file and, where relevant, a Greek letter to a consortium partner. A human signs and submits on ΕΣΗΔΗΣ. **Bid-Ready stops there.**
+
+## The demo: one "no", one "yes"
+
+Demo company: Pixelridge, an 8-person Athens software studio, €400,000 turnover over 2023–25, ISO 9001, two small municipal websites.
+
+**TED 769674-2026 (Κοινωνία της Πληροφορίας, escrow-payments platform): you can't bid alone.**
+- Fit score 87 on paper. But the tender needs five public escrow-payment projects (§2.2.6.1, p33) and six ISO certificates (§2.2.7, p36). Turnover is met (€400,000, §2.2.5). The verdict says so, and that the studio could join as a subcontractor. The Greek letter becomes outreach to a consortium partner.
+- **The catch.** TED's headline value is €300,000 (it includes a €100,000 option). Our first reading took 2% of that: a €6,000 participation guarantee. The verifier re-read §2.2.2.1 on PDF page 27 and found **€4,000**. The figure is corrected and the pack stays "needs review" until a person sees it.
+
+**TED 774438-2026 (Asterousia biosphere digital repository, €125k): you can bid.**
+- Nobody annotated this tender. Bid-Ready found its document in **ΚΗΜΔΗΣ** (the Greek public procurement register), read the rules with Gemini, and verified each quote against the PDF: yearly turnover ≥ €125,101 ✓ (p16), ISO 9001 ✓ (p17), a named team ?.
+- The studio declares the team. The verdict becomes **"You can bid on this one"**, with the €2,502 guarantee (p11) and the 14 Dec 15:00 deadline. The pack comes back **READY**.
+
+## Why trust it: receipts, not vibes
+
+- **The verifier is independent of the reader.** It re-opens the cited page text extracted from the PDF and checks the quote is there and the figure matches. It never grades against our own fixtures.
+- **We measured the trap.** Gemini (gemini-3.8-flash on Vertex AI), asked for nine facts from TED 769674-2026, 3 trials each, graded by the verifier:
+
+  | Model sees | Correct | Wrong | Abstained |
+  |---|---|---|---|
+  | The cited PDF page | 27 / 27 | 0 | 0 |
+  | Only the TED headline | 3 | 3 | 21 |
+
+  Every wrong answer was the same trap: €300,000 reported as the budget (the page says €200,000).
+- **Second opinion.** The Oumi decision model independently grades "does the company meet this rule?" and the letter's claims; disagreements are flagged, not hidden.
 
 ## Run it
 
@@ -10,57 +60,38 @@ A guided path from a two-line company profile to a checked bid pack for Greek/EU
 python -m venv .venv
 .venv\Scripts\activate            # Windows (source .venv/bin/activate elsewhere)
 pip install -r requirements.txt
-copy .env.example .env            # Google Cloud project for Gemini (optional; rules work offline)
-pytest -q                         # golden KtP test runs fully offline
-uvicorn app.main:app --port 8000  # UI at http://localhost:8000
-python -m app.mcp_server          # MCP (stdio): six tools
+copy .env.example .env            # optional keys; everything has an offline fallback
+pytest -q                         # 74 tests, including a golden end-to-end test; all offline
+uvicorn app.main:app --port 8000  # open http://localhost:8000, click "Use demo studio"
 ```
 
-Set `BIDREADY_OFFLINE=1` to skip live TED and use `data/tender-demo/ted-cache/`.
+- **Offline:** set `BIDREADY_OFFLINE=1`. TED search and both demo tenders run from `data/tender-demo/` (cached TED notices, ΚΗΜΔΗΣ documents, extracted page text). Live calls time out after 8 s and fall back to the cache, labelled as such.
+- **Optional keys** (`.env`, never committed): `GOOGLE_CLOUD_PROJECT` for Gemini on Vertex AI (`gcloud auth application-default login`), `FIRECRAWL_API_KEY` to read a company website, `OUMI_API_KEY` + `OUMI_PROJECT_ID` for the second opinion.
 
-MCP clients (both configs ship in the repo; create the `.venv` first):
+### For agents: MCP
 
-- **Claude Code**: `.mcp.json` at the project root. Open the project in Claude Code and approve the `bid-ready` server when asked.
-- **Cursor**: `.cursor/mcp.json`. Enable `bid-ready` under Settings → MCP.
+`python -m app.mcp_server` (stdio) exposes eight tools: `find_tenders`, `scan_khmdhs`, `read_rules`, `score_tenders`, `check_eligibility`, `draft_cover_letter`, `verify`, `build_pack`. Configs ship for Claude Code (`.mcp.json`) and Cursor (`.cursor/mcp.json`). Ask *"Check eligibility on TED 769674-2026"*: the result includes the corrected guarantee and its receipt.
 
-Then ask: *"Check eligibility on TED 769674-2026."* The result includes the FAILED guarantee receipt. TED calls time out after 8 s and fall back to the local cache, so the call works offline.
+## Built with
 
-## What it does
+Python · FastAPI · MCP Python SDK (FastMCP) · SQLite · **Gemini on Vertex AI** (profile reading, rule reading, letter, model eval) · **TED Search API v3** · **ΚΗΜΔΗΣ** open data · **Firecrawl** (website onboarding) · **Oumi** (second opinion) · python-docx
 
-| Tool | What it does |
-|---|---|
-| `find_tenders` | TED Search API v3 (no key), Greek IT notices; local cache fallback marks the live hop UNVERIFIED |
-| `score_tenders` | Visible formula on TED metadata only: 25% CPV, 25% value vs 3-year turnover, 25% place, 25% days to deadline |
-| `check_eligibility` | Rules with `meets / missing / unclear`, each citing section + PDF page + printed page, then runs the verifier |
-| `draft_cover_letter` | Greek consortium-partner letter (.md + .docx), using verified figures only |
-| `verify` | Re-opens the cited tender page (`text/pages.json`) or pack file; `VERIFIED / FAILED / UNVERIFIED`, idempotent |
-| `build_pack` | ZIP (ASCII names): letter, checklist, `receipts.json`, `deadline.ics` (`20261207T120000Z` = 14:00 Athens). Stops; a human signs on ΕΣΗΔΗΣ |
-
-## Demo: TED 769674-2026 (ΚτΠ), offline-capable
-
-Demo profile: 8-person Athens studio, €350,000 3-year turnover, ISO 9001 only, two small municipal websites (no escrow).
-
-- Verdict **not eligible**: §2.2.6.1 (five escrow-payment projects), §2.2.7 (six ISOs), §2.2.5 (turnover < €400,000 total).
-- The naive extractor trusts TED's procedure-level value (`estimated-value-proc` = €300,000) and computes a €6,000 guarantee. The verifier re-reads §2.2.2.1 on PDF p27 / printed 20 and finds **€4,000** → **FAILED**, pack **NOT READY**.
-
-**Honest note.** `data/tender-demo/769674-2026/requirements.json` is a human-curated clause index prepared before the hackathon. It tells the agent *what* to check and *where*. The verifier never grades against it; it re-opens the cited page text from the tender PDF. Fixtures and cached documents were prepared before Saturday 13:00; the code was built after (see commit times).
-
-## Model eval (Gemini on the contest's Google Cloud)
-
-How often does a model get the tender facts right? Gemini extracts nine facts from TED 769674-2026 (budget, both guarantees, turnover threshold, deadline, opening, escrow projects, duration, ISO count). The verifier re-reads the PDF page and grades every answer: correct, wrong, abstained, or error. The answer key is never `requirements.json`.
-
-- **headline**: the model sees only TED metadata (the €300,000 headline). Abstaining is the right answer for most fields.
-- **page**: the model sees the cited page text.
-- **full**: the whole RFP text (large; opt-in).
-
-```bash
-gcloud auth application-default login       # once, with the contest account
-# .env: GOOGLE_CLOUD_PROJECT=<contest project id>, GOOGLE_CLOUD_LOCATION=global, GEMINI_MODEL=<model id>
-python -m app.evals --conditions headline,page --trials 3
+```
+app/        main.py (API + UI), agent.py (flow), ted.py, khmdhs.py, scoring.py, rules.py,
+            eligibility.py, verifier.py, receipts.py, letter.py, pack.py, mcp_server.py, evals.py
+web/        index.html (one-page UI), brand/ (logo)
+tests/      74 offline tests
+data/       cached tenders and extracted page text for the demo
+docs/       design notes: scope, architecture, verifier, scoring, demo script
 ```
 
-Results land in `out/evals/` (JSON + Markdown) and in the UI's "Model check" panel. Every graded answer is also a receipt.
+## Honest notes
 
-## Out of scope
+- **Hand-made index for one tender.** `data/tender-demo/769674-2026/requirements.json` is a human-curated clause index prepared before the hackathon. It tells the agent what to check and where; the verifier never grades against it. The second demo tender (774438) has no index: its rules are read live and verified.
+- **Prepared before, built during.** Fixtures and cached documents were prepared before Saturday 13:00; the code was written after (see commit times).
+- **We don't submit.** Submitting on ΕΣΗΔΗΣ, signing, and fetching the ESPD XML are out of scope. A human signs.
+- **Gemini's reading varies run to run.** A reading is only used once the verifier has confirmed its quotes; unconfirmed rules show as "?".
 
-Submitting on ΕΣΗΔΗΣ, fetching the ESPD `.xml`, parsing the full 137-page διακήρυξη from scratch.
+## What's next
+
+Scan TED and ΚΗΜΔΗΣ continuously for a company's profile; pre-fill the ΕΕΕΣ/ESPD; for each missing document (e.g. tax clearance), link the official gov.gr procedure.

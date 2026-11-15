@@ -1,6 +1,29 @@
-# Demo video: script and shot list
+# Demo video and pitch
 
-The submission video. About 2:30, hard stop 3:00. No MCP beat. Every figure below was checked on screen on Sun 15 Nov.
+Two scripts. Every figure was checked on screen on Sun 15 Nov.
+
+- **Submission video: 1 minute**, YouTube unlisted. Who it's for, the problem, the solution. Below.
+- **Live pitch: 3 minutes** if we're picked (8 teams). The longer shot list further down.
+
+## Submission video (60 seconds, ~140 words)
+
+Record the screen in one take, then cut it to the voice. Each beat is a jump cut: skip loading spinners and scrolling. Light mode, 1920×1080, browser zoom 125%.
+
+| Time | Screen | Say |
+|---|---|---|
+| 0:00 | Home page, logo | "Bid-Ready is for small Greek companies that could win public contracts but never bid. Two in three Greek startups have never tried." |
+| 0:07 | ΚτΠ verdict, the ✗ rows and page links | "Why? A tender is a hundred-page PDF with the rules buried in numbered clauses, and one wrong number gets you excluded. A chatbot will confidently repeat the wrong one." |
+| 0:17 | **Use demo studio** → match list | "Bid-Ready starts from two lines about your company, searches the open EU and Greek tenders, and ranks them." |
+| 0:25 | ΚτΠ verdict | "Pick one and it reads the tender's own rules. Here: you can't bid alone. Every line links to its page." |
+| 0:33 | "How we checked our own reading" | "Then a second checker re-reads the PDF. Our first reading said a six-thousand-euro guarantee. Page 27 says four thousand. Corrected, not trusted." |
+| 0:43 | 774438: tick the team → **"You can bid on this one"** → READY pack | "On a tender you can win: a yes, the guarantee, the deadline, and a pack ready to sign." |
+| 0:53 | Handover, "Bid-Ready does not submit" | "A human signs and submits. Nothing is ready until it's checked. That's Bid-Ready." |
+
+Who / problem / solution are all in the first 25 seconds, so a judge who stops early still gets them.
+
+# Live pitch (3 minutes)
+
+About 2:30, hard stop 3:00. No MCP beat.
 
 ## The one sentence
 
