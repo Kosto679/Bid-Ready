@@ -238,10 +238,17 @@ def fact_check(candidate: str, draft: str, profile: dict) -> tuple[bool, dict]:
 
 POLISH_PROMPT = (
     "Ξαναγράψε την παρακάτω επιστολή σε φυσικά, επαγγελματικά ελληνικά, πιο ζεστά και πιο πειστικά, για τον συγκεκριμένο διαγωνισμό. "
-    "Κανόνες: ΜΗΝ προσθέσεις αριθμούς, ποσά, ημερομηνίες, ενότητες ή γεγονότα που δεν υπάρχουν στο κείμενο. Κράτα όλα τα ποσά, τις ημερομηνίες "
+    "Κανόνες: ΜΗΝ προσθέσεις αριθμούς, ποσά, ημερομηνίες, ενότητες ή γεγονότα που δεν υπάρχουν στο κείμενο. "
+    "ΜΗΝ προσθέσεις δεσμεύσεις, εγγυήσεις, υποσχέσεις ή επαίνους για την ποιότητα και τις ικανότητες της εταιρείας. "
+    "Κάθε πρόταση να λέει μόνο ό,τι λέει ήδη το κείμενο ή το προφίλ.Κράτα όλα τα ποσά, τις ημερομηνίες "
     "και τις παραπομπές (§) όπως είναι. Κράτα τη μορφή Markdown, τις αγκύλες [ ] και την τελευταία γραμμή. Όλο το κείμενο στα ελληνικά, "
     "εκτός από τα ονόματα, ISO, SLA, MIS και escrow accounts. Αν το προφίλ περιέχει αγγλικό κείμενο, απόδωσέ το στα ελληνικά χωρίς να προσθέσεις στοιχεία.\n\n"
 )
+
+
+def POLISH_FACTS(profile: dict) -> dict:
+    """The profile fields the rewriter sees; the claim check sees exactly the same."""
+    return {k: profile.get(k) for k in ("name", "summary", "public_sector_projects_last_5y")}
 
 
 def _polish(draft: str, profile: dict) -> tuple[str | None, str]:
@@ -255,7 +262,7 @@ def _polish(draft: str, profile: dict) -> tuple[str | None, str]:
 
         resp = gemini.client().models.generate_content(
             model=gemini.MODEL,
-            contents=POLISH_PROMPT + "ΠΡΟΦΙΛ:\n" + json.dumps({k: profile.get(k) for k in ("name", "summary", "public_sector_projects_last_5y")}, ensure_ascii=False)
+            contents=POLISH_PROMPT + "ΠΡΟΦΙΛ:\n" + json.dumps(POLISH_FACTS(profile), ensure_ascii=False)
                      + "\n\nΕΠΙΣΤΟΛΗ:\n" + draft,
             config=types.GenerateContentConfig(temperature=0.3, thinking_config=gemini.fast_thinking()),
         )
@@ -266,7 +273,7 @@ def _polish(draft: str, profile: dict) -> tuple[str | None, str]:
         return None, f"{type(e).__name__}: {e}"
 
 
-def _claim_check(run_id: str, candidate: str, draft: str, asker=None) -> tuple[bool, dict | None]:
+def _claim_check(run_id: str, candidate: str, draft: str, facts: dict | None = None, asker=None) -> tuple[bool, dict | None]:
     """Oumi Iris checks each sentence of the rewrite against the checked draft. Unsupported -> keep the draft.
     Not configured -> (True, None): the code fact check above still applies."""
     from . import oumi
@@ -274,7 +281,7 @@ def _claim_check(run_id: str, candidate: str, draft: str, asker=None) -> tuple[b
     if asker is None and not oumi.configured()[0]:
         return True, None
     try:
-        res = oumi.letter_claims(candidate, draft, asker=asker)
+        res = oumi.letter_claims(candidate, draft, facts, asker=asker)
     except Exception as e:
         return True, {"skipped": f"{type(e).__name__}"}
     write_receipt({
@@ -342,7 +349,7 @@ def draft_cover_letter(notice_id: str, profile: dict, eligibility: dict, run_id:
                 "reason": None if ok else "Rewrite rejected; the checked draft is used instead.",
             })
             if ok:
-                ok, claims = _claim_check(run_id, candidate, draft)
+                ok, claims = _claim_check(run_id, candidate, draft, POLISH_FACTS(profile))
                 if claims is not None:
                     check = {**check, "oumi": claims}
             if ok:

@@ -108,17 +108,22 @@ def sentences(md: str, limit: int = 40) -> list[str]:
     return keep[:limit]
 
 
-def letter_claims(candidate: str, draft: str, asker=None) -> dict:
+def letter_claims(candidate: str, draft: str, facts: dict | None = None, asker=None) -> dict:
     """{"ok", "checked", "unsupported": [{sentence, p}]}. ok is False if any sentence is likely unsupported."""
     sents = sentences(candidate)
     if not sents:
         return {"ok": True, "checked": 0, "unsupported": []}
-    state = ("REFERENCE LETTER (checked facts):\n" + draft + "\n\nREWRITTEN LETTER, sentence by sentence:\n"
+    # The same sources the rewriter saw: the checked draft and the company's own answers.
+    ref = "REFERENCE LETTER (checked facts):\n" + draft
+    if facts:
+        ref += "\n\nCOMPANY FACTS (the company's own answers):\n" + json.dumps(facts, ensure_ascii=False)
+    state = (ref + "\n\nREWRITTEN LETTER, sentence by sentence:\n"
              + "\n".join(f"[s{i}] {s}" for i, s in enumerate(sents)))
     qs = {f"s{i}": _noul(f"Judge sentence [s{i}] only. Is every fact, number, date, commitment and capability in it stated in "
-                         "the reference letter? Rewording, tone and politeness are fine.",
-                         "Everything the sentence claims is in the reference letter.",
-                         "The sentence adds a fact, commitment or capability that the reference letter doesn't state.")
+                         "the reference letter or in the company facts? The sources may be in another language: a faithful "
+                         "translation counts as stated. Rewording, tone and politeness are fine.",
+                         "Everything the sentence claims is in the reference letter or the company facts.",
+                         "The sentence adds a fact, commitment or capability that neither the letter nor the facts state.")
           for i in range(len(sents))}
     answers = (asker or ask)(state, qs)
     bad = []

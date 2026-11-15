@@ -118,6 +118,13 @@ def extract(site: dict, reader=None) -> dict:
     return reader(ctx)
 
 
+def _plain(md: str) -> str:
+    """Markdown -> plain text, so a quote matches across **bold**, [links](...) and headings."""
+    md = re.sub(r"!?\[([^\]]*)\]\([^)]*\)", r"\1", md)
+    md = re.sub(r"(?m)^\s{0,3}(?:#{1,6}|[-*+]|\d+\.)\s+", "", md)
+    return re.sub(r"[*_`~]+", "", md)
+
+
 def _checked(item: Any, pages: list[dict]) -> dict | None:
     """Keep a fact only if its quote is on the page it names; attach that page's URL."""
     if not isinstance(item, dict) or not item.get("value") or not item.get("quote"):
@@ -125,7 +132,7 @@ def _checked(item: Any, pages: list[dict]) -> dict | None:
     i = item.get("page")
     if not isinstance(i, int) or not 1 <= i <= len(pages):
         return None
-    if T.norm(item["quote"]) not in T.norm(pages[i - 1]["markdown"]):
+    if T.norm(_plain(item["quote"])) not in T.norm(_plain(pages[i - 1]["markdown"])):
         return None
     return {"value": str(item["value"]).strip(), "quote": item["quote"], "url": pages[i - 1]["url"]}
 

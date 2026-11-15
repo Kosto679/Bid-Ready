@@ -66,3 +66,9 @@ def test_answers_fill_the_rest(site):
 def test_not_configured_offline():
     with pytest.raises(website.NotConfigured):
         website.read_site(URL)
+
+
+def test_quotes_match_across_markdown_formatting():
+    pages = [{"url": URL, "markdown": "## What we do\n\n**Web applications** Custom [web apps](https://x/y) and portals."}]
+    f = website._checked(F("Web applications", "Web applications Custom web apps and portals."), pages)
+    assert f and f["url"] == URL
