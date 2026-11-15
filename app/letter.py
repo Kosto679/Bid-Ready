@@ -141,8 +141,8 @@ def render_markdown(profile: dict, eligibility: dict, guarantee: float | None) -
     roles = set(decl.get("team") or [])
     role_el = {"senior_dev": "δύο έμπειρους προγραμματιστές (Senior Developers)", "dev": "δύο προγραμματιστές",
                "pm": "υπεύθυνο έργου", "infosec": "υπεύθυνο ασφάλειας πληροφοριών", "dpo": "υπεύθυνο προστασίας δεδομένων (DPO)"}
-    team_line = (f"Για την Ομάδα Έργου της §2.2.6.2 μπορούμε να διαθέσουμε {_join_el([role_el[k] for k in role_el if k in roles])}."
-                 if roles else "")
+    named = [role_el[k] for k in role_el if k in roles]  # answers given for another tender's roles are ignored
+    team_line = f"Για την Ομάδα Έργου της §2.2.6.2 μπορούμε να διαθέσουμε {_join_el(named)}." if named else ""
     concrete = (
         "## Τι προτείνουμε συγκεκριμένα\n\n"
         f"- Να αναλάβουμε τα πακέτα παραμετροποίησης και ένταξης νέων δράσεων ({T['param_packages']} πακέτα των {_eur(T['param_each'])}, "

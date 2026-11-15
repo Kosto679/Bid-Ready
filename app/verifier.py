@@ -142,6 +142,43 @@ def check_ics_deadline(claim: dict) -> dict:
     return {"method": "reread_pack_file", "source": p.name, "observed": {"dtstart_europe_athens": observed, "raw": m.group(0).strip()}, "mismatch": observed != claim["value"]}
 
 
+def athens_deadline(date: str | None, time: str | None) -> str | None:
+    """TED-style date/time ('2026-12-14+02:00', '15:00:00+02:00') -> '2026-12-14T15:00' in Europe/Athens."""
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+
+    if not date or not time:
+        return None
+    m_d = re.match(r"(\d{4}-\d{2}-\d{2})", date)
+    m_t = re.match(r"(\d{2}:\d{2})(?::\d{2})?(Z|[+-]\d{2}:\d{2})?", time)
+    if not m_d or not m_t:
+        return None
+    dt = datetime.fromisoformat(f"{m_d.group(1)}T{m_t.group(1)}")
+    tz = m_t.group(2)
+    if tz:
+        dt = datetime.fromisoformat(f"{m_d.group(1)}T{m_t.group(1)}{'+00:00' if tz == 'Z' else tz}").astimezone(ZoneInfo("Europe/Athens"))
+    return dt.strftime("%Y-%m-%dT%H:%M")
+
+
+def check_deadline_two_sources(claim: dict) -> dict:
+    """Re-read the deadline from TED and from the matched ΚΗΜΔΗΣ record; both must give the claimed time."""
+    import json as _json
+
+    from . import config, khmdhs, ted
+
+    nid = claim["notice_id"]
+    n = (ted.get_notice(nid, run_id="verify").get("notice") or {})
+    raw = n.get("deadline_raw") or {}
+    from_ted = athens_deadline(raw.get("date"), raw.get("time"))
+    mf = config.DATA_DIR / khmdhs.CACHE / "ted-matches.json"
+    rec = ((_json.loads(mf.read_text(encoding="utf-8")) if mf.exists() else {}).get(nid) or {}).get("record") or {}
+    from_khmdhs = (rec.get("deadline") or "")[:16] or None
+    seen = [v for v in (from_ted, from_khmdhs) if v]
+    return {"method": "reread_ted_and_khmdhs", "source": "TED notice" + (" + ΚΗΜΔΗΣ " + rec["adam"] if rec.get("adam") else ""),
+            "observed": {"ted": from_ted, "khmdhs": from_khmdhs},
+            "mismatch": not seen or any(v != claim["value"] for v in seen)}
+
+
 def check_zip_entries(claim: dict) -> dict:
     p = Path(claim["check"]["path"])
     if not p.exists():
@@ -410,6 +447,7 @@ CHECKS: dict[str, Check] = {
     "deadline_on_page": check_deadline_on_page,
     "file_readable": check_file_readable,
     "ics_deadline": check_ics_deadline,
+    "deadline_two_sources": check_deadline_two_sources,
     "zip_entries": check_zip_entries,
     "field_value": check_field_value,
     "quote_supports_value": check_quote_supports_value,
