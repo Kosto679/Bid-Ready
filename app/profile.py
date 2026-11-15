@@ -185,6 +185,57 @@ def onboard(lines: str = "", answers: dict | None = None, profile_json: dict | N
     return {"run_id": run_id, "profile": profile, "questions": questions, "source": source, "receipt": receipt}
 
 
+def onboard_site(url: str, answers: dict | None = None, run_id: str | None = None, reader=None) -> dict:
+    """Profile from a company website (Firecrawl + Gemini, every fact quote-checked against its page).
+    What the site doesn't state stays empty and is asked; turnover is always asked."""
+    from urllib.parse import urlparse
+
+    from . import website
+
+    run_id = run_id or new_run_id()
+    site = website.read_site(url)
+    f = website.facts(site, reader)
+    host = urlparse(url).netloc.replace("www.", "")
+    size = None
+    if f.get("team_size"):
+        m = re.search(r"\d{1,5}", f["team_size"]["value"]) or re.search(r"\d{1,5}", f["team_size"]["quote"])
+        size = int(m.group(0)) if m else None
+    location, nuts = None, None
+    if f.get("city"):
+        c = f["city"]["value"].lower()
+        nuts = next((code for city, code in CITY_NUTS.items() if city in c), None)
+        location = f"{f['city']['value'].split(',')[0].strip()}, Greece" if nuts or "greece" in c or "ελλάδα" in c else f["city"]["value"]
+        nuts = nuts or ("GRC" if location.endswith("Greece") else None)
+    services = [s["value"] for s in f["services"]]
+    text = " ".join([f.get("summary") or ""] + services)
+    g = cpv.guess(text)
+    base: dict[str, Any] = {
+        "name": f["name"]["value"] if f.get("name") else host, "summary": f.get("summary") or "; ".join(services),
+        "size": size, "location": location, "nuts_or_country": nuts,
+        "turnover_2023_2025_total_eur": None, "certificates": [c["value"] for c in f["certificates"]],
+        "public_sector_projects_last_5y": [p["value"] for p in f["public_sector_projects"]] or None,
+        "profitable_last_3y": None,
+        "cpv_codes": g["codes"], "cpv_detail": g["detail"], "cpv_source": g["source"], "cpv_note": g["note"],
+        "site": {"url": url, "pages": [p["url"] for p in site["pages"]], "dropped": f.get("dropped", 0),
+                 "sources": {k: f[k] for k in ("name", "team_size", "city") if f.get(k)} |
+                            {k: f[k] for k in ("services", "certificates", "public_sector_projects") if f.get(k)}},
+    }
+    if base["certificates"]:
+        base["_certificates_answered"] = True
+    profile = apply_answers(base, answers)
+    questions = missing_questions(profile)
+    receipt = write_receipt({
+        "run_id": run_id,
+        "idempotency_key": f"onboard_site:{run_id}:{hashlib.sha1(repr((url, answers)).encode()).hexdigest()[:12]}",
+        "action": "onboard", "intent": {"input": url},
+        "tool_call": {"name": "onboard_site", "arguments": {"url": url, "pages": len(site["pages"]), "via": "firecrawl"}},
+        "tool_response": {"profile": {k: v for k, v in profile.items() if not k.startswith('_') and k != 'site'},
+                          "open_questions": [q["field"] for q in questions], "facts_dropped": f.get("dropped", 0)},
+        "status": "RECORDED",
+    })
+    return {"run_id": run_id, "profile": profile, "questions": questions, "source": "website", "receipt": receipt}
+
+
 DEMO_LINES = (
     "Pixelridge is an 8-person software studio in Athens.\n"
     "We build web apps, booking platforms and data dashboards for tourism and retail clients."

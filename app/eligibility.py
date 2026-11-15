@@ -234,6 +234,7 @@ def check_eligibility(notice_id: str, profile: dict, run_id: str | None = None, 
         rule_cache.save_from_receipts(notice_id, out["receipts"])
         _apply_guarantee_check(rules, out["receipts"])
     present(report, profile, out.get("receipts") or [], deadline="Monday 7 Dec 2026, 14:00 (Athens)")
+    _second_opinion(report, profile)
     _save_report(run_id, report)  # the pack checklist reads this file
     out.update({k: report[k] for k in ("summary", "provide", "rules")})
     out["state"] = verifier.run_state(run_id)
@@ -503,10 +504,44 @@ def check_eligibility_generic(notice_id: str, profile: dict, run_id: str, run_ve
     else:
         out["receipts"] = [receipt]
     present(report, profile, out["receipts"], deadline=_deadline_text(notice_id))
+    _second_opinion(report, profile)
     _save_report(run_id, report)
     out.update({k: report[k] for k in ("summary", "provide", "rules")})
     out["state"] = verifier.run_state(run_id)
     return out
+
+
+def _second_opinion(report: dict, profile: dict, asker=None) -> None:
+    """Oumi Iris reads the meaning-based rules (past projects, team) against the profile, as a second model.
+    Advisory: shown beside our reading with a receipt, never changes the verdict or the run state."""
+    from . import oumi
+
+    if asker is None and not oumi.configured()[0]:
+        return
+    rows = report.get("rules") or []
+    try:
+        ops = oumi.second_opinion(rows, profile, asker=asker)
+    except Exception as e:  # a second opinion is optional; its absence is recorded, not hidden
+        ops, err = {}, f"{type(e).__name__}: {e}"[:200]
+    else:
+        err = None
+    for r in rows:
+        if r["id"] in ops:
+            r["second_opinion"] = ops[r["id"]]
+    if not ops and not err:
+        return
+    run_id = report["run_id"]
+    write_receipt({
+        "run_id": run_id, "idempotency_key": f"second_opinion:{run_id}:{report['notice_id']}", "actor": "oumi",
+        "action": "second_opinion",
+        "intent": {"claim": "A second, independent model reads the meaning-based rules against the company's own description."},
+        "tool_call": {"name": "oumi_iris", "arguments": {"model": oumi.model_name(), "rules": sorted(ops)}},
+        "tool_response": ops or {"error": err},
+        "independent_check": {"checker": "oumi:iris", "method": "noul_per_rule", "source": "profile + rule text",
+                              "observed": ops, "mismatch": any(not o["agrees"] for o in ops.values())},
+        "status": "RECORDED" if ops else "UNVERIFIED",
+        "reason": ("Advisory only; it does not change the verdict." if ops else f"Second opinion unavailable: {err}"),
+    })
 
 
 def _deadline_text(notice_id: str) -> str | None:

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixelridge · Software studio in Athens</title>
+<meta name="description" content="Pixelridge is a fictional 8-person software studio in Athens, created for the Bid-Ready hackathon demo.">
+<style>
+:root{--bg:#f6f5f1;--ink:#1b1c1e;--mute:#5e6066;--line:#e2e0d8;--accent:#0f6e56;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#141516;--ink:#ebeae6;--mute:#a3a5aa;--line:#2c2e31;--accent:#5dcaa5;--card:#1c1d20}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:860px;margin:0 auto;padding:28px 18px 64px}
+.demo{background:#fff4d6;color:#5b3e00;border:1px solid #e9c46a;border-radius:8px;padding:10px 14px;font-size:14px}
+header h1{font-size:40px;margin:22px 0 4px;letter-spacing:-.02em}header p{margin:0;color:var(--mute);font-size:18px}
+section{margin-top:34px}h2{font-size:20px;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card b{display:block;margin-bottom:4px}.card span{color:var(--mute);font-size:14.5px}
+ul{margin:0;padding-left:20px}li{margin:4px 0}
+footer{margin-top:40px;color:var(--mute);font-size:14px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<main>
+  <p class="demo"><strong>Demo company.</strong> Pixelridge is fictional, created for the Bid-Ready hackathon (Gen AI Summit Athens, November 2026) so its website can be read live. Any resemblance to a real company is unintended.</p>
+
+  <header>
+    <h1>Pixelridge</h1>
+    <p>A software studio in Athens, Greece. We design and build web apps, booking platforms and data dashboards.</p>
+  </header>
+
+  <section id="about">
+    <h2>About us</h2>
+    <p>Pixelridge was founded in 2019 in Athens. We are a team of 8 people: designers, developers and a project manager who work closely with our clients from the first workshop to years of support after launch. Most of our clients are in tourism and retail, and we increasingly work with the public sector.</p>
+  </section>
+
+  <section id="services">
+    <h2>What we do</h2>
+    <div class="grid">
+      <div class="card"><b>Web applications</b><span>Custom web apps and portals, built to last and easy to maintain.</span></div>
+      <div class="card"><b>Booking platforms</b><span>Reservations, availability and payments for hotels, tours and venues.</span></div>
+      <div class="card"><b>Data dashboards</b><span>Reporting and analytics dashboards that turn operational data into decisions.</span></div>
+      <div class="card"><b>UX and UI design</b><span>Research, prototypes and accessible interfaces.</span></div>
+      <div class="card"><b>Support and maintenance</b><span>Hosting, monitoring and ongoing improvements under clear service levels.</span></div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>Our team</h2>
+    <ul>
+      <li>1 project manager</li>
+      <li>2 senior developers</li>
+      <li>2 developers</li>
+      <li>1 UX/UI designer</li>
+      <li>1 data analyst</li>
+      <li>1 QA engineer</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Selected work</h2>
+    <ul>
+      <li>Public sector: the website of a municipality in Attica (2023).</li>
+      <li>Public sector: a visitor information portal for an island municipality (2025).</li>
+      <li>A booking platform for a hotel group with 12 properties.</li>
+      <li>A sales and stock dashboard for a retail chain.</li>
+    </ul>
+  </section>
+
+  <section id="quality">
+    <h2>Quality</h2>
+    <p>Our quality management system is certified to ISO 9001:2015.</p>
+  </section>
+
+  <footer>Pixelridge · Athens, Greece · hello@pixelridge.example · A fictional company for a hackathon demo.</footer>
+</main>
+</body>
+</html>

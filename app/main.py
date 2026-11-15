@@ -63,6 +63,28 @@ def api_onboard(body: OnboardIn) -> dict:
     return onboard(body.lines, body.answers, run_id=body.run_id)
 
 
+class SiteIn(BaseModel):
+    url: str
+    answers: dict[str, Any] | None = None
+    run_id: str | None = None
+
+
+@app.post("/api/onboard_site")
+def api_onboard_site(body: SiteIn) -> dict:
+    from . import website
+    from .profile import onboard_site
+
+    url = body.url.strip()
+    if not url.startswith(("http://", "https://")):
+        url = "https://" + url
+    try:
+        return onboard_site(url, body.answers, run_id=body.run_id)
+    except website.NotConfigured as e:
+        raise HTTPException(400, f"Website reading isn't set up: {e}. Type two lines about your company instead.")
+    except Exception as e:
+        raise HTTPException(502, f"Couldn't read that website ({type(e).__name__}). Check the address, or type two lines instead.")
+
+
 @app.post("/api/matches")
 def api_matches(body: MatchesIn) -> dict:
     return agent.shortlist(body.profile, run_id=body.run_id, value_min=body.value_min, value_max=body.value_max)

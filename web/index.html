@@ -113,6 +113,7 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
 .letterdoc h3{font-size:18px;margin:0 0 12px}.letterdoc h4{font-size:15px;margin:18px 0 6px}
 .letterdoc p{margin:0 0 10px}.letterdoc ul,.letterdoc ol{margin:0 0 10px;padding-left:22px}.letterdoc hr{border:0;border-top:1px solid var(--line);margin:14px 0}
 .letterdoc em{color:var(--mute)}
+.erow .eop{grid-column:2 / -1;color:var(--mute);font-size:13px;margin-top:-2px}.erow .eop.disagree{color:var(--amb)}
 .erow .enote{grid-column:2 / -1;color:var(--bad);font-size:13.5px;margin-top:-2px}
 /* self-declaration form */
 .erow .askform{grid-column:2 / -1;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;margin-top:6px}
@@ -140,6 +141,12 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
       <details class="m"><summary>New to public tenders? Key terms explained</summary><dl class="gloss" id="glossList"></dl></details>
       <textarea id="lines" rows="3" placeholder="e.g. We are an 8-person software studio in Athens building web apps…"></textarea>
       <div class="row" style="margin-top:10px"><button id="go1">Build profile</button><button class="ghost" id="demo">Use demo studio</button></div>
+      <div class="row siterow" style="margin-top:12px">
+        <label for="siteUrl" class="m" style="margin:0">Or read your website</label>
+        <input id="siteUrl" type="url" inputmode="url" placeholder="https://yourcompany.gr" style="flex:1;min-width:200px">
+        <button type="button" class="ghost" id="goSite">Read website</button>
+      </div>
+      <p class="m" id="siteMsg" style="margin:4px 0 0"></p>
       <div id="profileBox" class="hidden" style="margin-top:14px">
         <div id="profileSummary" class="m"></div>
         <div id="questions"></div>
@@ -332,7 +339,18 @@ let MATCHES={}, prepPromise=null, letterPromise=null;
 
 $('#demo').onclick=async()=>{const d=await (await fetch('/api/demo')).json();$('#lines').value=d.lines;answers={};await doOnboard(d.answers)};
 $('#go1').onclick=()=>doOnboard(null);
-async function doOnboard(prefill){busy($('#go1'),true);try{
+let siteUrl=null;
+$('#goSite').onclick=async()=>{const u=$('#siteUrl').value.trim();$('#siteMsg').textContent='';
+  if(!u){$('#siteMsg').textContent='Enter your website address first.';return}
+  busy($('#goSite'),true);$('#siteMsg').textContent='Reading your website, about 15–30 seconds…';
+  try{const r=await post('/api/onboard_site',{url:u,run_id:runId});runId=r.run_id;profile=r.profile;siteUrl=u;
+    renderProfile();renderYou();
+    $('#siteMsg').textContent='';
+    $('#questions').innerHTML='<p class="m" style="margin-top:10px">We couldn\'t find these on your website:</p>'+r.questions.map(q=>`<div class="q"><label for="q_${q.field}">${esc(q.question)}</label><input id="q_${q.field}" data-f="${q.field}" value=""></div>`).join('');
+    $('#profileBox').classList.remove('hidden');renderFoot();
+  }catch(e){let m=String(e.message||e);try{m=JSON.parse(m).detail||m}catch(_){}$('#siteMsg').textContent=m}
+  busy($('#goSite'),false)};
+async function doOnboard(prefill){siteUrl=null;busy($('#go1'),true);try{
   const r=await post('/api/onboard',{lines:$('#lines').value,answers:null,run_id:runId});runId=r.run_id;profile=r.profile;
   renderProfile();renderYou();
   $('#questions').innerHTML='<p class="m" style="margin-top:10px">We could not work these out from your text:</p>'+r.questions.map(q=>`<div class="q"><label for="q_${q.field}">${esc(q.question)}</label><input id="q_${q.field}" data-f="${q.field}" value="${esc(prefill?.[q.field]??'')}"></div>`).join('');
@@ -341,7 +359,9 @@ async function doOnboard(prefill){busy($('#go1'),true);try{
 
 $('#go2').onclick=async()=>{busy($('#go2'),true);try{
   const a={cpv_codes:profile.cpv_codes||[]};document.querySelectorAll('#questions input').forEach(i=>{a[i.dataset.f]=i.value.trim()===''?null:i.value.trim()});
-  const r=await post('/api/onboard',{lines:$('#lines').value,answers:a,run_id:runId});profile=r.profile;
+  const r=siteUrl?await post('/api/onboard_site',{url:siteUrl,answers:a,run_id:runId})
+                 :await post('/api/onboard',{lines:$('#lines').value,answers:a,run_id:runId});
+  profile=r.profile;
   const t=profile.turnover_2023_2025_total_eur;
   $('#vmaxHint').textContent=t?`Optional. Tenders usually ask for turnover of about twice their value to bid alone, so up to about ${eur(t/2)} for you; higher if you'd bid with a partner.`:'Optional. Add your turnover to get a suggested maximum.';
   await runMatches();
@@ -376,8 +396,15 @@ function renderProfile(){
   $('#profileSummary').innerHTML=`<b>${esc(profile.name)}</b> · ${esc(profile.size??'?')} people · ${esc(profile.location??'location?')}
     <div class="cpvbox"><div><b>What you sell, as ${termBtn('cpv','CPV codes')}</b> <span class="m">· ${esc(src)}. Remove any that don't fit; only the first two digits affect the score.</span></div>
     <div class="chips">${chips||'<span class="m">No codes found. Describe what you sell (e.g. "we build web apps") and build the profile again.</span>'}</div>
-    ${profile.cpv_note?`<div class="m">${esc(profile.cpv_note)}</div>`:''}</div>`;
+    ${profile.cpv_note?`<div class="m">${esc(profile.cpv_note)}</div>`:''}</div>${siteSources()}`;
 }
+function secondOp(o){const w={meets:'likely meets it',missing:"likely doesn't",unclear:"can't tell"}[o.opinion]||o.opinion;
+  return `<span class="eop${o.agrees?'':' disagree'}">Second opinion (Oumi): ${w}, ${Math.round(o.p_meets*100)}% · ${o.agrees?'agrees with our reading':'disagrees: check this row yourself'}</span>`}
+function siteSources(){const s=profile.site;if(!s)return'';
+  const lab={name:'Name',team_size:'Team size',city:'City',services:'Service',certificates:'Certificate',public_sector_projects:'Public-sector project'};
+  const rows=[];for(const[k,v]of Object.entries(s.sources||{}))for(const f of(Array.isArray(v)?v:[v]))
+    rows.push(`<li><b>${lab[k]||k}:</b> ${esc(f.value)} <span class="m">· “${esc(f.quote)}” · <a href="${esc(f.url)}" target="_blank" rel="noopener">source</a></span></li>`);
+  return `<details class="cpvbox" open><summary><b>Read from your website</b> <span class="m">· ${s.pages.length} page(s); every fact below was found word for word on the page it links to${s.dropped?`; ${s.dropped} we couldn't confirm were left out`:''}. Turnover is never on a website, so we ask.</span></summary><ul style="margin:6px 0 0;padding-left:18px">${rows.join('')||'<li class="m">Nothing we could confirm.</li>'}</ul></details>`}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-rm]');if(!b||!profile)return;
   profile.cpv_codes=(profile.cpv_codes||[]).filter(c=>c!==b.dataset.rm);profile.cpv_detail=(profile.cpv_detail||[]).filter(d=>d.code!==b.dataset.rm);renderProfile()});
 
@@ -438,6 +465,7 @@ function renderElig(e,nid){
         <span class="eyou">You: ${esc(x.you||'—')}${pageRef(x.citation)?` · ${pageRef(x.citation)}`:''}
           ${canAnswer?` · <button type="button" class="linkbtn" data-ask="${esc(x.id)}">${x.declared?'Change':'Answer'}</button>`:''}</span>
         ${x.declared&&x.status==='missing'&&x.notes?`<span class="enote">${esc(x.notes)}</span>`:''}
+        ${x.second_opinion?secondOp(x.second_opinion):''}
         ${canAnswer?askForm(x):''}</div>`}).join('')
       ||`<p class="m">${esc(e.source?.note||'No rules could be read.')} <a href="${esc(e.ted_url)}" target="_blank" rel="noopener">Open the notice on TED ↗</a></p>`;
     const PICON={bank:'€',file:'▤',calendar:'◷'};

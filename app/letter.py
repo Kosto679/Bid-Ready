@@ -266,6 +266,31 @@ def _polish(draft: str, profile: dict) -> tuple[str | None, str]:
         return None, f"{type(e).__name__}: {e}"
 
 
+def _claim_check(run_id: str, candidate: str, draft: str, asker=None) -> tuple[bool, dict | None]:
+    """Oumi Iris checks each sentence of the rewrite against the checked draft. Unsupported -> keep the draft.
+    Not configured -> (True, None): the code fact check above still applies."""
+    from . import oumi
+
+    if asker is None and not oumi.configured()[0]:
+        return True, None
+    try:
+        res = oumi.letter_claims(candidate, draft, asker=asker)
+    except Exception as e:
+        return True, {"skipped": f"{type(e).__name__}"}
+    write_receipt({
+        "run_id": run_id, "idempotency_key": f"verify:{run_id}:letter_claims:v1", "actor": "oumi",
+        "action": "draft_cover_letter",
+        "intent": {"claim_id": "letter_claims", "claim": "Every sentence of the rewritten letter is supported by the checked draft."},
+        "tool_call": {"name": "oumi_iris", "arguments": {"model": oumi.model_name(), "sentences": res["checked"]}},
+        "tool_response": {"checked": res["checked"], "unsupported": len(res["unsupported"])},
+        "independent_check": {"checker": "oumi:iris", "method": "noul_per_sentence", "source": "template draft",
+                              "observed": res, "mismatch": not res["ok"]},
+        "status": "VERIFIED" if res["ok"] else "FAILED",
+        "reason": None if res["ok"] else "Rewrite rejected: a sentence claims something the checked draft doesn't; the draft is used.",
+    })
+    return res["ok"], res
+
+
 def _gemini_model() -> str:
     from . import gemini
 
@@ -316,6 +341,10 @@ def draft_cover_letter(notice_id: str, profile: dict, eligibility: dict, run_id:
                 "status": "VERIFIED" if ok else "FAILED",
                 "reason": None if ok else "Rewrite rejected; the checked draft is used instead.",
             })
+            if ok:
+                ok, claims = _claim_check(run_id, candidate, draft)
+                if claims is not None:
+                    check = {**check, "oumi": claims}
             if ok:
                 md, source = candidate, "gemini_polished"
         elif err:
