@@ -123,6 +123,9 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
 .askfield label{display:flex;gap:6px;align-items:center;margin:0;font-weight:400}.askopt{flex-basis:100%}
 .askfield input[type=radio],.askfield input[type=checkbox]{width:auto}
 /* estimated-value filter */
+#matches .factors{display:none} /* the fit screen shows them; keeps 3-4 tenders on screen */
+.tools2{display:flex;flex-wrap:wrap;gap:4px 22px;margin:2px 0 10px}.tools2 details[open]{flex-basis:100%}
+#matches .match .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .vfilter{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .vfilter label{margin:0;font-weight:600;font-size:13px}.vfilter input{width:130px;padding:7px 9px}
 .linkbtn{background:none;border:0;padding:0;color:var(--accent);font:inherit;font-weight:600;cursor:pointer;text-decoration:underline}
@@ -166,19 +169,24 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
 
     <section class="hidden" id="s2">
       <h2>Open Greek IT tenders</h2>
-      <p class="sub">Scored on <span data-term="ted">TED</span> data only. Pick one to read its rules. Fit = 25% <span data-term="cpv">CPV</span> + 25% TED value vs your 3-year <span data-term="turnover">turnover</span> + 25% place + 25% days to deadline (capped at 45).</p>
+      <p class="sub">Scored on <span data-term="ted">TED</span> data only. Pick one to check whether you can bid.</p>
       <div class="legend"><span class="good"><b>●</b> 70–100 strong fit</span><span class="fair"><b>■</b> 40–69 partial fit</span><span class="weak"><b>▲</b> 0–39 weak fit</span></div>
+      <div class="tools2">
       <details class="m"><summary>How is this scored?</summary>
+        <p>Fit = 25% <span data-term="cpv">CPV</span> + 25% TED value vs your 3-year <span data-term="turnover">turnover</span> + 25% place + 25% days to deadline (capped at 45).</p>
         <p><b>CPV</b> is the EU's Common Procurement Vocabulary: an 8-digit code for what a tender buys (72000000 = IT services: consulting, software development, Internet and support). We match on the first two digits, the division, against the codes guessed from your description. Score = share of the tender's codes in your divisions.</p>
         <p><b>Value vs turnover</b> = your 2023–2025 turnover ÷ (2 × the TED value), capped at 1. TED's value can include options, so this is rough. <b>Place</b> = 1 if the work is in Greece and so are you. <b>Deadline</b> = days left ÷ 45, capped at 1: more time to prepare scores higher.</p>
         <p>Each factor counts 25%, so the score is 25 × the sum of the four, from 0 to 100.</p>
       </details>
+      <details class="m" id="vfilterBox"><summary>Filter by estimated value</summary>
       <div class="vfilter">
         <label for="vmin">Estimated value (TED) from</label><input id="vmin" inputmode="numeric" placeholder="any">
         <label for="vmax">to</label><input id="vmax" inputmode="numeric" placeholder="any">
         <button type="button" id="vApply" class="ghost">Apply</button><button type="button" id="vClear" class="linkbtn">Clear</button>
       </div>
-      <p class="m" id="vmaxHint" style="margin:4px 0 10px"></p>
+      <p class="m" id="vmaxHint" style="margin:4px 0 0"></p>
+      </details>
+      </div>
       <div id="matches"></div>
     </section>
 
@@ -246,6 +254,8 @@ td.quote mark{background:var(--ambbg);color:var(--ink);font-weight:700;border-ra
 <script>
 const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let runId=null,profile=null,answers={},noticeId=null;
+// One run per tender, so one tender's receipts and corrections never show on another's screen or pack.
+const tRun=()=>`${runId}_${String(noticeId||'').replace(/\W/g,'')}`;
 async function post(u,b){const r=await fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)});if(!r.ok)throw new Error(await r.text());return r.json()}
 function busy(btn,on){btn.disabled=on;btn.classList.toggle('busy',on);if(on){btn.dataset.t=btn.textContent;btn.textContent='Working…'}else if(btn.dataset.t)btn.textContent=btn.dataset.t}
 const eur=v=>v==null?'—':'€'+Math.round(v).toLocaleString('en');
@@ -432,7 +442,7 @@ async function prepare(nid){
   noticeId=nid;const n=MATCHES[nid];if(n)showReport(n);
   $('#goElig').disabled=true;$('#eligWait').textContent='Checking the tender pages…';
   $('#status').className='banner wait';$('#status').textContent='Checking against the tender pages… not ready.';$('#rules').innerHTML='';$('#receipts').innerHTML='';$('#letter').textContent='';$('#verdict').innerHTML='';$('#letterSrc').innerHTML='';
-  prepPromise=post('/api/prepare',{notice_id:nid,profile,run_id:runId,with_letter:false});
+  prepPromise=post('/api/prepare',{notice_id:nid,profile,run_id:tRun(),with_letter:false});
   // The letter's Gemini rewrite is slow (~15 s); start it as soon as eligibility is saved, show it when it lands.
   letterPromise=prepPromise.then(r=>post('/api/letter',{run_id:r.run_id,notice_id:nid,profile}));
   letterPromise.catch(()=>{});
@@ -497,7 +507,7 @@ document.addEventListener('submit',async e=>{const f=e.target.closest('form.askf
   profile.declarations={...(profile.declarations||{}),[rid]:val};
   const btn=f.querySelector('button[type=submit]');busy(btn,true);
   try{const nid=noticeId;
-    const r=await post('/api/prepare',{notice_id:nid,profile,run_id:runId,with_letter:false});
+    const r=await post('/api/prepare',{notice_id:nid,profile,run_id:tRun(),with_letter:false});
     prepPromise=Promise.resolve(r);
     renderElig(r.eligibility,nid);renderReceipts(r.state);
     letterPromise=post('/api/letter',{run_id:r.run_id,notice_id:nid,profile});letterPromise.catch(()=>{});
@@ -584,7 +594,7 @@ function tile(r,i){const ic=r.independent_check||{},o=ic.observed||{};
     :r.status==='UNVERIFIED'?`<div class="m">${esc(r.reason||'Source could not be re-opened.')}</div>`
     :(field&&o[field]!=null?`<div class="m">Page says ${esc(o[field])}</div>`:'');
   return `<div class="tile ${r.status}" style="animation-delay:${i*40}ms"><div class="th"><span class="sh">${SHAPE[r.status]||'■'}</span><b>${esc(tileLabel(r))}</b></div>${detail}<div class="m">${pageLink(r)||esc(ic.source||'')}</div></div>`}
-async function renderReceipts(){const d=await (await fetch(`/api/runs/${runId}/receipts`)).json();const st=d.state;
+async function renderReceipts(){const d=await (await fetch(`/api/runs/${tRun()}/receipts`)).json();const st=d.state;
   const checked=d.receipts.filter(r=>r.independent_check);
   const count=s=>checked.filter(r=>r.status===s).length;
   let i=0;
@@ -602,13 +612,12 @@ async function renderReceipts(){const d=await (await fetch(`/api/runs/${runId}/r
       return `<div class="efix">Caught a wrong figure: our first reading put the ${esc(what)} at ${esc(eur(claimed))}. The tender says ${esc(eur(seen))}${esc(pg)}. We use ${esc(eur(seen))}.</div>`;
     return `<div class="efix">Caught a mismatch: ${esc(tileLabel(r))}. ${esc(r.reason||'')}</div>`}).join('');
   const line=total?`${total} figure${total===1?'':'s'} and quote${total===1?'':'s'} re-read from the tender. <span class="good">${ok} confirmed</span>${fixed?`, <span class="fair">${fixed} corrected</span>`:''}${open?`, <span class="fair">${open} couldn't be re-checked</span>`:''}.`:'Checking against the tender pages…';
-  const pack=window.__generic?'<p class="m" style="margin:8px 0 0">For this tender we show the rules; the letter and handover pack are ΚτΠ-only for now.</p>'
-    :st.state==='ready'?'<p class="m" style="margin:8px 0 0">Every check confirmed. The pack is ready for a person to review and sign.</p>'
+  const pack=st.state==='ready'?'<p class="m" style="margin:8px 0 0">Every check confirmed. The pack is ready for a person to review and sign.</p>'
     :fixed||open?'<p class="m" style="margin:8px 0 0">The pack is marked “needs review” until someone looks at the correction.</p>':'';
   s.className='echeck';s.innerHTML=`<p style="margin:0">${line}</p>${corrections}${pack}`;
 }
 
-$('#go4').onclick=async()=>{busy($('#go4'),true);try{const r=await post('/api/pack',{run_id:runId,notice_id:noticeId});
+$('#go4').onclick=async()=>{busy($('#go4'),true);try{const r=await post('/api/pack',{run_id:tRun(),notice_id:noticeId});
   const WHAT={'eligibility_checklist.md':'Start here: what to do and by when, then every rule with its page and every check',
     'consortium_letter_el.docx':'Greek letter to a possible consortium partner (Word)','consortium_letter_el.md':'Same letter, plain text',
     'tender_document.pdf':'The tender document the rules were read from','deadline.ics':'Calendar entry for the submission deadline, Athens time',
@@ -620,7 +629,7 @@ $('#go4').onclick=async()=>{busy($('#go4'),true);try{const r=await post('/api/pa
     :`Not marked ready: the verifier failed ${failed.length?esc(failed.join(', ')):'a check'}. A human fixes it before anyone signs.`;
   $('#packOut').innerHTML=`<p><span class="pill ${r.ready?'VERIFIED':'FAILED'}">${r.ready?'READY':'NOT READY'}</span> ${why}</p>
     <table>${[...(r.entries||[])].sort((a,b)=>{const o=Object.keys(WHAT),i=f=>o.includes(f)?o.indexOf(f):99;return i(a)-i(b)}).map(f=>`<tr><td><code>${esc(f)}</code></td><td class="m">${esc(WHAT[f]||'')}</td></tr>`).join('')}</table>
-    <p style="margin-top:10px"><a href="/api/runs/${runId}/zip">Download ${esc((r.zip_path||'').split(/[\\/]/).pop())}</a></p>
+    <p style="margin-top:10px"><a href="/api/runs/${tRun()}/zip">Download ${esc((r.zip_path||'').split(/[\\/]/).pop())}</a></p>
     ${r.todo?.length?`<h3 style="margin:18px 0 6px">To do</h3>${mdToHtml(r.todo.join('\n'))}`:''}`;
   renderReceipts();}catch(e){alert(e)}busy($('#go4'),false)};
 

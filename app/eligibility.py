@@ -335,7 +335,7 @@ def apply_declarations(rules: list[dict], profile: dict, generic: bool = False) 
                 r["notes"] = "You'd still need: " + "; ".join(missing) + "."
         r["status"] = "meets" if ok else "missing"
         r["declared"] = True
-        r["you"] = ("you declared: " + (("yes" if ok else "no") if q["type"] == "yesno" else
+        r["you"] = ("declared " + (("yes" if ok else "no") if q["type"] == "yesno" else
                     f"{v} project{'s' if str(v) != '1' else ''}" if q["type"] == "number" else
                     f"{len(set(v or []))} of {len(q['options'])} roles"))
 
