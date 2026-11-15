@@ -52,7 +52,17 @@ Demo company: Pixelridge, an 8-person Athens software studio, €400,000 turnove
   | Only the TED headline | 3 | 3 | 21 |
 
   Every wrong answer was the same trap: €300,000 reported as the budget (the page says €200,000).
-- **Second opinion.** The Oumi decision model independently grades "does the company meet this rule?" and the letter's claims; disagreements are flagged, not hidden.
+- **Second opinion.** The Oumi Iris decision model independently judges "does the company meet this rule?" and every sentence of the letter; disagreements are flagged, not hidden.
+
+## Sponsor tools we used
+
+| Sponsor | What it does in Bid-Ready | Where |
+|---|---|---|
+| **Firecrawl** | Reads a company's website (home page plus up to 3 relevant pages: about, team, services, projects, certificates) so onboarding can start from a URL instead of typing. Every fact we take from the site keeps an exact quote and its page, and the code checks the quote is really there; anything the site doesn't say (turnover always) is asked. | `app/website.py`, "Or read your website" on the first screen |
+| **Oumi Iris** decision model | A second, independent model for the judgement calls code can't check. (1) For meaning-based rules (past projects, named team) it answers "does this company meet the rule?" with a probability, shown next to our own reading as "Second opinion (Oumi)". (2) It checks each sentence of Gemini's Greek letter rewrite against the fact-checked draft; one unsupported sentence and we keep the draft. Both write receipts; neither can make a verdict "ready" on its own. | `app/oumi.py`, `app/eligibility.py`, `app/letter.py` |
+| **Google Cloud** (Gemini on Vertex AI) | Reads the profile and CPV codes, reads the eligibility rules of tenders nobody annotated (774438-2026), rewrites the Greek letter, and powers the model eval above. Every figure and quote it returns goes through the verifier. | `app/gemini.py`, `app/rules.py`, `app/evals.py` |
+
+All three are optional: without keys the app falls back to rule-based paths and cached readings, so the demo and tests run offline.
 
 ## Run it
 
@@ -74,7 +84,7 @@ uvicorn app.main:app --port 8000  # open http://localhost:8000, click "Use demo 
 
 ## Built with
 
-Python · FastAPI · MCP Python SDK (FastMCP) · SQLite · **Gemini on Vertex AI** (profile reading, rule reading, letter, model eval) · **TED Search API v3** · **ΚΗΜΔΗΣ** open data · **Firecrawl** (website onboarding) · **Oumi** (second opinion) · python-docx
+Python · FastAPI · MCP Python SDK (FastMCP) · SQLite · **Gemini on Vertex AI** (profile reading, rule reading, letter, model eval) · **TED Search API v3** · **ΚΗΜΔΗΣ** open data · **Firecrawl** (website onboarding) · **Oumi Iris** (second opinion, letter claim check) · python-docx
 
 ```
 app/        main.py (API + UI), agent.py (flow), ted.py, khmdhs.py, scoring.py, rules.py,

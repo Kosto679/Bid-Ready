@@ -39,6 +39,12 @@ Demo company: an 8-person Athens software studio, €400,000 turnover over 2023�
 **TED 774438-2026 (Asterousia biosphere digital repository, €125k): yes.**
 - Nobody annotated this tender. Bid-Ready found its document in ΚΗΜΔΗΣ, read it, and verified each rule against the PDF: average yearly turnover ≥ €125,101 (the studio has ≈ €133,000), ISO 9001 (held), and a named team of a project manager, an archaeologist and a photographer. The studio declares the team (contracted specialists), and the verdict becomes "You can bid on this one", with the €2,502 guarantee and the 14 Dec deadline listed.
 
+## Sponsor tools we used
+
+- **Firecrawl**: onboarding from a company website (home page plus up to 3 relevant pages). Every fact taken from the site keeps an exact quote and its page, checked by code; turnover is always asked.
+- **Oumi Iris decision model**: an independent second opinion. It judges meaning-based rules (past projects, named team) for the company, shown as "Second opinion (Oumi)", and checks each sentence of the Greek letter rewrite against the fact-checked draft (one unsupported sentence and the draft is kept). Both write receipts; neither can make a verdict ready on its own.
+- **Google Cloud (Gemini on Vertex AI)**: reads the profile and CPV codes, reads the rules of tenders nobody annotated, rewrites the Greek letter, and powers the model eval. Every figure and quote goes through the verifier.
+
 ## Model eval on the contest's Google Cloud
 
 We asked Gemini (gemini-3.8-flash on Vertex AI) for nine facts from this tender and let the verifier grade each answer against the PDF page. 3 trials each:
