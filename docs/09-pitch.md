@@ -5,21 +5,26 @@ Two scripts. Every figure was checked on screen on Sun 15 Nov.
 - **Submission video: 1 minute**, YouTube unlisted. Who it's for, the problem, the solution. Below.
 - **Live pitch: 3 minutes** if we're picked (8 teams). The longer shot list further down.
 
-## Submission video (60 seconds, ~140 words)
+## Submission video (~1:15, YouTube unlisted)
 
-Record the screen in one take, then cut it to the voice. Each beat is a jump cut: skip loading spinners and scrolling. Light mode, 1920×1080, browser zoom 125%.
+Record the screen in one take, then cut it to the voice. Jump cuts: skip loading, scrolling and Back clicks. Light mode, 1920×1080, browser zoom 125%. To get closer to 1:00, drop "every rule with its page" at 0:58 (the ΚτΠ beat already says it).
 
 | Time | Screen | Say |
 |---|---|---|
-| 0:00 | Home page, logo | "Bid-Ready is for small Greek companies that could win public contracts but never bid. Two in three Greek startups have never tried." |
-| 0:07 | ΚτΠ verdict, the ✗ rows and page links | "Why? A tender is a hundred-page PDF with the rules buried in numbered clauses, and one wrong number gets you excluded. A chatbot will confidently repeat the wrong one." |
-| 0:17 | **Use demo studio** → match list | "Bid-Ready starts from two lines about your company, searches the open EU and Greek tenders, and ranks them." |
-| 0:25 | ΚτΠ verdict | "Pick one and it reads the tender's own rules. Here: you can't bid alone. Every line links to its page." |
-| 0:33 | "How we checked our own reading" | "Then a second checker re-reads the PDF. Our first reading said a six-thousand-euro guarantee. Page 27 says four thousand. Corrected, not trusted." |
-| 0:43 | 774438: tick the team → **"You can bid on this one"** → READY pack | "On a tender you can win: a yes, the guarantee, the deadline, and a pack ready to sign." |
-| 0:53 | Handover, "Bid-Ready does not submit" | "A human signs and submits. Nothing is ready until it's checked. That's Bid-Ready." |
+| 0:00 | Home page, logo | "Bid-Ready helps small Greek companies win public contracts. Two in three Greek startups have never even bid on one." |
+| 0:07 | ΚτΠ PDF scrolling, then the €4,000 line on page 27 highlighted (open `/api/tenders/769674-2026/rfp#page=27`) | "Why? A tender is a hundred-page PDF with the rules buried in numbered clauses. One wrong number gets you excluded, and a chatbot will confidently repeat the wrong one." |
+| 0:17 | **Use demo studio** → match list with scores | "Start from two lines about your company, or its website. Bid-Ready searches the open EU and Greek tenders and ranks them by fit, with the formula on show." |
+| 0:26 | ΚτΠ (769674-2026) verdict, the ✗ rows and page links | "Pick one and it reads the tender's own rules. This one needs five escrow-payment projects and six ISO certificates. You can't bid alone, so it drafts a letter in Greek to a partner. Every line links to its page." |
+| 0:39 | "How we checked our own reading" panel | "Before anything counts, a separate verifier re-reads the PDF. Our first reading said a six-thousand-euro guarantee. Page 27 says four thousand. Corrected, not trusted. An Oumi model adds a second opinion on every rule." |
+| 0:50 | Cut to the match list with 774438-2026 already in view; cursor moves to it | "So this one is out of reach for now, but Bid-Ready doesn't leave you at no. Back on the list: a hundred-and-twenty-five-thousand-euro digital archive, closer to this studio's size." |
+| 0:58 | 774438 verdict: ✓ turnover, ✓ ISO, **Answer** on the team, tick the three roles, **Save and re-check** → "You can bid on this one" | "Turnover ✓, ISO ✓. The one thing only you know is your team. Answer it, and it's a yes: the guarantee, the deadline, every rule with its page." |
+| 1:08 | **Build the pack →** **Build handover ZIP**: READY, then hold on "Bid-Ready does not submit" in the to-do | "One pack, checked and ready to sign. A human signs and submits. Nothing is ready until it's checked. That's Bid-Ready." |
 
-Who / problem / solution are all in the first 25 seconds, so a judge who stops early still gets them.
+Facts to keep straight on camera:
+- ΚτΠ: turnover is **met** (€400,000, ✓). The blockers are the five escrow-payment projects and six ISOs.
+- The €6,000 → €4,000 catch is the **verifier** re-reading page 27. Oumi is the second opinion on each rule, not the PDF check.
+- The Greek letter belongs to ΚτΠ (outreach to a partner). The 774438 pack has the checklist, tender PDF, deadline calendar file and receipts, no letter.
+- Website onboarding (Firecrawl) needs a real company site, and its profile won't match the demo answers. Show "Use demo studio" and only *say* "or its website".
 
 # Live pitch (3 minutes)
 
