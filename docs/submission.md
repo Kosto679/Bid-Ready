@@ -67,5 +67,5 @@ MCP tools that scan tenders with filters across TED and the Greek ΚΗΜΔΗΣ r
 ## Links
 
 - Repo: https://github.com/Kosto679/Bid-Ready (public)
-- Video (1 min, YouTube unlisted): [link]
+- Video (1 min, YouTube unlisted): https://youtu.be/0C5STIg84WE
 - Team: [names]

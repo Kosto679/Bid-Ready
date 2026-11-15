@@ -7,7 +7,7 @@
 
 <p align="center"><b>From two lines about your company to a checked bid pack for Greek public tenders.<br>Nothing is marked ready until an independent verifier re-reads the tender itself.</b></p>
 
-<p align="center"><a href="[YOUTUBE-UNLISTED-LINK]">▶ 1-minute demo video</a></p>
+<p align="center"><a href="https://youtu.be/0C5STIg84WE">▶ 1-minute demo video</a></p>
 
 ## Who it's for
 
